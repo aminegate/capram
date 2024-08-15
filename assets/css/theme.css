@@ -1267,16 +1267,16 @@ div#sliderpro1,
     
         .main-slider__title {
         font-size: 120px !important;
-        width: 140vh;
+        width: 170vh;
     }
     
     .main-slider__subtitle {
        font-size: 67px !important;
-        width: 140vh !important;
+        width: 10vh !important;
     }
     
        .custom-caption {
-            margin-top: 5% !important;
+            margin-top: 0% !important;
         margin-left: 15% !important;
     }
 
