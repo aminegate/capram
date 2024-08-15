@@ -80,11 +80,12 @@
 
 .content-wrapper-capram .btn-skew-r {
 
-    margin-right: -19px  !important;
+    margin-right: -19px;
     margin-left: 0px !important;
-    transform: skewX(18deg) rotate(180deg) !important;
-}
+    transform: skewX(18deg) rotate(180deg);
+     padding: 9px 26px 11px;
 
+}
 
 
 .content-wrapper-capram a {
@@ -92,9 +93,7 @@
     transform: scaleX(-1) skewY(180deg) rotate(180deg) skewX(18deg)  !important;
 }
 
-.content-wrapper-capram .btn-skew-r {
-    padding: 9px 26px 11px;
-}
+   
 /* ========= social media header ============ */
 .list-inline > li:last-child, .list-inline > li:last-child a {
     padding-right: 2px !important;
@@ -843,7 +842,7 @@ h3.list-services__title strong {
 *********************** CAPRAM Responsive **************************
 ********************************************************************/
 
-
+/************************************** Large ********************************************************/
 @media (min-width: 992px) and (max-width: 1200px) { 
 
 .btn.menu-btn > .wrap__btn-skew-r {
@@ -866,6 +865,7 @@ h3.list-services__title strong {
 .custom-caption {
 
     margin-left: 0vw !important;
+    margin-top: 19% !important;
 
 }
     
@@ -882,9 +882,6 @@ div#sliderpro1,
     height: 600px !important;
 }
 
-    
-
-    
 .sp-slide:nth-child(3) img {
     padding-top: 100px !important;
 }
@@ -892,9 +889,19 @@ div#sliderpro1,
 .main-slider__inner.text-left {
     margin-top: 50px !important;
 }
+    
+    .yamm .nav > li > a {
+    font: 700 10px Raleway !important;
+}
+    
+    .btn-skew-r {
+    font-size: 10px !important;
+}
 
 
 }
+
+/************************************** Medium ********************************************************/
 @media (min-width: 768px) and (max-width: 992px) { 
 
 .btn.menu-btn > .wrap__btn-skew-r {
@@ -910,13 +917,66 @@ div#sliderpro1,
     font-size: 10px !important;
 } 
     
+.yamm .nav > li:nth-child(6) {
+
+ 
+            margin-top: 8px;
+        margin-right: -12px;
+}
+    
+.yamm .nav > li:last-child {
+        margin-top: 8px;
+    }
+    
 .btn.menu-btn a {
     font-size: 10px !important;
 }
-    
-
+    .main-slider__subtitle {
+    font-size: 30px !important;
 
 }
+    
+    .main-slider__title {
+    font-size: 50px !important;
+}
+    
+    .main-slider__btn_inner {
+    width: 165px !important;
+    font-size: 22px !important;
+}
+
+        div#sliderpro1 {
+    height: 450px !important;
+}
+
+    
+ 
+    
+    div#sliderpro1, 
+.sp-mask, 
+.sp-slides,
+.sp-slide,
+.sp-image-container {
+    height: 560px !important;
+}
+
+    .custom-caption {
+    margin-left: 8% !important;
+    margin-top: 17% !important;
+}
+  
+    .wrap__btn-skew-r {
+    margin-right: 0px !important;
+}
+    
+    img.logo__img.img-responsive {
+    margin-top: 18px;
+}
+
+}
+
+/************************************** Small ********************************************************/
+
 @media (min-width: 576px) and (max-width: 768px) { 
 
     .yamm .nav > li {
@@ -974,9 +1034,20 @@ div#sliderpro1,
     padding-top: 100px !important;
 }
 
-
+    .content-wrapper-capram .btn-skew-r {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    transform: skewX(0deg) rotate(0deg) !important;
+}
+        .yamm .nav > li:nth-child(6) {
+    margin-left: 0px !important;
+}
     
 }
+
+
+/************************************** Extra Small ********************************************************/
+
 @media (max-width: 575.98px) { ... }
 
 
