@@ -1191,10 +1191,124 @@ img.sp-image {
 }
     
     .header .social-links {
-    margin-right: 12px !important;
+    margin-right: 17px !important;
 }
 
+
 }
+
+
+@media (max-width:480px) {
+
+
+
+    .yamm .nav > li {
+      text-align: center !important;
+}
+    
+        .btn-skew-r {
+    box-shadow: none !important;
+    transform: skewX(0deg) !important;
+    margin-left: 0px !important;
+}
+    
+    .content-wrapper-turbo a {
+    -moz-transform: scaleX(-1) skewX(0deg) !important;
+    -webkit-transform: scaleX(-1) skewX(0deg) !important;
+    -o-transform: scaleX(-1) skewX(0deg) !important;
+    transform: scaleX(-1) skewX(0deg) !important;
+}
+    
+.btn.menu-btn {
+    display: block;
+}
+    
+    .btn-skew-r {
+    width: 100%;
+}
+    
+    .wrap__btn-skew-r {
+ 
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+}
+    
+    
+div#sliderpro1, 
+.sp-mask, 
+.sp-slides,
+.sp-slide,
+.sp-image-container {
+    height: 225px !important;
+}
+    
+    .sp-slide:nth-child(3) img {
+    padding-top: 100px !important;
+}
+
+    .content-wrapper-capram .btn-skew-r {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    transform: skewX(0deg) rotate(0deg) !important;
+}
+        .yamm .nav > li:nth-child(6) {
+    margin-left: 0px !important;
+}
+    
+    .btn.menu-btn > .wrap__btn-skew-r {
+    margin-top: 27px;
+        margin-bottom: 27px;
+}
+    
+    .sp-slide:nth-child(3) img {
+     padding-top: 0px !important; 
+}
+    
+        .main-slider__title {
+        font-size: 120px !important;
+        width: 140vh;
+    }
+    
+    .main-slider__subtitle {
+       font-size: 67px !important;
+        width: 140vh !important;
+    }
+    
+       .custom-caption {
+            margin-top: 5% !important;
+        margin-left: 15% !important;
+    }
+
+    
+    .main-slider__btn_inner {
+       width: 260px !important;
+        font-size: 35px;
+    } 
+
+.custom-caption {
+
+    width: 140vh !important;
+}
+
+
+img.sp-image {
+    margin-top: 0px !important;
+}
+    
+    
+.header-contacts__item {
+    margin-right: 5px !important;
+
+}
+    
+    .header .social-links {
+    margin-right: 17px !important;
+}
+
+
+}
+
 
 
 
