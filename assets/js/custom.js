@@ -97,8 +97,9 @@ var map2 = L.map('map2', {
 });
 
 // Define the company's locations
-var companyLocation1 = [33.5891546, -7.6085127]; // Location 1
-var companyLocation2 = [33.5869121432045, -7.6026959]; // Location 2
+    
+var companyLocation1 = [33.58923365298105, -7.6077161783448535]; // Location 1
+var companyLocation2 = [33.58609299340052, -7.602708825402712 ]; // Location 2
 
 // Add OpenStreetMap tiles to both maps
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
