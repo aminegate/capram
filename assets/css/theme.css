@@ -1033,7 +1033,7 @@ div#sliderpro1,
 .sp-slides,
 .sp-slide,
 .sp-image-container {
-    height: 460px !important;
+    height: 400px !important;
 }
     
     .sp-slide:nth-child(3) img {
@@ -1076,6 +1076,12 @@ div#sliderpro1,
         width: 175px !important;
         font-size: 24px;
     } 
+    
+    .header-contacts__item {
+    margin-right: 5px !important;
+
+}
+    
 }
 
 
