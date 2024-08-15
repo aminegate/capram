@@ -1128,7 +1128,7 @@ div#sliderpro1,
 .sp-slides,
 .sp-slide,
 .sp-image-container {
-    height: 245px !important;
+    height: 240px !important;
 }
     
     .sp-slide:nth-child(3) img {
