@@ -1180,7 +1180,7 @@ img.sp-image {
     
     
 .header-contacts__item {
-    margin-right: 5px;
+    margin-right: 5px !important;
 
 }
 
