@@ -167,19 +167,39 @@ $('#locateLocation2').click(function() {
     //  CUSTOM
     ///////////////////////////////////// 
 
-    
-    
-      $(window).scroll(function() {
-        var scrollPosition = $(this).scrollTop();
+$(window).scroll(function() {
+    var scrollPosition = $(this).scrollTop();
+    var windowWidth = $(window).width(); // Get the current window width
+    var scrollThreshold = 80; // Adjust this value if needed
 
-        if (scrollPosition > 80) { // Adjust the scroll value as needed
-            $('.yamm .nav > li:last-child').css('margin-top', '-16px');
-             $('.yamm .nav > li:nth-child(6)').css('margin-top', '-16px');
+    if (windowWidth > 992) { // For screens larger than 992px
+        if (scrollPosition > scrollThreshold) {
+            $('.yamm .nav > li:last-child').css('margin-top', '-14px');
+            $('.yamm .nav > li:nth-child(6)').css('margin-top', '-14px');
         } else {
             $('.yamm .nav > li:last-child').css('margin-top', '0px');
             $('.yamm .nav > li:nth-child(6)').css('margin-top', '0px');
         }
-    });
+    } else { // For screens 992px or smaller
+        if (scrollPosition > scrollThreshold) {
+            $('.yamm .nav > li:last-child').css('margin-top', '23px');
+            $('.yamm .nav > li:nth-child(6)').css('margin-top', '23px');
+            $('img.logo__img.img-responsive').css('margin-top', '18px');
+        } else {
+            $('.yamm .nav > li:last-child').css('margin-top', '8px');
+            $('.yamm .nav > li:nth-child(6)').css('margin-top', '8px');
+            $('img.logo__img.img-responsive').css('margin-top', '0px');
+        }
+    }
+});
+
+// Trigger the function on page load to ensure the correct styles are applied
+$(window).trigger('scroll');
+
+
+// Trigger the function on page load to ensure the correct styles are applied
+$(window).trigger('scroll');
+
  /////////////////////////////////////
     //  LOADER
     /////////////////////////////////////
