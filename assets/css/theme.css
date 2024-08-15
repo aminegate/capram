@@ -1305,6 +1305,10 @@ img.sp-image {
     .header .social-links {
     margin-right: 17px !important;
 }
+    
+      .sp-arrow {
+        display: block !important; /* Make sure it's not set to none */
+    }
 
 
 }
