@@ -1122,7 +1122,7 @@ div#sliderpro1,
 .sp-slides,
 .sp-slide,
 .sp-image-container {
-    height: 380px !important;
+    height: 245px !important;
 }
     
     .sp-slide:nth-child(3) img {
@@ -1144,7 +1144,7 @@ div#sliderpro1,
 }
     
     .sp-slide:nth-child(3) img {
-     padding-top: 30px !important; 
+     padding-top: 0px !important; 
 }
     
         .main-slider__title {
@@ -1158,7 +1158,7 @@ div#sliderpro1,
     }
     
        .custom-caption {
-        margin-top: 35% !important;
+        margin-top: 5% !important;
         margin-left: 3% !important;
     }
 
@@ -1168,13 +1168,21 @@ div#sliderpro1,
         font-size: 35px;
     } 
 
-    .custom-caption {
+.custom-caption {
 
     width: 140vh !important;
 }
 
 
+img.sp-image {
+    margin-top: 0px !important;
+}
+    
+    
+.header-contacts__item {
+    margin-right: 5px;
 
+}
 
 }
 
