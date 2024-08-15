@@ -1086,8 +1086,8 @@ div#sliderpro1,
 
 
 /************************************** Extra Small ********************************************************/
+@media (min-width:480px) and (max-width: 576px) {
 
-@media (max-width: 575.98px) { 
 
 
     .yamm .nav > li {
@@ -1128,7 +1128,7 @@ div#sliderpro1,
 .sp-slides,
 .sp-slide,
 .sp-image-container {
-    height: 240px !important;
+    height: 400px !important;
 }
     
     .sp-slide:nth-child(3) img {
@@ -1164,8 +1164,8 @@ div#sliderpro1,
     }
     
        .custom-caption {
-        margin-top: 5% !important;
-        margin-left: 3% !important;
+             margin-top: 27% !important;
+        margin-left: 14% !important;
     }
 
     
@@ -1188,6 +1188,10 @@ img.sp-image {
 .header-contacts__item {
     margin-right: 5px !important;
 
+}
+    
+    .header .social-links {
+    margin-right: 12px !important;
 }
 
 }
