@@ -1767,9 +1767,7 @@ img.sp-image {
     }
     
     
-#aboutUs {
-    padding-bottom: 0px !important;
-}
+
     
     
     #aboutUs:before {
@@ -1780,9 +1778,9 @@ img.sp-image {
     height: 610px;
 }
     
-    #aboutUs {
-    padding-bottom: 89px !important;
-        padding-top: 0px !important
+#aboutUs {
+        padding-bottom: 70px !important;
+        padding-top: 55px !important;
 }
     
     .borderiMG {
@@ -1809,7 +1807,7 @@ img.sp-image {
         margin-bottom: 20px !important;
     }
     
-    li.list-progress__item {
+ li.list-progress__item {
 
     height: 167px !important;
 
@@ -1818,11 +1816,11 @@ img.sp-image {
 
 }
     
-            .twomaps {
+.twomaps {
     width: 100% !important;
 
 }
-    .sectionMap1 {
+.sectionMap1 {
     float: none;
     width: 100% !important;
 
@@ -1844,8 +1842,18 @@ img.sp-image {
   
 }
     .certificate img {
-    width: 25% !important;
+    width: 45% !important;
    
+}
+    
+    span.mapAddress {
+    font-size: 12px !important;
+    width: 90% !important;
+}
+    
+.ui-title-block {
+
+    text-align: center !important;
 }
 
 }
