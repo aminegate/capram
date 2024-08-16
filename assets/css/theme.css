@@ -289,7 +289,7 @@ a.link-img__link img {
 
 .link-img__link:before {
   
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 55%) !important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 55%) !important;
 }
 
 .link-img_mod-a .link-img__wrap-title,.link-img_mod-b .link-img__wrap-title {
@@ -298,7 +298,9 @@ a.link-img__link img {
 }
 
 .link-img__link:hover .link-img__title {
-    color: white !important;
+    color: #F7943D !important;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .link-img__title {
@@ -704,7 +706,7 @@ span.mapAddress {
 }
 
 .twomaps {
-    width: 74%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     margin: 0px auto;
@@ -1855,11 +1857,22 @@ img.sp-image {
     .sectionMap1 {
 
     margin-left: 0px !important;
+    margin-left: 0px !important;
 }
     
     .mapBorder {
 
     width: 95% !important;
+
+}
+    
+.service .decor-1 {
+        margin: -13px 195px 0px 195px !important;
+    }
+    
+    .list-services {
+
+    padding: 22px 0px 40px 0px !important;
 
 }
 
@@ -2622,7 +2635,7 @@ img.pull-left {
 	/*background-color: rgba(0, 0, 0, 0.5);*/
 	content: '';
 	transition: all 0.3s;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.7) 40%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.7) 40%);
 }
 .link-img__link:after {
 	position: absolute;
