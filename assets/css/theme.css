@@ -1901,7 +1901,6 @@ height: 235px !important;
     
 .owl-buttons {
     width: 100% !important;
-    margin-top: 270px !important;
 }
     
 .owl-prev {
@@ -1916,12 +1915,7 @@ height: 235px !important;
 .slider-gallery {
         margin-top: -25px !important;
     }
-    
-.service .owl-buttons {
- 
-    margin-top: 236px !important;
-}
-     
+  
     .partner {
 
     height: 565px !important;
@@ -1959,7 +1953,6 @@ height: 235px !important;
     
 .owl-buttons {
     width: 100% !important;
-    margin-top: 270px !important;
 }
     
 .owl-prev {
@@ -1975,33 +1968,42 @@ height: 235px !important;
         margin-top: -25px !important;
     }
     
-.service .owl-buttons {
- 
-    margin-top: 236px !important;
-}
-     
-    .partner {
+  
+.partner {
 
     height: 565px !important;
 } 
      
-         .service .decor-1 {
+.service .decor-1 {
             margin: 0px auto 30px auto;
     }
      
      
-    .service .owl-theme_mod-a .owl-controls {
+.service .owl-theme_mod-a .owl-controls {
         top: 40px;
     }
      
-     li.list-progress__item img {
+li.list-progress__item img {
     left: 40% !important;
 }
      
-     .owl-theme_mod-a .owl-controls {
+.owl-theme_mod-a .owl-controls {
          
          z-index: 99999999999 !important
      }
+     
+.service .owl-theme_mod-a .owl-controls {
+        top: 282px !important;
+    }
+     
+.partner .owl-controls {
+        top: 220px !important;
+    }
+     
+.owl-buttons {
+
+    margin-top: 0px !important;
+}
      
 }
 
