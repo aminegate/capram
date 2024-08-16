@@ -1993,6 +1993,11 @@ height: 235px !important;
     left: 40% !important;
 }
      
+     .owl-theme_mod-a .owl-controls {
+         
+         z-index: 99999999999 !important
+     }
+     
 }
 
 
