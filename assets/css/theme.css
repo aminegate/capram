@@ -1331,6 +1331,97 @@ div#sliderpro1,
 
 }
     
+    .border-section-bottom {
+    display: none;
+}
+    .slider-services {
+  
+    margin-bottom: 0px !important;
+            height: 320px !important;
+}
+    
+    .section-bg .bg-inner {
+    padding-bottom: 0px !important;
+}
+    
+    .section_mod-b {
+    height: 555px !important;
+}
+    
+.borderiMG {
+        height: 125px !important;
+        width: 200px !important;
+        top: 51px !important;
+        left: 74px !important;
+        border: 6px solid orange !important;
+        border-radius: 22px !important;
+    }
+    
+    .blog-img img {
+    width: 55% !important;
+    height: 230px !important;
+}
+    
+    .blog-grid .blog-info {
+    width: 52.5% !important;
+        text-align: initial !important;
+        margin: -30px auto 10px auto;
+}
+    
+    
+    .blog-grid .blog-img .date {
+    left: 158px !important;
+
+}
+    
+    .blog-grid {
+
+    text-align: center;
+}
+    
+.list-progress__item:nth-child(1), .list-progress__item:nth-child(2), .list-progress__item:nth-child(3) {
+        height: 166px !important;
+        margin-bottom: 10px !important;
+    }
+    li.list-progress__item {
+    width: 340px !important;
+}
+    
+    .twomaps {
+    width: 100% !important;
+
+}
+    .sectionMap1 {
+    float: none;
+    width: 100% !important;
+
+}
+.sectionMap1 .mapBorder {
+    float: none !important; 
+    margin: 0px auto !important;
+}
+    
+.sectionMap2 .mapBorder {
+    float: none !important;
+    margin: 0px auto !important;
+}
+    
+        
+.sectionMap2 {
+    float: none !important;
+    width: 100% !important; 
+  
+}
+    .clientIMG {
+    width: 65% !important;
+
+}
+    
+    certificate img {
+    width: 25% !important;
+
+}
+    
 }
 
 
@@ -1439,14 +1530,130 @@ img.sp-image {
 
 }
     
-    .header .social-links {
+.header .social-links {
     margin-right: 17px !important;
 }
-
-
+    
+.border-section-bottom {
+    display: none !important;
 }
 
+.section_mod-b {
+    height: 565px !important;
+}
+    
+.slider-services {
+    height: 330px !important;
+    margin-bottom: 0px !important;
+}
+    
+.link {
 
+    padding: 5px 17px !important;
+}
+    
+    h2.ui-title-block {
+    text-align: center;
+}
+    
+.borderiMG {
+    border: 6px solid orange !important;
+    height: 93px !important;
+    width: 153px !important;
+    top: 40px !important;
+    left: 53px !important;
+}
+    
+.section-bg .bg-inner {
+
+    padding-bottom: 0px !important;
+}
+    
+.partner {
+    height: 480px !important;
+}
+    
+.blog-img img {
+        width: 80% !important;
+        height: 260px !important;
+}
+
+    
+.blog-grid .blog-info {
+        width: 76.5% !important;
+        text-align: initial !important;
+        margin: -30px auto 10px auto;
+ }
+    
+    
+.blog-grid .blog-img .date {
+    left: 54px !important;
+
+}
+    .blog-grid .blog-info p {
+    font-size: 15px;
+}
+    
+.blog-grid {
+    text-align: center;
+}
+    
+.list-progress__item:nth-child(1), .list-progress__item:nth-child(2), .list-progress__item:nth-child(3) {
+        height: 178px !important;
+        margin-bottom: 10px !important;
+}
+    
+li.list-progress__item {
+    width: 340px !important;
+}
+    
+.list-progress__name {
+    font-size: 15px !important;
+    margin-top: 10px;
+}
+    
+        .twomaps {
+    width: 100% !important;
+
+}
+    .sectionMap1 {
+    float: none;
+    width: 100% !important;
+
+}
+.sectionMap1 .mapBorder {
+    float: none !important; 
+    margin: 0px auto !important;
+}
+    
+.sectionMap2 .mapBorder {
+    float: none !important;
+    margin: 0px auto !important;
+}
+    
+        
+.sectionMap2 {
+    float: none !important;
+    width: 100% !important; 
+  
+}
+    .certificate img {
+    width: 25% !important;
+   
+}
+    li.list-progress__item {
+
+    height: 177px !important;
+
+}
+    
+    li.list-progress__item img {
+    left: 43% !important;
+}
+  
+}
+
+/**************************************************************************/
 @media (max-width:480px) {
 
 
@@ -1558,6 +1765,8 @@ img.sp-image {
       .sp-arrow {
         display: block !important; /* Make sure it's not set to none */
     }
+    
+    
 
 
 }
