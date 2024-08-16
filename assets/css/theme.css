@@ -1905,12 +1905,12 @@ height: 235px !important;
 }
     
 .owl-prev {
-    margin-left: 130px !important;
+    margin-left: 110px !important;
 }
     
 .owl-next {
 
-    margin-right: 130px !important;
+    margin-right: 100px !important;
 }
     
 .slider-gallery {
@@ -1926,18 +1926,15 @@ height: 235px !important;
 
     height: 565px !important;
 } 
-     
-         .service .decor-1 {
-        margin: -13px 197px 0px !important;
-    }
-     
+    
+
      
     .service .owl-theme_mod-a .owl-controls {
         top: 40px;
     }
      
      li.list-progress__item img {
-    left: 44% !important;
+    left: 40% !important;
 }
     
 
