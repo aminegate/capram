@@ -913,7 +913,7 @@ span.mapTitle {
 }
 
 .service .decor-1 {
-    margin: 0px 127px;
+    margin: 0px auto 30px auto;
 }
 
 .owl-item:nth-child(2) .list-services .icon {
@@ -1038,7 +1038,7 @@ div#sliderpro1,
 }
     
     .service .decor-1 {
-    margin: 0px 103px !important;
+    margin: 0px auto 30px auto !important;
 }
     
     .list-services.fixPad {
@@ -1173,7 +1173,7 @@ div#sliderpro1,
 }
     
     .service .decor-1 {
-    margin: 0px 106px;
+    margin: 0px auto 30px auto;
 }
     .list-services .icon {
     padding: 0px 85px;
@@ -1881,7 +1881,7 @@ img.sp-image {
 }
     
 .service .decor-1 {
-        margin: -13px 142px 0px !important;
+        margin: 0px auto 30px auto !important;
     }
     
 .list-services {
@@ -1958,12 +1958,12 @@ height: 235px !important;
 }
     
 .owl-prev {
-    margin-left: 160px !important;
+    margin-left: 100px !important;
 }
     
 .owl-next {
 
-    margin-right: 160px !important;
+    margin-right: 100px !important;
 }
     
 .slider-gallery {
@@ -1981,7 +1981,7 @@ height: 235px !important;
 } 
      
          .service .decor-1 {
-        margin: -13px 197px 0px !important;
+            margin: 0px auto 30px auto;
     }
      
      
@@ -1990,7 +1990,7 @@ height: 235px !important;
     }
      
      li.list-progress__item img {
-    left: 44% !important;
+    left: 40% !important;
 }
      
 }
