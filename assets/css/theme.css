@@ -1757,40 +1757,36 @@ img.sp-image {
     margin-right: 5px !important;
 
 }
-    
-    .header .social-links {
+
+.header .social-links {
     margin-right: 17px !important;
 }
     
-      .sp-arrow {
+.sp-arrow {
         display: block !important; /* Make sure it's not set to none */
     }
     
-    
 
-    
-    
-    #aboutUs:before {
+#aboutUs:before {
     bottom: 191px !important; 
 }
     
-    .section_mod-b {
+.section_mod-b {
     height: 610px;
 }
     
-#aboutUs {
-        padding-bottom: 70px !important;
-        padding-top: 55px !important;
-}
+    #aboutUs {
+        padding-bottom: 84px !important;
+        padding-top: 84px !important;
+    }
     
-    .borderiMG {
-    border: 6px solid orange !important;
-    height: 109px !important;
-    width: 181px !important;
-    top: 46px !important;
-    left: 62px !important;
-
-}
+.borderiMG {
+        border: 6px solid orange !important;
+        height: 119px !important;
+        width: 191px !important;
+        top: 46px !important;
+        left: 66px !important;
+    }
     
 .partner {
 
@@ -1854,6 +1850,17 @@ img.sp-image {
 .ui-title-block {
 
     text-align: center !important;
+}
+    
+    .sectionMap1 {
+
+    margin-left: 10px !important;
+}
+    
+    .mapBorder {
+
+    width: 95% !important;
+
 }
 
 }
