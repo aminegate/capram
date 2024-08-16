@@ -197,7 +197,7 @@ li.list-progress__item img {
 .partner {
     position: relative;
 }
-
+/**
 .borderiMG {
     border: 4px solid orange;
     height: 100px;
@@ -207,8 +207,10 @@ li.list-progress__item img {
     left: 56px;
     border-radius: 15px;
     z-index: 1;
-    pointer-events: none; /* This makes sure it doesn't interfere with hover */
-}
+    pointer-events: none; /* This makes sure it doesn't interfere with hover 
+}*/
+
+
 
 .section_mod-f:after {
     background-position: center bottom -89px;
@@ -235,7 +237,7 @@ li.list-progress__item img {
 
 .owl-buttons {
     width: 100%;
-        margin-top: 172px;
+        margin-top: 155px;
 }
 
 .owl-theme_mod-a .owl-controls {
@@ -246,11 +248,11 @@ li.list-progress__item img {
 }
 .owl-next {
     float: right;
-    margin-right: -100px !important;
+    margin-right: -40px !important;
 }
 
 .owl-prev {
-    margin-left: -100px !important;
+    margin-left: -40px ;
 }
 .owl-carousel .owl-prev {
    
@@ -1060,13 +1062,13 @@ background: url(../media/bg/10.png) no-repeat 100% 55% / 50% !important;
     z-index: -1;
 }
     
-    .borderiMG {
+   /* .borderiMG {
     height: 85px !important;
     width: 137px !important;
     top: 32px !important;
-    left: 44px !important;
+    left: 44px !important;*/
 
-}
+
     
     li.list-progress__item {
 
@@ -1087,6 +1089,10 @@ background: url(../media/bg/10.png) no-repeat 100% 55% / 50% !important;
     font-size: 12px !important;
     line-height: 30px !important;
     font-weight: 500 !important;
+}
+
+li.list-progress__item img {
+    left: 42% !important;
 }
     
 }
@@ -1179,19 +1185,19 @@ div#sliderpro1,
     padding: 0px 76px 0px 68px !important;
 }
     
-/*******************************************/
+    
     
 .service .border-section-bottom {
     right: 120px !important;
     bottom: 60px !important;
 }
-    .borderiMG {
+/*    .borderiMG {
     height: 86px !important;
     width: 140px !important;
     top: 33px !important;
-    left: 45px !important;
+    left: 45px !important;*/
 
-}
+
 .list-progress__item:nth-child(1), .list-progress__item:nth-child(2), .list-progress__item:nth-child(3) {
         height: 166px !important;
         margin-bottom: 10px !important;
@@ -1215,12 +1221,11 @@ div#sliderpro1,
   
 }
     
-
 .blog-grid .blog-info {
 
     width: 67.5%;
-            text-align: initial !important;
-        margin: -30px auto 10px auto;
+    text-align: initial !important;
+    margin: -30px auto 10px auto;
 }
     
     .blog-grid .blog-img .date {
@@ -1239,7 +1244,6 @@ div#sliderpro1,
 
 }
 
-    
 }
 
 /************************************** Small ********************************************************/
@@ -1350,14 +1354,14 @@ div#sliderpro1,
     height: 555px !important;
 }
     
-.borderiMG {
+/*.borderiMG {
         height: 125px !important;
         width: 200px !important;
         top: 51px !important;
         left: 74px !important;
         border: 6px solid orange !important;
         border-radius: 22px !important;
-    }
+    }*/
     
     .blog-img img {
     width: 55% !important;
@@ -1423,6 +1427,16 @@ div#sliderpro1,
     width: 25% !important;
 
 }
+    
+    
+.owl-prev {
+    margin-left: 0px !important;
+    margin-top: -75px !important;
+}
+    .owl-next {
+        margin-right: 0px !important;
+        margin-top: -48px !important;
+    }
     
 }
 
@@ -1557,14 +1571,14 @@ img.sp-image {
     h2.ui-title-block {
     text-align: center;
 }
-    
+  /*  
 .borderiMG {
     border: 6px solid orange !important;
     height: 93px !important;
     width: 153px !important;
     top: 40px !important;
     left: 53px !important;
-}
+}*/
     
 .section-bg .bg-inner {
 
@@ -1781,14 +1795,14 @@ img.sp-image {
         padding-bottom: 84px !important;
         padding-top: 84px !important;
     }
-    
+   /* 
 .borderiMG {
         border: 6px solid orange !important;
         height: 119px !important;
         width: 191px !important;
         top: 46px !important;
         left: 66px !important;
-    }
+    }*/
     
 .partner {
 
