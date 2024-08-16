@@ -1767,7 +1767,86 @@ img.sp-image {
     }
     
     
+#aboutUs {
+    padding-bottom: 0px !important;
+}
+    
+    
+    #aboutUs:before {
+    bottom: 191px !important; 
+}
+    
+    .section_mod-b {
+    height: 610px;
+}
+    
+    #aboutUs {
+    padding-bottom: 89px !important;
+        padding-top: 0px !important
+}
+    
+    .borderiMG {
+    border: 6px solid orange !important;
+    height: 109px !important;
+    width: 181px !important;
+    top: 46px !important;
+    left: 62px !important;
 
+}
+    
+.partner {
+
+    height: 535px !important;
+}
+    
+    .blog-grid .blog-info h5 a {
+
+    font-size: 17px !important;
+}
+    
+        .list-progress__item:nth-child(1), .list-progress__item:nth-child(2), .list-progress__item:nth-child(3) {
+        height: 161px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    li.list-progress__item {
+
+    height: 167px !important;
+
+    width: 87% !important;
+
+
+}
+    
+            .twomaps {
+    width: 100% !important;
+
+}
+    .sectionMap1 {
+    float: none;
+    width: 100% !important;
+
+}
+.sectionMap1 .mapBorder {
+    float: none !important; 
+    margin: 0px auto !important;
+}
+    
+.sectionMap2 .mapBorder {
+    float: none !important;
+    margin: 0px auto !important;
+}
+    
+        
+.sectionMap2 {
+    float: none !important;
+    width: 100% !important; 
+  
+}
+    .certificate img {
+    width: 25% !important;
+   
+}
 
 }
 
