@@ -1252,8 +1252,9 @@ div#sliderpro1,
     padding: 0px 76px 0px 68px !important;
 }
     
-.owl-theme_mod-a .owl-controls {
-           top: 115px;
+.service .owl-theme_mod-a .owl-controls {
+           top: 110px !important;
+    z-index: 999 !important;
 }
     
 #cartes .owl-theme_mod-a .owl-controls {
@@ -1355,6 +1356,16 @@ div#sliderpro1,
     .list-services__title strong {
     font-size: 14px !important;
    
+}
+    
+    .slider-gallery {
+    margin-bottom: 0px !important;
+}
+    
+        
+#cartes .section-bg {
+
+    height: 550px;
 }
 
 }
