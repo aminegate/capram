@@ -1,0 +1,167 @@
+.capramCartes {
+    padding: 80px 0px;
+}
+
+.capramCartes h1 {
+    
+    color: #222;
+    text-align: center;
+    margin-bottom: 65px;
+    font-size: 50px;
+}
+
+
+.cartWrapper {
+    margin-bottom: 60px;
+}
+
+
+img.capramCartesImg {
+    width: 100%;
+}
+
+
+img.capramCartesImg {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+img.capramCartesImg {
+  --c: #F7943D; /* the border color */
+  --b: 4px;    /* the border thickness */
+  --g: 5px;    /* the gap on hover */
+
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%, var(--c) 0;
+  background: 
+    conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g))
+    var(--_i, 200%) 0 / 200% var(--_i, var(--b)) no-repeat,
+    conic-gradient(at bottom var(--b) left var(--b), var(--_g))
+    0 var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
+  transition: .3s, background-position .3s .3s, background-color .3s, transform .3s;
+  cursor: pointer;
+}
+
+img.capramCartesImg:hover {
+  --_i: 100%;
+  background-color: white; /* White background on hover */
+  transform: scale(1.01); /* Slight zoom effect */
+  transition: .3s, background-size .3s .3s, background-color .3s, transform .3s;
+}
+
+.blueHover:hover {
+    
+    background-color: #42769b !important; /* White background on hover */
+}
+
+
+.capramCartes h1 .decor-1 {
+    margin-top: 20px;
+}
+
+#cartCatego1:target {
+position: relative;
+border-top: 105px solid transparent;
+margin:-105px 0 0;
+background-clip: padding-box;
+}
+
+#cartCatego2:target {
+position: relative;
+border-top: 105px solid transparent;
+margin:-105px 0 0;
+background-clip: padding-box;
+}
+
+#cartCatego3:target {
+position: relative;
+border-top: 105px solid transparent;
+margin:-105px 0 0;
+background-clip: padding-box;
+}
+
+
+.redHover:hover {
+    
+    background-color: #e01e26 !important; /* White background on hover */
+}
+
+.orangeHover:hover {
+    
+    background-color: #f6931e !important; /* White background on hover */
+}
+
+.orangeHoverTwo:hover {
+    
+    background-color: #eb662e !important; /* White background on hover */
+}
+
+.darkBlueHover:hover {
+    
+    background-color: #271d51 !important; /* White background on hover */
+}
+
+.redHoverTwo:hover {
+    
+    background-color: #e32028 !important; /* White background on hover */
+}
+
+.blackHover:hover {
+    
+    background-color: #21201e !important; /* White background on hover */
+}
+
+.blueHoverTwo:hover {
+    
+    background-color: #0074bd !important; /* White background on hover */
+}
+
+.blueHoverThree:hover {
+    
+    background-color: #007aa1 !important; /* White background on hover */
+}
+
+.purpleHover:hover {
+    
+    background-color: #345dac !important; /* White background on hover */
+}
+
+.redHoverThree:hover {
+    
+    background-color: #d22d29 !important; /* White background on hover */
+}
+
+.darkPurpleHover:hover {
+    
+    background-color: #2b3384 !important; /* White background on hover */
+}
+
+.blueHoverFour:hover {
+    
+    background-color: #067bc0 !important; /* White background on hover */
+}
+
+
+
+.blueHover, 
+.redHover, 
+.orangeHover, 
+.orangeHoverTwo, 
+.darkBlueHover, 
+.redHoverTwo, 
+.blackHover, 
+.blueHoverTwo, 
+.blueHoverThree,
+.purpleHover,
+.redHoverThree,
+.darkPurpleHover,
+.blueHoverFour
+
+{
+  --c: white !important; /* the border color */
+}
+
+
