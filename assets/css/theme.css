@@ -1005,6 +1005,14 @@ h3.list-services__title strong {
 ********************************************************************/
 
 /************************************** Large ********************************************************/
+@media (min-width: 1200px) and (max-width: 1367px) { 
+    .twomaps {
+    width: 100% !important;
+
+}
+}
+
+/************************************** Large ********************************************************/
 @media (min-width: 992px) and (max-width: 1200px) { 
 
 .btn.menu-btn > .wrap__btn-skew-r {
@@ -1112,7 +1120,7 @@ background: url(../media/bg/10.png) no-repeat 100% 55% / 50% !important;
     
     li.list-progress__item {
 
-    width: 218px !important;
+    width: 217px !important;
 
 }
     .twomaps {
@@ -1282,6 +1290,10 @@ div#sliderpro1,
     width: 70% !important;
     height: 300px !important;
 
+}
+    
+        li.list-progress__item img {
+    left: 43% !important;
 }
 
 }
@@ -1491,6 +1503,10 @@ div#sliderpro1,
         margin-right: 0px !important;
         margin-top: -48px !important;
     }
+    
+        li.list-progress__item img {
+    left: 43% !important;
+}
     
 }
 
