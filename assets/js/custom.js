@@ -23,9 +23,8 @@
 $(document).ready(function() {
 
     "use strict";
-    
-    
-    
+
+   
     var triggerPoint = 300; // Set the pixel value at which the image should appear
 
         $(window).on('scroll', function() {
@@ -38,7 +37,7 @@ $(document).ready(function() {
         });
     
     
-  /**  
+
    var isVisible = false;
 
   function toggleFixedImage() {
@@ -55,13 +54,13 @@ $(document).ready(function() {
     isVisible = !isVisible; // Toggle visibility state
   }
 
-  $('#btnOpen').click(function() {
+  $('#btnOpener').click(function() {
     toggleFixedImage(); // Call the function to toggle visibility and arrows
   });
     
   
     
- $('#btnOpen').click(function() {
+ $('#btnOpener').click(function() {
         var $fixedImage = $('.fixed-image');
         var $arrowContainer = $('.arrow-container');
      
@@ -74,7 +73,7 @@ $(document).ready(function() {
             $fixedImage.addClass('hide-left').addClass('animate__slideInRight').removeClass('show-right');
             $arrowContainer.addClass('arrow-reverse');
         }
-    }); **/
+    }); 
     
     function updateCopyrightYear() {
                 var currentYear = new Date().getFullYear();
@@ -88,36 +87,54 @@ $(document).ready(function() {
     // end copyriight
     
     
-// Initialize the maps
-var map1 = L.map('map1', {
-    scrollWheelZoom: false // Disable scroll wheel zoom by default
-});
-var map2 = L.map('map2', {
-    scrollWheelZoom: false // Disable scroll wheel zoom by default
-});
+function initializeMaps() {
+    // Check if the map elements exist on the page
+    if (document.getElementById('map1') && document.getElementById('map2')) {
+        
+        // Initialize the maps
+        var map1 = L.map('map1', { scrollWheelZoom: false });
+        var map2 = L.map('map2', { scrollWheelZoom: false });
 
-// Define the company's locations
-    
-var companyLocation1 = [33.58923365298105, -7.6077161783448535]; // Location 1
-var companyLocation2 = [33.58609299340052, -7.602708825402712 ]; // Location 2
+        // Define the company's locations
+        var companyLocation1 = [33.58923365298105, -7.6077161783448535];
+        var companyLocation2 = [33.58609299340052, -7.602708825402712];
 
-// Add OpenStreetMap tiles to both maps
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-}).addTo(map1);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-}).addTo(map2);
+        // Add OpenStreetMap tiles to both maps
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map1);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map2);
+
+        // Set the default view for each map
+        map1.setView(companyLocation1, 17);
+        map2.setView(companyLocation2, 17);
+
+        // Enable scroll wheel zoom on map when the user clicks or focuses on it
+        map1.on('click', function() { map1.scrollWheelZoom.enable(); });
+        map2.on('click', function() { map2.scrollWheelZoom.enable(); });
+
+        // Optionally, disable scroll wheel zoom when the user moves the mouse away from the map
+        map1.on('mouseout', function() { map1.scrollWheelZoom.disable(); });
+        map2.on('mouseout', function() { map2.scrollWheelZoom.disable(); });
+
+        // Bind the button clicks to locate the company's locations
+        $('#locateLocation1').click(function() {
+            locateCompany(map1, companyLocation1, 'CAPRAM');
+        });
+
+        $('#locateLocation2').click(function() {
+            locateCompany(map2, companyLocation2, 'COMPTOIR CAPRAM');
+        });
+    }
+}
 
 // Function to locate a company location with zoom-in animation
 function locateCompany(map, location, name) {
-    console.log("Animating map to:", location); // Debugging
+    console.log("Animating map to:", location);
 
     // Use flyTo for smooth animation and zoom-in
     map.flyTo(location, 18, {
-        animate: true, // Enable animation
-        duration: 1.5, // Duration of animation in seconds
-        easeLinearity: 0.5 // Easing function for smooth transition
+        animate: true,
+        duration: 1.5,
+        easeLinearity: 0.5
     });
 
     // Add or update marker for the company location with larger popup text
@@ -126,40 +143,10 @@ function locateCompany(map, location, name) {
         .openPopup();
 }
 
-// Initialize the maps with a default view
-map1.setView(companyLocation1, 17);
-map2.setView(companyLocation2, 17);
-
-// Enable scroll wheel zoom on map when the user clicks or focuses on it
-map1.on('click', function() {
-    map1.scrollWheelZoom.enable();
+// Call the initializeMaps function on document ready
+$(document).ready(function() {
+    initializeMaps();
 });
-
-map2.on('click', function() {
-    map2.scrollWheelZoom.enable();
-});
-
-// Optionally, disable scroll wheel zoom when the user moves the mouse away from the map
-map1.on('mouseout', function() {
-    map1.scrollWheelZoom.disable();
-});
-
-map2.on('mouseout', function() {
-    map2.scrollWheelZoom.disable();
-});
-
-// Bind the button clicks using jQuery
-$('#locateLocation1').click(function() {
-    locateCompany(map1, companyLocation1, 'CAPRAM');
-});
-
-$('#locateLocation2').click(function() {
-    locateCompany(map2, companyLocation2, 'COMPTOIR CAPRAM');
-});
-
-
-    
-    
 
     
     /*** map end**/
@@ -201,14 +188,7 @@ $(window).trigger('scroll');
 // Trigger the function on page load to ensure the correct styles are applied
 $(window).trigger('scroll');
 
- /////////////////////////////////////
-    //  LOADER
-    /////////////////////////////////////
 
-    var $preloader = $('#page-preloader'),
-    $spinner = $preloader.find('.spinner-loader');
-    $spinner.fadeOut();
-    $preloader.delay(50).fadeOut('slow');
 
 
 
@@ -246,6 +226,13 @@ $(function() {
     }
   });
 });
+
+
+
+
+  
+  
+
 
 
 
@@ -435,7 +422,7 @@ $(function() {
                     lineCap: false,
                     lineWidth: false,
                     size: false,
-                    animate: 7000,
+                    animate: 1500,
 
                     onStep: function(from, to, percent) {
                             $(this.el).find('.percent').text(Math.round(percent));
