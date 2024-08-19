@@ -1351,6 +1351,11 @@ div#sliderpro1,
     margin-left: -100px !important;
     margin-top: 0px !important;
 }
+    
+    .list-services__title strong {
+    font-size: 14px !important;
+   
+}
 
 }
 
