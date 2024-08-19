@@ -26,6 +26,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.sp-slide:nth-child(1) img {
+     width: 100% !important;
+    height: 100% !important;
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+}
+
 a.main-slider__btn:hover {
     background: none;
     transition:  0.3s ease !important; /* Smooth background transition */
@@ -1556,16 +1563,37 @@ div#sliderpro1,
 .sp-slide:nth-child(3) img {
      width: auto;
     height: 100%;
-    margin-left: -100px;
+    margin-left: 0px;
     margin-top: 0px;
 }
             .sp-slide:nth-child(3) img {
      width: auto !important;
     height: 100% !important;
-    margin-left: -100px !important;
+    margin-left: 0px !important;
     margin-top: 0px !important;
 }
+    
+        .owl-theme_mod-a .owl-controls {
+        top: -60px !important;
+    }
+    
+        .service .owl-theme_mod-a .owl-controls {
+        top: 150px !important;
+    }
+    
+  .service .owl-carousel .owl-prev {
+    left: 195px;
+}
+    
+   .service .owl-carousel .owl-next {
+    right: 195px;
+       top:3px;
+}
 
+    
+    .service  .section_mod-b {
+        height: 635px !important;
+    }
     
 }
 
@@ -1699,7 +1727,7 @@ img.sp-image {
 }
 
 .section_mod-b {
-    height: 565px !important;
+    height: 650px !important;
 }
     
 .slider-services {
@@ -1730,7 +1758,7 @@ img.sp-image {
 }
     
 .partner {
-    height: 480px !important;
+    height: 650px !important;
 }
     
 .blog-img img {
@@ -1809,6 +1837,28 @@ li.list-progress__item {
     
     li.list-progress__item img {
     left: 43% !important;
+}
+    
+    .service    .owl-prev {
+    margin-left: 175px 
+}
+    
+  .service  .owl-next {
+    float: right;
+    margin-right: 175px !important;
+}
+    
+   .service   .owl-buttons {
+    margin-top: 300px !important;
+}
+    
+    .partner .owl-prev {
+    margin-left: 175px;
+}
+    
+      .partner  .owl-next {
+    float: right;
+    margin-right: 175px !important;
 }
   
 }
@@ -2102,7 +2152,21 @@ height: 235px !important;
     height: 300px !important;
 }
     
-
+    .certificate img {
+        width: 30% !important;
+    }
+    
+       .service   .owl-buttons {
+    margin-top: 250px !important;
+}
+    
+           #cartes   .owl-buttons {
+    margin-top: 200px !important;
+}
+    
+    #cartes .owl-wrapper-outer {
+    margin-top: 60px;
+}
 
 }
 
