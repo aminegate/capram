@@ -2167,6 +2167,20 @@ height: 235px !important;
     #cartes .owl-wrapper-outer {
     margin-top: 60px;
 }
+    
+      #cartes  .owl-theme_mod-a .owl-controls {
+        top: 200px !important;
+          
+    }
+    
+    #cartes .owl-buttons {
+    width: 100%;
+    margin-top: 0px !important;
+}
+    
+    img.logo__img.img-responsive {
+    margin-top: -18px !important;
+}
 
 }
 
