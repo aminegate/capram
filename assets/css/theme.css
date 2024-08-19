@@ -1233,6 +1233,31 @@ div#sliderpro1,
     padding: 0px 76px 0px 68px !important;
 }
     
+.owl-theme_mod-a .owl-controls {
+           top: 115px;
+}
+    
+#cartes .owl-theme_mod-a .owl-controls {
+        top: 30px;
+    }
+    
+    .owl-prev {
+    margin-left: 300px 
+}
+    
+    .owl-next {
+    float: right;
+    margin-right: 300px !important;
+}
+    
+    .section_mod-b {
+    height: 650px !important;
+}
+    
+    .border-section-bottom:before, .border-section-bottom:after {
+    display: none;
+}
+    
     
     
 .service .border-section-bottom {
@@ -1294,6 +1319,11 @@ div#sliderpro1,
     
         li.list-progress__item img {
     left: 43% !important;
+}
+    
+    .certificate img {
+    width: 15%;
+
 }
 
 }
