@@ -8,6 +8,7 @@
     text-align: center;
     margin-bottom: 65px;
     font-size: 50px;
+    text-transform: uppercase;
 }
 
 
@@ -148,6 +149,10 @@ background-clip: padding-box;
     background-color: #111111 !important; /* White background on hover */
 }
 
+.darkBlueHoverTwo:hover {
+    
+    background-color: #060678 !important; /* White background on hover */
+}
 
 
 
@@ -165,10 +170,20 @@ background-clip: padding-box;
 .redHoverThree,
 .darkPurpleHover,
 .blueHoverFour,
-.blackHoverTwo
+.blackHoverTwo,
+.darkBlueHoverTwo
 
 {
   --c: white !important; /* the border color */
 }
 
+
+
+
+
+
+
+
+
+  
 
