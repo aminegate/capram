@@ -54,7 +54,12 @@ en: {
 	"copyright": "All rights reserved",
     "work_hours_1": "Monday – Friday",
     "work_hours_2": "Saturday",
-	"certif":"certificate"
+	"certif":"certificate",
+    "head_card_page":"Capram - Trusted Partners",
+    "card_title_1":"Capram Partners",
+    "card_title_2":"Capcarrosserie Partners",
+    "card_title_3":"Capservice Partners",
+    "card_title_4":"Capjap Partners"
 
 },
     
@@ -109,7 +114,12 @@ en: {
   "footer_subtitle_1": "LOCALISATION",
   "footer_subtitle_2": "Contactez-nous",
   "footer_subtitle_3": "Horaires",
-  "copyright": "Tous droits réservés"
+  "copyright": "Tous droits réservés",
+  "head_card_page":"Capram - La Qualité Qui Vous Mène Loin",
+  "card_title_1":"Cartes Capram",
+  "card_title_2":"Cartes Capcarrosserie",
+  "card_title_3":"Cartes Capservice",
+  "card_title_4":"Cartes Capjap"
 },
 
     
