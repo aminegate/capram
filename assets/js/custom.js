@@ -20,11 +20,112 @@
 
 
 
+
+
 $(document).ready(function() {
+    
 
-    "use strict";
 
-   
+    
+    
+
+   // Initialize language setting on page load
+var language = localStorage.getItem("lang") || "fr"; // Default to French if no language is available
+setLanguage(language);
+updateDropdownButton(language);
+
+// Handle language change event
+$(".dropdown-item").on("click", function(event) {
+    event.preventDefault();
+    var selectedLanguage = $(this).data("value");
+
+    // Show the loading line
+    $('body').append('<div id="loading-line"></div>');
+
+    // Incrementally animate the loading line
+    $('#loading-line').animate({ width: '20%' }, 200, function() {
+        $('#loading-line').animate({ width: '47%' }, 200, function() {
+            $('#loading-line').animate({ width: '67%' }, 200, function() {
+                $('#loading-line').animate({ width: '85%' }, 200, function() {
+                    $('#loading-line').animate({ width: '100%' }, 200, function() {
+                        // Change language logic
+                        setLanguage(selectedLanguage);
+                        localStorage.setItem("lang", selectedLanguage);
+                        updateDropdownButton(selectedLanguage);
+                        
+                        // Remove the loading line
+                        $('#loading-line').remove();
+                    });
+                });
+            });
+        });
+    });
+});
+
+function setLanguage(language) {
+    // Check if the language is available in translations
+    if (translations[language]) {
+        // Update text content for elements with data-i18n attribute
+        $("[data-i18n]").each(function() {
+            var $element = $(this);
+            var key = $element.data("i18n");
+            var text = translations[language][key] || $element.text(); // Default to current text if key not found
+            $element.text(text);
+        });
+
+        // Toggle language-specific stylesheets (optional, depending on your use case)
+        if (language === "en") {
+            $("#english-stylesheet").prop("disabled", false); // Enable English-specific styles
+            $("#arabic-stylesheet").prop("disabled", true);   // Disable Arabic-specific styles
+        } else if (language === "ar") {
+            $("#english-stylesheet").prop("disabled", true);  // Disable English-specific styles
+            $("#arabic-stylesheet").prop("disabled", false);  // Enable Arabic-specific styles
+        } else {
+            $("#english-stylesheet").prop("disabled", true);  // Disable English-specific styles
+            $("#arabic-stylesheet").prop("disabled", true);   // Disable Arabic-specific styles
+        }
+    } else {
+        console.error("Language not found:", language);
+    }
+}
+
+function updateDropdownButton(language) {
+    // Update the dropdown button with the selected language
+    var selectedText;
+    var selectedImage;
+
+    // Determine the dropdown button text and image based on the selected language
+    switch(language) {
+        case 'fr':
+            selectedText = "Français";
+            selectedImage = "../capram/assets/img/france.png";
+            break;
+        case 'en':
+            selectedText = "English";
+            selectedImage = "../capram/assets/img/united-states.png";
+            break;
+        default:
+            selectedText = "Français";
+            selectedImage = "../capram/assets/img/france.png";
+    }
+
+    $('#languageDropdown').html('<img src="' + selectedImage + '" style="width: 20px;"> ' + selectedText);
+
+    // Update dropdown items based on the selected language
+    if (language === 'fr') {
+        $('.dropdown-menu a[data-value="fr"]').hide();
+        $('.dropdown-menu a[data-value="en"]').show();
+    } else if (language === 'en') {
+        $('.dropdown-menu a[data-value="fr"]').show();
+        $('.dropdown-menu a[data-value="en"]').hide();
+    }
+}
+
+
+    
+    
+    
+    
     var triggerPoint = 300; // Set the pixel value at which the image should appear
 
         $(window).on('scroll', function() {
