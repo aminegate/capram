@@ -12,7 +12,6 @@
 
 -------------------------------------------------------------------*/
 
-
 .hoverStyle li:nth-child(1) a:hover{
   background: #3b5999;
 }
@@ -1131,6 +1130,16 @@ h3.list-services__title strong {
 /*******************************************************************
 *********************** CAPRAM Responsive **************************
 ********************************************************************/
+    
+
+
+/************************************** Large ********************************************************/
+@media (min-width: 992px)  { 
+    .toRight {
+    margin-left: 50px;
+}
+}
+
 
 /************************************** Large ********************************************************/
 @media (min-width: 1200px) and (max-width: 1367px) { 
@@ -1255,7 +1264,7 @@ div#sliderpro1,
 }
     
 .footer__text {
-    font-size: 12px !important;
+    font-size: 13px !important;
     line-height: 30px !important;
     font-weight: 500 !important;
 }
@@ -1285,6 +1294,12 @@ li.list-progress__item img {
     left: 25% !important;
 
 }
+    
+    h1.main-block__title span {
+    font-size: 10px;
+}
+
+
     
 }
 
