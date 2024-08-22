@@ -1,6 +1,6 @@
 .section_mod-d {
 
-    background: url(../media/bg/10.png) no-repeat 100% 100% !important;
+    background: url() no-repeat 100% 100% !important;
 }
 
 .list-services.fixPad {
@@ -22,6 +22,6 @@
 
 .card-badge::after{
 
-  content: 'Certificate';
+  content: 'Certificate' !important;
 
 }
