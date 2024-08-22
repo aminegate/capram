@@ -60,8 +60,13 @@ en: {
     "card_title_1":"Capram Partners",
     "card_title_2":"Capcarrosserie Partners",
     "card_title_3":"Capservice Partners",
-    "card_title_4":"Capjap Partners"
-
+    "card_title_4":"Capjap Partners",
+    "fullname_input": "Full Name",
+    "email_input": "Email",
+    "tel_input": "Phone Number",
+    "subject_input": "Subject",
+    "textarea_input": "Message Details..."
+  
 },
     
   fr:   {
@@ -121,10 +126,14 @@ en: {
   "card_title_1":"Cartes Capram",
   "card_title_2":"Cartes Capcarrosserie",
   "card_title_3":"Cartes Capservice",
-  "card_title_4":"Cartes Capjap"
+  "card_title_4":"Cartes Capjap",
+  "fullname_input":"Nom et prénom",
+  "email_input":"email",
+  "tel_input" :"tel_input",
+  "subject_input":"Objet",
+  "textarea_input": "Message Details ..."
 },
 
-    
     
      ar: {
 
