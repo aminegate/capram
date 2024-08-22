@@ -129,7 +129,7 @@ en: {
   "card_title_4":"Cartes Capjap",
   "fullname_input":"Nom et prénom",
   "email_input":"email",
-  "tel_input" :"tel_input",
+  "tel_input" :"Téléphone",
   "subject_input":"Objet",
   "textarea_input": "Message Details ..."
 },
