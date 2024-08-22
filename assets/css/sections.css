@@ -103,6 +103,9 @@
 
 .section_mod-f:after {
 	background-image: url('../media/bg/6.jpg');
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .section_mod-g:after {
