@@ -73,6 +73,15 @@ function setLanguage(language) {
             $element.text(text);
         });
 
+           // Update placeholders for elements with data-placeholder-i18n attribute
+        $("[data-i18n]").each(function() {
+            var $element = $(this);
+            var key = $element.data("i18n");
+            var placeholderText = translations[language][key] || $element.attr("placeholder"); // Default to current placeholder if key not found
+            $element.attr("placeholder", placeholderText);
+        });
+        
+        
         // Toggle language-specific stylesheets (optional, depending on your use case)
         if (language === "en") {
             $("#english-stylesheet").prop("disabled", false); // Enable English-specific styles
