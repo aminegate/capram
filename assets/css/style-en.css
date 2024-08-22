@@ -6,3 +6,22 @@
 .list-services.fixPad {
     padding-bottom: 23px !important;
 }
+
+.card-badge::after{
+  position: absolute;
+  content: 'Certificat';
+  top: 7px;
+  right: -14px;
+  padding: 0.5rem;
+  width: 10rem;
+  background: #F7943D;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-badge::after{
+
+  content: 'Certificate';
+
+}
