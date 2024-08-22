@@ -1134,10 +1134,12 @@ h3.list-services__title strong {
 
 
 /************************************** Large ********************************************************/
-@media (min-width: 992px)  { 
-    .toRight {
-    margin-left: 50px;
+@media (min-width: 1200px)  { 
+    
+        .toRight {
+    margin-left: 40px;
 }
+
 }
 
 
@@ -1151,6 +1153,10 @@ h3.list-services__title strong {
 
 /************************************** Large ********************************************************/
 @media (min-width: 992px) and (max-width: 1200px) { 
+    
+        .toRight {
+    margin-left: 40px;
+}
 
 .btn.menu-btn > .wrap__btn-skew-r {
     margin-top: 35px !important;
