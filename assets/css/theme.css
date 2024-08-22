@@ -500,6 +500,15 @@ a.link-img__link img {
     bottom: 0px !important;
 }
 
+.aboutUsImg img {
+    width: 86%;
+    float: right;
+}
+
+.mdStyle {
+    margin-top: 70px;
+}
+
 /*===========================================
 ================= salamatouna =============== 
 ===========================================*/
@@ -514,7 +523,7 @@ a.link-img__link img {
     width: 21vh;
     height: 15%;
     display: none;
-  /*  left: -125px;*/
+    z-index: 9999999;
 }
 
 .show-left {
@@ -524,8 +533,14 @@ a.link-img__link img {
 .fixed-image img {
     max-width: 100px; /* Adjust the size as needed */
     height: auto;
-    margin-top: 33px;
+    margin-top: 15px;
     margin-left: 12px;
+}
+
+.fixed-image img:nth-child(2) {
+
+    margin-top: 5px;
+  
 }
 
 .card-badge {
@@ -534,7 +549,8 @@ a.link-img__link img {
     background: white;
     position: relative;
     color: #434343;
-    height: 81px;
+    height: auto;
+    padding: 20px 0px 8px 0px;
 }
 
 .card-badge .card__container{
@@ -839,6 +855,7 @@ img.mapImage {
     margin: 0px auto;
     border-radius: 5px;
     background: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 }
 
 
@@ -903,6 +920,10 @@ span.mapTitle {
     margin-top: 35px;
 }
 
+input.form-control, textarea.form-control {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
 /*===========================================
 ==================== news =================== 
 ===========================================*/
@@ -926,11 +947,12 @@ span.mapTitle {
     border-left: 1px solid orange;
 }
 
-
-
 .gray-bg {
     background-color: #ebf4fa;
 }
+
+
+
 /* Blog 
 ---------------------*/
 .blog-grid {
@@ -1199,12 +1221,7 @@ div#sliderpro1,
     #aboutUs:before {
     bottom: 51px !important;
 }
-    
-    #aboutUs .section_mod-d{
 
-background: url(../media/bg/10.png) no-repeat 100% 55% / 50% !important;
-
-    }
     
 .service .border-section-bottom {
     right: 125px !important;
@@ -1245,6 +1262,28 @@ background: url(../media/bg/10.png) no-repeat 100% 55% / 50% !important;
 
 li.list-progress__item img {
     left: 42% !important;
+}
+    
+    .marginRemove {
+       margin-top: 0px !important
+    }
+    
+  .blog-img img {
+        width: 50% !important;
+        height: 300px !important;
+        margin: 0px auto;
+        display: block;
+    }
+
+ .blog-grid .blog-info {
+        width: 52.5% !important;
+        text-align: initial !important;
+        margin: -30px auto 10px auto !important;
+    }
+    
+.blog-grid .blog-img .date {
+    left: 25% !important;
+
 }
     
 }
@@ -1325,13 +1364,16 @@ div#sliderpro1,
     margin: 0px auto 30px auto;
 }
     .list-services .icon {
-    padding: 0px 85px;
-
-}
+        padding: 0px !important;
+    }
     
     .owl-item:nth-child(2) .list-services .icon {
 
-    padding: 0px 76px 0px 68px !important;
+    padding: 0px !important;
+}
+    
+    .list-services.fixPad {
+    padding-bottom: 22px !important;
 }
     
 .service .owl-theme_mod-a .owl-controls {
@@ -1448,6 +1490,11 @@ div#sliderpro1,
 #cartes .section-bg {
 
     height: 550px;
+}
+    
+    h3.list-services__title {
+    font-size: 11px;
+    font-weight: 600;
 }
 
 }
@@ -2983,6 +3030,7 @@ img.pull-left {
 .footer {
 	padding-bottom: 40px;
 	text-align: center;
+    margin-top: -30px;
 }
 .footer-title {
 	margin-top: 10px;

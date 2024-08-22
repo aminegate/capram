@@ -1,10 +1,6 @@
-.section_mod-d {
-
-    background: url(../media/bg/10.png) no-repeat 100% 100% !important;
-}
 
 .list-services.fixPad {
-    padding-bottom: 23px !important;
+    padding-bottom: 22px !important;
 }
 
 .card-badge::after{

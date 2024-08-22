@@ -86,10 +86,7 @@
 	background-image: url('../media/bg/3.jpg');
 }
 
-.section_mod-d {
-	padding-bottom: 70px;
-	background: url('../media/bg/10.png') no-repeat 100% 83%;
-}
+
 .section_mod-d .ui-subtitle-block_mod-b {
 	margin-bottom: 65px;
 }
@@ -111,6 +108,8 @@
 .section_mod-g:after {
 	background-image: url('../media/bg/7.jpg');
 }
+
+
 
 .section_mod-h {
 	padding-bottom: 100px;
@@ -155,7 +154,7 @@
 	padding-bottom: 50px;
 }
 .section_map:before {
-	bottom: -30px;
+	bottom: 0px;
 	background: url('../media/bg/7.jpg') no-repeat 100% 100%;
     z-index: -1;
 }
