@@ -459,6 +459,16 @@ a.link-img__link img {
 ================== A PROPOS  ================ 
 ===========================================*/
 
+.aboutUsImg {
+    padding-right: 0px !important;
+}
+
+.aboutUsImg img {
+    width: 90%;
+    float: right;
+    margin-top: -40px;
+}
+
 #aboutUs .ui-subtitle-block_mod-b {
     margin-bottom: 20px;
 }
