@@ -4175,18 +4175,12 @@ img.pull-left {
 .clientIMG{
 	width: 67%;
 	height: auto;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
+
      transition: filter 0.5s ease; /* Smooth transition for filter changes */
      position: relative; /* Ensure proper positioning */
 }
 
-.clientIMG:hover {
-    
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-   
-}
+
 
 .slider-gallery__item .icon {
 	display: block;
