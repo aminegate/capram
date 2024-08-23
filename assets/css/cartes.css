@@ -177,12 +177,86 @@ background-clip: padding-box;
 }
 
 
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    width: 78%;
+    margin: 0px auto 20px auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #545353;
+    width: 190px;
+    height: auto;
+    background: white;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 20px 0px 20px 0px;
+    position: relative;
+    border-radius: 5px;
+     border-bottom: 2px solid transparent; /* Default border */
+    transition: border-bottom 0.3s ease-in-out; /* Smooth transition for border */
+    
+}
+
+button.tablinks img {
+    width: 45%;
+    margin-bottom: 15px;
+}
+
+button.tablinks:nth-child(3) img {
+    width: 65%;
+    top: 5px;
+    position: relative;
+    margin-bottom: -3px;
+}
+
+button.tablinks:nth-child(3) {
+    padding-top: 0px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+
+}
 
 
+/* Create an active/current tablink class */
+.tab > .active {
+
+      border-bottom: 2px solid orange !important;
+}
 
 
+.tabcontent {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
+    display: block; /* Show content */
+    max-height: 0; /* Hide content initially by setting max-height to 0 */
+    overflow: hidden; /* Prevent overflow */
+}
 
+/* Show the active tab content */
+.tabcontent.active {
+    opacity: 1; /* Fully opaque */
+    transform: translateY(0); /* Slide into place */
+    max-height: 100vh; /* Show content by expanding max-height */
+}
 
-
+.cardTab {
+    
+    margin: 90px auto;
+    
+}
   
 
