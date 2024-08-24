@@ -61,26 +61,13 @@ img.capramCartesImg:hover {
     margin-top: 20px;
 }
 
-#cartCatego1:target {
+#cardTarget:target {
 position: relative;
-border-top: 105px solid transparent;
-margin:-105px 0 0;
+border-top: 70px solid transparent;
+margin:-70px 0 0;
 background-clip: padding-box;
 }
 
-#cartCatego2:target {
-position: relative;
-border-top: 105px solid transparent;
-margin:-105px 0 0;
-background-clip: padding-box;
-}
-
-#cartCatego3:target {
-position: relative;
-border-top: 105px solid transparent;
-margin:-105px 0 0;
-background-clip: padding-box;
-}
 
 
 .redHover:hover {
@@ -186,7 +173,7 @@ background-clip: padding-box;
 
 /* Style the buttons inside the tab */
 .tab button {
-  float: left;
+    float: left;
     border: none;
     outline: none;
     cursor: pointer;
@@ -203,25 +190,13 @@ background-clip: padding-box;
     padding: 20px 0px 20px 0px;
     position: relative;
     border-radius: 5px;
-     border-bottom: 2px solid transparent; /* Default border */
+    border-bottom: 2px solid transparent; /* Default border */
     transition: border-bottom 0.3s ease-in-out; /* Smooth transition for border */
-    
 }
 
 button.tablinks img {
-    width: 45%;
+    width: 70%;
     margin-bottom: 15px;
-}
-
-button.tablinks:nth-child(3) img {
-    width: 65%;
-    top: 5px;
-    position: relative;
-    margin-bottom: -3px;
-}
-
-button.tablinks:nth-child(3) {
-    padding-top: 0px;
 }
 
 /* Change background color of buttons on hover */
@@ -229,14 +204,36 @@ button.tablinks:nth-child(3) {
 
 }
 
-
 /* Create an active/current tablink class */
 .tab > .active {
+    border-bottom: 3px solid #F7943D !important;
+    position: relative;
+}
 
-      border-bottom: 2px solid orange !important;
+/* Initial state of the after pseudo-element */
+.tab button::after {
+    content: "";
+    width: 0; /* Initially, width is 0 */
+    height: 0; /* Initially, height is 0 */
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #F7943D;
+    position: absolute;
+    bottom: -10px;
+    left: 75px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Active state of the after pseudo-element */
+.tab > .active::after {
+    opacity: 1; /* Fully visible */
+    width: 40px; /* Full width */
+    height: 10px; /* Full height */
 }
 
 
+/* Tab content transition */
 .tabcontent {
     opacity: 0; /* Start fully transparent */
     transform: translateY(20px); /* Start slightly below */
@@ -253,10 +250,16 @@ button.tablinks:nth-child(3) {
     max-height: 100vh; /* Show content by expanding max-height */
 }
 
+
 .cardTab {
     
     margin: 90px auto;
     
+}
+
+h1.cardTabTitle {
+    text-align: center;
+    margin: 70px 0px;
 }
   
 
