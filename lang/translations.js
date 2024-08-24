@@ -1,5 +1,6 @@
 /* en.json  data-i18n="" */
 var  translations = {
+    
 en: {
   	"home_link":"Home",
 	"about_link":"About Us",
@@ -40,7 +41,7 @@ en: {
 	"stats_title":"CAPRAM IN NUMBERS",
 	"stats_subheading":"Discover the statistics and figures of our company",
 	"stats_one": "Managed Items",
-	"stats_two": "Distributor Partners",
+	"stats_two": "Customers",
 	"stats_three": "People / Staff",
 	"stats_four": "m² / Storage Area",
 	"contact_title": "Contact Us",
@@ -109,7 +110,7 @@ en: {
   "stats_title": "CAPRAM EN CHIFFRES",
   "stats_subheading": "Découvrez les statistiques en chiffres de notre entreprise.",
   "stats_one": "Références gérées",
-  "stats_two": "Partenaires Distributeurs",
+  "stats_two": "Clients",
   "stats_three": "Personnes / Effectifs",
   "stats_four": "m² / Zone de stockage",
   "contact_title": "Contactez-nous",
