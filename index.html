@@ -403,15 +403,13 @@ Accessoires automobiles importés,Meilleur fournisseur pièces auto,Choix de pi�
             var container = $('.slider-gallery');
             for (var i = start; i <= end; i++) {
                 // Skip the image with number 55
-                if (i === 55) {
-                    continue;
-                }
+             
 
                 var html = `
                     <div class="slider-gallery__item">
                         <a target="" class="slider-gallery__link" href="#" rel="prettyPhoto">
                             <div class="borderiMG"></div>
-                            <img class="clientIMG" src="../capram/assets/media/brands/${i}.png" height="177" width="280" alt="foto">
+                            <img class="clientIMG" src="../capram/assets/media/main-brands/${i}.png" height="177" width="280" alt="foto">
                         </a>
                     </div>
                 `;
@@ -420,7 +418,7 @@ Accessoires automobiles importés,Meilleur fournisseur pièces auto,Choix de pi�
         }
 
         // Call the function with desired range
-        generateImageGallery(1, 94);
+        generateImageGallery(0, 15);
     });
 </script>
 
