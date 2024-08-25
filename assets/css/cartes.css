@@ -51,7 +51,7 @@ img.capramCartesImg:hover {
   transition: .3s, background-size .3s .3s, background-color .3s, transform .3s;
 }
 
-.blueHover:hover {
+.fae:hover {
     
     background-color: #42769b !important; /* White background on hover */
 }
@@ -63,101 +63,107 @@ img.capramCartesImg:hover {
 
 #cardTarget:target {
 position: relative;
-border-top: 70px solid transparent;
-margin:-70px 0 0;
+border-top: 100px solid transparent;
+margin:-100px 0 0;
 background-clip: padding-box;
 }
 
 
 
-.redHover:hover {
+.hardex:hover {
     
     background-color: #e01e26 !important; /* White background on hover */
 }
 
-.orangeHover:hover {
+.continental:hover {
     
     background-color: #f6931e !important; /* White background on hover */
 }
 
-.orangeHoverTwo:hover {
+.misfilter:hover {
     
     background-color: #eb662e !important; /* White background on hover */
 }
 
-.darkBlueHover:hover {
+.dolz:hover {
     
     background-color: #271d51 !important; /* White background on hover */
 }
 
-.redHoverTwo:hover {
+.formpart:hover {
     
     background-color: #e32028 !important; /* White background on hover */
 }
 
-.blackHover:hover {
+.despa:hover {
     
     background-color: #21201e !important; /* White background on hover */
 }
 
-.blueHoverTwo:hover {
+.darco:hover {
     
     background-color: #0074bd !important; /* White background on hover */
 }
 
-.blueHoverThree:hover {
+.amadini:hover {
     
     background-color: #007aa1 !important; /* White background on hover */
 }
 
-.purpleHover:hover {
+.diesel:hover {
     
     background-color: #345dac !important; /* White background on hover */
 }
 
-.redHoverThree:hover {
+.hitachi:hover {
     
     background-color: #d22d29 !important; /* White background on hover */
 }
 
-.darkPurpleHover:hover {
+.professional:hover {
     
     background-color: #2b3384 !important; /* White background on hover */
 }
 
-.blueHoverFour:hover {
+.ate:hover {
     
     background-color: #067bc0 !important; /* White background on hover */
 }
-
+/**
 .blackHoverTwo:hover {
     
-    background-color: #111111 !important; /* White background on hover */
+    background-color: #111111 !important;
 }
 
-.darkBlueHoverTwo:hover {
+.darkdarco:hover {
     
-    background-color: #060678 !important; /* White background on hover */
+    background-color: #060678 !important; 
+}
+*/
+
+.nwp:hover {
+    
+    background-color: #13140f !important; /* White background on hover */
 }
 
 
 
 
-.blueHover, 
-.redHover, 
-.orangeHover, 
-.orangeHoverTwo, 
-.darkBlueHover, 
-.redHoverTwo, 
-.blackHover, 
-.blueHoverTwo, 
-.blueHoverThree,
-.purpleHover,
-.redHoverThree,
-.darkPurpleHover,
-.blueHoverFour,
-.blackHoverTwo,
-.darkBlueHoverTwo
+
+.fae, 
+.hardex, 
+.continental, 
+.misfilter, 
+.dolz, 
+.formpart, 
+.despa, 
+.darco, 
+.amadini,
+.diesel,
+.hitachi,
+.nwp,
+.professional,
+.ate
 
 {
   --c: white !important; /* the border color */
@@ -197,6 +203,8 @@ background-clip: padding-box;
 button.tablinks img {
     width: 70%;
     margin-bottom: 15px;
+    height: auto;
+
 }
 
 /* Change background color of buttons on hover */
@@ -247,14 +255,18 @@ button.tablinks img {
 .tabcontent.active {
     opacity: 1; /* Fully opaque */
     transform: translateY(0); /* Slide into place */
-    max-height: 100vh; /* Show content by expanding max-height */
+}
+
+.tabcontent.active {
+    opacity: 1; /* Fully opaque */
+    transform: translateY(0); /* Slide into place */
 }
 
 
 .cardTab {
     
     margin: 90px auto;
-    
+      
 }
 
 h1.cardTabTitle {
