@@ -255,11 +255,7 @@ button.tablinks img {
 .tabcontent.active {
     opacity: 1; /* Fully opaque */
     transform: translateY(0); /* Slide into place */
-}
-
-.tabcontent.active {
-    opacity: 1; /* Fully opaque */
-    transform: translateY(0); /* Slide into place */
+    max-height: 100%;
 }
 
 
@@ -268,6 +264,8 @@ button.tablinks img {
     margin: 90px auto;
       
 }
+
+
 
 h1.cardTabTitle {
     text-align: center;
