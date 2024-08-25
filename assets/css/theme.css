@@ -64,6 +64,7 @@ div#sliderpro1,
 .sp-slide,
 .sp-image-container {
     height: 100vh !important;
+    background: black;
 }
 
 
@@ -160,12 +161,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.sp-slide:nth-child(1) img {
-     width: 100% !important;
-    height: 100% !important;
-    margin-left: 0px !important;
-    margin-top: 0px !important;
-}
+
 
 a.main-slider__btn:hover {
     background: none;
@@ -4073,7 +4069,7 @@ img.pull-left {
 	content: '';
 }
 .main-slider__title {
-	font-size: 40px;
+	font-size: 55px;
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
@@ -4082,8 +4078,14 @@ img.pull-left {
 .main-slider__subtitle {
 	margin-bottom: 25px;
 	font-family: Raleway;
-	font-size: 22px;
-	font-weight: 500;
+	font-size: 27px;
+    font-weight: 300;
+
+}
+
+.custom-caption {
+
+    width: 50% !important;
 }
 .main-slider__text {
 	font-size: 16px;
