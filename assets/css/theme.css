@@ -3375,6 +3375,7 @@ img.pull-left {
 	padding: 22px 0px 22px 0;
 	background: #222;
 	transition: all 1s;
+    cursor: pointer;
 }
 .list-services:after {
 	position: absolute;
