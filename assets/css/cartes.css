@@ -146,6 +146,11 @@ background-clip: padding-box;
     background-color: #13140f !important; /* White background on hover */
 }
 
+.alco:hover{
+    
+    background-color: #e51c15 !important;
+}
+
 
 
 
@@ -163,7 +168,8 @@ background-clip: padding-box;
 .hitachi,
 .nwp,
 .professional,
-.ate
+.ate,
+.alco
 
 {
   --c: white !important; /* the border color */
@@ -188,7 +194,7 @@ background-clip: padding-box;
     font-weight: 500;
     text-transform: uppercase;
     color: #545353;
-    width: 190px;
+    width: 20%;
     height: auto;
     background: white;
     margin: 15px;
