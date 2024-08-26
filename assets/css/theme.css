@@ -3523,6 +3523,7 @@ img.pull-left {
 }
 .list-services:hover .list-services__description {
 	display: block;
+       font-size: 11px; 
 }
 .list-services:hover .decor-1,
 .list-services:hover .list-services__title strong {
