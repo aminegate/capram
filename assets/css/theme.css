@@ -3514,7 +3514,6 @@ img.pull-left {
 }
 .list-services:hover {
 	margin-bottom: 0;
-	border-bottom: 5px solid #ddd;
 	background: url('../media/bg/texture-1.gif');
     height: 295px;
 }
@@ -3537,6 +3536,7 @@ img.pull-left {
 .list-services:hover .list-services__inner {
 	border-left-color: #999;
         margin-top: -20px;
+        transition: all 0.6s ease;
 }
 .list-services:hover .icon {
 	margin-top: 7px;
