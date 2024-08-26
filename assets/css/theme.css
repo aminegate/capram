@@ -3536,7 +3536,9 @@ img.pull-left {
 .list-services:hover .list-services__inner {
 	border-left-color: #999;
         margin-top: -20px;
-        transition: all 0.6s ease;
+         -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 .list-services:hover .icon {
 	margin-top: 7px;
