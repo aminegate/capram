@@ -115,7 +115,7 @@ en: {
   "stats_four": "m² / Zone de stockage",
   "contact_title": "Contactez-nous",
   "contact_subheading": "N'hésitez pas à nous envoyer un message",
-  "contact_button": "envoyer",
+  "contact_button": "Envoyer",
   "map_button_1": "afficher l'emplacement 1",
   "map_button_2": "afficher l'emplacement 2",
   "footer_subtitle_1": "LOCALISATION",
