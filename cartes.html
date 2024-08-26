@@ -598,7 +598,7 @@ function scrollToTarget(tabName) {
         // Scroll to the target element with a slight offset
         setTimeout(function() {
             window.scrollTo({
-                top: targetElement.offsetTop - 4, // Adjust this value to match your desired offset
+                top: targetElement.offsetTop - 485, // Adjust this value to match your desired offset
                 behavior: 'smooth'
             });
         }, 100); // Short delay to ensure the tab content is visible before scrolling
@@ -612,18 +612,26 @@ document.addEventListener("DOMContentLoaded", function() {
         // Remove the '#' and find the tab by ID
         var tabId = hash.substring(1);
         var tabLink = document.querySelector('.tablinks[id="' + tabId + '"]');
-        if (tabLink) {
+        var tabContent = document.getElementById(tabId);
+        if (tabLink && tabContent) {
             // Simulate a click on the tab to open it
             tabLink.click();
+        } else {
+            // If the hash doesn't match any tab, default to the first tab
+            activateFirstTab();
         }
     } else {
-        // Ensure the first tab is active by default
-        var firstTab = document.querySelector('.tablinks');
-        if (firstTab) {
-            firstTab.click();
-        }
+        // No hash in URL, ensure the first tab is active
+        activateFirstTab();
     }
 });
+
+function activateFirstTab() {
+    var firstTab = document.querySelector('.tablinks');
+    if (firstTab) {
+        firstTab.click();
+    }
+}
 
 // Optionally, add event listeners for anchor links if you want them to trigger the tab change
 document.querySelectorAll('.anchor-link').forEach(anchor => {
@@ -635,6 +643,7 @@ document.querySelectorAll('.anchor-link').forEach(anchor => {
         }
     });
 });
+
 
 </script>
 
