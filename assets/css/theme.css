@@ -19,6 +19,31 @@
 }
 
 
+.upArrowService {
+    position: fixed;
+    bottom: 44%;
+    left: 40%;
+    overflow: hidden;
+}
+
+i.fa-hand-pointer {
+    font-size: 20px;
+    color: #d1d1d1;
+    border: 2px solid #d1d1d1;
+    padding: 15px 17px;
+    border-radius: 50%;
+}
+
+
+.list-services:hover .upArrowService {
+ display: none;
+}
+
+
+
+
+
+
 #wlcmSection:target {
 position: relative;
 border-top: 80px solid transparent;
@@ -1141,7 +1166,7 @@ input.form-control, textarea.form-control {
 }
 
 .service .decor-1 {
-    margin: 0px auto 30px auto;
+        margin: -33px auto 0px auto;
 }
 
 .owl-item:nth-child(2) .list-services .icon {
@@ -1169,6 +1194,7 @@ h3.list-services__title strong {
 
 .list-services .icon img {
     width: 70px;
+        margin-top: -30px;
 }
 
 /*===========================================
@@ -3376,6 +3402,8 @@ img.pull-left {
 	background: #222;
 	transition: all 1s;
     cursor: pointer;
+    height: 295px;
+    
 }
 .list-services:after {
 	position: absolute;
@@ -3426,6 +3454,7 @@ img.pull-left {
 	margin-bottom: 0;
 	border-bottom: 5px solid #ddd;
 	background: url('../media/bg/texture-1.gif');
+    height: 295px;
 }
 .list-services:hover:after {
 	content: none;
@@ -3444,6 +3473,7 @@ img.pull-left {
 }
 .list-services:hover .list-services__inner {
 	border-left-color: #999;
+        margin-top: -20px;
 }
 .list-services:hover .icon {
 	margin-top: 7px;
