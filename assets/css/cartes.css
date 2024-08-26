@@ -432,9 +432,9 @@ h1.cardTabTitle {
 /**************************************************************************/
 @media (max-width:480px) {
     
-         .tab button {
-        width: 30%;
-        margin-left: 50px;
+    .tab button {
+        width: 39%;
+        margin-left: 16px;
         font-size: 10px;
         height: 130px;
     }
