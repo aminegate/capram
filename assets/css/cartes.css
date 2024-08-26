@@ -240,7 +240,7 @@ button.tablinks img {
 }
 
 /* Active state of the after pseudo-element */
-.tab > .active::after {
+.tab > button.active::after {
     opacity: 1; /* Fully visible */
     width: 40px; /* Full width */
     height: 10px; /* Full height */

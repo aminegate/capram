@@ -3264,7 +3264,7 @@ img.pull-left {
 	overflow: hidden;
 	transition: all 0.3s;
 	text-align: center;
-    cursor: initial;
+    cursor: pointer;
    
 }
 
