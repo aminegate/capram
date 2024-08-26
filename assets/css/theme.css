@@ -1311,7 +1311,7 @@ div#sliderpro1,
 }
     
     .service .decor-1 {
-    margin: 0px auto 30px auto !important;
+  
 }
     
     .list-services.fixPad {
@@ -1466,7 +1466,7 @@ div#sliderpro1,
     
 
     .service .decor-1 {
-    margin: 0px auto 30px auto;
+
 }
     .list-services .icon {
         padding: 0px !important;
@@ -1482,7 +1482,7 @@ div#sliderpro1,
 }
     
 .service .owl-theme_mod-a .owl-controls {
-           top: 110px !important;
+           top: 140px !important;
     z-index: 999 !important;
 }
     
@@ -1601,12 +1601,30 @@ div#sliderpro1,
     font-size: 11px;
     font-weight: 600;
 }
+    
+    #aboutUs:before {
+    bottom: 21px !important;
+}
+.section_mod-e:before {
+    background-size: 127% 150%;
+
+}
 
 }
 
 /************************************** Small ********************************************************/
 
 @media (min-width: 576px) and (max-width: 768px) { 
+    
+    .section_mod-e:before {
+    background: none !important;
+
+}
+    
+         .section_map:before {
+    background: none !important;
+
+}
     
     .arrow-reverse {
     transform: rotate(-180deg) translateY(50%);
@@ -1828,8 +1846,14 @@ div#sliderpro1,
     }
     
         .service .owl-theme_mod-a .owl-controls {
-        top: 150px !important;
+        top: 107% !important;
+            z-index: 9999 !important;
     }
+    
+.service .owl-buttons {
+
+    margin-top: 0px !important;
+}
     
   .service .owl-carousel .owl-prev {
     left: 195px;
@@ -1850,6 +1874,16 @@ div#sliderpro1,
 
 /************************************** Extra Small ********************************************************/
 @media (min-width:480px) and (max-width: 576px) {
+    
+        .section_mod-e:before {
+    background: none !important;
+
+}
+    
+         .section_map:before {
+    background: none !important;
+
+}
 
 .arrow-reverse {
     transform: rotate(-180deg) translateY(50%);
@@ -2110,11 +2144,26 @@ li.list-progress__item {
     float: right;
     margin-right: 175px !important;
 }
+    
+        .owl-theme_mod-a .owl-controls {
+        top: 4% !important;
+        z-index: 999999 !important;
+    }
   
 }
 
 /**************************************************************************/
 @media (max-width:480px) {
+    
+        .section_mod-e:before {
+    background: none !important;
+
+}
+    
+         .section_map:before {
+    background: none !important;
+
+}
 
 .arrow-reverse {
     transform: rotate(-180deg) translateY(50%);
@@ -2340,7 +2389,7 @@ img.sp-image {
 }
     
 .service .decor-1 {
-        margin: 0px auto 30px auto !important;
+       
     }
     
 .list-services {
@@ -2439,10 +2488,17 @@ height: 235px !important;
     
 .slider-gallery__item {
 
-
 margin: 0px !important; 
 height: 235px !important;
+}
+     
+         .section_mod-e:before {
+    background: none !important;
 
+}
+     
+         .section_map:before {
+    background: none !important;
 
 }
     
@@ -2470,8 +2526,14 @@ height: 235px !important;
 } 
      
 .service .decor-1 {
-            margin: 0px auto 30px auto;
+        
     }
+     
+     .upArrowService {
+
+    left: 45%;
+
+}
      
      
 .service .owl-theme_mod-a .owl-controls {
@@ -2488,7 +2550,7 @@ li.list-progress__item img {
      }
      
 .service .owl-theme_mod-a .owl-controls {
-        top: 282px !important;
+        top: 77% !important;
     }
      
 .partner .owl-controls {

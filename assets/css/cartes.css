@@ -3,7 +3,7 @@
 }
 
 .capramCartes h1 {
-    
+
     color: #222;
     text-align: center;
     margin-bottom: 65px;
@@ -30,30 +30,34 @@ img.capramCartesImg {
 }
 
 img.capramCartesImg {
-  --c: #F7943D; /* the border color */
-  --b: 4px;    /* the border thickness */
-  --g: 5px;    /* the gap on hover */
+    --c: #F7943D;
+    /* the border color */
+    --b: 4px;
+    /* the border thickness */
+    --g: 5px;
+    /* the gap on hover */
 
-  padding: calc(var(--g) + var(--b));
-  --_g: #0000 25%, var(--c) 0;
-  background: 
-    conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g))
-    var(--_i, 200%) 0 / 200% var(--_i, var(--b)) no-repeat,
-    conic-gradient(at bottom var(--b) left var(--b), var(--_g))
-    0 var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
-  transition: .3s, background-position .3s .3s, background-color .3s, transform .3s;
+    padding: calc(var(--g) + var(--b));
+    --_g: #0000 25%, var(--c) 0;
+    background:
+        conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) var(--_i, 200%) 0 / 200% var(--_i, var(--b)) no-repeat,
+        conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0 var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
+    transition: .3s, background-position .3s .3s, background-color .3s, transform .3s;
 }
 
 img.capramCartesImg:hover {
-  --_i: 100%;
-  background-color: white; /* White background on hover */
-  transform: scale(1.01); /* Slight zoom effect */
-  transition: .3s, background-size .3s .3s, background-color .3s, transform .3s;
+    --_i: 100%;
+    background-color: white;
+    /* White background on hover */
+    transform: scale(1.01);
+    /* Slight zoom effect */
+    transition: .3s, background-size .3s .3s, background-color .3s, transform .3s;
 }
 
 .fae:hover {
-    
-    background-color: #42769b !important; /* White background on hover */
+
+    background-color: #42769b !important;
+    /* White background on hover */
 }
 
 
@@ -62,73 +66,86 @@ img.capramCartesImg:hover {
 }
 
 #cardTarget:target {
-position: relative;
-border-top: 100px solid transparent;
-margin:-100px 0 0;
-background-clip: padding-box;
+    position: relative;
+    border-top: 100px solid transparent;
+    margin: -100px 0 0;
+    background-clip: padding-box;
 }
 
 
 
 .hardex:hover {
-    
-    background-color: #e01e26 !important; /* White background on hover */
+
+    background-color: #e01e26 !important;
+    /* White background on hover */
 }
 
 .continental:hover {
-    
-    background-color: #f6931e !important; /* White background on hover */
+
+    background-color: #f6931e !important;
+    /* White background on hover */
 }
 
 .misfilter:hover {
-    
-    background-color: #eb662e !important; /* White background on hover */
+
+    background-color: #eb662e !important;
+    /* White background on hover */
 }
 
 .dolz:hover {
-    
-    background-color: #271d51 !important; /* White background on hover */
+
+    background-color: #271d51 !important;
+    /* White background on hover */
 }
 
 .formpart:hover {
-    
-    background-color: #e32028 !important; /* White background on hover */
+
+    background-color: #e32028 !important;
+    /* White background on hover */
 }
 
 .despa:hover {
-    
-    background-color: #21201e !important; /* White background on hover */
+
+    background-color: #21201e !important;
+    /* White background on hover */
 }
 
 .darco:hover {
-    
-    background-color: #0074bd !important; /* White background on hover */
+
+    background-color: #0074bd !important;
+    /* White background on hover */
 }
 
 .amadini:hover {
-    
-    background-color: #007aa1 !important; /* White background on hover */
+
+    background-color: #007aa1 !important;
+    /* White background on hover */
 }
 
 .diesel:hover {
-    
-    background-color: #345dac !important; /* White background on hover */
+
+    background-color: #345dac !important;
+    /* White background on hover */
 }
 
 .hitachi:hover {
-    
-    background-color: #d22d29 !important; /* White background on hover */
+
+    background-color: #d22d29 !important;
+    /* White background on hover */
 }
 
 .professional:hover {
-    
-    background-color: #2b3384 !important; /* White background on hover */
+
+    background-color: #2b3384 !important;
+    /* White background on hover */
 }
 
 .ate:hover {
-    
-    background-color: #067bc0 !important; /* White background on hover */
+
+    background-color: #067bc0 !important;
+    /* White background on hover */
 }
+
 /**
 .blackHoverTwo:hover {
     
@@ -142,12 +159,13 @@ background-clip: padding-box;
 */
 
 .nwp:hover {
-    
-    background-color: #13140f !important; /* White background on hover */
+
+    background-color: #13140f !important;
+    /* White background on hover */
 }
 
-.alco:hover{
-    
+.alco:hover {
+
     background-color: #e51c15 !important;
 }
 
@@ -155,24 +173,23 @@ background-clip: padding-box;
 
 
 
-.fae, 
-.hardex, 
-.continental, 
-.misfilter, 
-.dolz, 
-.formpart, 
-.despa, 
-.darco, 
+.fae,
+.hardex,
+.continental,
+.misfilter,
+.dolz,
+.formpart,
+.despa,
+.darco,
 .amadini,
 .diesel,
 .hitachi,
 .nwp,
 .professional,
 .ate,
-.alco
-
-{
-  --c: white !important; /* the border color */
+.alco {
+    --c: white !important;
+    /* the border color */
 }
 
 
@@ -202,8 +219,10 @@ background-clip: padding-box;
     padding: 20px 0px 20px 0px;
     position: relative;
     border-radius: 5px;
-    border-bottom: 2px solid transparent; /* Default border */
-    transition: border-bottom 0.3s ease-in-out; /* Smooth transition for border */
+    border-bottom: 2px solid transparent;
+    /* Default border */
+    transition: border-bottom 0.3s ease-in-out;
+    /* Smooth transition for border */
 }
 
 button.tablinks img {
@@ -214,61 +233,74 @@ button.tablinks img {
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
-
-}
+.tab button:hover {}
 
 /* Create an active/current tablink class */
-.tab > .active {
+.tabWrapper .active {
     border-bottom: 3px solid #F7943D !important;
     position: relative;
 }
 
 /* Initial state of the after pseudo-element */
-.tab button::after {
+.tabWrapper button::after {
     content: "";
-    width: 0; /* Initially, width is 0 */
-    height: 0; /* Initially, height is 0 */
+    width: 0;
+    /* Initially, width is 0 */
+    height: 0;
+    /* Initially, height is 0 */
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 10px solid #F7943D;
     position: absolute;
     bottom: -10px;
     left: 75px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out; /* Smooth transition */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+    /* Smooth transition */
 }
 
 /* Active state of the after pseudo-element */
-.tab > button.active::after {
-    opacity: 1; /* Fully visible */
-    width: 40px; /* Full width */
-    height: 10px; /* Full height */
+.tabWrapper button.active::after {
+    opacity: 1;
+    /* Fully visible */
+    width: 40px;
+    /* Full width */
+    height: 10px;
+    /* Full height */
 }
 
 
 /* Tab content transition */
 .tabcontent {
-    opacity: 0; /* Start fully transparent */
-    transform: translateY(20px); /* Start slightly below */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
-    display: block; /* Show content */
-    max-height: 0; /* Hide content initially by setting max-height to 0 */
-    overflow: hidden; /* Prevent overflow */
+    opacity: 0;
+    /* Start fully transparent */
+    transform: translateY(20px);
+    /* Start slightly below */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    /* Smooth transition */
+    display: block;
+    /* Show content */
+    max-height: 0;
+    /* Hide content initially by setting max-height to 0 */
+    overflow: hidden;
+    /* Prevent overflow */
 }
 
 /* Show the active tab content */
 .tabcontent.active {
-    opacity: 1; /* Fully opaque */
-    transform: translateY(0); /* Slide into place */
+    opacity: 1;
+    /* Fully opaque */
+    transform: translateY(0);
+    /* Slide into place */
     max-height: 100%;
 }
 
 
 .cardTab {
-    
+
     margin: 90px auto;
-      
+
 }
 
 
@@ -277,98 +309,142 @@ h1.cardTabTitle {
     text-align: center;
     margin: 70px 0px;
 }
-  
-
-/************************************** Large ********************************************************/
-@media (min-width: 1200px)  { 
-
-
-}
 
 
 /************************************** Large ********************************************************/
-@media (min-width: 1200px) and (max-width: 1367px) { 
+@media (min-width: 1200px) {}
 
-}
 
 /************************************** Large ********************************************************/
-@media (min-width: 992px) and (max-width: 1200px) { 
-    
+@media (min-width: 1200px) and (max-width: 1367px) {}
 
-.tab button::after {
+/************************************** Large ********************************************************/
+@media (min-width: 992px) and (max-width: 1200px) {
 
-    left: 53px;
 
-}
+    .tab button::after {
 
-    
-    
-    
+        left: 53px;
+
+    }
+
+
+
+
 }
 
 /************************************** Medium ********************************************************/
-@media (min-width: 768px) and (max-width: 992px) { 
+@media (min-width: 768px) and (max-width: 992px) {
 
-.tab button {
+    .tab button {
 
-    width: 19%;
+        width: 19%;
         font-size: 10px;
-}
-    
+    }
+
     .tab button::after {
 
-    left: 35px;
+        left: 35px;
 
-}
+    }
 
 }
 
 /************************************** Small ********************************************************/
 
-@media (min-width: 576px) and (max-width: 768px) { 
-    
-.tab button {
+@media (min-width: 576px) and (max-width: 768px) {
 
-    width: 19%;
-        font-size: 9px;
-}
-    
-    .tab button::after {
+  
+.boxy {
 
-    left: 35px;
+    bottom: 10%;
 
 }
-    
+
+    .tab button {
+        width: 35%;
+        margin-left: 50px;
+        font-size: 13px;
+        height: 155px;
+    }
 }
 
 
 /************************************** Extra Small ********************************************************/
 @media (min-width:480px) and (max-width: 576px) {
 
-.tab button {
-
-    width: 19%;
-        font-size: 9px;
-}
+ .tab button {
+        width: 30%;
+        margin-left: 50px;
+        font-size: 10px;
+        height: 130px;
+    }
     
-    .tab button::after {
+    .boxy {
 
-    left: 35px;
+    bottom: 10%;
 
 }
-  
+
+.tabWrapper button::after {
+
+    left: 39px;
+
+}
+
+    .fixRowTab {
+
+        margin-left: 0px;
+    }
+
 }
 
 /**************************************************************************/
 @media (max-width:480px) {
+    
+         .tab button {
+        width: 30%;
+        margin-left: 50px;
+        font-size: 10px;
+        height: 130px;
+    }
+    
+    .boxy {
 
-
+    bottom: 10%;
 
 }
+    
+    .tabWrapper button::after {
+
+    left: 39px;
+
+}
+    
+    
+}
+
 /*****************************************************************************/
- @media (min-width:387px) and (max-width: 464px) {  
+@media (min-width:387px) and (max-width: 464px) {
+    
+     .tab button {
+        width: 35%;
+        margin-left: 30px;
+        font-size: 10px;
+        height: 130px;
+    }
+    
+    .boxy {
 
-     
+    bottom: 10%;
+
 }
+    
+    .tabWrapper button::after {
 
+    left: 39px;
 
+}
+    
+    
+}
