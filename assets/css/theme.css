@@ -2218,8 +2218,13 @@ li.list-progress__item {
     .fixed-image {
         
         display: block;
-    left: -15vh;
+    left: -22vh;
     }
+    
+.btnOpen {
+
+    right: -6vh;
+}
 
     .yamm .nav > li {
       text-align: center !important;
@@ -2519,6 +2524,17 @@ height: 235px !important;
   
     margin-top: -45px;
 }
+    
+.custom-caption {
+        top: -30%;
+        -ms-transform: translateY(30%);
+        transform: translateY(30%);
+    }
+    
+.boxy {
+    bottom: 14%;
+}
+    
 
 }
 /*****************************************************************************/
