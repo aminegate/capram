@@ -711,16 +711,15 @@ a.link-img__link img {
 }*/
 
 .btnOpen {
-    width: 50px;
+    width: 60px;
     height: 29px;
     background-color: #F7943D;
-    position: absolute;
-    top: 7px;
-    right: 2%;
     z-index: 1;
     overflow: hidden;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+        margin-left: 160px;
+    margin-top: 7px;
 }
 
 .arrow-container {
@@ -2403,7 +2402,11 @@ a.navbar-brand {
 @media (max-width:480px) {
     
     
-    
+       
+       .fixed-image {
+
+        left: -34%;
+    }
     
 
     .section_mod-e:before {
@@ -2773,7 +2776,7 @@ a.navbar-brand {
     
        .fixed-image {
 
-        left: -37%;
+        left: -37% !important;
     }
 
    
