@@ -2141,7 +2141,7 @@ a.navbar-brand {
     .fixed-image {
 
         display: block;
-        left: -20vh;
+        left: -27vw;
     }
 
 
@@ -2404,9 +2404,8 @@ a.navbar-brand {
     
     
        
-       .fixed-image {
-
-        left: -34%;
+        .fixed-image {
+        left: -30vw;
     }
     
 
@@ -2775,10 +2774,10 @@ a.navbar-brand {
     width: 31%;
 }
     
-       .fixed-image {
-
-        left: -37%;
+     .fixed-image {
+        left: -30vw;
     }
+    
 
    
     
