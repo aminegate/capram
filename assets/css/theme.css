@@ -2619,6 +2619,19 @@ h3.list-services__title strong {
 /*****************************************************************************/
 @media (min-width:350px) and (max-width: 464px) {
     
+    
+    .section_mod-0:before {
+    background: none !important;
+}
+    
+    .section_mod-a:before {
+    background: none !important;
+}
+    
+    a.navbar-brand {
+    width: 31%;
+}
+    
        .fixed-image {
 
         left: -37%;
