@@ -615,10 +615,18 @@ a.link-img__link img {
     /* Smooth transition for sliding effect */
     z-index: 1000;
     /* Adjust the z-index to ensure it stays above other content */
-    width: 21vh;
+    width: 26vh;
     height: 15%;
     display: none;
     z-index: 9999999;
+}
+
+.certifWrapper {
+    width: 215px;
+    height: 37px;
+    margin-left: 81px;
+    position: relative;
+    float: right;
 }
 
 .show-left {
@@ -703,7 +711,7 @@ a.link-img__link img {
 }*/
 
 .btnOpen {
-    width: 42px;
+    width: 50px;
     height: 29px;
     background-color: #F7943D;
     position: absolute;
@@ -1806,7 +1814,7 @@ h3.list-services__title strong {
     .fixed-image {
 
         display: block;
-        left: -15vh;
+        left: -20vh;
     }
 
     .yamm .nav > li {
@@ -2133,7 +2141,7 @@ a.navbar-brand {
     .fixed-image {
 
         display: block;
-        left: -15vh;
+        left: -20vh;
     }
 
 
@@ -2765,13 +2773,10 @@ a.navbar-brand {
     
        .fixed-image {
 
-        left: -37%;
+        left: -30%;
     }
 
-       .btnOpen {
-        right: -25%;
-        width: 54px;
-    }
+   
     
     .arrow-container {
     right: -17%;
