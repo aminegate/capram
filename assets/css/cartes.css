@@ -186,6 +186,15 @@ img.capramCartesImg:hover {
     background-color: #e51c15 !important;
 }
 
+.alcoTwo:hover {
+    
+    background-color: #e10600 !important;
+}
+
+.capfilter:hover {
+    
+    background-color: #028632 !important;
+}
 
 
 
@@ -204,7 +213,9 @@ img.capramCartesImg:hover {
 .nwp,
 .professional,
 .ate,
-.alco {
+.alco,
+.alcoTwo,
+.capfilter{
     --c: white !important;
     /* the border color */
 }
