@@ -718,7 +718,8 @@ a.link-img__link img {
     overflow: hidden;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-        margin-left: 160px;
+    float: right;
+    margin-right: -48px;
     margin-top: 7px;
 }
 
