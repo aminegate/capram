@@ -2624,9 +2624,14 @@ h3.list-services__title strong {
         left: -37%;
     }
 
-   .btnOpen {
+       .btnOpen {
         right: -25%;
+        width: 54px;
     }
+    
+    .arrow-container {
+    right: -17%;
+}
 
     .slider-gallery__item {
 
