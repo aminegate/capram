@@ -615,7 +615,7 @@ a.link-img__link img {
     /* Smooth transition for sliding effect */
     z-index: 1000;
     /* Adjust the z-index to ensure it stays above other content */
-    width: 26vh;
+    width: 23vh;
     height: 15%;
     display: none;
     z-index: 9999999;
@@ -719,7 +719,7 @@ a.link-img__link img {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     float: right;
-    margin-right: -48px;
+
     margin-top: 7px;
 }
 
