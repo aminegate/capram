@@ -1394,7 +1394,36 @@ li.list-progress__item img {
 }
 
 /************************************** Medium ********************************************************/
-@media (min-width: 768px) and (max-width: 992px) { 
+@media (min-width: 768px) and (max-width: 890px) {
+       .custom-caption {
+
+        top: -85% !important;
+        -ms-transform: translateY(85%) !important;
+        transform: translateY(85%) !important;
+        margin-top: 0px !important;
+    }
+    
+}
+
+/************************************** Medium ********************************************************/
+@media (min-width: 768px) and (max-width: 992px) {
+    
+    
+    .custom-caption {
+
+        top: -55%;
+        -ms-transform: translateY(55%);
+        transform: translateY(55%);
+        margin-top: 0px !important;
+    }
+    
+    .sp-horizontal .sp-arrows {
+
+    top: 55%;
+  -ms-transform: translateY(-55%);
+  transform: translateY(-55%);
+
+}
 
 .btn.menu-btn > .wrap__btn-skew-r {
     margin-top: -1px !important;
@@ -1451,9 +1480,12 @@ div#sliderpro1,
     height: 560px !important;
 }
 
-    .custom-caption {
-    margin-left: 8% !important;
-    margin-top: 45% !important;
+
+    
+    .boxy {
+
+    bottom: 8%;
+
 }
   
     .wrap__btn-skew-r {
@@ -1575,12 +1607,7 @@ div#sliderpro1,
 
 }
     
-        .sp-slide:nth-child(3) img {
-     width: auto !important;
-    height: 100% !important;
-    margin-left: -100px !important;
-    margin-top: 0px !important;
-}
+
     
     .list-services__title strong {
     font-size: 14px !important;
@@ -1613,6 +1640,22 @@ div#sliderpro1,
 }
 
 /************************************** Small ********************************************************/
+
+
+@media (min-width: 630px) and (max-width: 768px) { 
+
+ .custom-caption {
+
+        top: -80%;
+        -ms-transform: translateY(80%);
+        transform: translateY(80%);
+        margin-top: 0px !important;
+    }
+    
+  }    
+
+/************************************** Small ********************************************************/
+
 
 @media (min-width: 576px) and (max-width: 768px) { 
     
@@ -1708,9 +1751,25 @@ div#sliderpro1,
         width: 630px !important;
     }
     
-        .custom-caption {
-        margin-top: 40% !important;
+   .custom-caption {
+
+        top: -100%;
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        margin-top: 0px !important;
     }
+    
+    .sp-horizontal .sp-arrows {
+
+    top: 67%;
+
+}
+    
+    .boxy {
+
+    bottom: 10%;
+
+}
     
     .main-slider__btn_inner {
         width: 175px !important;
@@ -1828,19 +1887,7 @@ div#sliderpro1,
     left: 43% !important;
 }
     
-.sp-slide:nth-child(3) img {
-     width: auto;
-    height: 100%;
-    margin-left: 0px;
-    margin-top: 0px;
-}
-            .sp-slide:nth-child(3) img {
-     width: auto !important;
-    height: 100% !important;
-    margin-left: 0px !important;
-    margin-top: 0px !important;
-}
-    
+
         .owl-theme_mod-a .owl-controls {
         top: -60px !important;
     }
@@ -1955,28 +2002,25 @@ div#sliderpro1,
     margin-top: 27px;
         margin-bottom: 27px;
 }
-    
-.sp-slide:nth-child(3) img {
-     width: auto !important;
-    height: 100% !important;
-    margin-left: -100px !important;
-    margin-top: 0px !important;
+    .boxy {
+    bottom: 10%;
+
 }
 
 
     
         .main-slider__title {
-        font-size: 120px !important;
+        font-size: 80px !important;
         width: 140vh;
     }
     
     .main-slider__subtitle {
-       font-size: 67px !important;
+       font-size: 50px !important;
         width: 140vh !important;
     }
     
        .custom-caption {
-             margin-top: 27% !important;
+             margin-top: 35% !important;
         margin-left: 14% !important;
     }
 
@@ -2218,12 +2262,6 @@ div#sliderpro1,
     height: 225px !important;
 }
     
-        .sp-slide:nth-child(3) img {
-     width: 100% !important;
-    height: 100% !important;
-    margin-left: 0px !important;
-    margin-top: 0px !important;
-}
 
     
 
@@ -2561,12 +2599,7 @@ li.list-progress__item img {
 
     margin-top: 0px !important;
 } 
-             .sp-slide:nth-child(3) img {
-     width: 100% !important;
-    height: 100% !important;
-    margin-left: 0px !important;
-    margin-top: 0px !important;
-}
+
      
      div#sliderpro1, 
 .sp-mask, 
