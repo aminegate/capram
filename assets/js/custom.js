@@ -185,11 +185,11 @@ function updateDropdownButton(language) {
   function toggleFixedImage() {
     if (isVisible) {
       // Slide the fixed-image out and reverse arrows
-      $('.fixed-image').animate({ left: '-16vh' }, 500);
+      $('.fixed-image').animate({ left: '-37%' }, 500);
       $('.arrow-container').addClass('arrow-reverse');
     } else {
       // Slide the fixed-image in and reverse arrows
-      $('.fixed-image').animate({ left: '0vh' }, 500);
+      $('.fixed-image').animate({ left: '0%' }, 500);
       $('.arrow-container').removeClass('arrow-reverse');
     }
 
