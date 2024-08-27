@@ -2285,14 +2285,7 @@ h3.list-services__title strong {
         top: 47%;
     }
 
-    .fixed-image {
-
-        left: -37%;
-    }
-
-   .btnOpen {
-        right: -25%;
-    }
+ 
 
     .link-img__title {
         font: 700 10px Raleway !important;
@@ -2625,6 +2618,15 @@ h3.list-services__title strong {
 
 /*****************************************************************************/
 @media (min-width:350px) and (max-width: 464px) {
+    
+       .fixed-image {
+
+        left: -37%;
+    }
+
+   .btnOpen {
+        right: -25%;
+    }
 
     .slider-gallery__item {
 
