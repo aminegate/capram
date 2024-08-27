@@ -2625,7 +2625,7 @@ h3.list-services__title strong {
     }
 
    .btnOpen {
-        right: -25%;
+        right: -2%;
     }
 
     .slider-gallery__item {
@@ -2722,9 +2722,6 @@ h3.list-services__title strong {
     }
     
 
-   .btnOpen {
-        right: -27%;
-    }
 
 
 }
