@@ -2287,12 +2287,11 @@ h3.list-services__title strong {
 
     .fixed-image {
 
-        left: -16vh;
+        left: -37%;
     }
 
-    .btnOpen {
-
-        right: 0vh;
+   .btnOpen {
+        right: -25%;
     }
 
     .link-img__title {
