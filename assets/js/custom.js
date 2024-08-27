@@ -25,6 +25,38 @@
 $(document).ready(function() {
     
 
+function openTab(evt, tabName) {
+    // Hide all elements with class="tabcontent" by default
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove the class "active" from all tab links
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+
+    // Update the URL hash without page jump
+    history.replaceState(null, null, '#' + tabName);
+}
+
+// Check if a tab is specified in the URL hash on page load
+window.onload = function() {
+    var hash = window.location.hash.substring(1); // Remove the # symbol
+    if (hash) {
+        var tabLink = document.getElementById(hash + 'Tab');
+        if (tabLink) {
+            tabLink.click(); // Simulate click on the corresponding tab
+        }
+    }
+};
 
     
     
@@ -153,7 +185,7 @@ function updateDropdownButton(language) {
   function toggleFixedImage() {
     if (isVisible) {
       // Slide the fixed-image out and reverse arrows
-      $('.fixed-image').animate({ left: '-15vh' }, 500);
+      $('.fixed-image').animate({ left: '-16vh' }, 500);
       $('.arrow-container').addClass('arrow-reverse');
     } else {
       // Slide the fixed-image in and reverse arrows
