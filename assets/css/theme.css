@@ -2218,12 +2218,12 @@ li.list-progress__item {
     .fixed-image {
         
         display: block;
-    left: -22vh !important;
+    left: -22vh;
     }
     
 .btnOpen {
 
-    right: -6vh !important;
+    right: 0vh ;
 }
     
     .link-img__title {
