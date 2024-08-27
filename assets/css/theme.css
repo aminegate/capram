@@ -2218,12 +2218,16 @@ li.list-progress__item {
     .fixed-image {
         
         display: block;
-    left: -22vh;
+    left: -22vh !important;
     }
     
 .btnOpen {
 
-    right: -6vh;
+    right: -6vh !important;
+}
+    
+    .link-img__title {
+    font: 700 10px Raleway !important;
 }
 
     .yamm .nav > li {
