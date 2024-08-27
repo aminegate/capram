@@ -609,7 +609,7 @@ a.link-img__link img {
 /* Ensure the image stays fixed on the left side */
 .fixed-image {
     position: fixed;
-    left: 0;
+    left: 0%;
     top: 50%;
     transition: transform 0.5s ease-in-out;
     /* Smooth transition for sliding effect */
@@ -708,7 +708,7 @@ a.link-img__link img {
     background-color: #F7943D;
     position: absolute;
     top: 7px;
-    right: 2vh;
+    right: 2%;
     z-index: 1;
     overflow: hidden;
     border-top-right-radius: 2px;
@@ -2625,7 +2625,7 @@ h3.list-services__title strong {
     }
 
    .btnOpen {
-        right: -2%;
+        right: -25%;
     }
 
     .slider-gallery__item {
