@@ -1450,6 +1450,46 @@ h3.list-services__title strong {
 
 /************************************** Medium ********************************************************/
 @media (min-width: 768px) and (max-width: 992px) {
+    
+    .list-progress {
+    margin-bottom: 95px !important;
+}
+    
+    .section_default {
+    padding-top: 60px !important;
+
+}
+    
+    .section_mod-a:before {
+    background: none !important;
+}
+    
+    .section_mod-e:before {
+    background: none !important;
+}
+    
+    .section_mod-a {
+    padding-top: 50px !important;
+}
+    
+    .section_mod-0:before {
+    background: none !important;
+}
+    
+    .section_map:before {
+    background: none !important;
+}
+    
+      .service .owl-theme_mod-a .owl-controls {
+        bottom: 0%;
+        height: 100px;
+        z-index: 1;
+            top: initial !important;
+    }
+    
+   .service .owl-buttons {
+    margin-top: 0px;
+}
 
 
     .custom-caption {
@@ -1556,10 +1596,7 @@ h3.list-services__title strong {
         padding-bottom: 22px !important;
     }
 
-    .service .owl-theme_mod-a .owl-controls {
-        top: 140px !important;
-        z-index: 999 !important;
-    }
+ 
 
     #cartes .owl-theme_mod-a .owl-controls {
         top: 30px;
@@ -1709,6 +1746,19 @@ h3.list-services__title strong {
 
 
 @media (min-width: 576px) and (max-width: 768px) {
+    
+    .section_mod-a {
+    padding-top: 45px;
+
+}
+    
+        .list-progress {
+    margin-bottom: 95px !important;
+}
+    
+    #aboutUs {
+    padding-bottom: 110px !important;
+}
 
     .section_mod-e:before {
         background: none !important;
@@ -1725,6 +1775,32 @@ h3.list-services__title strong {
         animation: moveArrowReverse 2s linear infinite;
         top: 47%;
     }
+    
+        
+       #cartes  .owl-theme_mod-a .owl-controls {
+        bottom: -23%;
+        height: 100px;
+        z-index: 1;
+            top: initial !important;
+    }
+    
+       
+        #cartes .owl-buttons{
+        margin-top: 0px !important;
+    }
+    
+    .section_mod-0:before {
+    background: none !important;
+}
+    .slider-gallery {
+    margin-bottom: 95px !important;
+}
+    
+    .list-progress {
+
+    margin-bottom: 100px !important;
+
+}
 
 
     .fixed-image {
@@ -1847,8 +1923,8 @@ h3.list-services__title strong {
         padding-bottom: 0px !important;
     }
 
-    .section_mod-b {
-        height: 555px !important;
+ .service .section_mod-b {
+        height: 720px !important;
     }
 
     /*.borderiMG {
@@ -1953,7 +2029,7 @@ h3.list-services__title strong {
     }
 
     .service .owl-theme_mod-a .owl-controls {
-        top: 107% !important;
+        top: 120% !important;
         z-index: 9999 !important;
     }
 
@@ -1971,10 +2047,10 @@ h3.list-services__title strong {
         top: 3px;
     }
 
+a.navbar-brand {
+    width: 20%;
+}
 
-    .service .section_mod-b {
-        height: 635px !important;
-    }
 
 }
 
@@ -1986,6 +2062,14 @@ h3.list-services__title strong {
         background: none !important;
 
     }
+    
+        .list-progress {
+    margin-bottom: 95px !important;
+}
+    
+    a.navbar-brand {
+    width: 20%;
+}
 
     .section_map:before {
         background: none !important;
@@ -1997,8 +2081,55 @@ h3.list-services__title strong {
         animation: moveArrowReverse 2s linear infinite;
         top: 47%;
     }
+    
+    .section_mod-a:before {
+    background: none !important;
 
+}
 
+#news {
+    padding-top: 10px;
+}
+    
+   .facts .section-bg .bg-inner {
+    padding-top: 120px;
+
+}
+    
+    .section_mod-0:before {
+    background: none !important;
+
+}
+    
+    .section_mod-a {
+    padding-top: 50px !important;
+    padding-bottom: 85px !important;
+}
+    
+        .service .owl-buttons,  
+        .partner .owl-buttons {
+        margin-top: 0px !important;
+    }
+    
+    #aboutUs {
+    padding-bottom: 100px !important;
+    padding-top: 50px;
+}
+    
+        .service  .owl-theme_mod-a .owl-controls {
+        bottom: -23%;
+        height: 100px;
+        z-index: 1;
+            top: initial !important;
+    }
+    
+            .partner  .owl-theme_mod-a .owl-controls {
+        bottom: -60%;
+        height: 100px;
+        z-index: 1;
+            top: initial !important;
+    }
+    
     .fixed-image {
 
         display: block;
@@ -2246,9 +2377,6 @@ h3.list-services__title strong {
         margin-right: 175px !important;
     }
 
-    .service .owl-buttons {
-        margin-top: 300px !important;
-    }
 
     .partner .owl-prev {
         margin-left: 175px;
@@ -2259,15 +2387,16 @@ h3.list-services__title strong {
         margin-right: 175px !important;
     }
 
-    .owl-theme_mod-a .owl-controls {
-        top: 4% !important;
-        z-index: 999999 !important;
-    }
+
 
 }
 
 /**************************************************************************/
 @media (max-width:480px) {
+    
+    
+    
+    
 
     .section_mod-e:before {
         background: none !important;
@@ -2619,7 +2748,9 @@ h3.list-services__title strong {
 /*****************************************************************************/
 @media (min-width:350px) and (max-width: 464px) {
     
-    
+        .list-progress {
+    margin-bottom: 95px !important;
+}
     .section_mod-0:before {
     background: none !important;
 }
