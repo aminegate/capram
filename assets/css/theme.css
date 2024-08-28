@@ -705,8 +705,16 @@ button.openbtn i.icon-flipped {
 
 
 
+/**** footer img ****/
+.row.salamatouna {
+    margin-top: 33px;
+}
 
-
+.certificate img {
+    width: 10%;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+}
 
 /*===========================================
 =============== header slider =============== 
@@ -1732,7 +1740,6 @@ button.openbtn {
 }
 
 
-  
     .yamm .nav > li {
         text-align: center !important;
     }
@@ -2734,7 +2741,7 @@ button.openbtn {
     a.navbar-brand {
     width: 31%;
 }
-
+  
     
 
    
