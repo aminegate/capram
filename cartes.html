@@ -31,27 +31,44 @@ Accessoires automobiles importés,Meilleur fournisseur pièces auto,Choix de pi�
 </head>
 
 <body>
-    <!-- Fixed image -->
-    <div class="fixed-image hide-left">
-
-        <div class="certifWrapper">
-            <div class="btnOpen hidden-lg hidden-md hidden-sm" id="btnOpener">
-                <div class="arrow-container arrow-reverse">
-                    <div class="arrow"></div>
-                    <div class="arrow"></div>
-                    <div class="arrow"></div>
-                    <div class="arrow"></div>
-                    <div class="arrow"></div>
-                </div>
+<!-- fixed  sidebar certif -->
+   <div class="certifContainer">
+    <div id="certifSidebar">
+         <div class="card-badge">
+            <div class="certifImg">
+                <img src="../capram/assets/img/salamatouna.png" alt="">
             </div>
         </div>
-        <div class="card-badge">
-            <div class="card__container">
-                <img src="../capram/assets/img/salamatouna.png" alt="Fixed Image">
-
-            </div>
-        </div>
+        <button class="openbtn">
+              <i class="fa-solid fa-angle-right"></i>
+        </button> 
     </div>
+    
+    </div>
+    
+
+<script>
+$('.openbtn').on('click', function() {
+    // Check if the screen width is less than or equal to 768px (small screen)
+    if ($(window).width() <= 768) {
+        var sidebarWidth = $('.card-badge').width();
+        
+        if (sidebarWidth === 125) {
+            $('.card-badge').css('width', '0px');
+            $('.openbtn').css('right', '101px');
+        } else {
+            $('.card-badge').css('width', '125px');
+            $('.openbtn').css('right', '-24px');
+        }
+
+      // Toggle class to flip the icon
+        $(this).find('i').toggleClass('icon-flipped');
+    }
+});
+</script>
+    
+<!-- fixed  sidebar certif end -->    
+    
 
     <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
         <div id="wrapper">
