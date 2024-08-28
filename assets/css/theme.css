@@ -606,64 +606,38 @@ a.link-img__link img {
 ================= salamatouna =============== 
 ===========================================*/
 
-/* Ensure the image stays fixed on the left side */
-.fixed-image {
+
+
+div#certifSidebar {
+    height: 100px;
+    width: 125px;
     position: fixed;
-    left: 0%;
     top: 50%;
-    transition: transform 0.5s ease-in-out;
-    /* Smooth transition for sliding effect */
-    z-index: 1000;
-    /* Adjust the z-index to ensure it stays above other content */
-    width: 23vh;
-    height: 15%;
-    display: none;
-    z-index: 9999999;
-}
-
-.certifWrapper {
-    width: 215px;
-    height: 37px;
-    margin-left: 81px;
-    position: relative;
-    float: right;
-}
-
-.show-left {
     left: 0;
-    /* Move the div into view */
+    z-index: 99999;
+     transition: 0.5s;
 }
 
-.fixed-image img {
-    max-width: 100px;
-    /* Adjust the size as needed */
-    height: auto;
-    margin-top: 2px;
-    margin-left: 12px;
+.certifImg {
+    height: 100%;
+    width: 100%;
+
 }
 
-.fixed-image img:nth-child(2) {
-
-    margin-top: 5px;
-
+.certifImg img {
+    width: 100%;
 }
 
 .card-badge {
     width: 125px;
-    border-radius: 0 5px 5px 0;
+   /* border-radius: 0 5px 5px 0;*/
     background: white;
     position: relative;
     color: #434343;
     height: auto;
-    padding: 20px 0px 8px 0px;
-}
-
-.card-badge .card__container {
-
-    width: 100%;
-    height: 100%;
-    background: white;
-    border-radius: 1rem;
+    padding: 33px 0px 2px 0px;
+     transition: 0.5s;
+    
 }
 
 .card-badge::before {
@@ -680,7 +654,6 @@ a.link-img__link img {
     background: #F7943D;
     height: 28px;
     width: 28px;
-    /* Added lines */
     top: 21px;
     right: -8px;
     transform: rotate(45deg);
@@ -691,119 +664,49 @@ a.link-img__link img {
     position: absolute;
     content: 'Certificat';
     top: 7px;
-    right: -14px;
+    right: -24px;
     padding: 0.5rem;
     width: 10rem;
     background: #F7943D;
     color: white;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    padding-right: 0px;
 }
 
-/**
-.hide-left {
-    transform: translateX(-120%) translateY(0%) !important;
-}
 
-.show-right {
-    
-    transform: translateX(0%) translateY(0%) !important;
-}*/
 
-.btnOpen {
-    width: 60px;
-    height: 29px;
-    background-color: #F7943D;
-    z-index: 1;
-    overflow: hidden;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    float: right;
-
-    margin-top: 7px;
-}
-
-.arrow-container {
-    width: 100%;
-    height: 30px;
-    overflow: hidden;
-    position: relative;
-
-}
-
-.arrow {
-    width: 12px;
-    height: 12px;
-    border: solid #fff;
-    /* Arrow color set to white */
-    border-width: 0 3px 3px 0;
-    display: inline-block;
+button.openbtn {
+    border: none;
+    outline: none;
+    height: 64px;
+    width: 24px;
+    background: #f7943d;
+    color: white;
     position: absolute;
-    top: 14%;
-    transform: rotate(135deg) translateY(-50%);
-    animation: moveArrow 2s linear infinite, fadeArrow 2s linear infinite;
-    opacity: 0;
-    /* Start with invisible arrows */
+    top: 9px;
+    right: -24px;
+    z-index: 9;
+    transition: 0.5s;
+    display: none;
 }
 
-.arrow:nth-child(1) {
-    right: -15px;
-    animation-delay: 0s;
+
+button.openbtn i {
+    transform: scale(2.5, 4);
+    padding-left: 1px;
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.arrow:nth-child(2) {
-    right: -15px;
-    animation-delay: 0.4s;
+button.openbtn i.icon-flipped {
+    transform: scale(2.5, 4) scaleX(-1); /* Flip the icon horizontally */
 }
 
-.arrow:nth-child(3) {
-    right: -15px;
-    animation-delay: 0.8s;
-}
-
-.arrow:nth-child(4) {
-    right: -15px;
-    animation-delay: 1.2s;
-}
-
-.arrow:nth-child(5) {
-    right: -15px;
-    animation-delay: 1.6s;
-}
-
-/* Animation for the arrows moving from right to left */
-@keyframes moveArrow {
-    0% {
-        right: -15px;
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        right: 100%;
-        opacity: 0;
-    }
-}
-
-/* Reversed Arrow Styles */
 
 
-.row.salamatouna {
-    margin-top: 33px;
-}
 
-.certificate img {
-    width: 10%;
-    margin: 0px 10px;
-    margin-bottom: 20px;
-}
+
+
 
 /*===========================================
 =============== header slider =============== 
@@ -1755,6 +1658,24 @@ h3.list-services__title strong {
 
 @media (min-width: 576px) and (max-width: 768px) {
     
+    .card-badge {
+    width: 0px;
+}
+
+button.openbtn {
+    right: 101px;
+
+}
+    
+    .card-badge::after {
+
+    padding-right: 28px;
+}
+
+button.openbtn {
+    display: block;
+}
+    
     .section_mod-a {
     padding-top: 45px;
 
@@ -1811,12 +1732,7 @@ h3.list-services__title strong {
 }
 
 
-    .fixed-image {
-
-        display: block;
-        left: -20vh;
-    }
-
+  
     .yamm .nav > li {
         text-align: center !important;
     }
@@ -2065,6 +1981,24 @@ a.navbar-brand {
 
 /************************************** Extra Small ********************************************************/
 @media (min-width:480px) and (max-width: 576px) {
+    
+    .card-badge {
+    width: 0px;
+}
+
+button.openbtn {
+    right: 101px;
+
+}
+    
+    .card-badge::after {
+
+    padding-right: 28px;
+}
+
+button.openbtn {
+    display: block;
+}
 
     .section_mod-e:before {
         background: none !important;
@@ -2138,11 +2072,6 @@ a.navbar-brand {
             top: initial !important;
     }
     
-    .fixed-image {
-
-        display: block;
-        left: -27vw;
-    }
 
 
     .yamm .nav > li {
@@ -2402,11 +2331,25 @@ a.navbar-brand {
 /**************************************************************************/
 @media (max-width:480px) {
     
+    .card-badge {
+    width: 0px;
+}
+
+button.openbtn {
+    right: 101px;
+
+}
     
+    .card-badge::after {
+
+    padding-right: 28px;
+}
+
+button.openbtn {
+    display: block;
+}
        
-        .fixed-image {
-        left: -30vw;
-    }
+
     
 
     .section_mod-e:before {
@@ -2759,6 +2702,24 @@ a.navbar-brand {
 /*****************************************************************************/
 @media (min-width:350px) and (max-width: 464px) {
     
+    .card-badge {
+    width: 0px;
+}
+
+button.openbtn {
+    right: 101px;
+
+}
+    
+    .card-badge::after {
+
+    padding-right: 28px;
+}
+
+button.openbtn {
+    display: block;
+}
+    
         .list-progress {
     margin-bottom: 95px !important;
 }
@@ -2773,10 +2734,7 @@ a.navbar-brand {
     a.navbar-brand {
     width: 31%;
 }
-    
-     .fixed-image {
-        left: -30vw;
-    }
+
     
 
    
