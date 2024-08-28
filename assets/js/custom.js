@@ -25,7 +25,7 @@
 $(document).ready(function() {
     
     
-    
+ // Cartes Tabs   
 
 function openTab(evt, tabName) {
     // Hide all elements with class="tabcontent" by default
@@ -63,7 +63,7 @@ window.onload = function() {
     
     
 
-   // Initialize language setting on page load
+// Initialize language setting on page load
 var language = localStorage.getItem("lang") || "fr"; // Default to French if no language is available
 setLanguage(language);
 updateDropdownButton(language);
@@ -164,60 +164,26 @@ function updateDropdownButton(language) {
     }
 }
 
-
+// lang swicth end
     
     
-    
+// sidebar certif toggle   
     
     var triggerPoint = 300; // Set the pixel value at which the image should appear
 
         $(window).on('scroll', function() {
             // Check if the user has scrolled past the trigger point
             if ($(window).scrollTop() > triggerPoint) {
-                $('.fixed-image').fadeIn();
+                $('.certifContainer').fadeIn();
             } else {
-                $('.fixed-image').fadeOut();
+                $('.certifContainer').fadeOut();
             }
         });
     
-    
+// sidebar certif toggle end  
 
-   var isVisible = false;
-
-  function toggleFixedImage() {
-    if (isVisible) {
-      // Slide the fixed-image out and reverse arrows
-      $('.fixed-image').animate({ left: '-24vw' }, 500);
-      $('.arrow-container').addClass('arrow-reverse');
-    } else {
-      // Slide the fixed-image in and reverse arrows
-      $('.fixed-image').animate({ left: '0%' }, 500);
-      $('.arrow-container').removeClass('arrow-reverse');
-    }
-
-    isVisible = !isVisible; // Toggle visibility state
-  }
-
-  $('#btnOpener').click(function() {
-    toggleFixedImage(); // Call the function to toggle visibility and arrows
-  });
-    
   
-    
- $('#btnOpener').click(function() {
-        var $fixedImage = $('.fixed-image');
-        var $arrowContainer = $('.arrow-container');
-     
-        
-        if ($fixedImage.hasClass('hide-left')) {
-            $fixedImage.removeClass('hide-left').addClass('animate__slideInLeft').addClass('show-right');
-            $arrowContainer.removeClass('arrow-reverse');
-
-        } else {
-            $fixedImage.addClass('hide-left').addClass('animate__slideInRight').removeClass('show-right');
-            $arrowContainer.addClass('arrow-reverse');
-        }
-    }); 
+// copyright
     
     function updateCopyrightYear() {
                 var currentYear = new Date().getFullYear();
@@ -226,10 +192,10 @@ function updateDropdownButton(language) {
 
             // Call the function to set the current year
             updateCopyrightYear();
-    
-    
     // end copyriight
     
+    
+//map start 
     
 function initializeMaps() {
     // Check if the map elements exist on the page
@@ -293,7 +259,7 @@ $(document).ready(function() {
 });
 
     
-    /*** map end**/
+/*** map end**/
 
     /////////////////////////////////////
     //  CUSTOM
