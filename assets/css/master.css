@@ -28,8 +28,8 @@ Primary use:	Autozone
 
 
 /* MAIN CSS */
-@import url('theme.css');
-@import url('sections.css');
+@import url('theme.css?version=2');
+@import url('sections.css?version=2');
 @import url('blog.css');
 @import url('sidebar.css');
 @import url('responsive.css');

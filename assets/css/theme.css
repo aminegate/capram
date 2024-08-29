@@ -672,6 +672,7 @@ div#certifSidebar {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     padding-right: 28px;
+    border-top-right-radius: 5px;
 }
 
 
