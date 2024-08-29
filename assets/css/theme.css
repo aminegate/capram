@@ -899,7 +899,7 @@ span.mapAddress {
     padding: 10px 0px;
     margin-top: 20px !important;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     width: 70%;
     margin: 0px auto;
 }
@@ -1579,6 +1579,7 @@ h3.list-services__title strong {
 
     span.mapAddress {
         width: 90% !important;
+        font-size: 15px;
 
     }
 
