@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend@latest/dist/umd/i18nextHttpBackend.min.js"></script>
-    <link id="english-stylesheet" rel="stylesheet" href="../capram/assets/css/style-en.css" disabled>
-    <link id="arabic-stylesheet" rel="stylesheet" href="../capram/assets/css/style-ar.css" disabled>
-    <link rel="stylesheet" href="../capram/assets/css/cartes.css">
+    <link id="english-stylesheet" rel="stylesheet" href="assets/css/style-en.css" disabled>
+    <link id="arabic-stylesheet" rel="stylesheet" href="assets/css/style-ar.css" disabled>
+    <link rel="stylesheet" href="assets/css/cartes.css">
 
     <title data-i18n="head_card_page">Capram - Nos Cartes</title>
 
@@ -36,7 +36,7 @@ Accessoires automobiles importés,Meilleur fournisseur pièces auto,Choix de pi�
     <div id="certifSidebar">
          <div class="card-badge">
             <div class="certifImg">
-                <img src="../capram/assets/img/salamatouna.png" alt="">
+                <img src="assets/img/salamatouna.png" alt="">
             </div>
         </div>
         <button class="openbtn">
@@ -50,7 +50,7 @@ Accessoires automobiles importés,Meilleur fournisseur pièces auto,Choix de pi�
 <script>
 $('.openbtn').on('click', function() {
     // Check if the screen width is less than or equal to 768px (small screen)
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 3000) {
         var sidebarWidth = $('.card-badge').width();
         
         if (sidebarWidth === 125) {
@@ -78,24 +78,24 @@ $('.openbtn').on('click', function() {
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
-                                <div class="header-contacts"> <span class="header-contacts__item"><i class="icon fa fa-phone"></i> +212 522 31 93 54</span> <a target="" class="header-contacts__item" href="index.html#goToLink-contact"><i class="icon fa fa-envelope"></i>info@capram.com</a> </div>
+                                <div class="header-contacts"> <span class="header-contacts__item"><i class="icon fa fa-phone"></i> +212 522 31 93 54</span> <a target="" class="header-contacts__item" href="https://capram.ma#goToLink-contact"><i class="icon fa fa-envelope"></i>contact@capram.ma</a> </div>
                                 <ul class="social-links list-inline">
                                     <li>
 
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <img src="../capram/assets/img/france.png" alt="" style="width: 20px;"> Français
+                                                <img src="assets/img/france.png" alt="" style="width: 20px;"> Français
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="languageDropdown">
                                                 <a class="dropdown-item" href="#" data-value="fr">
-                                                    <img src="../capram/assets/img/france.png" alt="" style="width: 20px;"> Français
+                                                    <img src="assets/img/france.png" alt="" style="width: 20px;"> Français
                                                 </a>
                                                 <a class="dropdown-item" href="#" data-value="en">
-                                                    <img src="../capram/assets/img/united-states.png" alt="" style="width: 20px;"> English
+                                                    <img src="assets/img/united-states.png" alt="" style="width: 20px;"> English
                                                 </a>
                                                 <!--
                                                 <a class="dropdown-item" href="#" data-value="ar">
-                                                    <img src="../capram/assets/img/morocco.png" alt="" style="width: 20px;"> Arabic
+                                                    <img src="assets/img/morocco.png" alt="" style="width: 20px;"> Arabic
                                                 </a>-->
                                             </div>
                                         </div>
@@ -119,17 +119,17 @@ $('.openbtn').on('click', function() {
                 <div class="header__inner">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12 col-xs-12"> <a target="" href="index.html" class="logo"> <img class="logo__img img-responsive" src="assets/img/logo.png" height="50" width="111" alt="Logo"> </a>
+                            <div class="col-md-12 col-xs-12"> <a target="" href="https://capram.ma/" class="logo"> <img class="logo__img img-responsive" src="assets/img/logo.png" height="50" width="111" alt="Logo"> </a>
                                 <div class="navbar yamm">
                                     <div class="navbar-header hidden-md hidden-lg hidden-sm">
                                         <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                                        <a target="" href="index.html" class="navbar-brand"></a>
+                                        <a target="" href="https://capram.ma/" class="navbar-brand"></a>
                                     </div>
                                     <div id="navbar-collapse-1" class="navbar-collapse collapse">
                                         <ul class="nav navbar-nav">
-                                            <li><a target="" href="index.html" data-i18n="home_link">Acceuil</a></li>
-                                            <li><a target="" href="index.html#goToLink-about" data-i18n="about_link">A Propos</a> </li>
-                                            <li class="dropdown"><a target="" href="cartes.html#cardTarget" data-i18n="cards_link">Cartes</a>
+                                            <li><a target="" href="https://capram.ma/" data-i18n="home_link">Acceuil</a></li>
+                                            <li><a target="" href="https://capram.ma#goToLink-about" data-i18n="about_link">A Propos</a> </li>
+                                            <li class="dropdown"><a target="" href="cartes.html" data-i18n="cards_link">Cartes</a>
                                                 <!-- 
                                              <ul role="menu" class="dropdown-menu">
                                                 <li> <a target="_blank" href="cartes.html#cartCatego1">Capram Cartes</a></li>
@@ -138,8 +138,8 @@ $('.openbtn').on('click', function() {
                                                 <li> <a target="_blank" href="cartes.html#cartCatego3">Capservice Cartes</a></li>
                                             </ul> -->
                                             </li>
-                                            <li><a target="" href="index.html#goToLink-news" data-i18n="news_link">Actualité</a></li>
-                                            <li><a target="" href="index.html#goToLink-contact" data-i18n="contact_link">Contact</a></li>
+                                            <li><a target="" href="https://capram.ma#goToLink-news" data-i18n="news_link">Actualité</a></li>
+                                            <li><a target="" href="https://capram.ma#goToLink-contact" data-i18n="contact_link">Contact</a></li>
                                             <li>
                                                 <div class="btn menu-btn ">
                                                     <div class="wrap__btn-skew-r ">
@@ -177,7 +177,7 @@ $('.openbtn').on('click', function() {
             <div id="sliderpro1" class="slider-pro main-slider">
                 <div class="sp-slides">
 
-                    <div class="sp-slide"> <img class="sp-image" src="../capram/assets/media/bg/slide1.jpg" data-src="../capram/assets/media/bg/slide1.jpg" data-retina="../capram/assets/media/bg/slide1.jpg" alt="img" />
+                    <div class="sp-slide"> <img class="sp-image" src="assets/media/bg/slide1.jpg" data-src="assets/media/bg/slide1.jpg" data-retina="assets/media/bg/slide1.jpg" alt="img" />
 
                         <div class="item-wrap sp-layer  sp-padding" data-horizontal="100" data-vertical="300" data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
                             <div class="main-slider__inner text-left">
@@ -195,7 +195,7 @@ $('.openbtn').on('click', function() {
 
 
 
-                    <div class="sp-slide"> <img class="sp-image" src="../capram/assets/media/bg/slide3.jpeg" data-src="../capram/assets/media/bg/slide3.jpeg" data-retina="../capram/assets/media/bg/slide3.jpeg" alt="img" />
+                    <div class="sp-slide"> <img class="sp-image" src="assets/media/bg/slide3.jpeg" data-src="assets/media/bg/slide3.jpeg" data-retina="assets/media/bg/slide3.jpeg" alt="img" />
                         <div class="item-wrap sp-layer  sp-padding" data-horizontal="100" data-vertical="300" data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
                             <div class="main-slider__inner text-left">
                                 <div class="custom-caption">
@@ -211,7 +211,7 @@ $('.openbtn').on('click', function() {
                         <div class="layer"></div>
                     </div>
 
-                    <div class="sp-slide"> <img class="sp-image" src="../capram/assets/media/bg/slide2.jpg" data-src="../capram/assets/media/bg/slide2.jpg" data-retina="../capram/assets/media/bg/slide2.jpg" alt="img" />
+                    <div class="sp-slide"> <img class="sp-image" src="assets/media/bg/slide2.jpg" data-src="assets/media/bg/slide2.jpg" data-retina="assets/media/bg/slide2.jpg" alt="img" />
 
                         <div class="item-wrap sp-layer  sp-padding" data-horizontal="100" data-vertical="300" data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
                             <div class="main-slider__inner text-left">
@@ -236,23 +236,22 @@ $('.openbtn').on('click', function() {
             <!-- end main-slider -->
 <div id="wlcmSection"></div>
 <div class="cardTab">
-<div id="cardTarget"></div>
 <h1 class="cardTabTitle">Nos Partenaires</h1>
 <div class="container">
        
 <div class="tab">
    <div class="row tabWrapper">
     <button id="capramTab" class="tablinks active col-lg-3 col-md-6 col-sm-6 col-xs-6" onclick="openTab(event, 'Capram')">
-        <img src="../capram/assets/media/link-img/tab1.jpg" alt=""><br>Capram
+        <img src="assets/media/link-img/tab1.jpg" alt=""><br>Capram
     </button>
     <button id="capjapTab" class="tablinks col-lg-3 col-md-6 col-sm-6 col-xs-6" onclick="openTab(event, 'Capjap')">
-        <img src="../capram/assets/media/link-img/tab2.jpg" alt=""><br>Capjap
+        <img src="assets/media/link-img/tab2.jpg" alt=""><br>Capjap
     </button>
     <button id="capcarrosserieTab" class="tablinks col-lg-3 col-md-6 col-sm-6 col-xs-6" onclick="openTab(event, 'Capcarrosserie')">
-        <img src="../capram/assets/media/link-img/tab3.jpg" alt=""><br>Capcarrosserie
+        <img src="assets/media/link-img/tab3.jpg" alt=""><br>Capcarrosserie
     </button>
     <button id="capserviceTab" class="tablinks col-lg-3 col-md-6 col-sm-6 col-xs-6" onclick="openTab(event, 'Capservice')">
-        <img src="../capram/assets/media/link-img/tab4.jpg" alt=""><br>Capservice
+        <img src="assets/media/link-img/tab4.jpg" alt=""><br>Capservice
     </button>
     </div>
 </div>
@@ -264,107 +263,107 @@ $('.openbtn').on('click', function() {
             <div class="row">
 
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA01.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA01.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA02.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA02.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA03.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA03.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA04.png" alt="" class="capramCartesImg despa">
+    <img src="assets/media/brands/capram/RA04.png" alt="" class="capramCartesImg despa">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA05.png" alt="" class="capramCartesImg darco">
+    <img src="assets/media/brands/capram/RA05.png" alt="" class="capramCartesImg darco">
 </div>
 
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA07.png" alt="" class="capramCartesImg fae">
+    <img src="assets/media/brands/capram/RA07.png" alt="" class="capramCartesImg fae">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA08.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA08.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA09.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA09.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA10.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA10.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA11.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA11.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA12.png" alt="" class="capramCartesImg hitachi">
+    <img src="assets/media/brands/capram/RA12.png" alt="" class="capramCartesImg hitachi">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA13.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA13.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA14.png" alt="" class="capramCartesImg continental">
+    <img src="assets/media/brands/capram/RA14.png" alt="" class="capramCartesImg continental">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA15.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA15.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA16.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA16.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA17.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA17.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA19.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA19.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA20.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA20.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA21.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA21.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA22.png" alt="" class="capramCartesImg amadini">
+    <img src="assets/media/brands/capram/RA22.png" alt="" class="capramCartesImg amadini">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA23.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA23.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA24.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA24.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA25.png" alt="" class="capramCartesImg diesel">
+    <img src="assets/media/brands/capram/RA25.png" alt="" class="capramCartesImg diesel">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA26.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA26.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA28.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA28.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA29.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA29.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA30.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA30.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA31.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA31.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA32.png" alt="" class="capramCartesImg formpart">
+    <img src="assets/media/brands/capram/RA32.png" alt="" class="capramCartesImg formpart">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA33.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA33.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA34.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA34.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA35.png" alt="" class="capramCartesImg hardex">
+    <img src="assets/media/brands/capram/RA35.png" alt="" class="capramCartesImg hardex">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA36.png" alt="" class="capramCartesImg dolz">
+    <img src="assets/media/brands/capram/RA36.png" alt="" class="capramCartesImg dolz">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capram/RA37.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capram/RA37.png" alt="" class="capramCartesImg">
 </div>
 
 
@@ -376,73 +375,73 @@ $('.openbtn').on('click', function() {
                         
                     <div class="row">
                 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA01.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA01.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA02.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA02.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA03.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA03.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA04.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA04.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA05.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA05.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA06.png" alt="" class="capramCartesImg nwp">
+    <img src="assets/media/brands/capjap/JA06.png" alt="" class="capramCartesImg nwp">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA07.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA07.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA08.png" alt="" class="capramCartesImg fae">
+    <img src="assets/media/brands/capjap/JA08.png" alt="" class="capramCartesImg fae">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA09.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA09.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA10.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA10.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA11.png" alt="" class="capramCartesImg hitachi">
+    <img src="assets/media/brands/capjap/JA11.png" alt="" class="capramCartesImg hitachi">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA12.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA12.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA13.png" alt="" class="capramCartesImg continental">
+    <img src="assets/media/brands/capjap/JA13.png" alt="" class="capramCartesImg continental">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA14.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA14.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA15.png" alt="" class="capramCartesImg amadini">
+    <img src="assets/media/brands/capjap/JA15.png" alt="" class="capramCartesImg amadini">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA16.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA16.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA17.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA17.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA18.png" alt="" class="capramCartesImg dolz">
+    <img src="assets/media/brands/capjap/JA18.png" alt="" class="capramCartesImg dolz">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA19.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA19.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA20.png" alt="" class="capramCartesImg formpart">
+    <img src="assets/media/brands/capjap/JA20.png" alt="" class="capramCartesImg formpart">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA21.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA21.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA22.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA22.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capjap/JA23.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capjap/JA23.png" alt="" class="capramCartesImg">
 </div>
 
 
@@ -457,64 +456,64 @@ $('.openbtn').on('click', function() {
                       
 
                       <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA01.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA01.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA02.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA02.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA03.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA03.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA04.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA04.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA05.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA05.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA06.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA06.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA07.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA07.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA08.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA08.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA09.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA09.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA10.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA10.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA11.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA11.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA12.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA12.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA13.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA13.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA14.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA14.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA15.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA15.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA16.png" alt="" class="capramCartesImg ">
+    <img src="assets/media/brands/capcarrosserie/CA16.png" alt="" class="capramCartesImg ">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA17.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA17.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA18.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA18.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA19.png" alt="" class="capramCartesImg despa">
+    <img src="assets/media/brands/capcarrosserie/CA19.png" alt="" class="capramCartesImg despa">
 </div>
                       <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capcarrosserie/CA20.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capcarrosserie/CA20.png" alt="" class="capramCartesImg">
 </div>
 
                       
@@ -527,50 +526,50 @@ $('.openbtn').on('click', function() {
                     <div class="row">
   
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE000.png" alt="" class="capramCartesImg alco">
+    <img src="assets/media/brands/capservice/SE000.png" alt="" class="capramCartesImg alco">
 </div>
 
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE00.png" alt="" class="capramCartesImg alcoTwo">
+    <img src="assets/media/brands/capservice/SE00.png" alt="" class="capramCartesImg alcoTwo">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE01.png" alt="" class="capramCartesImg ate">
+    <img src="assets/media/brands/capservice/SE01.png" alt="" class="capramCartesImg ate">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE02.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capservice/SE02.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE03.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capservice/SE03.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE04.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capservice/SE04.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE05.png" alt="" class="capramCartesImg professional">
+    <img src="assets/media/brands/capservice/SE05.png" alt="" class="capramCartesImg professional">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE06.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capservice/SE06.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE07.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capservice/SE07.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE08.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capservice/SE08.png" alt="" class="capramCartesImg">
 </div>
 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE09.png" alt="" class="capramCartesImg">
+    <img src="assets/media/brands/capservice/SE09.png" alt="" class="capramCartesImg">
 </div>
                     <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE11.png" alt="" class="capramCartesImg ">
+    <img src="assets/media/brands/capservice/SE11.png" alt="" class="capramCartesImg ">
 </div>
                     <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE12.png" alt="" class="capramCartesImg ">
+    <img src="assets/media/brands/capservice/SE12.png" alt="" class="capramCartesImg ">
 </div>
                     <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE13.png" alt="" class="capramCartesImg ">
+    <img src="assets/media/brands/capservice/SE13.png" alt="" class="capramCartesImg ">
 </div>
                                  <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="../capram/assets/media/brands/capservice/SE14.png" alt="" class="capramCartesImg capfilter">
+    <img src="assets/media/brands/capservice/SE14.png" alt="" class="capramCartesImg capfilter">
 </div>
 
                     </div>
@@ -691,7 +690,7 @@ document.querySelectorAll('.anchor-link').forEach(anchor => {
 
                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                         <div class="footer__name" data-i18n="footer_subtitle_2"> Contactez-nous </div>
-                                        <div class="footer__text"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;+212 522 31 93 54<br><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;info@capram.com</div>
+                                        <div class="footer__text"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;+212 522 31 93 54<br><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;contact@capram.ma</div>
                                     </div>
 
 
@@ -706,7 +705,7 @@ document.querySelectorAll('.anchor-link').forEach(anchor => {
 
                             <div class="row salamatouna">
                                 <div class="certificate">
-                                    <img src="../capram/assets/img/salamatouna%202.png" alt="salamatouna">
+                                    <img src="assets/img/salamatouna%202.png" alt="salamatouna">
 
                                 </div>
 

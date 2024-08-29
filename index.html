@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend@latest/dist/umd/i18nextHttpBackend.min.js"></script>
-    <link id="english-stylesheet" rel="stylesheet" href="../capram/assets/css/style-en.css" disabled>
-    <link id="arabic-stylesheet" rel="stylesheet" href="../capram/assets/css/style-ar.css" disabled>
+    <link id="english-stylesheet" rel="stylesheet" href="assets/css/style-en.css" disabled>
+    <link id="arabic-stylesheet" rel="stylesheet" href="assets/css/style-ar.css" disabled>
 
     <title data-i18n="head_index_page">Capram - La Qualité Qui Vous Mène Loin</title>
 
@@ -31,12 +31,13 @@ Accessoires automobiles importés,Meilleur fournisseur pièces auto,Choix de pi�
 
 <body>
 
-<!-- fixed  sidebar certif -->
+
+    <!-- fixed  sidebar certif -->
    <div class="certifContainer">
     <div id="certifSidebar">
          <div class="card-badge">
             <div class="certifImg">
-                <img src="../capram/assets/img/salamatouna.png" alt="">
+                <img src="assets/img/salamatouna.png" alt="">
             </div>
         </div>
         <button class="openbtn">
@@ -50,7 +51,7 @@ Accessoires automobiles importés,Meilleur fournisseur pièces auto,Choix de pi�
 <script>
 $('.openbtn').on('click', function() {
     // Check if the screen width is less than or equal to 768px (small screen)
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 3000) {
         var sidebarWidth = $('.card-badge').width();
         
         if (sidebarWidth === 125) {
@@ -67,9 +68,7 @@ $('.openbtn').on('click', function() {
 });
 </script>
     
-<!-- fixed  sidebar certif end -->    
-    
-    
+<!-- fixed  sidebar certif end -->   
     
     
     
@@ -82,20 +81,20 @@ $('.openbtn').on('click', function() {
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12">
-                                <div class="header-contacts"> <span class="header-contacts__item"><i class="icon fa fa-phone"></i> +212 522 31 93 54</span> <a target="" class="header-contacts__item" href="index.html#contact"><i class="icon fa fa-envelope"></i>info@capram.com</a> </div>
+                                <div class="header-contacts"> <span class="header-contacts__item"><i class="icon fa fa-phone"></i> +212 522 31 93 54</span> <a target="" class="header-contacts__item" href="https://capram.ma#contact"><i class="icon fa fa-envelope"></i>contact@capram.ma</a> </div>
                                 <ul class="social-links list-inline">
                                     <li>
 
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <img src="../capram/assets/img/france.png" alt="" style="width: 20px;"> Français
+                                                <img src="assets/img/france.png" alt="french-flag" style="width: 20px;"> Français
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="languageDropdown">
                                                 <a class="dropdown-item" href="#" data-value="fr">
-                                                    <img src="../capram/assets/img/france.png" alt="" style="width: 20px;"> Français
+                                                    <img src="assets/img/france.png" alt="french-flag" style="width: 20px;"> Français
                                                 </a>
                                                 <a class="dropdown-item" href="#" data-value="en">
-                                                    <img src="../capram/assets/img/united-states.png" alt="" style="width: 20px;"> English
+                                                    <img src="assets/img/united-states.png" alt="usa-flag" style="width: 20px;"> English
                                                 </a>
                                             
                                             </div>
@@ -120,17 +119,17 @@ $('.openbtn').on('click', function() {
                 <div class="header__inner">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12 col-xs-12"> <a target="" href="index.html" class="logo"> <img class="logo__img img-responsive" src="assets/img/logo.png" height="50" width="111" alt="Logo"> </a>
+                            <div class="col-md-12 col-xs-12"> <a target="" href="https://capram.ma/" class="logo"> <img class="logo__img img-responsive" src="assets/img/logo.png" height="50" width="111" alt="Logo"> </a>
                                 <div class="navbar yamm">
                                     <div class="navbar-header hidden-md hidden-lg hidden-sm">
                                         <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                                        <a target="" href="index.html" class="navbar-brand"></a>
+                                        <a target="" href="https://capram.ma/" class="navbar-brand"></a>
                                     </div>
                                     <div id="navbar-collapse-1" class="navbar-collapse collapse">
                                         <ul class="nav navbar-nav">
-                                            <li><a target="" href="index.html" data-i18n="home_link">Acceuil</a></li>
+                                            <li><a target="" href="https://capram.ma/" data-i18n="home_link">Acceuil</a></li>
                                             <li><a target="" href="#goToLink-about" data-i18n="about_link">A Propos</a> </li>
-                                            <li class="dropdown"><a target="" href="cartes.html#cardTarget" data-i18n="cards_link">Cartes</a>
+                                            <li class="dropdown"><a target="" href="cartes.html" data-i18n="cards_link">Cartes</a>
                                                 <!-- 
                                              <ul role="menu" class="dropdown-menu">
                                                 <li> <a target="_blank" href="cartes.html#cartCatego1">Capram Cartes</a></li>
@@ -178,7 +177,7 @@ $('.openbtn').on('click', function() {
             <div id="sliderpro1" class="slider-pro main-slider">
                 <div class="sp-slides">
 
-                    <div class="sp-slide"> <img class="sp-image" src="../capram/assets/media/bg/slide1.jpg" data-src="../capram/assets/media/bg/slide1.jpg" data-retina="../capram/assets/media/bg/slide1.jpg" alt="img" />
+                    <div class="sp-slide"> <img class="sp-image" src="assets/media/bg/slide1.jpg" data-src="assets/media/bg/slide1.jpg" data-retina="assets/media/bg/slide1.jpg" alt="slide 1" />
 
                         <div class="item-wrap sp-layer  sp-padding" data-horizontal="100" data-vertical="300" data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
                             <div class="main-slider__inner text-left">
@@ -196,7 +195,7 @@ $('.openbtn').on('click', function() {
 
 
 
-                    <div class="sp-slide"> <img class="sp-image" src="../capram/assets/media/bg/slide3.jpeg" data-src="../capram/assets/media/bg/slide3.jpeg" data-retina="../capram/assets/media/bg/slide3.jpeg" alt="img" />
+                    <div class="sp-slide"> <img class="sp-image" src="assets/media/bg/slide3.jpeg" data-src="assets/media/bg/slide3.jpeg" data-retina="assets/media/bg/slide3.jpeg" alt="slide 2" />
                         <div class="item-wrap sp-layer  sp-padding" data-horizontal="100" data-vertical="300" data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
                             <div class="main-slider__inner text-left">
                                 <div class="custom-caption">
@@ -212,7 +211,7 @@ $('.openbtn').on('click', function() {
                         <div class="layer"></div>
                     </div>
 
-                    <div class="sp-slide"> <img class="sp-image" src="../capram/assets/media/bg/slide2.jpg" data-src="../capram/assets/media/bg/slide2.jpg" data-retina="../capram/assets/media/bg/slide2.jpg" alt="img" />
+                    <div class="sp-slide"> <img class="sp-image" src="assets/media/bg/slide2.jpg" data-src="assets/media/bg/slide2.jpg" data-retina="assets/media/bg/slide2.jpg" alt="slide 3" />
 
                         <div class="item-wrap sp-layer  sp-padding" data-horizontal="100" data-vertical="300" data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="200">
                             <div class="main-slider__inner text-left">
@@ -301,7 +300,7 @@ $('.openbtn').on('click', function() {
                                     <div class="ui-subtitle-block_mod-a" data-i18n="service_subtitle">Capram s'engage à offrir un service de qualité et un confort optimal à ses clients.</div>
                                     <div class="slider-services owl-carousel owl-theme owl-theme_mod-a enable-owl-carousel" data-min480="2" data-min768="3" data-min992="4" data-min1200="4" data-pagination="true" data-navigation="false" data-auto-play="4000" data-stop-on-hover="true">
 
-                                        <div class="list-services"> <i class="icon"><img src="../capram/assets/img/car-parts-service-1.png" alt=""></i>
+                                        <div class="list-services"> <i class="icon"><img src="assets/img/car-parts-service-1.png" alt=""></i>
                                             <div class="decor-1"></div>
                                             <div class="list-services__inner">
                                                 <h3 class="list-services__title" data-i18n="service_one_title"> <strong>Piéces Auto</strong></h3>
@@ -314,7 +313,7 @@ $('.openbtn').on('click', function() {
                                      
                                         </div>
                                         <!-- end list-services -->
-                                        <div class="list-services fixPad"> <i class="icon"><img src="../capram/assets/img/car-parts-service-3.png" alt=""></i>
+                                        <div class="list-services fixPad"> <i class="icon"><img src="assets/img/car-parts-service-3.png" alt=""></i>
                                             <div class="decor-1"></div>
                                             <div class="list-services__inner">
                                                 <h3 class="list-services__title" data-i18n="service_two_title"> <strong>Pièces carrosserie</strong></h3>
@@ -324,7 +323,7 @@ $('.openbtn').on('click', function() {
 </div>                                  </div>
                                         </div>
                                         <!-- end list-services -->
-                                        <div class="list-services"> <i class="icon"><img src="../capram/assets/img/car-parts-service-2.png" alt=""></i>
+                                        <div class="list-services"> <i class="icon"><img src="assets/img/car-parts-service-2.png" alt=""></i>
                                             <div class="decor-1"></div>
                                             <div class="list-services__inner">
                                                 <h3 class="list-services__title" data-i18n="service_three_title"> <strong>Piéces Asiatique</strong></h3>
@@ -336,7 +335,7 @@ $('.openbtn').on('click', function() {
                                         </div>
                                         <!-- end list-services -->
 
-                                        <div class="list-services"> <i class="icon"><img src="../capram/assets/img/car-parts-service-4.png" alt=""></i>
+                                        <div class="list-services"> <i class="icon"><img src="assets/img/car-parts-service-4.png" alt=""></i>
                                             <div class="decor-1"></div>
                                             <div class="list-services__inner">
                                                 <h3 class="list-services__title" data-i18n="service_four_title"> <strong>LIBRIFIANTS & ADDITIFS</strong></h3>
@@ -403,7 +402,7 @@ $('.openbtn').on('click', function() {
                                 
                                             
                              <div class="col-lg-5 col-md-5 aboutUsImg  hidden-sm hidden-xs">
-                                    <img src="../capram/assets/media/bg/10.png" alt="">
+                                    <img src="assets/media/bg/10.png" alt="">
                             </div>
                 
                             <!-- end col -->
@@ -445,7 +444,7 @@ $('.openbtn').on('click', function() {
                     <div class="slider-gallery__item">
                         <a target="" class="slider-gallery__link" href="#" rel="prettyPhoto">
                             <div class="borderiMG"></div>
-                            <img class="clientIMG" src="../capram/assets/media/main-brands/${i}.png" height="177" width="280" alt="foto">
+                            <img class="clientIMG" src="assets/media/main-brands/${i}.png" height="177" width="280" alt="foto">
                         </a>
                     </div>
                 `;
@@ -571,20 +570,20 @@ $('.openbtn').on('click', function() {
                                     <script src="assets/plugins/rendro-easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 
                                     <ul class="list-progress list-unstyled">
-                                        <li class="list-progress__item"> <img src="../capram/assets/media/achievment/bar.png" alt=""><br>
+                                        <li class="list-progress__item"> <img src="assets/media/achievment/bar.png" alt=""><br>
                                             <div class="list-progress__inner"> <span class="chart" data-percent="35000"><span class="percent"></span>+</span> <span class="list-progress__name" data-i18n="stats_one">Références gérées</span> </div>
                                         </li>
 
 
-                                        <li class="list-progress__item"> <img src="../capram/assets/media/achievment/collab.png" alt=""><br>
+                                        <li class="list-progress__item"> <img src="assets/media/achievment/collab.png" alt=""><br>
                                             <div class="list-progress__inner"> <span class="chart" data-percent="2500"><span class="percent"></span>+</span> <span class="list-progress__name" data-i18n="stats_two">Clients</span> </div>
                                         </li>
 
-                                        <li class="list-progress__item"> <img src="../capram/assets/media/achievment/ppl.png" alt=""><br>
+                                        <li class="list-progress__item"> <img src="assets/media/achievment/ppl.png" alt=""><br>
                                             <div class="list-progress__inner"> <span class="chart" data-percent="155"><span class="percent"></span>+</span> <span class="list-progress__name" data-i18n="stats_three">Personnes / Effectifs</span> </div>
                                         </li>
 
-                                        <li class="list-progress__item"> <img src="../capram/assets/media/achievment/zone.png" alt=""><br>
+                                        <li class="list-progress__item"> <img src="assets/media/achievment/zone.png" alt=""><br>
                                             <div class="list-progress__inner"> <span class="chart" data-percent="40000"><span class="percent"></span>+</span> <span class="list-progress__name" data-i18n="stats_four">m² / Zone de stockage</span> </div>
                                         </li>
                                     </ul>
@@ -726,7 +725,7 @@ $('.openbtn').on('click', function() {
                                     <div class="col-lg-3 col-md-4 col-sm-12 ">
                                        <div class="toRight">
                                         <div class="footer__name" data-i18n="footer_subtitle_2"> Contactez-nous </div>
-                                        <div class="footer__text"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;+212 522 31 93 54<br><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;info@capram.com</div>
+                                        <div class="footer__text"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;+212 522 31 93 54<br><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;contact@capram.ma</div>
                                         </div>
                                     </div>
 
@@ -742,7 +741,7 @@ $('.openbtn').on('click', function() {
 
                             <div class="row salamatouna">
                                 <div class="certificate">
-                                    <img src="../capram/assets/img/salamatouna%202.png" alt="salamatouna">
+                                    <img src="assets/img/salamatouna%202.png" alt="salamatouna">
 
                                 </div>
 
