@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script src="https://unpkg.com/i18next@latest/dist/umd/i18next.min.js"></script>
-    <script src="https://unpkg.com/i18next-http-backend@latest/dist/umd/i18nextHttpBackend.min.js"></script>
     <link id="english-stylesheet" rel="stylesheet" href="assets/css/style-en.css" disabled>
     <link id="arabic-stylesheet" rel="stylesheet" href="assets/css/style-ar.css" disabled>
 
@@ -56,17 +54,11 @@ $('.openbtn').on('click', function() {
         
         if (sidebarWidth === 125) {
             $('.card-badge').css('width', '0px');
-            $('.openbtn').css({
-                'right': '101px',
-                'display': 'block !important'
-            });
+            $('.openbtn').attr('style', 'display: block !important; right: 101px;');
             
         } else {
             $('.card-badge').css('width', '125px');
-            $('.openbtn').css({
-                'right': '-24px',
-                'display': 'block !important'
-            });
+            $('.openbtn').attr('style', 'display: block !important; right: -24px;');
         }
 
       // Toggle class to flip the icon
