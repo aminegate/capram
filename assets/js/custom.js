@@ -141,15 +141,15 @@ function updateDropdownButton(language) {
     switch(language) {
         case 'fr':
             selectedText = "Français";
-            selectedImage = "../capram/assets/img/france.png";
+            selectedImage = "assets/img/france.png";
             break;
         case 'en':
             selectedText = "English";
-            selectedImage = "../capram/assets/img/united-states.png";
+            selectedImage = "assets/img/united-states.png";
             break;
         default:
             selectedText = "Français";
-            selectedImage = "../capram/assets/img/france.png";
+            selectedImage = "assets/img/france.png";
     }
 
     $('#languageDropdown').html('<img src="' + selectedImage + '" style="width: 20px;"> ' + selectedText);
