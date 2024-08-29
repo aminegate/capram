@@ -688,6 +688,7 @@ button.openbtn {
     right: 101px;
     z-index: 9;
     transition: 0.5s;
+    display: block;
 }
 
 
