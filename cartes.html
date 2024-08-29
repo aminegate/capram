@@ -55,13 +55,17 @@ $('.openbtn').on('click', function() {
         
         if (sidebarWidth === 125) {
             $('.card-badge').css('width', '0px');
-            $('.openbtn').css('right', '101px');
-             $('.openbtn').css('display', 'block !important');
+            $('.openbtn').css({
+                'right': '101px',
+                'display': 'block !important'
+            });
             
         } else {
             $('.card-badge').css('width', '125px');
-            $('.openbtn').css('right', '-24px');
-            $('.openbtn').css('display', 'block !important');
+            $('.openbtn').css({
+                'right': '-24px',
+                'display': 'block !important'
+            });
         }
 
       // Toggle class to flip the icon
