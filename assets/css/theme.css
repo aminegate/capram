@@ -1116,13 +1116,13 @@ textarea.form-control {
 }
 
 .owl-item:nth-child(2) > .list-services .icon img {
-    width: 100px;
-    margin-top: 7px;
+    width: 95px;
+    margin-top: 5px;
+    margin-bottom: 7px;
 }
 
 .owl-item:nth-child(4) > .list-services .icon img {
 
-    margin-top: 6px;
     width: 78px;
 }
 
