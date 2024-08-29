@@ -136,9 +136,7 @@
     padding-bottom: 100px;
 }
 
-.section_mod-h:after {
-    background-image: url('../media/bg/footer.jpg');
-}
+
 
 .section_mod-e:before {
     background: url(../media/bg/7.jpg);
