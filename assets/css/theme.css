@@ -630,7 +630,7 @@ div#certifSidebar {
 
 .card-badge {
     width: 0px;
-   /* border-radius: 0 5px 5px 0;*/
+    border-radius: 0 5px 5px 0;
     background: white;
     position: relative;
     color: #434343;
@@ -689,6 +689,7 @@ button.openbtn {
     z-index: 9;
     transition: 0.5s;
     display: block;
+    border-radius: 0px 5px 5px 0px;
 }
 
 
