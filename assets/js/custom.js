@@ -390,8 +390,8 @@ $(function() {
     if (sliderpro1.length > 0) {
 
         sliderpro1.sliderPro({
-            width: 3840,
-            height: 1514,
+            width: 2000,
+            height: 900,
             fade: true,
             arrows: true,
             buttons: false,
