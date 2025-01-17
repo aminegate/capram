@@ -1,0 +1,95 @@
+/*** header ***/
+.yamm .nav > li > a,
+.main-slider__subtitle,
+.capramIntro p,
+.ui-subtitle-block_mod-a,
+.list-services__description,
+.ui-description,
+#aboutUs p,
+a.link,
+.main-slider__btn_inner,
+.capramIntro p,
+.ui-subtitle-block_mod-a,
+h3.ui-title-inner.fontChange span,
+.list-progress__name,
+.ui-description,
+#aboutUs p,
+.list-services__description,
+h3.list-services__title,
+a.link,
+#contact.section_map .ui-title-inner,
+.footer__name{
+  font-family: "Oswald", serif !important;
+  font-optical-sizing: auto !important;
+  font-style: normal !important;
+}
+
+.yamm .nav > li > a {
+    padding: 42px 13px 23px;
+    font-size: 17px;
+    text-align: right;
+    direction: rtl;
+}
+
+.main-slider__subtitle,
+.capramIntro p,
+.ui-subtitle-block_mod-a,
+.list-services__description,
+.ui-description,
+#aboutUs p,
+a.link{
+
+    direction: rtl;
+}
+
+.main-slider__btn_inner {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.capramIntro p {
+    font-weight: 600;
+ 
+}
+
+.ui-subtitle-block_mod-a,
+h3.ui-title-inner.fontChange span{
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+}
+
+h3.ui-title-inner.fontChange span{
+
+    color: black;
+}
+
+.list-progress__name {
+    font-size: 14px !important;
+}
+
+.ui-description,
+#aboutUs p{
+    font-size: 16px;
+}
+
+.list-services__description,
+h3.list-services__title{
+    font-weight: 600;
+}
+
+a.link{
+
+    width: 100%;
+     box-shadow: 4px 0 0 0 #F7943D !important;
+    font-size: 17px;
+}
+
+#contact.section_map .ui-title-inner {
+    font-size: 17px;
+}
+
+.footer__name {
+    font-weight: 600;
+    font-size: 18px;
+}

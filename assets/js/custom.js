@@ -25,7 +25,6 @@
 $(document).ready(function() {
     
     
- // Cartes Tabs   
 
 function openTab(evt, tabName) {
     // Hide all elements with class="tabcontent" by default
@@ -61,7 +60,7 @@ window.onload = function() {
 };
 
     
-    
+
 
 // Initialize language setting on page load
 var language = localStorage.getItem("lang") || "fr"; // Default to French if no language is available
@@ -147,22 +146,35 @@ function updateDropdownButton(language) {
             selectedText = "English";
             selectedImage = "assets/img/united-states.png";
             break;
+        case 'ar':
+            selectedText = "العربية";
+            selectedImage = "assets/img/morocco.png"; // You can replace this image with the appropriate one
+            break;
         default:
             selectedText = "Français";
             selectedImage = "assets/img/france.png";
     }
 
+    // Update the button text and image
     $('#languageDropdown').html('<img src="' + selectedImage + '" style="width: 20px;"> ' + selectedText);
 
     // Update dropdown items based on the selected language
-    if (language === 'fr') {
-        $('.dropdown-menu a[data-value="fr"]').hide();
-        $('.dropdown-menu a[data-value="en"]').show();
-    } else if (language === 'en') {
-        $('.dropdown-menu a[data-value="fr"]').show();
-        $('.dropdown-menu a[data-value="en"]').hide();
+    $('.dropdown-menu a').show(); // Reset visibility of all items
+    switch(language) {
+        case 'fr':
+            $('.dropdown-menu a[data-value="fr"]').hide(); // Hide French option
+            break;
+        case 'en':
+            $('.dropdown-menu a[data-value="en"]').hide(); // Hide English option
+            break;
+        case 'ar':
+            $('.dropdown-menu a[data-value="ar"]').hide(); 
+            break;
+        default:
+            break;
     }
 }
+
 
 // lang swicth end
     

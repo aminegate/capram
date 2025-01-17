@@ -66,7 +66,10 @@ en: {
     "email_input": "Email",
     "tel_input": "Phone Number",
     "subject_input": "Subject",
-    "textarea_input": "Message Details..."
+    "textarea_input": "Message Details...",
+    "textarea_input": "Message Details...",
+    "card_page_title": "Our Partners"
+    
   
 },
     
@@ -132,7 +135,8 @@ en: {
   "email_input":"Email",
   "tel_input" :"Téléphone",
   "subject_input":"Objet",
-  "textarea_input": "Message Details ..."
+  "textarea_input": "Message Details ...",
+  "card_page_title": "Nos Partenaires"
 },
 
     
@@ -177,7 +181,7 @@ en: {
 	"stats_title": "CAPRAM بالأرقام",
 	"stats_subheading": "اكتشف الإحصائيات والأرقام لشركتنا.",
 	"stats_one": "العناصر المدارة",
-	"stats_two": "شركاء الموزعين",
+	"stats_two": "شركاء",
 	"stats_three": "الأشخاص / الموظفون",
 	"stats_four": "م² / منطقة التخزين",
 	"contact_title": "اتصل بنا",
@@ -191,7 +195,14 @@ en: {
 	"copyright": "جميع الحقوق محفوظة",
     "work_hours_1": "الاثنين - الجمعة",
     "work_hours_2": "السبت",
-	"certif": "شهادة"
+	"certif": "شهادة",
+    "fullname_input": "الاسم الكامل",
+    "email_input": "البريد الإلكتروني",
+    "tel_input": "رقم الهاتف",
+    "subject_input": "الموضوع",
+    "textarea_input": "... تفاصيل الرسالة",
+    "card_page_title": "شركاؤنا"
+
      },
 };
 

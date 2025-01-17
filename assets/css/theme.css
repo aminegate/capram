@@ -39,11 +39,6 @@ i.fa-hand-pointer {
     display: none;
 }
 
-
-
-
-
-
 #wlcmSection:target {
     position: relative;
     border-top: 80px solid transparent;
@@ -1028,6 +1023,12 @@ textarea.form-control {
     font-size: 21px;
     font-weight: 500;
     margin: 0 0 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 48px;
 }
 
 .blog-grid .blog-info h5 a {
@@ -3823,7 +3824,6 @@ img.pull-left {
     padding: 22px 0px 22px 0;
     background: #222;
     transition: all 1s;
-    cursor: pointer;
     height: 295px;
 
 }
@@ -4866,6 +4866,7 @@ img.pull-left {
     display: block;
     color: #fff;
     overflow: hidden;
+    cursor: initial;
 }
 
 .slider-gallery__link:hover {
