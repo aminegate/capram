@@ -201,7 +201,8 @@ en: {
     "tel_input": "رقم الهاتف",
     "subject_input": "الموضوع",
     "textarea_input": "... تفاصيل الرسالة",
-    "card_page_title": "شركاؤنا"
+    "card_page_title": "شركاؤنا",
+    "head_index_page": "كابرام - الجودة التي تقودك إلى آفاق جديدة"
 
      },
 };
