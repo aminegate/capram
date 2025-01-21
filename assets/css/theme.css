@@ -11,6 +11,10 @@
 
 
 -------------------------------------------------------------------*/
+.certificate {
+    width: 100%;
+}
+
 .boxy {
     position: absolute;
     bottom: 5%;
@@ -2892,6 +2896,7 @@ img.pull-left {
 
 #wrapper {
     margin: auto;
+    overflow: hidden;
 }
 
 
