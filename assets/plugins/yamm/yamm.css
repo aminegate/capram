@@ -5,7 +5,9 @@
  * @geedmo - Licensed under the MIT license
  */
 
-
+.yamm .nav {
+    overflow: hidden;
+}
 .header.sticky {
     left: 0;
     position: fixed;
@@ -21,8 +23,6 @@
 
 .header.sticky  .logo {
     display: inline-block;
-    margin-top: 22px;
-	
 }
 
 .header.sticky   .yamm .nav > li > a {
@@ -77,7 +77,7 @@
 .yamm .nav > li > a {
 	position: relative;
 	display: block;
-	padding: 50px 13px 23px;
+	padding: 22px 8px 23px;
 	font: 700 12px Raleway;
 	color: #FFF;
 	text-transform: uppercase;
@@ -151,7 +151,12 @@
 
 }
 
+@media (min-width:767px) and (max-width:991px) {
 
+    .header.sticky .yamm .nav > li > a {
+        padding: 35px 10px 23px !important;
+    }
+}
 
 @media (max-width:767px) {
 

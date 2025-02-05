@@ -51,11 +51,7 @@
 	right: -60vw;
 	text-align: right;
 }
-.header .logo {
-	position: absolute;
-	left: 10px;
-	top: 50px;
-}
+
 .yamm .nav > li > a {
 	padding-top: 20px;
 }
@@ -152,15 +148,8 @@
     
     
   /* custom css */   
-    
-.yamm .nav > li:last-child {
-    margin-top: 13px;
-}
-          
-.header .logo {
-        left: 4px;
-        top: -22px;
-}  
+
+  
 }
 
 /* end max-width:991px and min-width:768px */
@@ -170,12 +159,7 @@
     
   /* custom css */      
     
-.header .logo 
 
-    {
-        left: 30px;
-        top: -24px;
-    }
     
 .custom-caption {
     margin-top: 95px;
@@ -274,14 +258,9 @@
 
 @media (max-width:480px) {
 .header {
-	background: #333;
+	background: black;
 }
-html .header .logo {
-	left: 17px;
-	margin: 0;
-	position: absolute;
-	top: 4px;
-}
+
 
 .navbar-collapse {
 	border-top: 1px solid transparent;
@@ -291,10 +270,9 @@ html .yamm .nav {
 	margin-top: 20px;
 }
 .header__inner {
-	background: #333 none repeat scroll 0 0;
+	background: black none repeat scroll 0 0;
 	border-top: 1px solid rgba(255, 255, 255, 0.15);
 	margin-top: 0;
-	padding: 10px 0;
 }
 .link-img__item {
 	width: 40%;
@@ -316,9 +294,6 @@ html .yamm .nav {
 }
 .list-type__item,  .list-type__link {
 	width: 270px;
-}
-.slider-gallery {
-	margin-top: 73px;
 }
 #iview div.iview-directionNav {
 	display: none;

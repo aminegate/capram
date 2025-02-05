@@ -215,28 +215,25 @@ img.capramCartesImg:hover {
 }
 
 
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    width: 78%;
-    margin: 0px auto 20px auto;
+
+
+.row.tabWrapper button {
+    border: none;
+    outline: none;
+    background: none;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
-    float: left;
+.tab .tablinks {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     color: #545353;
-    width: 20%;
     height: auto;
     background: white;
-    margin: 15px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
             box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     padding: 20px 0px 20px 0px;
@@ -248,17 +245,16 @@ img.capramCartesImg:hover {
     -o-transition: border-bottom 0.3s ease-in-out;
     transition: border-bottom 0.3s ease-in-out;
     /* Smooth transition for border */
+    margin-bottom: 30px;
 }
 
-button.tablinks img {
+.tablinks img {
     width: 70%;
     margin-bottom: 15px;
     height: auto;
 
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {}
 
 /* Create an active/current tablink class */
 .tabWrapper .active {
@@ -267,7 +263,7 @@ button.tablinks img {
 }
 
 /* Initial state of the after pseudo-element */
-.tabWrapper button::after {
+.tablinks::after {
     content: "";
     width: 0;
     /* Initially, width is 0 */
@@ -278,7 +274,8 @@ button.tablinks img {
     border-top: 10px solid #F7943D;
     position: absolute;
     bottom: -10px;
-    left: 75px;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
     /* Initially hidden */
     -webkit-transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -288,7 +285,7 @@ button.tablinks img {
 }
 
 /* Active state of the after pseudo-element */
-.tabWrapper button.active::after {
+.tabWrapper .tablinks.active::after {
     opacity: 1;
     /* Fully visible */
     width: 40px;
@@ -395,25 +392,12 @@ h1.cardTabTitle {
     bottom: 10%;
 
 }
-
-    .tab button {
-        width: 35%;
-        margin-left: 50px;
-        font-size: 13px;
-        height: 155px;
-    }
 }
 
 
 /************************************** Extra Small ********************************************************/
 @media (min-width:480px) and (max-width: 576px) {
 
- .tab button {
-        width: 30%;
-        margin-left: 50px;
-        font-size: 10px;
-        height: 130px;
-    }
     
     .boxy {
 
@@ -437,13 +421,7 @@ h1.cardTabTitle {
 /**************************************************************************/
 @media (max-width:480px) {
     
-    .tab button {
-        width: 39%;
-        margin-left: 16px;
-        font-size: 10px;
-        height: 130px;
-    }
-    
+
     .boxy {
 
     bottom: 10%;
@@ -461,13 +439,7 @@ h1.cardTabTitle {
 
 /*****************************************************************************/
 @media (min-width:387px) and (max-width: 464px) {
-    
-     .tab button {
-        width: 35%;
-        margin-left: 30px;
-        font-size: 10px;
-        height: 130px;
-    }
+
     
     .boxy {
 

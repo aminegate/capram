@@ -25,7 +25,7 @@ a.link,
 }
 
 .yamm .nav > li > a {
-    padding: 42px 13px 23px;
+    padding: 14px 13px 23px;
     font-size: 17px;
     text-align: right;
     direction: rtl;
@@ -91,4 +91,98 @@ a.link{
 .footer__name {
     font-weight: 600;
     font-size: 18px;
+}
+
+.fixWidthInArabic_v1 {
+    text-align: right;
+    width: 44%;
+}
+
+.fixWidthInArabic_v0 {
+    width: 21%;
+}
+
+.main-slider__subtitle {
+    text-align: right;
+}
+
+.about-section .content-column {
+    order: 2;
+}
+
+.about-section .image-column {
+    order: 1;
+}
+
+.about-section .capcompanies {
+    order: 3;
+}
+
+.about-section .image-column .inner-column {
+    float: left;
+}
+
+.inner-column {
+    text-align: right;
+}
+
+.about-section .content-column .text {
+    text-align: right;
+    direction: rtl;
+    float: right;
+}
+
+#history-slid .history-content {
+    align-items: end;
+}
+
+#our-services .col-lg-4 {
+    order: 2;
+}
+
+#our-services .col-lg-8 {
+    order: 1;
+}
+
+#our-services .desc {
+    text-align: right;
+    direction: rtl;
+    float: right;
+}
+
+#our-services .desc .text p {
+    width: 100%;
+    color: white;
+    font-size: 15px;
+}
+
+#our-services .desc {
+    width: 70%;
+}
+
+.single-service {
+    direction: rtl;
+}
+
+.history-content p:last-child {
+    direction: rtl;
+}
+
+.header-section p.description {
+    direction: rtl;
+}
+
+@media (max-width: 967px) {
+    #our-services .desc {
+        text-align: center !important;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+        float: none !important;
+    }
+
+    .heading h1:after {
+        margin: 15px auto;
+        text-align: center;
+    }
 }
