@@ -419,19 +419,6 @@ $(document).ready(function() {
     
 /*** map end**/
 
-    /////////////////////////////////////
-    //  CUSTOM
-    ///////////////////////////////////// 
-
-
-
-
-/////////////////////////////////////////////////////////////////
-// SETTING
-/////////////////////////////////////////////////////////////////
-
-
-  
   
 
 
@@ -558,15 +545,7 @@ $(document).ready(function() {
 
 
 
-//////////////////////////////
-// Animated Entrances
-//////////////////////////////
 
- (function () {
-
-
-
-})();
 
 
 /////////////////////////////////////////////////////////////////
@@ -590,7 +569,7 @@ $(document).ready(function() {
 //  Chars Start
 /////////////////////////////////////
 (function () {
-    if (window.location.pathname.endsWith("index.html")) {
+    if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
         if ($('body').length) {
             $(window).on('scroll', function () {
                 var winH = $(window).scrollTop();
