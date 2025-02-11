@@ -569,38 +569,38 @@ $(document).ready(function() {
 //  Chars Start
 /////////////////////////////////////
 (function () {
-  if (window.location.pathname.endsWith("https://aminegate.github.io/capram/")) {
-        if ($('body').length) {
-            $(window).on('scroll', function () {
-                var winH = $(window).scrollTop();
+  if (window.location.pathname === "/capram/") {
+    if ($('body').length) {
+      $(window).on('scroll', function () {
+        var winH = $(window).scrollTop();
 
-                $('.list-progress').waypoint(function () {
-                    $('.chart').each(function () {
-                        CharsStart();
-                    });
-                }, {
-                    offset: '80%'
-                });
-            });
-        }
-
-        function CharsStart() {
-            $('.chart').easyPieChart({
-                barColor: false,
-                trackColor: false,
-                scaleColor: false,
-                scaleLength: false,
-                lineCap: false,
-                lineWidth: false,
-                size: false,
-                animate: 1500,
-
-                onStep: function (from, to, percent) {
-                    $(this.el).find('.percent').text(Math.round(percent));
-                }
-            });
-        }
+        $('.list-progress').waypoint(function () {
+          $('.chart').each(function () {
+            CharsStart();
+          });
+        }, {
+          offset: '80%'
+        });
+      });
     }
+
+    function CharsStart() {
+      $('.chart').easyPieChart({
+        barColor: false,
+        trackColor: false,
+        scaleColor: false,
+        scaleLength: false,
+        lineCap: false,
+        lineWidth: false,
+        size: false,
+        animate: 1500,
+
+        onStep: function (from, to, percent) {
+          $(this.el).find('.percent').text(Math.round(percent));
+        }
+      });
+    }
+  }
 })();
 
 
