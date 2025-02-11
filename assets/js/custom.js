@@ -569,7 +569,7 @@ $(document).ready(function() {
 //  Chars Start
 /////////////////////////////////////
 (function () {
-    if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+  if (window.location.pathname.endsWith("https://aminegate.github.io/capram/")) {
         if ($('body').length) {
             $(window).on('scroll', function () {
                 var winH = $(window).scrollTop();
