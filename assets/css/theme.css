@@ -10,7 +10,24 @@
  - Sliders
 
 ----------------------------------------------------------------- */
+.Term-title {
+    width: 100%;
+    text-align: center;
+    color: #f7943d;
+    margin: 100px auto 60px auto;
+}
 
+.Term-Content {
+    width: 65%;
+    margin: 0px auto;
+    font-size: 17px;
+    color: black;
+    margin-bottom: 100px;
+}
+
+.Term-Content p {
+    line-height: 45px;
+}
 /***************** css update *******************/
 
 button#languageDropdown:focus {
