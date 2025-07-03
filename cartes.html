@@ -33,43 +33,44 @@ Accessoires automobiles importés,Meilleur fournisseur pièces auto,Choix de pi�
 </head>
 
 <body>
-<!-- fixed  sidebar certif -->
-   <div class="certifContainer">
-    <div id="certifSidebar">
-         <div class="card-badge">
-            <div class="certifImg">
-                <img src="assets/media/other_images/salamatouna.png" alt="">
+    <!-- fixed  sidebar certif -->
+    <div class="certifContainer">
+        <div id="certifSidebar">
+            <div class="card-badge">
+                <div class="certifImg">
+                    <img src="assets/media/other_images/salamatouna.png" alt="">
+                    <img src="assets/media/other_images/imanor.png" alt="">
+                </div>
             </div>
+            <button class="openbtn">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
         </div>
-        <button class="openbtn">
-              <i class="fa-solid fa-angle-right"></i>
-        </button> 
-    </div>
-    
-    </div>
-    
-<script>
-$('.openbtn').on('click', function() {
-    // Check if the screen width is less than or equal to 768px (small screen)
-    if ($(window).width() <= 3000) {
-        var sidebarWidth = $('.card-badge').width();
-        
-        if (sidebarWidth === 125) {
-            $('.card-badge').css('width', '0px');
-            $('.openbtn').attr('style', 'display: block !important; right: 101px;');
-            
-        } else {
-            $('.card-badge').css('width', '125px');
-            $('.openbtn').attr('style', 'display: block !important; right: -24px;');
-        }
 
-      // Toggle class to flip the icon
-        $(this).find('i').toggleClass('icon-flipped');
-    }
-});
-</script>
-    
-<!-- fixed  sidebar certif end -->    
+    </div>
+
+    <script>
+        $('.openbtn').on('click', function() {
+            // Check if the screen width is less than or equal to 768px (small screen)
+            if ($(window).width() <= 3000) {
+                var sidebarWidth = $('.card-badge').width();
+
+                if (sidebarWidth === 125) {
+                    $('.card-badge').css('width', '0px');
+                    $('.openbtn').attr('style', 'display: block !important; right: 101px;');
+
+                } else {
+                    $('.card-badge').css('width', '125px');
+                    $('.openbtn').attr('style', 'display: block !important; right: -24px;');
+                }
+
+                // Toggle class to flip the icon
+                $(this).find('i').toggleClass('icon-flipped');
+            }
+        });
+    </script>
+
+    <!-- fixed  sidebar certif end -->
 
     <div id="this-top" class="layout-theme animated-css" data-header="sticky" data-header-top="200">
         <div id="wrapper">
@@ -81,6 +82,7 @@ $('.openbtn').on('click', function() {
                             <div class="col-xs-12">
                                 <div class="header-contacts"> <span class="header-contacts__item"><i class="icon fa fa-phone"></i> +212 522 31 93 54</span> <a target="" class="header-contacts__item" href="https://capram.ma#goToLink-contact"><i class="icon fa fa-envelope"></i>contact@capram.ma</a> </div>
                                 <ul class="social-links list-inline">
+                                    <li><a href="terms.html#wlcmSection">Politique SMQ</a></li>
                                     <li>
 
                                         <div class="dropdown">
@@ -94,7 +96,7 @@ $('.openbtn').on('click', function() {
                                                 <a class="dropdown-item" href="#" data-value="en">
                                                     <img src="assets/media/other_images/united-states.png" alt="" style="width: 20px;"> English
                                                 </a>
-                                                
+
                                                 <a class="dropdown-item" href="#" data-value="ar">
                                                     <img src="assets/media/other_images/morocco.png" alt="maroc-flag" style="width: 20px;"> العربية
                                                 </a>
@@ -170,8 +172,8 @@ $('.openbtn').on('click', function() {
                 <!-- end header__inner -->
             </div>
             <!-- end header -->
-                
-               <div class="sliderHeader">
+
+            <div class="sliderHeader">
                 <div class="owl-carousel owl-theme">
                     <div class="item">
                         <div class="imageCarousel">
@@ -225,520 +227,519 @@ $('.openbtn').on('click', function() {
                 </a>
             </div><!-- end main-slider -->
             <!-- end main-slider -->
-<div id="wlcmSection"></div>
-<div class="cardTab">
-<h1 class="cardTabTitle" data-i18n="card_page_title">Nos Partenaires</h1>
-<div class="container">
-       
-<div class="tab">
-   <div class="row tabWrapper">
-    <button id="capramTab" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-       <div class="tablinks active"  onclick="openTab(event, 'Capram')">
-        <img src="assets/media/cap_catego/tab1.jpg" alt=""><br><span>Capram</span>
-        </div>
-    </button>
-    <button id="capjapTab" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-       <div class="tablinks"  onclick="openTab(event, 'Capjap')">
-        <img src="assets/media/cap_catego/tab2.jpg" alt=""><br><span>Capjap</span>
-        </div>
-    </button>
-    <button id="capcarrosserieTab" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-        <div class="tablinks"  onclick="openTab(event, 'Capcarrosserie')">
-        <img src="assets/media/cap_catego/tab3.jpg" alt=""><br><span>Capcarrosserie</span>
-        </div>
-    </button>
-    <button id="capserviceTab" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
-       <div class="tablinks"  onclick="openTab(event, 'Capservice')">
-        <img src="assets/media/cap_catego/tab4.jpg" alt=""><br><span>Capservice</span>
-        </div>
-    </button>
-    </div>
-</div>
-        
-        
-<!---------------------------- Capram Cartes ---------------------------------->
+            <div id="wlcmSection"></div>
+            <div class="cardTab">
+                <h1 class="cardTabTitle" data-i18n="card_page_title">Nos Partenaires</h1>
+                <div class="container">
 
-        <div id="Capram" class="tabcontent" style="display: block;">
-            <div class="row">
-
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA01.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA02.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA03.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA04.png" alt="" class="capramCartesImg despa">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA05.png" alt="" class="capramCartesImg darco">
-</div>
-
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA07.png" alt="" class="capramCartesImg fae">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA08.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA09.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA10.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA11.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA12.png" alt="" class="capramCartesImg hitachi">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA13.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA14.png" alt="" class="capramCartesImg continental">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA15.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA16.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA17.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA19.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA20.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA21.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA22.png" alt="" class="capramCartesImg amadini">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA23.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA24.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA25.png" alt="" class="capramCartesImg diesel">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA26.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA28.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA29.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA30.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA31.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA32.png" alt="" class="capramCartesImg formpart">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA33.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA34.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA35.png" alt="" class="capramCartesImg hardex">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA36.png" alt="" class="capramCartesImg dolz">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capram/RA37.png" alt="" class="capramCartesImg">
-</div>
+                    <div class="tab">
+                        <div class="row tabWrapper">
+                            <button id="capramTab" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                <div class="tablinks active" onclick="openTab(event, 'Capram')">
+                                    <img src="assets/media/cap_catego/tab1.jpg" alt=""><br><span>Capram</span>
+                                </div>
+                            </button>
+                            <button id="capjapTab" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                <div class="tablinks" onclick="openTab(event, 'Capjap')">
+                                    <img src="assets/media/cap_catego/tab2.jpg" alt=""><br><span>Capjap</span>
+                                </div>
+                            </button>
+                            <button id="capcarrosserieTab" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                <div class="tablinks" onclick="openTab(event, 'Capcarrosserie')">
+                                    <img src="assets/media/cap_catego/tab3.jpg" alt=""><br><span>Capcarrosserie</span>
+                                </div>
+                            </button>
+                            <button id="capserviceTab" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                <div class="tablinks" onclick="openTab(event, 'Capservice')">
+                                    <img src="assets/media/cap_catego/tab4.jpg" alt=""><br><span>Capservice</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
 
 
-            </div>
-        </div>
-     
-<!---------------------------- capjap Cartes ---------------------------------->
+                    <!---------------------------- Capram Cartes ---------------------------------->
+
+                    <div id="Capram" class="tabcontent" style="display: block;">
+                        <div class="row">
+
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA01.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA02.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA03.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA04.png" alt="" class="capramCartesImg despa">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA05.png" alt="" class="capramCartesImg darco">
+                            </div>
+
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA07.png" alt="" class="capramCartesImg fae">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA08.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA09.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA10.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA11.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA12.png" alt="" class="capramCartesImg hitachi">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA13.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA14.png" alt="" class="capramCartesImg continental">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA15.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA16.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA17.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA19.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA20.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA21.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA22.png" alt="" class="capramCartesImg amadini">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA23.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA24.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA25.png" alt="" class="capramCartesImg diesel">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA26.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA28.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA29.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA30.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA31.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA32.png" alt="" class="capramCartesImg formpart">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA33.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA34.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA35.png" alt="" class="capramCartesImg hardex">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA36.png" alt="" class="capramCartesImg dolz">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capram/RA37.png" alt="" class="capramCartesImg">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!---------------------------- capjap Cartes ---------------------------------->
                     <div id="Capjap" class="tabcontent">
-                        
-                    <div class="row">
-                <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA01.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA02.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA03.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA04.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA05.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA06.png" alt="" class="capramCartesImg nwp">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA07.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA08.png" alt="" class="capramCartesImg fae">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA09.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA10.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA11.png" alt="" class="capramCartesImg hitachi">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA12.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA13.png" alt="" class="capramCartesImg continental">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA14.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA15.png" alt="" class="capramCartesImg amadini">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA16.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA17.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA18.png" alt="" class="capramCartesImg dolz">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA19.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA20.png" alt="" class="capramCartesImg formpart">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA21.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA22.png" alt="" class="capramCartesImg alcoTwo">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capjap/JA23.png" alt="" class="capramCartesImg">
-</div>
+
+                        <div class="row">
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA01.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA02.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA03.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA04.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA05.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA06.png" alt="" class="capramCartesImg nwp">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA07.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA08.png" alt="" class="capramCartesImg fae">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA09.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA10.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA11.png" alt="" class="capramCartesImg hitachi">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA12.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA13.png" alt="" class="capramCartesImg continental">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA14.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA15.png" alt="" class="capramCartesImg amadini">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA16.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA17.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA18.png" alt="" class="capramCartesImg dolz">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA19.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA20.png" alt="" class="capramCartesImg formpart">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA21.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA22.png" alt="" class="capramCartesImg alcoTwo">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capjap/JA23.png" alt="" class="capramCartesImg">
+                            </div>
 
 
-                    </div>
-                        
-                    </div>
-                    
-<!---------------------------- Capcarrosserie Cartes ---------------------------------->
-        <div id="Capcarrosserie" class="tabcontent">
-               
-                         <div class="row">
-                      
-
-                      <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA01.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA02.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA03.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA04.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA05.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA06.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA07.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA08.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA09.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA10.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA11.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA12.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA13.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA14.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA15.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA16.png" alt="" class="capramCartesImg ">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA17.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA18.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA19.png" alt="" class="capramCartesImg despa">
-</div>
-                      <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capcarrosserie/CA20.png" alt="" class="capramCartesImg">
-</div>
-
-                      
-                      
-                    </div>
-        </div>
-<!---------------------------- Capservice Cartes ---------------------------------->
-        
-                <div id="Capservice" class="tabcontent">
-                    <div class="row">
-  
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE000.png" alt="" class="capramCartesImg ">
-</div>
-
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE00.png" alt="" class="capramCartesImg alcoTwo">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE01.png" alt="" class="capramCartesImg ate">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE02.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE03.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE04.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE05.png" alt="" class="capramCartesImg professional">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE06.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE07.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE08.png" alt="" class="capramCartesImg">
-</div>
-<div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE09.png" alt="" class="capramCartesImg">
-</div>
-                    <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE11.png" alt="" class="capramCartesImg ">
-</div>
-                    <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE12.png" alt="" class="capramCartesImg ">
-</div>
-                    <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE13.png" alt="" class="capramCartesImg ">
-</div>
-                                 <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
-    <img src="assets/media/cap_cartes/capservice/SE14.png" alt="" class="capramCartesImg capfilter">
-</div>
+                        </div>
 
                     </div>
+
+                    <!---------------------------- Capcarrosserie Cartes ---------------------------------->
+                    <div id="Capcarrosserie" class="tabcontent">
+
+                        <div class="row">
+
+
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA01.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA02.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA03.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA04.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA05.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA06.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA07.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA08.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA09.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA10.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA11.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA12.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA13.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA14.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA15.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA16.png" alt="" class="capramCartesImg ">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA17.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA18.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA19.png" alt="" class="capramCartesImg despa">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capcarrosserie/CA20.png" alt="" class="capramCartesImg">
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <!---------------------------- Capservice Cartes ---------------------------------->
+
+                    <div id="Capservice" class="tabcontent">
+                        <div class="row">
+
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE000.png" alt="" class="capramCartesImg ">
+                            </div>
+
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE00.png" alt="" class="capramCartesImg alcoTwo">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE01.png" alt="" class="capramCartesImg ate">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE02.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE03.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE04.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE05.png" alt="" class="capramCartesImg professional">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE06.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE07.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE08.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE09.png" alt="" class="capramCartesImg">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE11.png" alt="" class="capramCartesImg ">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE12.png" alt="" class="capramCartesImg ">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE13.png" alt="" class="capramCartesImg ">
+                            </div>
+                            <div class="cartesContainer col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                                <img src="assets/media/cap_cartes/capservice/SE14.png" alt="" class="capramCartesImg capfilter">
+                            </div>
+
+                        </div>
+                    </div>
+                    <!---------------------------- End Cartes ---------------------------------->
                 </div>
-<!---------------------------- End Cartes ---------------------------------->
+            </div>
+
+
+            <!---------------------------- End Cartes ---------------------------------->
         </div>
-        </div>
-        
-        
-<!---------------------------- End Cartes ---------------------------------->
-</div>
 
 
-            
-<script>
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
 
-    // Hide all tab contents
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
-    }
+        <script>
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
 
-    // Remove 'active' class from all tab links
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-    }
+                // Hide all tab contents
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].classList.remove("active");
+                }
 
-    // Add 'active' class to the clicked tab link
-    evt.currentTarget.classList.add("active");
+                // Remove 'active' class from all tab links
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+                }
 
-    // Add 'active' class to the tab content with a delay to allow transition
-    setTimeout(function() {
-        document.getElementById(tabName).classList.add("active");
-        scrollToTarget(tabName);
-    }, 200); // Short delay to allow the transition effect
-}
+                // Add 'active' class to the clicked tab link
+                evt.currentTarget.classList.add("active");
 
-function scrollToTarget(tabName) {
-    // Find the target element for scrolling
-    var targetElement = document.getElementById(tabName);
-    if (targetElement) {
-        // Scroll to the target element with a slight offset
-        setTimeout(function() {
-            window.scrollTo({
-                top: targetElement.offsetTop - 485, // Adjust this value to match your desired offset
-                behavior: 'smooth'
+                // Add 'active' class to the tab content with a delay to allow transition
+                setTimeout(function() {
+                    document.getElementById(tabName).classList.add("active");
+                    scrollToTarget(tabName);
+                }, 200); // Short delay to allow the transition effect
+            }
+
+            function scrollToTarget(tabName) {
+                // Find the target element for scrolling
+                var targetElement = document.getElementById(tabName);
+                if (targetElement) {
+                    // Scroll to the target element with a slight offset
+                    setTimeout(function() {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 485, // Adjust this value to match your desired offset
+                            behavior: 'smooth'
+                        });
+                    }, 100); // Short delay to ensure the tab content is visible before scrolling
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                // Check if there's a hash in the URL
+                var hash = window.location.hash;
+                if (hash) {
+                    // Remove the '#' and find the tab by ID
+                    var tabId = hash.substring(1);
+                    var tabLink = document.querySelector('.tablinks[id="' + tabId + '"]');
+                    var tabContent = document.getElementById(tabId);
+                    if (tabLink && tabContent) {
+                        // Simulate a click on the tab to open it
+                        tabLink.click();
+                    } else {
+                        // If the hash doesn't match any tab, default to the first tab
+                        activateFirstTab();
+                    }
+                } else {
+                    // No hash in URL, ensure the first tab is active
+                    activateFirstTab();
+                }
             });
-        }, 100); // Short delay to ensure the tab content is visible before scrolling
-    }
-}
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Check if there's a hash in the URL
-    var hash = window.location.hash;
-    if (hash) {
-        // Remove the '#' and find the tab by ID
-        var tabId = hash.substring(1);
-        var tabLink = document.querySelector('.tablinks[id="' + tabId + '"]');
-        var tabContent = document.getElementById(tabId);
-        if (tabLink && tabContent) {
-            // Simulate a click on the tab to open it
-            tabLink.click();
-        } else {
-            // If the hash doesn't match any tab, default to the first tab
-            activateFirstTab();
-        }
-    } else {
-        // No hash in URL, ensure the first tab is active
-        activateFirstTab();
-    }
-});
+            function activateFirstTab() {
+                var firstTab = document.querySelector('.tablinks');
+                if (firstTab) {
+                    firstTab.click();
+                }
+            }
 
-function activateFirstTab() {
-    var firstTab = document.querySelector('.tablinks');
-    if (firstTab) {
-        firstTab.click();
-    }
-}
+            // Optionally, add event listeners for anchor links if you want them to trigger the tab change
+            document.querySelectorAll('.anchor-link').forEach(anchor => {
+                anchor.addEventListener('click', function(event) {
+                    var targetId = this.getAttribute('href').substring(1);
+                    var tabLink = document.querySelector('.tablinks[id="' + targetId + '"]');
+                    if (tabLink) {
+                        tabLink.click();
+                    }
+                });
+            });
+        </script>
 
-// Optionally, add event listeners for anchor links if you want them to trigger the tab change
-document.querySelectorAll('.anchor-link').forEach(anchor => {
-    anchor.addEventListener('click', function(event) {
-        var targetId = this.getAttribute('href').substring(1);
-        var tabLink = document.querySelector('.tablinks[id="' + targetId + '"]');
-        if (tabLink) {
-            tabLink.click();
-        }
-    });
-});
-
-
-</script>
-
-            <footer class="footer wow bounceInUp" data-wow-duration="2s">
-                <div class="wrap-section-border">
-                    <section class="section_mod-h section-bg section-bg_second">
-                        <div class="bg-inner border-section-top border-section-top_mod-b">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <h2 class="footer-title">capram</h2>
-                                        <div class="decor-1 decor-1_mod-b"></div>
-                                    </div>
-                                    <!-- end col -->
-                                </div>
-                                <!-- end row -->
-
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-12">
-                                        <div class="footer__name" data-i18n="footer_subtitle_1"> LOCALISATION </div>
-                                        <div class="footer__text">35 Rue Bachir Ibrahimi, Casablanca 20250 <br>18 Bd de Khouribga, Casablanca 20250</div>
-                                    </div>
-                                    <!-- end col -->
-
-
-                                    <div class="col-lg-4 col-md-4 col-sm-12">
-                                        <div class="footer__name" data-i18n="footer_subtitle_2"> Contactez-nous </div>
-                                        <div class="footer__text"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;+212 522 31 93 54<br><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;contact@capram.ma</div>
-                                    </div>
-
-
-                                    <div class="col-lg-4 col-md-3 col-sm-12">
-                                        <div class="footer__name" data-i18n="footer_subtitle_3"> Horaires </div>
-                                        <div class="footer__text"><span data-i18n="work_hours_1">Lundi – Vendredi</span> : 8:30 AM – 18:30 PM<br><span data-i18n="work_hours_2">Samedi</span> : 8:30 AM – 13:00 PM</div>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-
-
-                            <div class="row salamatouna">
-                                <div class="certificate">
-                                    <img src="assets/media/other_images/salamatouna%202.png" alt="salamatouna">
-
-                                </div>
-
-                            </div>
-                            <!-- end row -->
+        <footer class="footer wow bounceInUp" data-wow-duration="2s">
+            <div class="wrap-section-border">
+                <section class="section_mod-h section-bg section-bg_second">
+                    <div class="bg-inner border-section-top border-section-top_mod-b">
+                        <div class="container">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <ul class="social-links list-inline">
-                                        <li><a target="_blank" class="icon fa-brands fa-facebook-f" href="https://www.facebook.com/people/Capram-Maroc/61561691562602/"></a></li>
-                                        <li><a target="_blank" class="icon fa-brands fa-instagram" href="https://www.instagram.com/capram.auto/"></a></li>
-                                        <li><a target="_blank" class="icon fa-brands fa-linkedin-in" href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"></a></li>
-
-                                    </ul>
+                                    <h2 class="footer-title">capram</h2>
+                                    <div class="decor-1 decor-1_mod-b"></div>
                                 </div>
                                 <!-- end col -->
                             </div>
                             <!-- end row -->
 
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                    <div class="footer__name" data-i18n="footer_subtitle_1"> LOCALISATION </div>
+                                    <div class="footer__text">35 Rue Bachir Ibrahimi, Casablanca 20250 <br>18 Bd de Khouribga, Casablanca 20250</div>
+                                </div>
+                                <!-- end col -->
 
-                            <!-- end container -->
+
+                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                    <div class="footer__name" data-i18n="footer_subtitle_2"> Contactez-nous </div>
+                                    <div class="footer__text"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;+212 522 31 93 54<br><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;contact@capram.ma</div>
+                                </div>
+
+
+                                <div class="col-lg-4 col-md-3 col-sm-12">
+                                    <div class="footer__name" data-i18n="footer_subtitle_3"> Horaires </div>
+                                    <div class="footer__text"><span data-i18n="work_hours_1">Lundi – Vendredi</span> : 9:00 AM – 18:30 PM<br><span data-i18n="work_hours_2">Samedi</span> : 9:00 AM – 13:00 PM</div>
+                                </div>
+                            </div>
+                            <!-- end col -->
                         </div>
-                        <!-- end bg-inner -->
-                    </section>
-                    <!-- end section_mod-b -->
-                </div>
-                <!-- end wrap-section-border -->
-                <div class="footer__wrap-btn"> <a target="" class="footer__btn scroll" href="#this-top">top</a> </div>
-                <div class="copyright">Copyrights <span id="current-year"></span> <a target="" class="copyright__link" href="javascript:void(0);">CAPRAM</a> : : <span data-i18n="copyright">Tous droits réservés</span>
-                <br><a href="terms.html">POLITIQUE QUALITÉ</a>
-                </div>
-            </footer>
-        </div>
-        <!-- end #wrapper -->
-  
+
+
+                        <div class="row salamatouna">
+                            <div class="certificate">
+                                <img src="assets/media/other_images/salamatouna%202.png" alt="salamatouna">
+                                <img src="assets/media/other_images/imanor_2.png" alt="salamatouna">
+
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="social-links list-inline">
+                                    <li><a target="_blank" class="icon fa-brands fa-facebook-f" href="https://www.facebook.com/people/Capram-Maroc/61561691562602/"></a></li>
+                                    <li><a target="_blank" class="icon fa-brands fa-instagram" href="https://www.instagram.com/capram.auto/"></a></li>
+                                    <li><a target="_blank" class="icon fa-brands fa-linkedin-in" href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"></a></li>
+
+                                </ul>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+
+                        <!-- end container -->
+                    </div>
+                    <!-- end bg-inner -->
+                </section>
+                <!-- end section_mod-b -->
+            </div>
+            <!-- end wrap-section-border -->
+            <div class="footer__wrap-btn"> <a target="" class="footer__btn scroll" href="#this-top">top</a> </div>
+            <div class="copyright">Copyrights <span id="current-year"></span> <a target="" class="copyright__link" href="javascript:void(0);">CAPRAM</a> : : <span data-i18n="copyright">Tous droits réservés</span>
+                <br><a href="terms.html">POLITIQUE SMQ</a>
+            </div>
+        </footer>
+    </div>
+    <!-- end #wrapper -->
+
 
     <!-- end layout-theme -->
 
@@ -748,8 +749,8 @@ document.querySelectorAll('.anchor-link').forEach(anchor => {
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js//owl.carousel.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    
-    <!--old css-->     
+
+    <!--old css-->
     <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
     <script src="assets/plugins/jelect/jquery.jelect.js"></script>
     <!--HOME SLIDER-->

@@ -24,6 +24,57 @@
 
 $(document).ready(function() {
     
+(function ($) {
+    $(document).ready(function () {
+        function smoothScroll(target) {
+            if ($(target).length) {
+                $("html, body").animate(
+                    {
+                        scrollTop: $(target).offset().top
+                    },
+                    800 // Adjust speed in milliseconds
+                );
+            }
+        }
+
+        // Handle clicks on the first <li> inside .social-links
+        $(".social-links > li:first-child > a").on("click", function (e) {
+            var targetHash = this.hash;
+            var targetPath = this.pathname;
+
+            // If the link is on the same page
+            if (targetPath === window.location.pathname) {
+                e.preventDefault();
+                smoothScroll(targetHash);
+            }
+        });
+
+        // If arriving on a page with a hash, scroll smoothly to it
+        if (window.location.hash) {
+            setTimeout(function () {
+                smoothScroll(window.location.hash);
+            }); // Small delay to ensure content loads
+        }
+    });
+})(jQuery);
+
+    
+    
+    $(".zoomable").click(function() {
+        var imgSrc = $(this).attr("src");
+        $("#modalImage").attr("src", imgSrc);
+        $("#imageModal").fadeIn();
+    });
+
+    // Close modal when clicking on .close or outside image
+    $(".close, #imageModal").click(function(e) {
+        if (!$(e.target).is("#modalImage")) {
+            $("#imageModal").fadeOut();
+        }
+    });
+    
+    
+    
 (function($) {
     function autoScrollText(selector, speed) {
         $(selector).each(function() {
@@ -431,57 +482,56 @@ $(document).ready(function() {
 
 (function() {
     $(document).ready(function() {
-        var windowHeight = $(window).height();
-        var windowWidth = $(window).width();  // Define windowWidth here
 
-        var tabletWidth = 767;
-        var mobileWidth = 640;
+        // Only run this if the <header> element exists
+        if ($('header').length) {
 
-        if (windowWidth > tabletWidth) {
-            var headerSticky = $(".layout-theme").data("header");
-            var headerTop = $(".layout-theme").data("header-top");
+            var windowHeight = $(window).height();
+            var windowWidth = $(window).width();
 
-            if (headerSticky.length) {
-                $(window).on('scroll', function() {
-                    var winH = $(window).scrollTop();
-                    var $pageHeader = $('.header');
+            var tabletWidth = 767;
+            var mobileWidth = 640;
 
-                    // Recalculate windowWidth on scroll, in case the window resizes
-                    var windowWidth = $(window).width(); 
+            if (windowWidth > tabletWidth) {
+                var headerSticky = $(".layout-theme").data("header");
+                var headerTop = $(".layout-theme").data("header-top");
 
-                    if (winH > headerTop) {
-                        $('.header').addClass("animated");
-                        $('header').addClass("animation-done");
-                        $('.header').addClass("bounce");
-                        $pageHeader.addClass('sticky');
-                    } else {
-                        $('.header').removeClass("bounce");
-                        $('.header').removeClass("animated");
-                        $('.header').removeClass("animation-done");
-                        $pageHeader.removeClass('sticky');
-                    }
-                });
+                if (headerSticky && $('.header').length) {
+                    $(window).on('scroll', function() {
+                        var winH = $(window).scrollTop();
+                        var $pageHeader = $('.header');
+
+                        // Recalculate windowWidth in case of resize
+                        var windowWidth = $(window).width(); 
+
+                        if (winH > headerTop) {
+                            $pageHeader.addClass("animated bounce sticky");
+                            $('header').addClass("animation-done");
+                        } else {
+                            $pageHeader.removeClass("bounce animated sticky");
+                            $('header').removeClass("animation-done");
+                        }
+                    });
+                }
             }
-        }
-        
+
+            // Entrance animation only for large screens
             if (windowWidth > 1200) {
-
-        $(window).scroll(function() {
-                $('.animatedEntrance').each(function() {
+                $(window).scroll(function() {
+                    $('.animatedEntrance').each(function() {
                         var imagePos = $(this).offset().top;
-
                         var topOfWindow = $(window).scrollTop();
                         if (imagePos < topOfWindow + 400) {
-                                        $(this).addClass("slideUp"); // slideUp, slideDown, slideLeft, slideRight, slideExpandUp, expandUp, fadeIn, expandOpen, bigEntrance, hatch
+                            $(this).addClass("slideUp");
                         }
+                    });
                 });
-        });
+            }
 
-    }
-        
+        }
+
     });
 })();
-
 
 
 
@@ -569,7 +619,7 @@ $(document).ready(function() {
 //  Chars Start
 /////////////////////////////////////
 (function () {
-  if (window.location.pathname === "/capram/") {
+  if (window.location.hostname === "capram.ma") {
     if ($('body').length) {
       $(window).on('scroll', function () {
         var winH = $(window).scrollTop();
@@ -602,6 +652,7 @@ $(document).ready(function() {
     }
   }
 })();
+
 
 
 /////////////////////////////////////////////////////////////////

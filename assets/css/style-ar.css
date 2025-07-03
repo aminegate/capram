@@ -166,6 +166,7 @@ a.link{
 
 .history-content p:last-child {
     direction: rtl;
+    text-align: right;
 }
 
 .header-section p.description {

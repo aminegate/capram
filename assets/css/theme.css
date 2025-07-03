@@ -1,3 +1,27 @@
+.df-arrow-left,
+.df-arrow-right {
+  width: 80px !important;         /* Make arrows wider */
+  height: 100% !important;        /* Full height of flipbook */
+  top: 0 !important;              /* Align to top */
+  bottom: 0 !important;           /* Align to bottom */
+  transform: none !important;     /* Remove vertical centering */
+  background: rgba(0, 0, 0, 0.1); /* Optional: light background for visibility */
+  z-index: 9999;                  /* Ensure it's above content */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Push left arrow fully to left edge */
+.df-arrow-left {
+  left: 0 !important;
+}
+
+/* Push right arrow fully to right edge */
+.df-arrow-right {
+  
+
 /*------------------------------------------------------------------
 [Table of contents]
  - css update
@@ -27,6 +51,55 @@
 
 .Term-Content p {
     line-height: 45px;
+}
+
+/* Style for the image */
+.image-container img {
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999999999999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/* Modal image */
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+button.btn-skew-r.btn-effect {
+    padding: 0px !important;
 }
 /***************** css update *******************/
 
@@ -364,7 +437,6 @@ a.main-slider__btn {
 
 .btn-skew-r {
     margin-left: -20px;
-    padding: 15px 29px 14px;
     font-size: 12px;
     font-weight: 700;
     color: #fff;
@@ -385,7 +457,6 @@ a.main-slider__btn {
 
 .btn-skew-r {
     margin-left: -20px;
-    padding: 15px 29px 14px;
     font-size: 12px;
     font-weight: 700;
     color: #fff;
@@ -800,14 +871,25 @@ a.main-slider__btn {
     margin-left: 17px;
 }
 
+@media (min-width:768px) and (max-width:992px) {
+    
+   .sticky .yamm .nav > li:nth-child(6) {
+    margin-left: 0px;
+} 
+}
+
+
+
+
 .btn-skew-r {
 
-    padding: 10px 22px 10px !important;
+    
 }
 
 a.btn-skew-r__inner {
     outline: none;
     text-decoration: none;
+    padding: 10px 22px 10px !important;
 }
 
 i.fa-solid.fa-cart-shopping,
@@ -1091,6 +1173,7 @@ div#certifSidebar {
 
 .certifImg img {
     width: 100%;
+    padding: 5px;
 }
 
 .card-badge {
@@ -4067,7 +4150,7 @@ img.pull-left {
     height: 76%;
     transform: translate(-50%, -50%);
     left: 50%;
-    width: 75%;
+    width: 80%;
 }
 
 .list-services:after {
