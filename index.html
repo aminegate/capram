@@ -9,10 +9,8 @@
     <meta name="description" content="Capram">
     <meta name="keywords" content="Capram">
     <meta name="robots" content="INDEX,FOLLOW">
-
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Favicons - Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
@@ -31,14 +29,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
     <!--==============================
 	  Google Fonts
 	============================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
     <!--==============================
 	    All CSS File
 	============================== -->
@@ -51,19 +47,16 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-
 </head>
 
 <body class="">
-
     <!--[if lte IE 9]>
     	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   	<![endif]-->
-
-
     <!--********************************
    		Code Start From Here 
 	******************************** -->
@@ -71,10 +64,9 @@
 
     <!-- slider drag cursor -->
     <!-- <div class="slider-drag-cursor"> DRAG </div> -->
-
     <!--==============================
     Mobile Menu
-  ============================== -->
+============================== -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
@@ -273,7 +265,7 @@
                         <div class="col-auto">
                             <div class="header-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo.png" alt="Capram"/>
+                                    <img src="assets/img/logo.png" alt="Capram" />
                                 </a>
                             </div>
                         </div>
@@ -302,11 +294,11 @@
                                             <li><a href="service-details.html">Cartes Details</a></li>
                                         </ul>
                                     </li>
-                                    
+
                                     <li class="">
                                         <a href="#">Actualité</a>
                                     </li>
-                                   <li>
+                                    <li>
                                         <a href="contact.html">Contact</a>
                                     </li>
                                 </ul>
@@ -317,7 +309,6 @@
                         </div>
                         <div class="col-auto d-xl-block d-none">
                             <div class="header-button">
-                                <button type="button" class="icon-btn style6 searchBoxToggler"><i class="far fa-search"></i></button>
                                 <a class="th-btn style6" href="tel:+16369729901"><img src="assets/img/icon/phone.svg" alt="">Appelez-nous: +212 522 31 93 54</a>
                             </div>
                         </div>
@@ -326,17 +317,15 @@
             </div>
         </div>
     </header>
-
-
     <!--==============================
 Hero Area
 ==============================-->
-    <div class="th-hero-wrapper hero-1 bg-mask" id="hero" data-mask-src="assets/img/shape/hero-thumb1-1-shape.png">
-        <div class="swiper th-slider" id="heroSlider8" data-slider-options='{"effect":"fade", "autoHeight": "true"}'>
+    <div class="th-hero-wrapper hero-1 bg-mask" id="hero">
+        <div class="swiper th-slider" id="heroSlider8" data-slider-options='{"effect":"fade", "autoHeight": "false"}'>
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_1.jpg">
                     <div class="hero-inner">
-                        <div class="container-xxl">
+                        <div class="container-fluid">
                             <div class="hero-style1">
                                 <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Pièces de rechanges</span>
                                 <h1 class="hero-title text-white">
@@ -359,7 +348,7 @@ Hero Area
                 </div>
                 <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_2.jpg">
                     <div class="hero-inner">
-                        <div class="container-xxl">
+                        <div class="container-fluid">
                             <div class="hero-style1">
                                 <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Carrosserie</span>
                                 <h1 class="hero-title text-white">
@@ -372,7 +361,7 @@ Hero Area
                                         <span class="after-bg"></span>
                                     </a>
                                     <a href="contact.html" class="th-btn style2">
-                                        Contact 
+                                        Contact
                                         <span class="after-bg"></span>
                                     </a>
                                 </div>
@@ -382,7 +371,7 @@ Hero Area
                 </div>
                 <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_3.jpg">
                     <div class="hero-inner">
-                        <div class="container-xxl">
+                        <div class="container-fluid">
                             <div class="hero-style1">
                                 <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Lubrifiants, additifs & liquides</span>
                                 <h1 class="hero-title text-white">
@@ -403,7 +392,7 @@ Hero Area
                         </div>
                     </div>
                 </div>
-            
+
             </div>
             <div class="icon-box">
                 <button data-slider-prev="#heroSlider8" class="slider-arrow style2 default">
@@ -418,503 +407,404 @@ Hero Area
             <a href="#about-sec" class="scroll-wrap">Descendre<span><img src="assets/img/icon/down-arrow.svg" alt=""></span></a>
         </div>
     </div>
-    <!--======== / Hero Section ========--><!--==============================
+    <!--======== / Hero Section ========-->
+    <!--==============================
 Feature Area  
 ==============================-->
-   <section class="feature-area-1 position-relative pt-60">
-    <div class="container">
-        <div class="row gy-4 justify-content-center">
+    <section class="feature-area-1 position-relative pt-60">
+        <div class="container">
+            <div class="row gy-4 justify-content-center">
 
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="feature-card" data-cue="slideInUp">
-                    <div class="box-icon">
-                        <div>
-                            <img src="assets/img/icon/feature-icon1-1.svg" alt="icon">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="feature-card" data-cue="slideInUp">
+                        <div class="box-icon">
+                            <div>
+                                <img src="assets/img/icon/feature-icon1-1.svg" alt="icon">
+                            </div>
+                        </div>
+                        <div class="feature-card-details text-left">
+                            <h3 class="box-title">Meilleure Qualité</h3>
+                            <p class="box-text">Qualité inégalée dans chaque produit, conçu pour durer et impressionner !</p>
                         </div>
                     </div>
-                    <div class="feature-card-details text-left">
-                        <h3 class="box-title">Meilleure Qualité</h3>
-                        <p class="box-text">Qualité inégalée dans chaque produit, conçu pour durer et impressionner !</p>
-                    </div>
                 </div>
-            </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="feature-card" data-cue="slideInUp">
-                    <div class="box-icon">
-                        <div>
-                            <img src="assets/img/icon/feature-icon1-2.svg" alt="icon">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="feature-card" data-cue="slideInUp">
+                        <div class="box-icon">
+                            <div>
+                                <img src="assets/img/icon/feature-icon1-2.svg" alt="icon">
+                            </div>
+                        </div>
+                        <div class="feature-card-details text-left">
+                            <h3 class="box-title">Expédition Rapide</h3>
+                            <p class="box-text">Livraison Rapide Garantie, apportant vos commandes directement à votre porte !</p>
                         </div>
                     </div>
-                    <div class="feature-card-details text-left">
-                        <h3 class="box-title">Expédition Rapide</h3>
-                        <p class="box-text">Livraison Rapide Garantie, apportant vos commandes directement à votre porte !</p>
-                    </div>
                 </div>
-            </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="feature-card" data-cue="slideInUp">
-                    <div class="box-icon">
-                        <div>
-                            <img src="assets/img/icon/feature-icon1-3.svg" alt="icon">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="feature-card" data-cue="slideInUp">
+                        <div class="box-icon">
+                            <div>
+                                <img src="assets/img/icon/feature-icon1-3.svg" alt="icon">
+                            </div>
+                        </div>
+                        <div class="feature-card-details text-left">
+                            <h3 class="box-title">Offres Spéciales</h3>
+                            <p class="box-text">Offres Exclusives qui Boostent vos Économies, ne manquez pas !</p>
                         </div>
                     </div>
-                    <div class="feature-card-details text-left">
-                        <h3 class="box-title">Offres Spéciales</h3>
-                        <p class="box-text">Offres Exclusives qui Boostent vos Économies, ne manquez pas !</p>
-                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-</section>
-<!--==============================
+    </section>
+    <!--==============================
 About Area  
 ==============================-->
-  <div class="overflow-hidden space overflow-hidden " id="about-sec">
-    <div class="container">
-        <div class="about-wrap1">
-            <div class="title-area">
-                <div class="row gx-60 justify-content-center align-items-start">
-                    <div class="col-auto">
-                        <div class="text-center">
-                            <span class="sub-title style2 text-anim after-none before-none" data-cue="slideInUp">Qui sommes-nous</span>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <div class="text-center">
-                            <h2 class="sec-title style2 text-anim2 mb-0" data-cue="slideInUp">À propos
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row gx-60">
-                <div class="col-xxl-6 col-xl-6 col-lg-6">
-                    <div class="img-box1" data-cue="slideInUp" data-delay="300">
-                        <div class="img2 bg-mask" data-mask-src="assets/img/shape/about-thumb1-1-shape.png">
-                            <img src="assets/img/normal/about-thumb1-1.jpg" alt="About">
-                        </div>
-                        <div class="circle-tag d-none d-xxl-block">
-                            <span class="circle-title-anime">** Années d'expérience ** Années d'expérience</span>
-                            <h2 class="box-number"><span class="counter-number">35</span><span class="counter-marker">+</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-6 col-xl-6 col-lg-6">
-                    <div class="about-wrap" data-cue="slideInUp">
-                        <div class="title-area mb-40">
-                            <p>
-                                Chez CAPRAM, nous nous engageons à rester à la pointe de l'industrie automobile en proposant
-                                des solutions innovantes et fiables. Nous mettons un point d’honneur à maintenir des standards
-                                élevés de qualité et de service afin de répondre aux besoins des professionnels de la réparation
-                                automobile. Forts de notre expertise, nous sommes fiers de notre histoire et impatients de
-                                vous accompagner dans tous vos besoins en matière de PRA.
-                            </p>
-                        </div>
-
-                        <div class="checklist style">
-                            <ul>
-                                <li>Pièces automobiles de haute qualité</li>
-                                <li>Solutions innovantes adaptées aux professionnels</li>
-                                <li>Engagement total envers la satisfaction client</li>
-                            </ul>
-                        </div>
-
-                        <div class="btn-wrap mt-40">
-                            <a href="about.html" class="th-btn">
-                                En savoir plus
-                                <span class="after-bg"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="img-box2 d-none d-xxl-block d-xl-block">
-                        <div class="row">
-                            <div class="col-xxl-6 col-md-6" data-cue="slideInUp">
-                                <div class="img-box1">
-                                    <div class="img1">
-                                        <img src="assets/img/normal/about-thumb1-2.jpg" alt="About">
-                                    </div>
-                                </div>
+    <div class="overflow-hidden space overflow-hidden " id="about-sec">
+        <div class="container">
+            <div class="about-wrap1">
+                <div class="title-area">
+                    <div class="row gx-60 justify-content-center align-items-start">
+                        <div class="col-auto">
+                            <div class="text-center">
+                                <span class="sub-title style2 text-anim after-none before-none" data-cue="slideInUp">Qui sommes-nous</span>
                             </div>
-                            <div class="col-xxl-6 col-md-6" data-cue="slideInUp">
-                                <div class="img-box1">
-                                    <div class="img1">
-                                        <img src="assets/img/normal/about-thumb1-3.jpg" alt="About">
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="text-center">
+                                <h2 class="sec-title style2 text-anim2 mb-0" data-cue="slideInUp">À propos
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row gx-60">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6">
+                        <div class="img-box1" data-cue="slideInUp" data-delay="300">
+                            <div class="img2 bg-mask" data-mask-src="assets/img/shape/about-thumb1-1-shape.png">
+                                <img src="assets/img/normal/about-thumb1-1.jpg" alt="About">
+                            </div>
+                            <div class="circle-tag d-none d-xxl-block">
+                                <span class="circle-title-anime">** Années d'expérience ** Années d'expérience</span>
+                                <h2 class="box-number"><span class="counter-number">35</span><span class="counter-marker">+</span></h2>
                             </div>
                         </div>
                     </div>
 
-                </div>
-            </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6">
+                        <div class="about-wrap" data-cue="slideInUp">
+                            <div class="title-area mb-40">
+                                <p>
+                                    Chez CAPRAM, nous nous engageons à rester à la pointe de l'industrie automobile en proposant
+                                    des solutions innovantes et fiables. Nous mettons un point d’honneur à maintenir des standards
+                                    élevés de qualité et de service afin de répondre aux besoins des professionnels de la réparation
+                                    automobile. Forts de notre expertise, nous sommes fiers de notre histoire et impatients de
+                                    vous accompagner dans tous vos besoins en matière de PRA.
+                                </p>
+                            </div>
 
-            <div class="shape-mockup jump d-none d-xxl-block" style="bottom: 0%; left: 4%;">
-                <img src="assets/img/shape/bg-shape2.png" alt="shape">
+                            <div class="checklist style">
+                                <ul>
+                                    <li>Pièces automobiles de haute qualité</li>
+                                    <li>Solutions innovantes adaptées aux professionnels</li>
+                                    <li>Engagement total envers la satisfaction client</li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-wrap mt-40">
+                                <a href="about.html" class="th-btn">
+                                    En savoir plus
+                                    <span class="after-bg"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="img-box2 d-none d-xxl-block d-xl-block">
+                            <div class="row">
+                                <div class="col-xxl-6 col-md-6" data-cue="slideInUp">
+                                    <div class="img-box1">
+                                        <div class="img1">
+                                            <img src="assets/img/normal/about-thumb1-2.jpg" alt="About">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6 col-md-6" data-cue="slideInUp">
+                                    <div class="img-box1">
+                                        <div class="img1">
+                                            <img src="assets/img/normal/about-thumb1-3.jpg" alt="About">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="shape-mockup jump d-none d-xxl-block" style="bottom: 0%; left: 4%;">
+                    <img src="assets/img/shape/bg-shape2.png" alt="shape">
+                </div>
             </div>
         </div>
     </div>
-</div> <!--==============================
+    <!--==============================
 Marquee Area  
 ==============================-->
- <div class="overflow-hidden pb-85" data-cue="slideInUp">
-    <div class="container-fluid p-0">
-        <div class="swiper th-slider marquee-slider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":"auto"}},"autoplay":{"delay":0,"disableOnInteraction":false},"noSwiping":"true","speed":10000,"spaceBetween":30}'>
-            <div class="swiper-wrapper">
-                <!-- Slide 1: Engine Parts -->
-                <div class="swiper-slide">
-                    <div class="marquee-card">
-                        <div class="marquee-icon color-masking">
-                            <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
-                            <img src="assets/img/shape/star-shape1.png" alt="img">
-                        </div>
-                        <a target="_blank" href="#" data-hover="Pièces de Moteur">
-                            Pièces de Moteur </a>
-                    </div>
-                </div>
-                <!-- Slide 2: Braking System -->
-                <div class="swiper-slide">
-                    <div class="marquee-card">
-                        <div class="marquee-icon color-masking">
-                            <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
-                            <img src="assets/img/shape/star-shape1.png" alt="img">
-                        </div>
-                        <a target="_blank" href="#" data-hover="Système de Freinage">
-                            Système de Freinage </a>
-                    </div>
-                </div>
-                <!-- Slide 3: Lighting & Electricity -->
-                <div class="swiper-slide">
-                    <div class="marquee-card">
-                        <div class="marquee-icon color-masking">
-                            <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
-                            <img src="assets/img/shape/star-shape1.png" alt="img">
-                        </div>
-                        <a target="_blank" href="#" data-hover="Éclairage & Électricité">
-                            Éclairage & Électricité </a>
-                    </div>
-                </div>
-                <!-- Slide 4: Suspension -->
-                <div class="swiper-slide">
-                    <div class="marquee-card">
-                        <div class="marquee-icon color-masking">
-                            <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
-                            <img src="assets/img/shape/star-shape1.png" alt="img">
-                        </div>
-                        <a target="_blank" href="#" data-hover="Suspension & Direction">
-                            Suspension & Direction </a>
-                    </div>
-                </div>
-                <!-- Slide 5: Exhaust System -->
-                <div class="swiper-slide">
-                    <div class="marquee-card">
-                        <div class="marquee-icon color-masking">
-                            <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
-                            <img src="assets/img/shape/star-shape1.png" alt="img">
-                        </div>
-                        <a target="_blank" href="#" data-hover="Systèmes d'Échappement">
-                            Systèmes d'Échappement </a>
-                    </div>
-                </div>
-                <!-- Slide 6: Body Parts -->
-                <div class="swiper-slide">
-                    <div class="marquee-card">
-                        <div class="marquee-icon color-masking">
-                            <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
-                            <img src="assets/img/shape/star-shape1.png" alt="img">
-                        </div>
-                        <a target="_blank" href="#" data-hover="Pièces de Carrosserie">
-                            Pièces de Carrosserie </a>
-                    </div>
-                </div>
-                <!-- Slide 7: Filtration -->
-                <div class="swiper-slide">
-                    <div class="marquee-card">
-                        <div class="marquee-icon color-masking">
-                            <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
-                            <img src="assets/img/shape/star-shape1.png" alt="img">
-                        </div>
-                        <a target="_blank" href="#" data-hover="Filtres & Huiles">
-                            Filtres & Huiles </a>
-                    </div>
-                </div>
-                <!-- Slide 8: Accessories -->
-                <div class="swiper-slide">
-                    <div class="marquee-card">
-                        <div class="marquee-icon color-masking">
-                            <div class="masking-src" data-mask-src="assets/img/shape/star-shape1.png"></div>
-                            <img src="assets/img/shape/star-shape1.png" alt="img">
-                        </div>
-                        <a target="_blank" href="#" data-hover="Accessoires Auto">
-                            Accessoires Auto </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
     <!--==============================
 Service Area  
 ==============================-->
- 
-  <section class="space overflow-hidden bg-gray-color service-wrap mb-40" id="service-sec">
-    <div class="service-bg-shape1-1 shape-mockup" data-bottom="0" data-left="50%">
-        <img src="assets/img/shape/bg-shape3.png" alt="img">
-    </div>
-    <div class="container">
-        <div class="title-area style2 common-style-for-title ">
-            <div>
-                <div class=" ">
-                    <div class="text-xxl-end text-xl-end text-lg-end text-start">
-                        <span class="sub-title style2 after-none before-none" data-cue="slideInUp">NOS SERVICES</span>
-                        <h2 class="sec-title style3 style7 mb-0" data-cue="slideInUp">Nous Fournissons   <br> <span>les Meilleures Pièces Auto pour Vous</span></h2>
-                    </div>
-                </div>
+    <section class="space overflow-hidden bg-gray-color service-wrap mb-40" id="service-sec">
+        <div class="service-bg-shape1-1 shape-mockup" data-bottom="0" data-left="50%">
+            <img src="assets/img/shape/bg-shape3.png" alt="img">
+        </div>
+        <div class="container">
+            <div class="title-area style2 common-style-for-title ">
                 <div>
-                    <div class="title-area-right text-start" data-cue="slideInUp">
-                        <p class="mb-0">Capram s'engage à offrir un service de qualité et un confort optimal à ses clients.
-</p>
+                    <div class=" ">
+                        <div class="text-xxl-end text-xl-end text-lg-end text-start">
+                            <span class="sub-title style2 after-none before-none" data-cue="slideInUp">NOS SERVICES</span>
+                            <h2 class="sec-title style3 style7 mb-0" data-cue="slideInUp">Nous Fournissons <br> <span>les Meilleures Pièces Auto pour Vous</span></h2>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="title-area-right text-start" data-cue="slideInUp">
+                            <p class="mb-0">Capram s'engage à offrir un service de qualité et un confort optimal à ses clients.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="slider-area service-slider">
-        <div class="swiper th-slider" id="serviceSlider" data-slider-options='{"paginationType":"progressbar","breakpoints":{"0":{"slidesPerView":1},"767":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"},"1300":{"slidesPerView":"3"},"1600":{"slidesPerView":"3"}}}'>
-            <div class="swiper-wrapper">
-                
-                <!-- Service 1 -->
-                <div class="swiper-slide">
-                    <div class="service-card">
-                        <div class="d-flex justify-content-between">
-                            <div class="box-icon">
-                                <div class="color-masking">
-                                    <img src="assets/img/icon/service/car-parts-service-1.png" alt="icon">
+        <div class="slider-area service-slider">
+            <div class="swiper th-slider" id="serviceSlider" data-slider-double="true" data-slider-options='{"paginationType":"progressbar","breakpoints":{"0":{"slidesPerView":1},"767":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
+                <div class="swiper-wrapper">
+                    <!-- Service 1 -->
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="d-flex justify-content-between">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <img src="assets/img/icon/service/car-parts-service-1.png" alt="icon">
+                                    </div>
                                 </div>
+                                <a href="service.html" class="circle-tag">
+                                    <span class="circle-title-anime">EN SAVOIR PLUS</span>
+                                    <div class="icon">
+                                        <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
+                                    </div>
+                                </a>
                             </div>
-                            <a href="service.html" class="circle-tag">
-                                <span class="circle-title-anime">EN SAVOIR PLUS</span>
-                                <div class="icon">
-                                    <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
-                                </div>
-                            </a>
+                            <h3 class="box-title"><a href="service.html">Pièces Auto</a></h3>
+                            <p class="box-text">Capram est spécialiste de la pièce de rechange automobile au Maroc depuis 1990.</p>
                         </div>
-                        <h3 class="box-title"><a href="service.html">Pièces Auto</a></h3>
-                        <p class="box-text">Capram est spécialiste de la pièce de rechange automobile au Maroc depuis 1990.</p>
+                        <div class="service-card style1">
+                            <div class="d-flex justify-content-between">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <img src="assets/img/icon/service/car-parts-service-1.png" alt="icon">
+                                    </div>
+                                </div>
+                                <a href="service.html" class="circle-tag">
+                                    <span class="circle-title-anime">EN SAVOIR PLUS</span>
+                                    <div class="icon">
+                                        <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <h3 class="box-title"><a href="service.html">Pièces Auto</a></h3>
+                            <p class="box-text">Capram est spécialiste de la pièce de rechange automobile au Maroc depuis 1990.</p>
+                            <div class="box-img">
+                                <img src="assets/img/service/service_card_4_1.jpg" alt="image">
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-card style1">
-                        <div class="d-flex justify-content-between">
-                            <div class="box-icon">
-                                <div class="color-masking">
-                                    <img src="assets/img/icon/service/car-parts-service-1.png" alt="icon">
+
+                    <!-- Service 2 -->
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="d-flex justify-content-between">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <img src="assets/img/icon/service/car-parts-service-3.png" alt="icon">
+                                    </div>
                                 </div>
+                                <a href="service.html" class="circle-tag">
+                                    <span class="circle-title-anime">EN SAVOIR PLUS</span>
+                                    <div class="icon">
+                                        <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
+                                    </div>
+                                </a>
                             </div>
-                            <a href="service.html" class="circle-tag">
-                                <span class="circle-title-anime">EN SAVOIR PLUS</span>
-                                <div class="icon">
-                                    <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
-                                </div>
-                            </a>
+                            <h3 class="box-title"><a href="service.html">Pièces carrosserie</a></h3>
+                            <p class="box-text">CapCarrosserie est importateur et distributeur de pièces de carrosserie Européenne et Asiatique depuis 2014.</p>
                         </div>
-                        <h3 class="box-title"><a href="service.html">Pièces Auto</a></h3>
-                        <p class="box-text">Capram est spécialiste de la pièce de rechange automobile au Maroc depuis 1990.</p>
-                        <div class="box-img">
-                            <img src="assets/img/service/service_card_4_1.jpg" alt="image">
+                        <div class="service-card style1">
+                            <div class="d-flex justify-content-between">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <img src="assets/img/icon/service/car-parts-service-3.png" alt="icon">
+                                    </div>
+                                </div>
+                                <a href="service.html" class="circle-tag">
+                                    <span class="circle-title-anime">EN SAVOIR PLUS</span>
+                                    <div class="icon">
+                                        <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <h3 class="box-title"><a href="service.html">Pièces carrosserie</a></h3>
+                            <p class="box-text">CapCarrosserie est importateur et distributeur de pièces de carrosserie Européenne et Asiatique depuis 2014</p>
+                            <div class="box-img">
+                                <img src="assets/img/service/service_card_4_2.jpg" alt="image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="d-flex justify-content-between">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <img src="assets/img/icon/service/car-parts-service-2.png" alt="icon">
+                                    </div>
+                                </div>
+                                <a href="service.html" class="circle-tag">
+                                    <span class="circle-title-anime">EN SAVOIR PLUS</span>
+                                    <div class="icon">
+                                        <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <h3 class="box-title"><a href="service.html">Pièces Asiatique</a></h3>
+                            <p class="box-text">CapJap est importateur et distributeur de pièces automobile asiatique depuis 2016.</p>
+                        </div>
+                        <div class="service-card style1">
+                            <div class="d-flex justify-content-between">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <img src="assets/img/icon/service/car-parts-service-2.png" alt="icon">
+                                    </div>
+                                </div>
+                                <a href="service.html" class="circle-tag">
+                                    <span class="circle-title-anime">EN SAVOIR PLUS</span>
+                                    <div class="icon">
+                                        <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <h3 class="box-title"><a href="service.html">Pièces Asiatique</a></h3>
+                            <p class="box-text">CapJap est importateur et distributeur de pièces automobile asiatique depuis 2016.</p>
+                            <div class="box-img">
+                                <img src="assets/img/service/service_card_4_3.jpg" alt="image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <div class="d-flex justify-content-between">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <img src="assets/img/icon/service/car-parts-service-4.png" alt="icon">
+                                    </div>
+                                </div>
+                                <a href="service.html" class="circle-tag">
+                                    <span class="circle-title-anime">EN SAVOIR PLUS</span>
+                                    <div class="icon">
+                                        <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <h3 class="box-title"><a href="service.html">LUBRIFIANTS & ADDITIFS</a></h3>
+                            <p class="box-text">CapService est importateur et distributeur de lubrifiants et additifs automobile depuis 2023.</p>
+                        </div>
+                        <div class="service-card style1">
+                            <div class="d-flex justify-content-between">
+                                <div class="box-icon">
+                                    <div class="color-masking">
+                                        <img src="assets/img/icon/service/car-parts-service-4.png" alt="icon">
+                                    </div>
+                                </div>
+                                <a href="service.html" class="circle-tag">
+                                    <span class="circle-title-anime">EN SAVOIR PLUS</span>
+                                    <div class="icon">
+                                        <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <h3 class="box-title"><a href="service.html">LUBRIFIANTS & ADDITIFS</a></h3>
+                            <p class="box-text">CapService est importateur et distributeur de lubrifiants et additifs automobile depuis 2023.</p>
+                            <div class="box-img">
+                                <img src="assets/img/service/service_card_4_4.jpg" alt="image">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="swiper-slide">
-                    <div class="service-card">
-                        <div class="d-flex justify-content-between">
-                            <div class="box-icon">
-                                <div class="color-masking">
-                                    <img src="assets/img/icon/service/car-parts-service-3.png" alt="icon">
-                                </div>
-                            </div>
-                            <a href="service.html" class="circle-tag">
-                                <span class="circle-title-anime">EN SAVOIR PLUS</span>
-                                <div class="icon">
-                                    <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="box-title"><a href="service.html">Pièces carrosserie</a></h3>
-                        <p class="box-text">CapCarrosserie est importateur et distributeur de pièces de carrosserie Européenne et Asiatique depuis 2014.</p>
+                <div class="slider-pagination-wrap ">
+                    <div class="slider-pagination2"></div>
+                    <div class="slider-pagination"></div>
+                    <div class="icon-box">
+                        <button data-slider-prev="#serviceSlider" class="slider-arrow style3 default">
+                            <img src="assets/img/icon/left-arrow.svg" alt="">
+                        </button>
+                        <button data-slider-next="#serviceSlider" class="slider-arrow style3 default">
+                            <img src="assets/img/icon/right-arrow.svg" alt="">
+                        </button>
                     </div>
-                    <div class="service-card style1">
-                        <div class="d-flex justify-content-between">
-                            <div class="box-icon">
-                                <div class="color-masking">
-                                    <img src="assets/img/icon/service/car-parts-service-3.png" alt="icon">
-                                </div>
-                            </div>
-                            <a href="service.html" class="circle-tag">
-                                <span class="circle-title-anime">EN SAVOIR PLUS</span>
-                                <div class="icon">
-                                    <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="box-title"><a href="service.html">Pièces carrosserie</a></h3>
-                        <p class="box-text">CapCarrosserie est importateur et distributeur de pièces de carrosserie Européenne et Asiatique depuis 2014</p>
-                        <div class="box-img">
-                            <img src="assets/img/service/service_card_4_2.jpg" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="swiper-slide">
-                    <div class="service-card">
-                        <div class="d-flex justify-content-between">
-                            <div class="box-icon">
-                                <div class="color-masking">
-                                    <img src="assets/img/icon/service/car-parts-service-2.png" alt="icon">
-                                </div>
-                            </div>
-                            <a href="service.html" class="circle-tag">
-                                <span class="circle-title-anime">EN SAVOIR PLUS</span>
-                                <div class="icon">
-                                    <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="box-title"><a href="service.html">Pièces Asiatique</a></h3>
-                        <p class="box-text">CapJap est importateur et distributeur de pièces automobile asiatique depuis 2016.</p>
-                    </div>
-                    <div class="service-card style1">
-                        <div class="d-flex justify-content-between">
-                            <div class="box-icon">
-                                <div class="color-masking">
-                                    <img src="assets/img/icon/service/car-parts-service-2.png" alt="icon">
-                                </div>
-                            </div>
-                            <a href="service.html" class="circle-tag">
-                                <span class="circle-title-anime">EN SAVOIR PLUS</span>
-                                <div class="icon">
-                                    <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="box-title"><a href="service.html">Pièces Asiatique</a></h3>
-                        <p class="box-text">CapJap est importateur et distributeur de pièces automobile asiatique depuis 2016.</p>
-                        <div class="box-img">
-                            <img src="assets/img/service/service_card_4_3.jpg" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="swiper-slide">
-                    <div class="service-card">
-                        <div class="d-flex justify-content-between">
-                            <div class="box-icon">
-                                <div class="color-masking">
-                                    <img src="assets/img/icon/service/car-parts-service-4.png" alt="icon">
-                                </div>
-                            </div>
-                            <a href="service.html" class="circle-tag">
-                                <span class="circle-title-anime">EN SAVOIR PLUS</span>
-                                <div class="icon">
-                                    <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="box-title"><a href="service.html">LUBRIFIANTS & ADDITIFS</a></h3>
-                        <p class="box-text">CapService est importateur et distributeur de lubrifiants et additifs automobile depuis 2023.</p>
-                    </div>
-                    <div class="service-card style1">
-                        <div class="d-flex justify-content-between">
-                            <div class="box-icon">
-                                <div class="color-masking">
-                                    <img src="assets/img/icon/service/car-parts-service-4.png" alt="icon">
-                                </div>
-                            </div>
-                            <a href="service.html" class="circle-tag">
-                                <span class="circle-title-anime">EN SAVOIR PLUS</span>
-                                <div class="icon">
-                                    <img src="assets/img/icon/right-arrow-theme1.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <h3 class="box-title"><a href="service.html">LUBRIFIANTS & ADDITIFS</a></h3>
-                        <p class="box-text">CapService est importateur et distributeur de lubrifiants et additifs automobile depuis 2023.</p>
-                        <div class="box-img">
-                            <img src="assets/img/service/service_card_4_4.jpg" alt="image">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="slider-pagination-wrap ">
-                <div class="slider-pagination2"></div>
-                <div class="slider-pagination"></div>
-                <div class="icon-box">
-                    <button data-slider-prev="#serviceSlider" class="slider-arrow style3 default">
-                        <img src="assets/img/icon/left-arrow.svg" alt="">
-                    </button>
-                    <button data-slider-next="#serviceSlider" class="slider-arrow style3 default">
-                        <img src="assets/img/icon/right-arrow.svg" alt="">
-                    </button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
     <!--==============================
 Counter Area  
 ==============================-->
-    <div style="display: none;" class="counter-area-2 space overflow-hidden position-relative z-index-2" data-bg-src="assets/img/normal/funfact-img.jpg">
+    <div class="counter-area-2 space overflow-hidden position-relative z-index-2" data-bg-src="assets/img/normal/funfact-img.jpg">
         <div class="container">
             <div class="counter-wrap2">
                 <div class="counter-card2" data-cue="slideInUp">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">98</span>%</h2>
-                        <p class="box-text">Happy Customers</p>
+                        <h2 class="box-number"><span class="counter-number">35000</span>+</h2>
+                        <p class="box-text">Références gérées</p>
                     </div>
                 </div>
                 <div class="counter-card2" data-cue="slideInUp">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">52</span>k</h2>
-                        <p class="box-text">Complete Projects</p>
+                        <h2 class="box-number"><span class="counter-number">2500</span>+</h2>
+                        <p class="box-text">Clients</p>
                     </div>
                 </div>
                 <div class="counter-card2" data-cue="slideInUp">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">2</span>K</h2>
-                        <p class="box-text">Professional Team</p>
+                        <h2 class="box-number"><span class="counter-number">155</span>+</h2>
+                        <p class="box-text">Personnes / Effectifs</p>
                     </div>
                 </div>
                 <div class="counter-card2" data-cue="slideInUp">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">1</span>k</h2>
-                        <p class="box-text">Global Stores</p>
+                        <h2 class="box-number"><span class="counter-number">40000</span>+</h2>
+                        <p class="box-text">m² / Zone de stockage</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div><!--==============================
+    </div>
+    <!--==============================
 Why Choose Us Area  
 ==============================-->
-    <div style="display: none;" class="why-sec-1 overflow-hidden space  overflow-hidden">
+    <div class="why-sec-1 overflow-hidden space  overflow-hidden">
         <div class="container">
             <div class="row gy-40 gx-80">
                 <div class="col-xxl-6 ">
                     <div class="title-area mb-60">
-                        <span class="sub-title style2 text-anim after-none before-none" data-cue="slideInLeft">Why Choose Us</span>
+                        <span class="sub-title style2 text-anim after-none before-none" data-cue="slideInLeft">E-commerce</span>
                         <h2 class="sec-title style3 text-anim2" data-cue="slideInLeft">
-                            We Focus on <br>
-                            Customer <span>Satisfaction And Quality</span>
+                            La Référence B2B<span><br>en Pièces Automobiles</span>
                         </h2>
                     </div>
                     <div class="why-img-box1" data-cue="slideInUp">
@@ -927,80 +817,50 @@ Why Choose Us Area
                             <div class="col-xxl-6 col-lg-6 col-md-6">
                                 <div class="why-card" data-cue="slideInUp">
                                     <div class="box-icon">
-                                        <img src="assets/img/icon/why-icon1-1.svg" alt="why-icon">
+                                        <!-- Icône de catalogue ou de recherche -->
+                                        <img src="assets/img/icon/ecommerce-icon1.svg" alt="catalogue-complet">
                                     </div>
                                     <div class="box-details">
-                                        <h4 class="box-title">Licensed & Certified Plumbers</h4>
-                                        <p class="box-text">When it comes to plumbing, you need more than just.</p>
-                                    </div>
-                                    <div class="skill-feature-wrap mt-60">
-                                        <div class="skill-feature">
-                                            <h3 class="skill-feature_title">Skill <span>92%</span></h3>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-theme" style="width: 92%;"></div>
-                                                <div class="progress-value">92%</div>
-                                            </div>
-                                        </div>
+                                        <h4 class="box-title">Catalogue Complet en Ligne</h4>
+                                        <p class="box-text">Explorez l'intégralité de nos stocks et collections en temps réel avant de vous déplacer en magasin.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-lg-6 col-md-6">
                                 <div class="why-card" data-cue="slideInUp">
                                     <div class="box-icon">
-                                        <img src="assets/img/icon/why-icon1-2.svg" alt="why-icon">
+                                        <!-- Remplacez par une icône de camion ou de colis -->
+                                        <img src="assets/img/icon/ecommerce-icon2.svg" alt="livraison-rapide">
                                     </div>
                                     <div class="box-details">
-                                        <h4 class="box-title">Modern Tools & Digital Technology</h4>
-                                        <p class="box-text">When it comes to plumbing, you need more than just.</p>
-                                    </div>
-                                    <div class="skill-feature-wrap mt-60">
-                                        <div class="skill-feature">
-                                            <h3 class="skill-feature_title">Skill <span>85%</span></h3>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-theme" style="width: 85%;"></div>
-                                                <div class="progress-value">85%</div>
-                                            </div>
-                                        </div>
+                                        <h4 class="box-title">Livraison Rapide & Suivie</h4>
+                                        <p class="box-text">Expédition sous 24h avec un suivi en temps réel pour ne jamais perdre de vue votre colis.</p>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-xxl-6 col-lg-6 col-md-6">
                                 <div class="why-card" data-cue="slideInUp">
                                     <div class="box-icon">
-                                        <img src="assets/img/icon/why-icon1-3.svg" alt="why-icon">
+                                        <!-- Remplacez par une icône de casque ou de message -->
+                                        <img src="assets/img/icon/ecommerce-icon3.svg" alt="support-client">
                                     </div>
                                     <div class="box-details">
-                                        <h4 class="box-title">Upfront Pricing with No Hidden Fees</h4>
-                                        <p class="box-text">When it comes to plumbing, you need more than just.</p>
-                                    </div>
-                                    <div class="skill-feature-wrap mt-60">
-                                        <div class="skill-feature">
-                                            <h3 class="skill-feature_title">Skill <span>90%</span></h3>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-theme" style="width: 90%;"></div>
-                                                <div class="progress-value">90%</div>
-                                            </div>
-                                        </div>
+                                        <h4 class="box-title">Support Client</h4>
+                                        <p class="box-text">Notre équipe est à votre entière disposition pour répondre rapidement à toutes vos questions et vous guider dans vos choix.</p>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-xxl-6 col-lg-6 col-md-6">
                                 <div class="why-card" data-cue="slideInUp">
                                     <div class="box-icon">
-                                        <img src="assets/img/icon/why-icon1-4.svg" alt="why-icon">
+                                        <!-- Remplacez par une icône de smartphone ou de design -->
+                                        <img src="assets/img/icon/ecommerce-icon4.svg" alt="interface-mobile">
                                     </div>
                                     <div class="box-details">
-                                        <h4 class="box-title">Clean,& Professional Workmanship</h4>
-                                        <p class="box-text">When it comes to plumbing, you need more than just.</p>
-                                    </div>
-                                    <div class="skill-feature-wrap mt-60">
-                                        <div class="skill-feature">
-                                            <h3 class="skill-feature_title">Skill <span>95%</span></h3>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-theme" style="width: 95%;"></div>
-                                                <div class="progress-value">95%</div>
-                                            </div>
-                                        </div>
+                                        <h4 class="box-title">Interface Mobile Optimisée</h4>
+                                        <p class="box-text">Une expérience d'achat fluide et intuitive, que vous soyez sur smartphone, tablette ou ordinateur.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1013,23 +873,21 @@ Why Choose Us Area
     <!--==============================
 Project Area  
 ==============================-->
-    <section style="display: none;" class="overflow-hidden" id="project-sec">
+    <section class="overflow-hidden" id="project-sec">
         <div class="container">
             <div class="title-area text-xl-start text-center">
                 <div class="row justify-content-between ">
-                    <div class="col-xl-auto">
-                        <h2 class="sub-title style2 text-anim after-none before-none  justify-content-xl-start justify-content-center" data-cue="slideInLeft">Case Studies</h2>
-                    </div>
+
                     <div class="col-md d-none">
                         <hr class="mb-0">
                     </div>
                     <div class="col-xl-5">
-                        <h2 class="sec-title style2 text-anim2 mb-0" data-cue="slideInLeft">Projects</h2>
+                        <h2 class="sec-title style2 text-anim2 mb-0" data-cue="slideInLeft">Nos Cartes</h2>
                     </div>
                     <div class="col-xxl-3 col-xl-4">
                         <div class="mt-30 text-xl-end text-xxl-end" data-cue="slideInLeft">
                             <a href="project.html" class="th-btn style3">
-                                View All Projects
+                                Voir toutes les cartes
                                 <span class="after-bg"></span>
                             </a>
                         </div>
@@ -1039,21 +897,13 @@ Project Area
         </div>
         <div class="slider-area">
             <div class="swiper th-slider marquee-slider2 mb-2" data-slider-options='{"breakpoints":{"0":{"slidesPerView":"auto"}},"autoplay":{"delay":0,"disableOnInteraction":false},"noSwiping":"false","speed":10000,"spaceBetween":12}'>
+
                 <div class="swiper-wrapper">
-                   
+                    <!-- Row 1 -->
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-1.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/alco.jpg" alt="Alco Logo">
                             </div>
 
                         </div>
@@ -1062,16 +912,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-2.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/alco-lubricant.jpg" alt="Alco Lubricant Logo">
                             </div>
 
                         </div>
@@ -1080,16 +921,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-3.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/alkar.jpg" alt="Alkar Logo">
                             </div>
 
                         </div>
@@ -1098,16 +930,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-4.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/as.jpg" alt="A&S Logo">
                             </div>
 
                         </div>
@@ -1116,16 +939,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-5.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/ate.jpg" alt="Ate Logo">
                             </div>
 
                         </div>
@@ -1134,16 +948,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-6.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/atl.jpg" alt="Atlantic Logo">
                             </div>
 
                         </div>
@@ -1152,16 +957,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-7.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/bendix.jpg" alt="Bendix Logo">
                             </div>
 
                         </div>
@@ -1170,16 +966,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-8.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/bosch.jpg" alt="Bosch Logo">
                             </div>
 
                         </div>
@@ -1188,39 +975,105 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-9.jpg" alt="project image">
-                            </div>
-                            <div class="box-content ">
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
+                                <img src="assets/img/project/castrol.jpg" alt="Castrol Logo">
                             </div>
 
                         </div>
                     </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/concord.jpg" alt="Concorde Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/continental.jpg" alt="Continental Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/coram.jpg" alt="Coram Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/dana.jpg" alt="Dana Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/dayco.jpg" alt="Dayco Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/delphi.jpg" alt="Delphi Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/depo.jpg" alt="Depo Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/dolz.jpg" alt="Dolz Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/eurobump.jpg" alt="Eurobump Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
 
                 </div>
 
             </div>
             <div class="swiper th-slider marquee-slider2" dir="rtl" data-slider-options='{"breakpoints":{"0":{"slidesPerView":"auto"}},"autoplay":{"delay":0,"disableOnInteraction":false,"reverseDirection": false},"noSwiping":"false","speed":10000,"spaceBetween":12}'>
                 <div class="swiper-wrapper">
+
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-5.jpg" alt="project image">
-                            </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+                                <img src="assets/img/project/fae.jpg" alt="FAE Logo">
                             </div>
 
                         </div>
@@ -1229,16 +1082,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-6.jpg" alt="project image">
-                            </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+                                <img src="assets/img/project/fare.jpg" alt="Fare Logo">
                             </div>
 
                         </div>
@@ -1247,16 +1091,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-7.jpg" alt="project image">
-                            </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+                                <img src="assets/img/project/fersa.jpg" alt="Fersa Logo">
                             </div>
 
                         </div>
@@ -1265,16 +1100,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-8.jpg" alt="project image">
-                            </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+                                <img src="assets/img/project/fiamm.jpg" alt="Fiamm Logo">
                             </div>
 
                         </div>
@@ -1283,16 +1109,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-9.jpg" alt="project image">
-                            </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+                                <img src="assets/img/project/formpart.jpg" alt="Formpart Logo">
                             </div>
 
                         </div>
@@ -1301,16 +1118,17 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-1.jpg" alt="project image">
+                                <img src="assets/img/project/fristom.jpg" alt="Fristom Logo">
                             </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/gebe.jpg" alt="Gebe Logo">
                             </div>
 
                         </div>
@@ -1319,16 +1137,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-2.jpg" alt="project image">
-                            </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+                                <img src="assets/img/project/hepu.jpg" alt="Hepu Logo">
                             </div>
 
                         </div>
@@ -1337,16 +1146,7 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-3.jpg" alt="project image">
-                            </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+                                <img src="assets/img/project/isam.jpg" alt="Isam Logo">
                             </div>
 
                         </div>
@@ -1355,16 +1155,52 @@ Project Area
                     <div class="swiper-slide">
                         <div class="project-card">
                             <div class="box-img">
-                                <img src="assets/img/project/project1-4.jpg" alt="project image">
+                                <img src="assets/img/project/lion.jpg" alt="Lion Logo">
                             </div>
-                            <div class="box-content text-start style2">
-                                <a href="project-details.html" class="icon-btn style2">
-                                    <img src="assets/img/icon/arrow-right-white.svg" alt="">
-                                </a>
-                                <div>
-                                    <p class="box-subtitle">Kitchen</p>
-                                    <h3 class="box-title"><a href="project-details.html">Plumbing Diagnosis</a></h3>
-                                </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/lpr.jpg" alt="LPR Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/lumileds.jpg" alt="Lumileds Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/mars.jpg" alt="Mars Tech Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/NARVA.jpg" alt="Narva Logo">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <div class="box-img">
+                                <img src="assets/img/project/professional.jpg" alt="Professional Logo">
                             </div>
 
                         </div>
@@ -1374,123 +1210,22 @@ Project Area
 
             </div>
         </div>
-    </section><!--==============================
-Team Area  
-==============================-->
-    <section style="display: none;" class="space overflow-hidden team-area-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-xxl-6">
-                    <div class="title-area mb-60">
-                        <span class="sub-title style2 text-anim after-none before-none" data-cue="slideInLeft">Our Team</span>
-                        <h2 class="sec-title style3 text-anim2" data-cue="slideInLeft">
-                            Meet Our Professional<br>
-                            <span>Plumber Team.</span>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-4">
-
-                <div class="col-xl-4 col-lg-4 col-md-6 order-xxl-1 order-1">
-                    <div class="th-team team-card" data-cue="slideInUp">
-                        <div class="team-img">
-                            <img src="assets/img/team/team_1_1.jpg" alt="Team">
-                        </div>
-                        <div class="team-card-content">
-                            <h3 class="box-title"><a href="team-details.html">Michel Manthan</a></h3>
-                            <span class="team-desig">Expert Plumber</span>
-                        </div>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-4 col-lg-4 col-md-6 order-xxl-2 order-2">
-                    <div class="th-team team-card" data-cue="slideInUp">
-                        <div class="team-img">
-                            <img src="assets/img/team/team_1_2.jpg" alt="Team">
-                        </div>
-                        <div class="team-card-content">
-                            <h3 class="box-title"><a href="team-details.html">Jenny William</a></h3>
-                            <span class="team-desig">Expert Plumber</span>
-                        </div>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-4 col-lg-4 col-md-6 order-xxl-5 order-3">
-                    <div class="th-team team-card" data-cue="slideInUp">
-                        <div class="team-img">
-                            <img src="assets/img/team/team_1_3.jpg" alt="Team">
-                        </div>
-                        <div class="team-card-content">
-                            <h3 class="box-title"><a href="team-details.html">Daniel Thomas</a></h3>
-                            <span class="team-desig">Expert Plumber</span>
-                        </div>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-xl-4 col-lg-4 col-md-6 order-xxl-6 order-4">
-                    <div class="th-team team-card" data-cue="slideInUp">
-                        <div class="team-img">
-                            <img src="assets/img/team/team_1_4.jpg" alt="Team">
-                        </div>
-                        <div class="team-card-content">
-                            <h3 class="box-title"><a href="team-details.html">Daniel Thomas</a></h3>
-                            <span class="team-desig">Expert Plumber</span>
-                        </div>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="order-xxl-2 col-xxl-4 d-none d-xxl-inline col-lg-4 col-md-6 align-self-center text-center">
-                    <div class="team-bg-shape">
-                        <img src="assets/img/shape/bg-shape4.png" alt="">
-                    </div>
-                </div>
-                <div class="order-xxl-3 order-5 col-xl-4 col-lg-4 col-md-6 align-self-center text-center">
-                    <a href="team.html" class="circle-btn th-btn  mt-xl-0 mt-30" data-cue="slideInUp">
-                        Join With Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section><!--==============================
+    </section>
+    <!--==============================
 Process Area  
 ==============================-->
-    <section style="display: none;" class="position-relative process1 bg-black-color2 space-top overflow-hidden" data-bg-src="assets/img/shape/bg-shape5.png">
+    <section class="position-relative process1 bg-black-color2 space-top overflow-hidden" data-bg-src="assets/img/shape/bg-shape5.png">
         <div class="container">
             <div class="row">
                 <div class="col-xxl-4">
                     <div class="title-area mb-60">
-                        <span class="sub-title style2 text-theme2 border-theme2 text-anim after-none before-none" data-cue="slideInLeft">Work Process</span>
+                        <span class="sub-title style2 text-theme2 border-theme2 text-anim after-none before-none" data-cue="slideInLeft">CAPRAM </span>
                         <h2 class="sec-title style3 text-white text-anim2" data-cue="slideInLeft">
-                            How We Work!
+                            Grande Maison de Pièces de Rechange Automobile
                         </h2>
+                        <p class="process-para" data-cue="slideInLeft">Depuis de nombreuses années déjà, Capram est spécialisé dans le domaine des pièces détachées au Maroc, où nous mettons à profit notre expertise pour constamment adapter nos méthodes de travail aux évolutions du marché. Notre objectif principal est de fournir des solutions optimales pour la maintenance et la réparation automobile.
+
+                            Nous nous engageons à offrir un service de qualité et un confort optimal à nos clients à travers les éléments suivants :</p>
                     </div>
                 </div>
                 <div class="col-xxl-8">
@@ -1499,8 +1234,8 @@ Process Area
                             <div class="col-xl-4 col-lg-4 col-md-4">
                                 <div class="process-card" data-cue="slideInUp">
                                     <div class="box-content">
-                                        <h3 class="box-title">Online Booking</h3>
-                                        <p class="box-text">When booking, it helps customers when they are shown a calendar.</p>
+                                        <h3 class="box-title">Stock comme marque de fabrique</h3>
+                                        <p class="box-text">Nous nous distinguons par notre capacité à maintenir un stock robuste et diversifié pour répondre aux besoins variés de nos clients.</p>
                                     </div>
                                     <div class="box-thumb-wrap">
                                         <div class="box-thumb">
@@ -1515,8 +1250,8 @@ Process Area
                             <div class="col-xl-4 col-lg-4 col-md-4">
                                 <div class="process-card" data-cue="slideInUp">
                                     <div class="box-content">
-                                        <h3 class="box-title">Inspect & Analyze</h3>
-                                        <p class="box-text">When booking, it helps customers when they are shown a calendar.</p>
+                                        <h3 class="box-title">Garantie du fabricant</h3>
+                                        <p class="box-text">Tous nos produits bénéficient de la garantie du fabricant, assurant à fournir des pièces respectant les standards internationaux.</p>
                                     </div>
                                     <div class="box-thumb-wrap">
                                         <div class="box-thumb">
@@ -1531,8 +1266,8 @@ Process Area
                             <div class="col-xl-4 col-lg-4 col-md-4">
                                 <div class="process-card" data-cue="slideInUp">
                                     <div class="box-content">
-                                        <h3 class="box-title">Solving Problem</h3>
-                                        <p class="box-text">When booking, it helps customers when they are shown a calendar.</p>
+                                        <h3 class="box-title">Entité logistique propre</h3>
+                                        <p class="box-text">Notre infrastructure logistique intégrée garantit une gestion efficace des flux de produits, assurant une livraison rapide et fiable.</p>
                                     </div>
                                     <div class="box-thumb-wrap">
                                         <div class="box-thumb">
@@ -1550,11 +1285,12 @@ Process Area
             </div>
 
         </div>
-    </section><!--==============================
+    </section>
+    <!--==============================
 Video Area  
 ==============================-->
-    <div style="display: none;" class=" video-area-1 position-relative overflow-hidden" data-sec-pos="top-half" data-pos-for="#feature-sec">
-        <div class="price-bg-shape1-1 shape-mockup d-none d-xxl-block" data-bottom="0" data-left="7%">
+    <div class=" video-area-1 position-relative overflow-hidden" data-sec-pos="top-half" data-pos-for="#feature-sec">
+        <div class="price-bg-shape1-1 shape-mockup d-none d-xxl-block" data-bottom="0" data-left="120px">
             <img src="assets/img/shape/video_shape.png" alt="img">
         </div>
         <div class="video-wrap">
@@ -1562,198 +1298,64 @@ Video Area
                 <div class="col-lg-12">
                     <div class="video-thumb1-1 video-box-center" data-overlay="black" data-opacity="3">
                         <img src="assets/img/normal/video1-1.jpg" alt="img">
-                        <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn style2 popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
+                        <a href="https://www.youtube.com/watch?v=RJ-Pb4IRUTs" class="play-btn style2 popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div><!--==============================
-Price Area  
-==============================-->
-    <section style="display: none;" class="overflow-hidden">
-        <div class="price-wrap1 space">
-            <div class="price-bg-shape1-1 shape-mockup " data-top="0" data-left="8%">
-                <img src="assets/img/shape/bg-shape1.png" alt="img">
-            </div>
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-xxl-12">
-                        <div class="title-area text-center pt-1">
-                            <span class="sub-title text-anim after-none before-none" data-cue="slideInUp">Affordable Pricing Plan</span>
-                            <h2 class="sec-title text-anim2" data-cue="slideInUp">Explore Range Flexible <br>
-                                <span>Service Packages.</span>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gy-30 justify-content-center">
-
-                    <div class="col-xl-4 col-md-6" data-cue="slideInUp">
-                        <div class="price-card ">
-                            <div class="box-top">
-                                <div class="box-content">
-                                    <h3 class="box-title">Basic
-                                        Package</h3>
-                                    <p class="box-subtitle"></p>
-                                </div>
-                                <div class="box-image">
-                                    <img src="assets/img/price/price_1_1.jpg" alt="price">
-                                </div>
-                            </div>
-                            <div class="price_card-wrap">
-                                <h4 class="price-card_price">$290<span class="duration">/month</span>
-                                </h4>
-                                <div class="checklist">
-                                    <ul>
-
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> 10% Off On All Services</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Priority Scheduling</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Maintained Equipment</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Trusted, certified technicians</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> 1 Annual Plumbing Inspection</li>
-                                    </ul>
-                                </div>
-                                <div class="btn-wrap">
-                                    <a href="contact.html" class="th-btn style4">
-                                        Choose Package
-                                        <span class="after-bg"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-md-6" data-cue="slideInUp">
-                        <div class="price-card active">
-                            <div class="box-top">
-                                <div class="box-content">
-                                    <h3 class="box-title">Standard
-                                        Package</h3>
-                                    <p class="box-subtitle">Popular</p>
-                                </div>
-                                <div class="box-image">
-                                    <img src="assets/img/price/price_1_2.jpg" alt="price">
-                                </div>
-                            </div>
-                            <div class="price_card-wrap">
-                                <h4 class="price-card_price">$390<span class="duration">/month</span>
-                                </h4>
-                                <div class="checklist">
-                                    <ul>
-
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> 10% Off On All Services</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Priority Scheduling</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Maintained Equipment</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Trusted, certified technicians</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> 1 Annual Plumbing Inspection</li>
-                                    </ul>
-                                </div>
-                                <div class="btn-wrap">
-                                    <a href="contact.html" class="th-btn style4">
-                                        Choose Package
-                                        <span class="after-bg"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-md-6" data-cue="slideInUp">
-                        <div class="price-card ">
-                            <div class="box-top">
-                                <div class="box-content">
-                                    <h3 class="box-title">Premium
-                                        Package</h3>
-                                    <p class="box-subtitle"></p>
-                                </div>
-                                <div class="box-image">
-                                    <img src="assets/img/price/price_1_3.jpg" alt="price">
-                                </div>
-                            </div>
-                            <div class="price_card-wrap">
-                                <h4 class="price-card_price">$490<span class="duration">/month</span>
-                                </h4>
-                                <div class="checklist">
-                                    <ul>
-
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> 10% Off On All Services</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Priority Scheduling</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Maintained Equipment</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> Trusted, certified technicians</li>
-                                        <li><img src="assets/img/icon/check-icon1-3.svg" alt="img"> 1 Annual Plumbing Inspection</li>
-                                    </ul>
-                                </div>
-                                <div class="btn-wrap">
-                                    <a href="contact.html" class="th-btn style4">
-                                        Choose Package
-                                        <span class="after-bg"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!--==============================
+    </div>
+    <!--==============================
 Contact Area   
 ==============================-->
-    <div style="display: none;" class="space overflow-hidden contact-area-1 position-relative z-index-common" id="contact-sec">
+    <div style="margin-top: 100px; margin-bottom: 100px;" class="space overflow-hidden contact-area-1 position-relative z-index-common" id="contact-sec">
         <div class="container">
             <div class="consulting-wrap1">
                 <div class="row gy-60 align-items-center">
                     <div class="col-xxl-6">
                         <div class="page-img mb-0">
-                            <img src="assets/img/normal/consulting-thumb1-1.jpg" alt="img">
+                            <div id="map" style="height: 700px; width: 100%;"></div>
                         </div>
                     </div>
                     <div class="col-xxl-6">
                         <div class="consulting-form-wrap1">
                             <div class="title-area mb-60 ">
-                                <span class="sub-title style2 text-white border-white text-anim after-none before-none" data-cue="slideInLeft">Get In Touch</span>
-                                <h2 class="sec-title text-white">Get Your Free <span>Estimate!</span></h2>
+                                <span class="sub-title style2 text-white border-white text-anim after-none before-none" data-cue="slideInLeft">Contactez-nous</span>
+                                <h2 class="sec-title text-white">N'hésitez pas à nous envoyer un <span>message!</span></h2>
                             </div>
                             <!--==============================
 Contact Area  
 ==============================-->
-                            <div class="contact-form-v1 ">
+                            <div class="contact-form-v1">
                                 <form action="mail.php" method="POST" class="contact-form ajax-contact">
                                     <div class="row">
                                         <div class="form-group style-border col-md-6">
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom">
                                             <i class="far fa-user"></i>
                                         </div>
+
                                         <div class="form-group style-border col-md-6">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Adresse e-mail">
                                             <i class="far fa-envelope"></i>
                                         </div>
+
                                         <div class="form-group style-border col-md-6">
-                                            <input type="number" class="form-control" name="number" id="number" placeholder="Phone Number">
+                                            <input type="number" class="form-control" name="number" id="number" placeholder="Numéro de téléphone">
                                             <i class="far fa-phone"></i>
                                         </div>
 
                                         <div class="form-group style-border col-md-6">
-                                            <select name="subject" id="subject" class="form-select bg-white">
-                                                <option value="" disabled selected hidden>Select Service</option>
-                                                <option value="Web Development">Web Development</option>
-                                                <option value="Brand Marketing">Brand Marketing</option>
-                                                <option value="UI/UX Designing">UI/UX Designing</option>
-                                                <option value="Digital Marketing">Digital Marketing</option>
-                                            </select>
+                                            <input type="text" class="form-control" name="objet" id="objet" placeholder="Objet">
+                                            <i class="fa-regular fa-comment"></i>
                                         </div>
+
                                         <div class="form-group style-border col-12">
-                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Write Message...."></textarea>
+                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Écrivez votre message..."></textarea>
                                             <i class="fa-light fa-pen"></i>
                                         </div>
-                                        <div class="form-group col-12">
-                                            <div class="custom-checkbox">
-                                                <input type="checkbox" id="remembermylogin">
-                                                <label for="remembermylogin" class="text-white">I agree with the privacy policy</label>
-                                            </div>
-                                        </div>
+
                                         <div class="form-btn col-12">
-                                            <button class="th-btn style5 ">
-                                                Request A Quote
+                                            <button class="th-btn style5">
+                                                Envoyer le message
                                                 <span class="after-bg"></span>
                                             </button>
                                         </div>
@@ -1771,249 +1373,24 @@ Contact Area
         </div>
     </div>
     <!--==============================
-Testimonial Area  
-==============================-->
-    <section style="display: none;" class="testi-area-1 space-top overflow-hidden " id="testi-sec">
-        <div class="price-bg-shape1-1 shape-mockup " data-top="3%" data-right="0">
-            <img src="assets/img/shape/bg-shape7.png" alt="img">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="title-area text-xl-start text-center">
-                    <div class="row ">
-                        <div class="col-xl-3">
-                            <h2 class="sub-title style2 text-anim after-none before-none  justify-content-xl-start justify-content-center" data-cue="slideInLeft">Testimonials</h2>
-                        </div>
-                        <div class="col-xl-6">
-                            <h2 class="sec-title style2 text-anim2 mb-0" data-cue="slideInLeft">Clients Say</h2>
-                            <p class="sec-text" data-cue="slideInUp">Whether it’s a small repair or a major installation, our team of licensed and experienced plumber is committed to getting the job done right — the first time. We use modern tools</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-50 flex-row-reverse">
-                <div class="col-xl-6">
-                    <div class="testi-thumb1-1">
-                        <div class="quote-icon">
-                            <img src="assets/img/icon/quote-icon2.svg" alt="">
-                        </div>
-                        <div class="img1 bg-mask" data-mask-src="assets/img/shape/testi-shape.png">
-                            <img src="assets/img/testimonial/testi-thumb1-1.jpg" alt="img">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="slider-area testi-slider1">
-                        <div class="swiper th-slider has-shadow" id="testiSlide1" data-slider-options='{"autoHeight": "true","breakpoints":{"0":{"slidesPerView":1},"768":{"slidesPerView":"1"},"992":{"slidesPerView":"1"},"1200":{"slidesPerView":"1"},"1600":{"slidesPerView":"1"}}}'>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testi-card">
-                                        <div class="testi-card_review">
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                        </div>
-                                        <p class="box-text">With transparent pricing, fast response times, and 24/7 emergency availability, we’re always here when you need us. Our customer-first approach means we treat every job with care, cleanliness, and professionalism.</p>
-                                        <div class="testi-card-profile">
-                                            <div class="testi-card-profile-detaile">
-                                                <h3 class="box-title">Alex Johansson</h3>
-                                                <p class="box-desig">Client of USA.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testi-card">
-                                        <div class="testi-card_review">
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                            <i class="fa-sharp fa-solid fa-star"></i>
-                                        </div>
-                                        <p class="box-text">With transparent pricing, fast response times, and 24/7 emergency availability, we’re always here when you need us. Our customer-first approach means we treat every job with care, cleanliness, and professionalism.</p>
-                                        <div class="testi-card-profile">
-                                            <div class="testi-card-profile-detaile">
-                                                <h3 class="box-title">Harry Callum</h3>
-                                                <p class="box-desig">Co-founder</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-pagination-wrap ">
-                                <button data-slider-prev="#testiSlide1" class="slider-arrow style3 default">
-                                    <img src="assets/img/icon/left-arrow.svg" alt="">
-                                </button>
-                                <button data-slider-next="#testiSlide1" class="slider-arrow style3 default">
-                                    <img src="assets/img/icon/right-arrow.svg" alt="">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!--==============================
-Brand Area  
-==============================-->
-    <div style="display: none;" class=" space overflow-hidden brand-area-1">
-        <div class="container-fluid p-0">
-            <div class="brand-wrap1 text-center">
-                <div class="swiper th-slider" data-cue="slideInUp" id="brandSlider1" data-slider-options='{"breakpoints":{"0":{"slidesPerView":"auto"}},
-             "autoplay":{"delay":0,"disableOnInteraction":false},"noSwiping":"true","speed":8000,"spaceBetween":126}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-1.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-2.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-3.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-4.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-5.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-6.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-1.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-2.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-3.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-4.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-5.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-6.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-1.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-2.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-3.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-4.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-5.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-6.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-1.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-2.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-3.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-4.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-5.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="blog.html" class="brand-box">
-                                <img src="assets/img/brand/brand1-6.svg" alt="Brand Logo">
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--==============================
 Blog Area  
 ==============================-->
-    <section style="display: none;" class="space overflow-hidden bg-gray-color" id="blog-sec">
+    <section class="space overflow-hidden bg-gray-color" id="blog-sec">
         <div class="container">
 
-            <div class="title-area style2 common-style-for-title ">
+            <div class="title-area style2 common-style-for-title">
                 <div>
                     <div class=" ">
                         <div class="text-xxl-end text-xl-end text-lg-end text-start">
-                            <span class="sub-title style2 after-none before-none" data-cue="slideInUp">News & Blog</span>
-                            <h2 class="sec-title style3 mb-0" data-cue="slideInUp">Latest News & Blog</h2>
+                            <span class="sub-title style2 after-none before-none" data-cue="slideInUp">Actualités & Articles</span>
+                            <h2 class="sec-title style3 mb-0" data-cue="slideInUp">Dernières actualités et articles</h2>
                         </div>
                     </div>
                     <div>
                         <div class="title-area-right text-start">
-                            <p class="mb-30">Our plumbing services are designed to provide fast, reliable, and long-lasting solutions for both residential and commercial needs. Whether it’s a leaky faucet, clogged drain, burst pipe,</p>
+                            <p class="mb-30">Le blog de CAPRAM vous permet de découvrir l’entreprise, son histoire et son expertise dans le domaine des pièces de rechange automobiles au Maroc. À travers nos articles, nous partageons notre vision, nos valeurs ainsi que notre engagement à fournir des produits de qualité et des solutions fiables pour les professionnels et les particuliers. Vous y trouverez également des informations sur nos activités, nos partenaires et les évolutions du secteur automobile.</p>
                             <a href="blog.html" class="th-btn">
-                                View All Post
+                                Découvrir d'autres articles
                                 <span class="after-bg"></span>
                             </a>
                         </div>
@@ -2021,43 +1398,23 @@ Blog Area
                 </div>
             </div>
 
-            <!-- <div class="title-area style2 ">
-             <div class="row justify-content-center align-items-start">
-               <div class="col-xxl-6 col-xl-6 col-lg-6 ">
-                  <div class="text-xxl-end text-xl-end text-lg-end text-start">
-                     <span class="sub-title style2 after-none before-none" data-cue="slideInUp">News & Blog</span>
-                     <h2 class="sec-title style3 mb-0" data-cue="slideInUp">Latest News & Blog</h2>
-                  </div>
-               </div>
-               <div class="col-xxl-6 col-xl-6 col-lg-6" data-cue="slideInUp">
-                  <div class="title-area-right text-start">
-                     <p class="mb-30">Our plumbing services are designed to provide fast, reliable, and long-lasting solutions for both residential and commercial needs. Whether it’s a leaky faucet, clogged drain, burst pipe,</p>
-                     <a href="blog.html" class="th-btn">
-                        View All Post
-                        <span class="after-bg"></span>
-                      </a>
-                  </div>
-               </div>
-            </div>
-         </div> -->
 
             <div class="row gy-40 justify-content-center">
                 <div class="col-xl-4 col-lg-6" data-cue="slideInUp">
                     <div class="blog-card position-relative">
                         <div class="blog-img">
-                            <a href="blog-details.html">
+                            <a href="https://www.rechange-maroc.com/capram-2026-rida-sabil-elargit-le-jeu-le-stock-tient-la-promesse-le-digital-fait-tourner-la-maison/">
                                 <img src="assets/img/blog/blog_1_1.jpg" alt="blog image">
                             </a>
                             <div class="blog-date">
-                                <h3>24 </h3>
-                                <span>Jan</span>
+                                <h3>10</h3>
+                                <span>Fév</span>
                             </div>
                         </div>
                         <div class="blog-content">
-                            <span class="box-tag">Kitchen Plumbing</span>
-                            <h3 class="box-title"><a href="blog-details.html">Achieving calm minds from plumbing issues </a></h3>
-                            <a href="blog-details.html" class="link-btn">
-                                Read More
+                            <h3 class="box-title"><a href="https://www.rechange-maroc.com/capram-2026-rida-sabil-elargit-le-jeu-le-stock-tient-la-promesse-le-digital-fait-tourner-la-maison/">Capram 2026 : Rida Sabil élargit le jeu, le stock... </a></h3>
+                            <a href="https://www.rechange-maroc.com/capram-2026-rida-sabil-elargit-le-jeu-le-stock-tient-la-promesse-le-digital-fait-tourner-la-maison/" class="link-btn">
+                                En savoir plus
                                 <span class="after-bg"></span>
                             </a>
                         </div>
@@ -2067,19 +1424,18 @@ Blog Area
                 <div class="col-xl-4 col-lg-6" data-cue="slideInUp">
                     <div class="blog-card position-relative">
                         <div class="blog-img">
-                            <a href="blog-details.html">
+                            <a href="https://www.rechange-maroc.com/capram-offre-a-la-3e-generation-le-soin-de-piloter-lavenir/">
                                 <img src="assets/img/blog/blog_1_2.jpg" alt="blog image">
                             </a>
                             <div class="blog-date">
-                                <h3>16 </h3>
-                                <span>Jan</span>
+                                <h3>04</h3>
+                                <span>Nov</span>
                             </div>
                         </div>
                         <div class="blog-content">
-                            <span class="box-tag">Bathroom Plumbing</span>
-                            <h3 class="box-title"><a href="blog-details.html">Expert Tips & Stories from the Plumbing World</a></h3>
-                            <a href="blog-details.html" class="link-btn">
-                                Read More
+                            <h3 class="box-title"><a href="https://www.rechange-maroc.com/capram-offre-a-la-3e-generation-le-soin-de-piloter-lavenir/">Capram offre à la 3e génération le soin de...</a></h3>
+                            <a href="https://www.rechange-maroc.com/capram-offre-a-la-3e-generation-le-soin-de-piloter-lavenir/" class="link-btn">
+                                En savoir plus
                                 <span class="after-bg"></span>
                             </a>
                         </div>
@@ -2089,19 +1445,18 @@ Blog Area
                 <div class="col-xl-4 col-lg-6" data-cue="slideInUp">
                     <div class="blog-card position-relative">
                         <div class="blog-img">
-                            <a href="blog-details.html">
+                            <a href="https://www.rechange-maroc.com/m-a-t-linterview-du-commissaire-du-salon-aziz-dich/">
                                 <img src="assets/img/blog/blog_1_3.jpg" alt="blog image">
                             </a>
                             <div class="blog-date">
-                                <h3>30 </h3>
-                                <span>Jan</span>
+                                <h3>04 </h3>
+                                <span>Nov</span>
                             </div>
                         </div>
                         <div class="blog-content">
-                            <span class="box-tag">Kitchen Plumbing</span>
-                            <h3 class="box-title"><a href="blog-details.html">Solving Everyday Plumbing Challenges with Ease</a></h3>
-                            <a href="blog-details.html" class="link-btn">
-                                Read More
+                            <h3 class="box-title"><a href="https://www.rechange-maroc.com/m-a-t-linterview-du-commissaire-du-salon-aziz-dich/">M.A.T. l’interview du Commissaire du Salon, Aziz...</a></h3>
+                            <a href="https://www.rechange-maroc.com/m-a-t-linterview-du-commissaire-du-salon-aziz-dich/" class="link-btn">
+                                En savoir plus
                                 <span class="after-bg"></span>
                             </a>
                         </div>
@@ -2114,27 +1469,7 @@ Blog Area
     <!--==============================
 	Footer Area
 ==============================-->
-    <footer style="display: none;" class="footer-wrapper footer-default">
-        <div class="container">
-            <div class="footer-top">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-xxl-9 col-xl-8">
-                        <div class="title-area mb-0">
-                            <h2 class="text-white text-anim2">
-                                Contact us today for a free Consultation.</h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-auto">
-                        <div class="fadeinright wow" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                            <a href="contact.html" class="th-btn style5">
-                                Free Consultation
-                                <span class="after-bg"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <footer class="footer-wrapper footer-default">
         <div class="widget-area">
             <div class="container">
                 <div class="row justify-content-between">
@@ -2142,76 +1477,72 @@ Blog Area
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
-                                    <a href="index.html"><img src="assets/img/logo3.svg" alt="Capram"></a>
+                                    <a href="index.html"><img src="assets/img/logo.png" alt="Capram"></a>
                                 </div>
-                                <p class="about-text">At Capram, we are committed to delivering unparalleled quality and precision in every facet of our operations. From the moment you reach out to us, through our expert.</p>
+                                <p class="about-text">Chez CAPRAM, nous nous engageons à offrir une qualité et une précision inégalées dans chaque aspect de nos activités. Dès votre premier contact avec nous et tout au long de notre accompagnement par nos experts, nous mettons tout en œuvre pour garantir des solutions fiables et un service à la hauteur de vos attentes.</p>
                                 <div class="th-social">
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/capram.auto/"><i class="fa-brands fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xl-auto" data-cue="slideInUp">
                         <div class="widget widget_nav_menu footer-widget ">
-                            <h3 class="widget_title">Useful Links</h3>
+                            <h3 class="widget_title">Liens Utiles</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="index.html"><i class="fa-solid fa-angle-right"></i>Home</a></li>
-                                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i>About Us</a></li>
-                                    <li><a href="pricing.html"><i class="fa-solid fa-angle-right"></i>Pricing Plan</a></li>
-                                    <li><a href="project.html"><i class="fa-solid fa-angle-right"></i>Our Gallery</a></li>
-                                    <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i>Our Location</a></li>
-                                    <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i> Blog</a></li>
+                                    <li><a href="index.html"><i class="fa-solid fa-angle-right"></i>Accueil</a></li>
+                                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i>À propos</a></li>
+                                    <li><a href="project.html"><i class="fa-solid fa-angle-right"></i>Nos Services</a></li>
+                                    <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i>Nos Catégories</a></li>
+                                    <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i>Blog</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-6 col-xl-auto" data-cue="slideInUp">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Our Services</h3>
+                            <h3 class="widget_title">Nos Services</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i> Burst Pipe Repair</a></li>
-                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i> Drain Unclogging</a></li>
-                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i> Water Heater Fixes</a></li>
-                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i> Sewer Backup</a></li>
-                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i> Leak Detection</a></li>
-                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i> Gas Line Emergencies</a></li>
+                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i>Pièces Auto</a></li>
+                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i>Pièces de Carrosserie</a></li>
+                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i>Pièces Asiatiques</a></li>
+                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i>Lubrifiants & Additifs</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3" data-cue="slideInUp">
                         <div class="widget footer-widget">
-                            <h3 class="widget_title">Instagram Post</h3>
+                            <h3 class="widget_title">Instagram Posts</h3>
                             <div class="sidebar-gallery">
                                 <div class="gallery-thumb">
                                     <img src="assets/img/widget/gallery_1_1.jpg" alt="Gallery Image">
-                                    <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="gallery-thumb">
                                     <img src="assets/img/widget/gallery_1_2.jpg" alt="Gallery Image">
-                                    <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="gallery-thumb">
                                     <img src="assets/img/widget/gallery_1_3.jpg" alt="Gallery Image">
-                                    <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="gallery-thumb">
                                     <img src="assets/img/widget/gallery_1_4.jpg" alt="Gallery Image">
-                                    <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="gallery-thumb">
                                     <img src="assets/img/widget/gallery_1_5.jpg" alt="Gallery Image">
-                                    <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
                                 </div>
                                 <div class="gallery-thumb">
                                     <img src="assets/img/widget/gallery_1_6.jpg" alt="Gallery Image">
-                                    <a target="_blank" href="https://www.instagram.com/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -2225,15 +1556,14 @@ Blog Area
                     <div class="col-lg-6" data-cue="slideInUp">
                         <p class="copyright-text">
                             Copyright
-                            <i class="fal fa-copyright"></i> 2025 <a href="index.html">Capram</a>, All rights reserved.
+                            <i class="fal fa-copyright"></i> 2025 <a href="index.html">Capram</a>, Tous droits réservés.
                         </p>
                     </div>
                     <div class="col-lg-6 text-lg-end text-center" data-cue="slideInUp">
                         <div class="footer-links">
                             <ul>
-                                <li><a href="about.html">Terms of service</a></li>
-                                <li><a href="about.html">Privacy policy</a></li>
-                                <li><a href="about.html">cookies</a></li>
+                                <li><a href="about.html">Politique SMQ</a></li>
+                                <li><a href="about.html">Français</a></li>
                             </ul>
                         </div>
                     </div>
@@ -2241,27 +1571,39 @@ Blog Area
             </div>
         </div>
     </footer>
-
     <!--********************************
 			Code End  Here 
-	******************************** -->
-
+******************************** -->
     <!-- Scroll To Top -->
     <div style="display: none;" class="scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg>
     </div>
-
     <!--==============================
     All Js File
 ============================== -->
     <!-- Jquery -->
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <!-- <script src="assets/js/vendor/jquery-3.7.1.min.js"></script> -->
-    <!-- Swiper Js -->
-    <!-- <script src="assets/js/app.min.js"></script> -->
+    <!-- map Js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // 1. Initialize map
+        var map = L.map('map').setView([33.58609299340052, -7.602708825402712], 18);
 
+        // 2. Use World_Street_Map for high detail in Casablanca
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Add your marker
+        var marker = L.marker([33.58609299340052, -7.602708825402712]).addTo(map);
+        marker.bindPopup("<b>CAPRAM</b>").openPopup();
+
+    </script>
+    <!-- <script src="assets/js/app.min.js"></script> -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- Bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
@@ -2284,8 +1626,6 @@ Blog Area
     <script src="assets/js/SplitText.min.js"></script>
     <!-- Lenis Js -->
     <script src="assets/js/lenis.min.js"></script>
-
-
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
 </body>

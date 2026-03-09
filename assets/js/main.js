@@ -253,56 +253,71 @@
     };
 
     /*----------- 07. Global Slider ----------*/   
-    $('.th-slider').each(function () {
-        var thSlider = $(this);
-        var settings = $(this).data('slider-options') || {};
-        
-        // Store references to the navigation buttons
-        var prevArrow = thSlider.find('.slider-prev');
-        var nextArrow = thSlider.find('.slider-next');
-        var paginationEl1 = thSlider.find('.slider-pagination').get(0);
-        var paginationEl2 = thSlider.find('.slider-pagination2');
-        var progressBarEl = thSlider.find('.slider-pagination-progressbar2 .slider-progressbar-fill');
+   /*----------- 07. Global Slider ----------*/   
+$('.th-slider').each(function () {
+    var thSlider = $(this);
+    var settings = $(this).data('slider-options') || {};
     
-        var sliderDefault = {
-            slidesPerView: 1,
-            spaceBetween: settings.spaceBetween || 24,
-            loop: settings.loop !== false,
-            speed: settings.speed || 1000,
-            autoplay: settings.autoplay || { delay: 6000, disableOnInteraction: false },
-            navigation: {
-                prevEl: prevArrow.get(0),
-                nextEl: nextArrow.get(0),
+    // NEW PARAMETER: Only triggers if you add data-slider-double="true" to HTML
+    var isDoubled = thSlider.data('slider-double') === true;
+    if (isDoubled) {
+        var HTMLcontent = thSlider.find('.swiper-wrapper').html();
+        thSlider.find('.swiper-wrapper').append(HTMLcontent);
+    }
+
+    var prevArrow = thSlider.find('.slider-prev');
+    var nextArrow = thSlider.find('.slider-next');
+    var paginationEl1 = thSlider.find('.slider-pagination').get(0);
+    var paginationEl2 = thSlider.find('.slider-pagination2');
+    var progressBarEl = thSlider.find('.slider-pagination-progressbar2 .slider-progressbar-fill');
+
+    var sliderDefault = {
+        slidesPerView: 1,
+        spaceBetween: settings.spaceBetween || 24,
+        loop: settings.loop !== false,
+        speed: settings.speed || 1000,
+        autoplay: settings.autoplay || { delay: 6000, disableOnInteraction: false },
+        navigation: {
+            prevEl: prevArrow.get(0),
+            nextEl: nextArrow.get(0),
+        },
+        pagination: {
+            el: paginationEl1,
+            type: settings.paginationType || 'bullets',
+            clickable: true,
+            renderBullet: function (index, className) {
+                // If doubled, only render bullets for the first half
+                if (isDoubled) {
+                    var realCount = thSlider.find('.swiper-slide').length / 2;
+                    if (index >= realCount) return ""; 
+                }
+                var number = index + 1;
+                var formattedNumber = number < 10 ? '0' + number : number;
+                return '<span class="' + className + '" aria-label="Go to Slide ' + formattedNumber + '"></span>';
             },
-            pagination: {
-                el: paginationEl1,
-                type: settings.paginationType || 'bullets',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    var number = index + 1;
-                    var formattedNumber = number < 10 ? '0' + number : number;
-                    return '<span class="' + className + '" aria-label="Go to Slide ' + formattedNumber + '"></span>';
-                },
+        },
+        on: {
+            init: function () {
+                updatePagination(this);
+                updateProgressBar(this);
             },
-            on: {
-                init: function () {
-                    updatePagination(this);
-                    updateProgressBar(this);
-                },
-                slideChange: function () {
-                    updatePagination(this);
-                    updateProgressBar(this);
-                },
+            slideChange: function () {
+                updatePagination(this);
+                updateProgressBar(this);
             },
-        };
-    
-        var options = $.extend({}, sliderDefault, settings);
-        var swiperInstance = new Swiper(thSlider.get(0), options);
-    
-        // Update Pagination and other UI elements
-        function updatePagination(swiper) {
-            var activeIndex = swiper.realIndex + 1; 
-            var totalSlides = swiper.slides.length;
+        },
+    };
+
+    var options = $.extend({}, sliderDefault, settings);
+    var swiperInstance = new Swiper(thSlider.get(0), options);
+
+    function updatePagination(swiper) {
+        // Get actual slides ignoring Swiper's internal clones
+        var allSlides = $(swiper.el).find('.swiper-slide:not(.swiper-slide-duplicate)').length;
+        var totalSlides = isDoubled ? (allSlides / 2) : allSlides;
+        var activeIndex = (swiper.realIndex % totalSlides) + 1; 
+
+        if (paginationEl2.length > 0) {
             paginationEl2.html(
                 '<span class="current-slide">' +
                 (activeIndex < 10 ? '0' + activeIndex : activeIndex) +
@@ -311,18 +326,21 @@
                 '</span>'
             );
         }
-    
-        function updateProgressBar(swiper) {
-            var progress = ((swiper.realIndex + 1) / swiper.slides.length) * 100;
+    }
+
+    function updateProgressBar(swiper) {
+        var allSlides = $(swiper.el).find('.swiper-slide:not(.swiper-slide-duplicate)').length;
+        var totalSlides = isDoubled ? (allSlides / 2) : allSlides;
+        var activeIndex = (swiper.realIndex % totalSlides) + 1; 
+        var progress = (activeIndex / totalSlides) * 100;
+        
+        if (progressBarEl.length > 0) {
             progressBarEl.css('height', progress + '%');
         }
+    }
+});
 
-        if ($('.slider-area').length > 0) {
-            $('.slider-area').closest(".container").parent().addClass("arrow-wrap");
-        }
-    
-    });
-    
+/* Same animationProperties and Click handler code follows... */
     // Function to add animation classes
     function animationProperties() {
         $('[data-ani]').each(function () {
@@ -348,14 +366,13 @@
             if (swiper) {
                 if ($(this).data('slider-prev')) {
                     swiper.slidePrev();
-                } else {navigator, 
+                } else {
                     swiper.slideNext();
                 }
             }
         }
     }); 
-
-    /*----------- 08. Ajax Contact Form ----------*/
+/*----------- 08. Ajax Contact Form ----------*/
     var form = ".ajax-contact";
     var invalidCls = "is-invalid";
     var $email = '[name="email"]';
