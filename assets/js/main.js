@@ -1,3 +1,55 @@
+      /*---------- 00. scroll link ----------*/
+    
+    
+        // Target all anchor tags inside your menu-area
+$(document).ready(function() {
+
+    // --- STEP 1: Listen for clicks on links ---
+    $('a').on('click', function(e) {
+        // Ignore middle-clicks or Ctrl/Cmd+clicks (which open in a new tab)
+        if (e.which !== 1 || e.ctrlKey || e.metaKey) {
+            return; 
+        }
+
+        var href = $(this).attr('href');
+        
+        // Ensure the link actually has an href
+        if (href) {
+            // Check what kind of link it is
+            var isIndex  = href.indexOf('index.html') !== -1 || href === '/';
+            var isAnchor = href.startsWith('#');
+            var isJS     = href.startsWith('javascript');
+            var isTel    = href.startsWith('tel:');
+            var isMail   = href.startsWith('mailto:');
+
+            // If it's a REAL page link and NOT index.html
+            if (!isIndex && !isAnchor && !isJS && !isTel && !isMail) {
+                // Set a flag in the browser's memory to scroll on the next page
+                sessionStorage.setItem('scrollNextPage', 'true');
+            }
+        }
+    });
+
+    // --- STEP 2: When a page loads, check if we need to scroll ---
+    if (sessionStorage.getItem('scrollNextPage') === 'true') {
+        
+        // Remove the flag immediately so it doesn't scroll if you manually refresh the page later
+        sessionStorage.removeItem('scrollNextPage');
+        
+        // Wait 1 second (1000 milliseconds)
+        setTimeout(function() {
+            
+            // Smooth scroll down by 400 pixels
+            $('html, body').animate({
+                scrollTop: 930 
+            }, 800); // 800 is the animation speed (0.8 seconds to scroll)
+            
+        }, 1000); // 1000 is the 1-second wait time
+    }
+    
+});
+   
+
 (function ($) {
     "use strict";
     /*=================================
@@ -30,6 +82,8 @@
         JS Index End
     ==================================*/
     /*
+    
+ 
 
   /*---------- 01. On Load Function ----------*/
     $(window).on("load", function () {

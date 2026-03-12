@@ -319,6 +319,10 @@ iframe {
     width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .slick-slide:focus,
 button:focus,
 a:focus,
@@ -11819,6 +11823,16 @@ span.colorSlash {
     -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
     border-bottom: 3px solid var(--theme-color);
+    display: grid;
+    grid-template-rows: repeat(4, auto); /* Forces exactly 4 rows */
+    grid-auto-flow: column; /* Pushes the 5th item to a new column on the right */
+    
+    /* Spacing styling */
+    column-gap: 30px; /* Space between the left and right columns */
+    row-gap: 10px;    /* Space between the vertical lines */
+    
+    /* Useful for dropdown menus to prevent columns from squishing */
+    width: max-content; 
 }
 
 .main-menu ul.sub-menu a {
@@ -11832,11 +11846,12 @@ span.colorSlash {
 }
 
 .main-menu ul.sub-menu li {
-    display: block;
+    display: flex;
     margin: 0 0;
     padding: 0px 9px;
+    align-items: center;
+    gap: 15px;
 }
-
 .main-menu ul.sub-menu li:has(.sub-menu) > a:after,
 .main-menu ul.sub-menu li:has(.mega-menu) > a:after,
 .main-menu ul.sub-menu li.menu-item-has-children > a:after {
@@ -11857,11 +11872,12 @@ span.colorSlash {
 .main-menu ul.sub-menu li a {
     position: relative;
     padding-left: 0;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
+/*
 .main-menu ul.sub-menu li a:before {
-    content: "\e439";
+    content: "\f061";
     position: absolute;
     top: 6px;
     left: 10px;
@@ -11880,9 +11896,26 @@ span.colorSlash {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
+*/
 
+/*
 .main-menu ul.sub-menu li a:hover {
     padding-left: 23px;
+}
+*/
+
+ul.sub-menu li img {
+    width: 75%;
+}
+
+ul.sub-menu li div {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f7943d;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-menu ul.sub-menu li a:hover:before {

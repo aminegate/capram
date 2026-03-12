@@ -1,0 +1,1088 @@
+<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CAPRAM</title>
+    <meta name="author" content="Capram">
+    <meta name="description" content="Capram">
+    <meta name="keywords" content="Capram">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="favicon.png" type="image/x-icon" rel="shortcut icon">
+    <meta name="theme-color" content="#ffffff">
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--==============================
+	    All CSS File 
+	============================== -->
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="assets/css/app.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --bg-color: #0a0a0a;
+            /* Deep asphalt black */
+            --bg-secondary: #141414;
+            --text-main: #fcfcfc;
+            --text-muted: #9ca3af;
+            --primary: #f7943d;
+            /* Your requested main color */
+            --primary-dark: #d67a2b;
+            --primary-glow: rgba(247, 148, 61, 0.25);
+            --card-white: #ffffff;
+        }
+
+        /* --- GLOBAL RESETS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Glow */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
+            z-index: -1;
+            filter: blur(100px);
+            pointer-events: none;
+        }
+
+        h1,
+        h2,
+        .brand-text {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* --- SECTION 1: HERO --- */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            padding-top: 5rem;
+            z-index: 1;
+        }
+
+        /* Creative Element: Angled Background Shape from your image */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20%;
+            width: 80%;
+            height: 100%;
+            background-color: var(--bg-secondary);
+            transform: skewX(-15deg);
+            z-index: -1;
+            border-right: 2px solid rgba(247, 148, 61, 0.1);
+        }
+
+        .hero-content {
+            animation: slideUp 1s ease-out;
+        }
+
+        .category-label {
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 90%;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-img-container {
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 1rem;
+            object-fit: cover;
+            aspect-ratio: 4/4;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        /* --- SECTION 2: SUB-CATEGORIES --- */
+        .categories-section {
+            padding: 5rem 0 10rem 0;
+        }
+
+        /* Staggered Grid to avoid repetitive boring layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            row-gap: 5rem;
+            /* Extra space for overlapping labels */
+        }
+
+        /* Middle items stagger down slightly */
+        .grid-card:nth-child(even) {
+            transform: translateY(30px);
+        }
+
+        .grid-card {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .grid-card:hover {
+            transform: translateY(-10px) !important;
+        }
+
+        /* The White Stage for Products */
+        .card-image-wrapper {
+            background-color: var(--card-white);
+            border-radius: 1rem;
+            padding: 0rem 1rem 3rem 1rem;
+            /* Extra padding at bottom for the label */
+            aspect-ratio: 1/1.1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .grid-card:hover .card-image-wrapper {
+            box-shadow: 0 15px 40px var(--primary-glow);
+        }
+
+        /* Makes white background images blend perfectly */
+        .card-image-wrapper img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+            mix-blend-mode: darken;
+            transition: transform 0.5s ease;
+        }
+
+        .grid-card:hover .card-image-wrapper img {
+            transform: scale(1.1);
+        }
+
+        /* Creative Element: Overlapping Orange Label */
+        .card-label {
+            position: absolute;
+            bottom: -20px;
+            /* Floats off the bottom edge */
+            left: 5%;
+            width: 90%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            box-shadow: 0 8px 20px rgba(247, 148, 61, 0.4);
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
+        }
+
+        .grid-card:hover .card-label {
+            bottom: -25px;
+            background: #fff;
+            color: var(--primary-dark);
+        }
+
+        /* --- SECTION 3: BRANDS --- */
+        /* --- SECTION 3: BRANDS --- */
+        .brands-section {
+            padding: 4rem 0 8rem 0;
+            background: var(--bg-secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+
+        .brands-section h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+        }
+
+        .marquee-wrapper {
+            width: 100vw;
+            position: relative;
+            left: calc(-50vw + 50%);
+            display: flex;
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 2.5rem;
+            /* Space between logos */
+            width: max-content;
+            /* Forces track to be as wide as all images combined */
+            animation: scroll 35s linear infinite;
+            /* Slower speed for more images */
+        }
+
+        .brand-card {
+            flex-shrink: 0;
+            height: 175px;
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .brand-card:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 10px 25px var(--primary-glow);
+            border: 2px solid var(--primary);
+        }
+
+        .brand-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            /* Ensures logos don't get cut off */
+        }
+
+        /* Pause animation when user hovers over the brands */
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            /* Scrolls exactly half the track width (the first set of images) */
+            100% {
+                transform: translateX(calc(-50% - 1.25rem));
+            }
+        }
+
+        /* --- KEYFRAMES --- */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                row-gap: 4rem;
+            }
+
+            .grid-card:nth-child(even) {
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+                padding-top: 6rem;
+            }
+
+            .hero::before {
+                display: none;
+            }
+
+            .hero-content p {
+                margin: 0 auto 2rem auto;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-text {
+                font-size: 2rem;
+                margin: 0 2rem;
+            }
+
+            .card-label {
+                font-size: 1rem;
+                padding: 1.2rem 0.5rem;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+<body class="">
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+    <!-- <div class="cursor-follower"></div> -->
+
+    <!-- slider drag cursor -->
+    <!-- <div class="slider-drag-cursor"> DRAG </div> -->
+    <!--==============================
+    Mobile Menu
+============================== -->
+
+    <div style="display: none" class="th-menu-wrapper">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="index.html">Home</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Multipage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Home General Plumbing</a></li>
+                                    <li><a href="home-2.html">Home Emergency Plumbing</a></li>
+                                    <li><a href="home-3.html">Home Residential Plumbing</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Onepage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="home-1-op.html">Home General Plumbing</a></li>
+                                    <li><a href="home-2-op.html">Home Emergency Plumbing</a></li>
+                                    <li><a href="home-3-op.html">Home Residential Plumbing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="javascript:void(0);">Service Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="project-details.html">Project Details</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="testimonial.html">Testimonial</a></li>
+                            <li><a href="faq.html">FAQ'S Page</a></li>
+                            <li><a href="cost-calculation.html">Cost Calculation</a></li>
+                            <li><a href="error.html">Error Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Blog</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">Blog Standard</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="display: none" class="popup-search-box d-none d-lg-block">
+        <button class="searchClose"><i class="far fa-times"></i></button>
+        <form action="#">
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+    <!--==============================
+    Sidemenu 
+============================== -->
+    <div style="display: none" class="sidemenu-wrapper sidemenu-info d-none d-lg-block">
+        <div class="sidemenu-content allow-natural-scroll">
+            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
+            <div class="widget  ">
+                <div class="th-widget-about">
+                    <div class="about-logo">
+                        <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+                    </div>
+                    <p class="about-text mb-4"> Capram full potential with our comprehensive consulting services. Our expert team partners with you to identify growth opportunities.</p>
+                    <div class="th-social style2">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="widget">
+                <h3 class="widget_title">Recent Posts</h3>
+                <div class="recent-post-wrap">
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>20 Mar, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Rapid solutions for your plumbing issues</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>24 Sep, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Frequent maintenance, such as inspection</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>23 Oct, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Mastering: Handyman's Guide to Tips & Tricks</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget th-newsletter-widget style4 ">
+                <h3 class="widget_title">Subscribe to Newsletter</h3>
+                <p class="footer-text mb-4">Get Monthly insights from founders around the globe. No spam - promise.</p>
+                <form class="newsletter-form">
+                    <div class="form-group style-border">
+                        <input class="form-control" type="email" placeholder="Enter your email" required="">
+                    </div>
+                    <button type="submit" class="th-btn">Subscribe <span class="after-bg"></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+	Header Area
+   ==============================-->
+    <header class="th-header header-default">
+        <div class="header-top">
+            <div class="row justify-content-center justify-content-lg-between  align-items-center gy-2">
+                <div class="col-auto">
+                    <div class="header-links d-none d-xxl-inline-block d-lg-inline-block">
+                        <ul>
+                            <li class=" d-xxl-inline-block"><i class="fa-regular fa-clock"></i>Horaires: Lundi – Vendredi : 9:00 AM – 18:30 PM <span class="colorSlash">/</span> Samedi : 9:00 AM – 13:00 PM</li>
+                            <li><i class="fal fa-envelope"></i><a href="mailto:info@Capram.com">contact@capram.ma</a></li>
+                            <li class=" d-xxl-inline-block"><i class="fal fa-location-dot"></i>35 Rue Bachir Ibrahimi, Casablanca 20250</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="top-right">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="menu-area">
+                <div class="container-fulid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo.png" alt="Capram" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li class="">
+                                        <a href="index.html">Accueil</a>
+                                    </li>
+                                    <li><a href="about.html">À propos</a></li>
+                                     <li class="menu-item-has-children">
+                                        <a href="categories.html">Catégories</a>
+                                        <ul class="sub-menu">
+
+                                            <li>
+                                                <div><img src="assets/img/icon/clutch.png" alt=""></div><a href="javascript:void(0);">Embrayage</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/motor.svg" alt=""></div><a href="ca-motor.html">Moteur</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/filter.png" alt=""></div><a href="javascript:void(0);">Filtration</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/suspension.svg" alt=""></div><a href="javascript:void(0);">Suspension</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/brakes.svg" alt=""></div><a href="javascript:void(0);">Freinage</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/cooling.png" alt=""></div><a href="javascript:void(0);">Refroidissement</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/battery.png" alt=""></div><a href="javascript:void(0);">Système Électrique</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/roues.svg" alt=""></div><a href="javascript:void(0);">Entraînement des roues</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/lubricant.png" alt=""></div><a href="ca-lubricant.html">Lubrifiant</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/carrosserie.png" alt=""></div><a href="javascript:void(0);">Carrosserie</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/perfum.png" alt=""></div><a href="javascript:void(0);">Accessoires</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/other.png" alt=""></div><a href="javascript:void(0);">Autres</a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Services</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="javascript:void(0);">Service Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">Cartes</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="javascript:void(0);">Cartes Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">Actualité</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header-button d-flex d-lg-none">
+                                <button type="button" class="th-menu-toggle icon-btn"><i class="far fa-bars"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-auto d-xl-block d-none">
+                            <div class="header-button">
+                                <a class="th-btn style6" href="tel:+16369729901"><img src="assets/img/icon/phone.svg" alt="">Appelez-nous: +212 522 31 93 54</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--==============================
+Hero Area
+==============================-->
+    <div class="th-hero-wrapper hero-1 bg-mask" id="hero">
+        <div class="swiper th-slider" id="heroSlider8" data-slider-options='{"effect":"fade", "autoHeight": "false"}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_1.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Pièces de rechanges</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPRAM</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Meilleure Offre pièces de rechanges au Maroc.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_2.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Carrosserie</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPCARROSSERIE</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Bon rapport qualité prix en carrosserie Européenne & Asiatique</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_3.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Lubrifiants, additifs & liquides</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPSERVICE</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Solution Complète: Lubrifiants, additifs & liquides pour automobile & industrie.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="icon-box">
+                <button data-slider-prev="#heroSlider8" class="slider-arrow style2 default">
+                    <img src="assets/img/icon/left-arrow.svg" alt="">
+                </button>
+                <button data-slider-next="#heroSlider8" class="slider-arrow style2 default">
+                    <img src="assets/img/icon/right-arrow.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about-sec" class="scroll-wrap">Descendre<span><img src="assets/img/icon/down-arrow.svg" alt=""></span></a>
+        </div>
+    </div>
+    <!--======== / Hero Section ========-->
+
+    <div class="container">
+
+        <!-- SECTION 1: HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="category-label">Catégorie</span>
+                <h1>Lubrifiants<br><span style="color: var(--primary);">& Additifs</span></h1>
+                <p>Des solutions de haute performance conçues pour optimiser, nettoyer et protéger les composants vitaux de votre moteur, garantissant une longévité maximale.</p>
+            </div>
+
+            <div class="hero-img-container">
+                <!-- Using an abstract, golden-oil/mechanical aesthetic image from Unsplash -->
+                <img src="assets/img/categories/sub-catego/lubricant.png" alt="Premium Oil Engine" class="hero-img">
+            </div>
+        </section>
+
+        <!-- SECTION 2: SUB-CATEGORIES -->
+        <section class="categories-section">
+            <div class="grid">
+
+                <!-- Category 1 -->
+                <div class="grid-card">
+                    <div class="card-image-wrapper">
+                        <!-- Replace src with your actual white-background product image -->
+                        <img src="assets/img/categories/sub-catego/lub-1.jpg" alt="Huile Moteur">
+                        <div class="card-label">Huile Moteur</div>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="grid-card">
+                    <div class="card-image-wrapper">
+                        <img src="assets/img/categories/sub-catego/lub-2.jpg" alt="Système Hydraulique">
+                        <div class="card-label">Huile Système Hydraulique</div>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="grid-card">
+                    <div class="card-image-wrapper">
+                        <img src="assets/img/categories/sub-catego/lub-3.jpg" alt="Boîte de Vitesse">
+                        <div class="card-label">Huile De Boîte<br>De Vitesse</div>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="grid-card">
+                    <div class="card-image-wrapper">
+                        <img src="assets/img/categories/sub-catego/lub-4.jpg" alt="Huile de Frein">
+                        <div class="card-label">Huile De Frein</div>
+                    </div>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="grid-card">
+                    <div class="card-image-wrapper">
+                        <img src="assets/img/categories/sub-catego/lub-5.jpg" alt="AdBlue">
+                        <div class="card-label">AdBlue</div>
+                    </div>
+                </div>
+
+                <!-- Category 6 -->
+                <div class="grid-card">
+                    <div class="card-image-wrapper">
+                        <img src="assets/img/categories/sub-catego/lub-6.jpg" alt="Antigel">
+                        <div class="card-label">Antigel</div>
+                    </div>
+                </div>
+
+                <!-- Category 7 -->
+                <div class="grid-card">
+                    <div class="card-image-wrapper">
+                        <img src="assets/img/categories/sub-catego/lub-7.jpg" alt="Graisse">
+                        <div class="card-label">Graisse</div>
+                    </div>
+                </div>
+
+                <!-- Category 8 -->
+                <div class="grid-card">
+                    <div class="card-image-wrapper">
+                        <img src="assets/img/categories/sub-catego/lub-8.jpg" alt="Additifs">
+                        <div class="card-label">Additifs</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- SECTION 3: BRANDS -->
+    <section class="brands-section">
+        <h2>Nos Marques Partenaires</h2>
+
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+
+                <!-- ========================= -->
+                <!-- GROUP 1: ALL 17 BRANDS    -->
+                <!-- ========================= -->
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/ate.jpg" alt="ATE"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/alco-lubricant.jpeg" alt="Alco"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/castrol.jpg" alt="Castrol"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/atlantic.jpg" alt="Atlantic"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/profesional.jpg" alt="Professional"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/hepu.jpg" alt="Hepu"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/concorde.jpg" alt="Concorde"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/jurid.jpeg" alt="Jurid"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/lion.jpeg" alt="Lion"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/burtech.jpeg" alt="Burtech"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/bruxol.jpeg" alt="Bruxol"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/lpr.jpg" alt="lpr"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/bendix.jpeg" alt="Bendix"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/prof.additif.jpg" alt="Prof Additif"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/bardahl.jpg" alt="Bardahl"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/adblue.jpg" alt="AdBlue"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/bosch.jpg" alt="bosch"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/SKF.jpeg" alt="SKF"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/trw.jpg" alt="TRW"></div>
+
+                <!-- ========================= -->
+                <!-- GROUP 2: EXACT DUPLICATE  -->
+                <!-- (Required for smooth loop)-->
+                <!-- ========================= -->
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/ate.jpg" alt="ATE"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/alco-lubricant.jpeg" alt="Alco"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/castrol.jpg" alt="Castrol"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/atlantic.jpg" alt="Atlantic"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/profesional.jpg" alt="Professional"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/hepu.jpg" alt="Hepu"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/concorde.jpg" alt="Concorde"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/jurid.jpeg" alt="Jurid"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/lion.jpeg" alt="Lion"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/burtech.jpeg" alt="Burtech"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/bruxol.jpeg" alt="Bruxol"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/lpr.jpg" alt="lpr"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/bendix.jpeg" alt="Bendix"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/prof.additif.jpg" alt="Prof Additif"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/bardahl.jpg" alt="Bardahl"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/adblue.jpg" alt="AdBlue"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/bosch.jpg" alt="bosch"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/SKF.jpeg" alt="SKF"></div>
+                <div class="brand-card"><img src="assets/img/categories/sub-cartes/trw.jpg" alt="TRW"></div>
+
+            </div>
+        </div>
+    </section>
+    <!--==============================
+	Footer Area
+==============================-->
+    <footer class="footer-wrapper footer-default">
+        <div class="widget-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-4" data-cue="slideInUp">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="index.html"><img src="assets/img/logo.png" alt="Capram"></a>
+                                </div>
+                                <p class="about-text">Chez CAPRAM, nous nous engageons à offrir une qualité et une précision inégalées dans chaque aspect de nos activités. Dès votre premier contact avec nous et tout au long de notre accompagnement par nos experts, nous mettons tout en œuvre pour garantir des solutions fiables et un service à la hauteur de vos attentes.</p>
+                                <div class="th-social">
+                                    <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/capram.auto/"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-auto" data-cue="slideInUp">
+                        <div class="widget widget_nav_menu footer-widget ">
+                            <h3 class="widget_title">Liens Utiles</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="index.html"><i class="fa-solid fa-angle-right"></i>Accueil</a></li>
+                                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i>À propos</a></li>
+                                    <li><a href="project.html"><i class="fa-solid fa-angle-right"></i>Nos Services</a></li>
+                                    <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i>Nos Catégories</a></li>
+                                    <li><a href="blog.html"><i class="fa-solid fa-angle-right"></i>Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-auto" data-cue="slideInUp">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Nos Services</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i>Pièces Auto</a></li>
+                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i>Pièces de Carrosserie</a></li>
+                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i>Pièces Asiatiques</a></li>
+                                    <li><a href="service.html"><i class="fa-solid fa-angle-right"></i>Lubrifiants & Additifs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3" data-cue="slideInUp">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Instagram Posts</h3>
+                            <div class="sidebar-gallery">
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_1.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_2.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_3.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_4.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_5.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_6.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row justify-content-center gy-3 align-items-center">
+                    <div class="col-lg-6" data-cue="slideInUp">
+                        <p class="copyright-text">
+                            Copyright
+                            <i class="fal fa-copyright"></i> 2025 <a href="index.html">Capram</a>, Tous droits réservés.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end text-center" data-cue="slideInUp">
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="about.html">Politique SMQ</a></li>
+                                <li><a href="about.html">Français</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--********************************
+			Code End  Here 
+******************************** -->
+    <!-- Scroll To Top -->
+    <div style="display: none;" class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- <script src="assets/js/vendor/jquery-3.7.1.min.js"></script> -->
+
+
+    <!-- <script src="assets/js/app.min.js"></script> -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Cue Js -->
+    <script src="assets/js/scrollCue.min.js"></script>
+    <!-- Gsap -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- Split Text -->
+    <script src="assets/js/SplitText.min.js"></script>
+    <!-- Lenis Js -->
+    <script src="assets/js/lenis.min.js"></script>
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
