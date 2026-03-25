@@ -1,0 +1,994 @@
+<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CAPRAM</title>
+    <meta name="author" content="Capram">
+    <meta name="description" content="Capram">
+    <meta name="keywords" content="Capram">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="favicon.png" type="image/x-icon" rel="shortcut icon">
+    <meta name="theme-color" content="#ffffff">
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--==============================
+	    All CSS File 
+	============================== -->
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="assets/css/app.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --bg-color: #0a0a0a;
+            /* Deep asphalt black */
+            --bg-secondary: #141414;
+            --text-main: #fcfcfc;
+            --text-muted: #9ca3af;
+            --primary: #f7943d;
+            /* Your requested main color */
+            --primary-dark: #d67a2b;
+            --primary-glow: rgba(247, 148, 61, 0.25);
+            --card-white: #ffffff;
+        }
+
+        /* --- GLOBAL RESETS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Glow */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
+            z-index: -1;
+            filter: blur(100px);
+            pointer-events: none;
+        }
+
+        h1,
+        h2,
+        .brand-text {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        
+
+    </style>
+</head>
+
+<body class="">
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+    <!-- <div class="cursor-follower"></div> -->
+
+    <!-- slider drag cursor -->
+    <!-- <div class="slider-drag-cursor"> DRAG </div> -->
+    <!--==============================
+    Mobile Menu
+============================== -->
+
+    <div style="display: none" class="th-menu-wrapper">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="index.html">Home</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Multipage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Home General Plumbing</a></li>
+                                    <li><a href="home-2.html">Home Emergency Plumbing</a></li>
+                                    <li><a href="home-3.html">Home Residential Plumbing</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Onepage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="home-1-op.html">Home General Plumbing</a></li>
+                                    <li><a href="home-2-op.html">Home Emergency Plumbing</a></li>
+                                    <li><a href="home-3-op.html">Home Residential Plumbing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">Services</a></li>
+                            <li><a href="javascript:void(0);">Service Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="project-details.html">Project Details</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="testimonial.html">Testimonial</a></li>
+                            <li><a href="faq.html">FAQ'S Page</a></li>
+                            <li><a href="cost-calculation.html">Cost Calculation</a></li>
+                            <li><a href="error.html">Error Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Blog</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">Blog Standard</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="display: none" class="popup-search-box d-none d-lg-block">
+        <button class="searchClose"><i class="far fa-times"></i></button>
+        <form action="#">
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+    <!--==============================
+    Sidemenu 
+============================== -->
+    <div style="display: none" class="sidemenu-wrapper sidemenu-info d-none d-lg-block">
+        <div class="sidemenu-content allow-natural-scroll">
+            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
+            <div class="widget  ">
+                <div class="th-widget-about">
+                    <div class="about-logo">
+                        <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+                    </div>
+                    <p class="about-text mb-4"> Capram full potential with our comprehensive consulting services. Our expert team partners with you to identify growth opportunities.</p>
+                    <div class="th-social style2">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="widget">
+                <h3 class="widget_title">Recent Posts</h3>
+                <div class="recent-post-wrap">
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>20 Mar, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Rapid solutions for your plumbing issues</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>24 Sep, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Frequent maintenance, such as inspection</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>23 Oct, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Mastering: Handyman's Guide to Tips & Tricks</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget th-newsletter-widget style4 ">
+                <h3 class="widget_title">Subscribe to Newsletter</h3>
+                <p class="footer-text mb-4">Get Monthly insights from founders around the globe. No spam - promise.</p>
+                <form class="newsletter-form">
+                    <div class="form-group style-border">
+                        <input class="form-control" type="email" placeholder="Enter your email" required="">
+                    </div>
+                    <button type="submit" class="th-btn">Subscribe <span class="after-bg"></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+	Header Area
+   ==============================-->
+   <header class="th-header header-default">
+        <div class="header-top">
+            <div class="row justify-content-center justify-content-lg-between  align-items-center gy-2">
+                <div class="col-auto">
+                    <div class="header-links d-none d-xxl-inline-block d-lg-inline-block">
+                        <ul>
+                            <li class=" d-xxl-inline-block"><i class="fa-regular fa-clock"></i>Horaires: Lundi – Vendredi : 9:00 AM – 18:30 PM <span class="colorSlash">/</span> Samedi : 9:00 AM – 13:00 PM</li>
+                            <li><i class="fal fa-envelope"></i><a href="mailto:info@Capram.com">contact@capram.ma</a></li>
+                            <li class=" d-xxl-inline-block"><i class="fal fa-location-dot"></i>35 Rue Bachir Ibrahimi, Casablanca 20250</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="top-right">
+                        <div class="social-links">
+                            <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/capram.auto/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="menu-area">
+                <div class="container-fulid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo.png" alt="Capram" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li class="">
+                                        <a href="index.html">Accueil</a>
+                                    </li>
+                                    <li><a href="about.html">À propos</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="categories.html">Catégories</a>
+                                        <ul class="sub-menu">
+
+                                            <li>
+                                                <div><img src="assets/img/icon/clutch.png" alt=""></div><a href="ca-embrayage.html">Embrayage</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/motor.svg" alt=""></div><a href="ca-motor.html">Moteur</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/filter.png" alt=""></div><a href="ca-filtration.html">Filtration</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/suspension.svg" alt=""></div><a href="ca-suspension.html">Suspension</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/brakes.svg" alt=""></div><a href="ca-freinage.html">Freinage</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/cooling.png" alt=""></div><a href="ca-refroidissment.html">Refroidissement</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/battery.png" alt=""></div><a href="ca-electrical.html">Système Électrique</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/roues.svg" alt=""></div><a href="ca-wheels.html">Entraînement des roues</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/lubricant.png" alt=""></div><a href="ca-lubricant.html">Lubrifiant</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/carrosserie.png" alt=""></div><a href="ca-carrosserie.html">Carrosserie</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/perfum.png" alt=""></div><a href="ca-accessory.html">Accessoires</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/other.png" alt=""></div><a href="ca-autres.html">Autres</a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0);">Services</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="nos-service-3.html">Espace Digital</a></li>
+                                            <li><a href="nos-service-2.html">Logistique</a></li>
+                                            <li><a href="nos-service-1.html">Impact National</a></li>
+                                            <li><a href="javascript:void(0);">E-Catalogue</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="partner.html">Partenaires</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="javascript:void(0);">Actualité</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header-button d-flex d-lg-none">
+                                <button type="button" class="th-menu-toggle icon-btn"><i class="far fa-bars"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-auto d-xl-block d-none">
+                            <div class="header-button">
+                                <a class="th-btn style6" href="tel:+16369729901"><img src="assets/img/icon/phone.svg" alt="">Appelez-nous: +212 522 31 93 54</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--==============================
+Hero Area
+==============================-->
+    <div class="th-hero-wrapper hero-1 bg-mask" id="hero">
+        <div class="swiper th-slider" id="heroSlider8" data-slider-options='{"effect":"fade", "autoHeight": "false"}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_1.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Pièces de rechanges</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPRAM</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Meilleure Offre pièces de rechanges au Maroc.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_2.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Carrosserie</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPCARROSSERIE</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Bon rapport qualité prix en carrosserie Européenne & Asiatique</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_3.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Lubrifiants, additifs & liquides</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPSERVICE</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Solution Complète: Lubrifiants, additifs & liquides pour automobile & industrie.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="icon-box">
+                <button data-slider-prev="#heroSlider8" class="slider-arrow style2 default">
+                    <img src="assets/img/icon/left-arrow.svg" alt="">
+                </button>
+                <button data-slider-next="#heroSlider8" class="slider-arrow style2 default">
+                    <img src="assets/img/icon/right-arrow.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about-sec" class="scroll-wrap">Descendre<span><img src="assets/img/icon/down-arrow.svg" alt=""></span></a>
+        </div>
+    </div>
+    <!--======== / Hero Section ========-->
+    
+
+            <!-- about / start -->
+            <section class="about-section">
+                <div class="container">
+                    <div class="row clearfix">
+                        <!--Content Column-->
+                        <div class="content-column col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="inner-column">
+                                <div class="sec-title">
+                                    <div class="title" data-i18n="aboutUs_section_title">À propos de nous</div>
+                                    <h2 data-i18n="aboutUs_section_subtitle">Grande Maison de Pièces de <br> Rechange Automobile</h2>
+                                </div>
+                                <div class="text" data-i18n="aboutUs_section_description">Chez CAPRAM nous nous engageons à rester à la pointe de notre industrie, en offrant des solutions innovantes et en maintenant des standards élevés de qualité et de service. Nous sommes fiers de notre histoire et sommes impatients de vous accompagner dans tous vos besoins en matière de PRA et de réparation automobile.</div>
+                            </div>
+                        </div>
+                        <!--Image Column-->
+                        <div class="image-column col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="inner-column ">
+                                <div class="image">
+                                    <img src="assets/img/about/capram.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        
+                           
+                            <div class="capcompanies col-lg-12">
+                              <div class="contentLeft">
+                               
+                                <div class="imgWrapper">
+                                    <img src="assets/img/about/image-001.jpg" alt="">
+                                </div>
+                                <div class="imgWrapper">
+                                    <img src="assets/img/about/image-002.jpg" alt="">
+                                </div>
+                                <div class="imgWrapper">
+                                    <img src="assets/img/about/image-003.jpg" alt="">
+                                </div>
+                                <div class="imgWrapper">
+                                    <img src="assets/img/about/image-004.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about / end -->
+            <!-- history / start -->
+          <section class="history-area">
+    <div class="bg-inner border-section-top border-section-top_mod-a about_border_section_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="title-bg-small" data-i18n="history_section_title">Capram</p>
+                    <h3 class="section-title" data-i18n="history_section_description"><span>Un Héritage d'Excellence</span></h3>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Added data-bs-ride="carousel" so it auto-plays if needed -->
+                    <div id="history-slid" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-img">
+                                            <img class="img-fluid" src="assets/img/about/timeline_01.jpeg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-content">
+                                            <p class="title-bg-small primary-bg">1990</p>
+                                            <h2 class="column-title" data-i18n="history_section_tab_one_title">Fondation de CAPRAM</h2>
+                                            <p data-i18n="history_section_tab_one_description">
+                                                Fondation CAPRAM / Fourniture de solutions « Maintenance & Réparation Automobile ».
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off item-->
+                            
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-img">
+                                            <img class="img-fluid" src="assets/img/about/timeline_02.jpeg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-content">
+                                            <p class="title-bg-small">2006</p>
+                                            <h2 class="column-title" data-i18n="history_section_tab_two_title">Expansion vers les accessoires</h2>
+                                            <p data-i18n="history_section_tab_two_description">
+                                                TURBO Accessories Spécialiste en Tuning & Accessoires Automobile.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off item-->
+                            
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-img ">
+                                            <img class="img-fluid" src="assets/img/about/timeline_03.jpeg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-content">
+                                            <p class="title-bg-small primary-bg">2014</p>
+                                            <h2 class="column-title" data-i18n="history_section_tab_three_title">Division dédiée à la carrosserie</h2>
+                                            <p data-i18n="history_section_tab_three_description">
+                                                CAPCARROSSERIE / Division dédiée à l'Habitacle & Éléments de Carrosserie Automobile.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off item-->
+                            
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-img">
+                                            <img class="img-fluid" src="assets/img/about/timeline_06.jpeg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-content">
+                                            <p class="title-bg-small primary-bg">2016</p>
+                                            <h2 class="column-title" data-i18n="history_section_tab_four_title">Offre pour véhicules asiatiques</h2>
+                                            <p data-i18n="history_section_tab_four_description">CAPJAP Offre PRA pour véhicules Asiatiques.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off item-->
+                            
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-img">
+                                            <img class="img-fluid" src="assets/img/about/timeline_05.jpeg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-content">
+                                            <p class="title-bg-small primary-bg">2021</p>
+                                            <h2 class="column-title" data-i18n="history_section_tab_five_title">Licence de marque collective</h2>
+                                            <p data-i18n="history_section_tab_five_description">
+                                                SALAMATOUNA / Droit d’usage de la marque collective de certification.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off item-->
+                            
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-img ">
+                                            <img class="img-fluid" src="assets/img/about/timeline_04.jpeg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-content">
+                                            <p class="title-bg-small primary-bg">2023</p>
+                                            <h2 class="column-title" data-i18n="history_section_tab_six_title">Service automobile complet</h2>
+                                            <p data-i18n="history_section_tab_six_description">CAPSERVICE / Offre complète pour Vidange Automobile.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off item-->
+                            
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-img">
+                                            <img class="img-fluid" src="assets/img/about/timeline_07.jpeg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="history-content">
+                                            <p class="title-bg-small primary-bg">2025</p>
+                                            <h2 class="column-title" data-i18n="history_section_tab_seven_title">Certification ISO 9001</h2>
+                                            <p data-i18n="history_section_tab_seven_description">Notre système de management de la qualité est désormais certifié ISO 9001 par l’organisme IMANOR, gage de notre engagement envers l’excellence et la satisfaction de nos clients.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End off item-->
+                        </div><!-- End off carousel inner -->
+                        
+                        <!-- Indicators (UPDATED FOR BOOTSTRAP 5) -->
+                        <ol class="carousel-indicators text-center">
+                            <li data-bs-target="#history-slid" data-bs-slide-to="0" class="active">1990</li>
+                            <li data-bs-target="#history-slid" data-bs-slide-to="1">2006</li>
+                            <li data-bs-target="#history-slid" data-bs-slide-to="2">2014</li>
+                            <li data-bs-target="#history-slid" data-bs-slide-to="3">2016</li>
+                            <li data-bs-target="#history-slid" data-bs-slide-to="4">2021</li>
+                            <li data-bs-target="#history-slid" data-bs-slide-to="5">2023</li>
+                            <li data-bs-target="#history-slid" data-bs-slide-to="6">2025</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <!-- history / end -->
+            <!-- services / start -->
+            <section id="our-services">
+                <div class="bg-inner border-section-top border-section-top_mod-b about_border_section_2">
+                    <div class="container">
+                       <div class="row">
+                           <div class="col-lg-4">
+                                <div class="desc">
+                                <div class="heading">
+                                    <h1 data-i18n="service_section_title">Équipe Passionnée, <br> Stock Performant</h1>
+                                </div>
+                                <div class="text">
+                                    <p data-i18n="service_section_description_one">L'équipe de Capram, dirigée par Rida Sabil, Directeur général, est composée de professionnels passionnés et compétents, dédiés à fournir des pièces de rechange automobiles de haute qualité.</p>
+                                    <p class="second_para" data-i18n="service_section_description_two">Grâce à une organisation structurée en différentes entités spécialisées, telles que CapCarrosserie, CapJap et CapService, l'entreprise assure une gestion efficace de son stock diversifié, répondant ainsi aux besoins variés de sa clientèle.</p>
+                                </div>
+</div>
+                            </div>
+                            
+                            <div class="col-lg-8">
+                                    <div class="services">
+
+                                <div class="hexagon-gallery">
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/01.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/02.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/03.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/04.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/05.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/06.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/07.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/08.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/09.jpg" alt=""></div>
+                                    </div>
+                                    <div class="hex">
+                                        <div class="hex inner"><img src="assets/img/about/10.jpg" alt=""></div>
+                                    </div>
+                                </div>
+</div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- services / end -->
+            <!-- goals / start -->
+            <section class="section-goals">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-10 col-lg-8">
+                            <div class="header-section">
+                                <h2 class="title" data-i18n="goals_section_title">Engagés pour l'Excellence Automobile</h2>
+                                <p class="description" data-i18n="goals_section_description">Chez CAPRAM, notre mission est de fournir des pièces de rechange automobiles de haute qualité, en assurant une disponibilité optimale grâce à un stock diversifié. Nous valorisons l'innovation, la transparence et la responsabilité environnementale, afin de bâtir des relations de confiance durables avec nos clients et partenaires.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center text-center">
+                        <!-- Single Service -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-service">
+                                <div class="content">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-bullseye"></i>
+                                    </span>
+                                    <h3 class="title" data-i18n="goals_section_tab_one_title">Notre mission</h3>
+                                    <p class="description para_target" data-i18n="goals_section_tab_one_description">Notre entreprise s'engage à donner une nouvelle vie aux véhicules en fournissant des solutions automobiles durables. Nous visons à offrir à nos clients des pièces de qualité supérieure, contribuant ainsi à la prolongation de la durée de vie de leurs véhicules et à la réduction de l'empreinte écologique.</p>
+                                </div>
+                                <span class="circle-before"></span>
+                            </div>
+                        </div>
+                        <!-- / End Single Service -->
+                        <!-- Single Service -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-service">
+                                <div class="content">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </span>
+                                    <h3 class="title" data-i18n="goals_section_tab_two_title">Notre vision</h3>
+                                    <p class="description" data-i18n="goals_section_tab_two_description">Nous aspirons à fournir la meilleure expérience client en devenant un partenaire privilégié. Cette vision guide chacune de nos actions, nous incitant à comprendre les besoins spécifiques de nos clients et à y répondre de manière proactive et efficace.</p>
+                                </div>
+                                <span class="circle-before"></span>
+                            </div>
+                        </div>
+                        <!-- / End Single Service -->
+                        <!-- Single Service -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-service">
+                                <div class="content">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-gem"></i>
+                                    </span>
+                                    <h3 class="title" data-i18n="goals_section_tab_three_title">Nos valeurs fondamentales</h3>
+                                    <p class="description" data-i18n="goals_section_tab_three_description">La responsabilité et la compétence sont au cœur de nos valeurs. Nous employons des personnes passionnées, faisant preuve d'intégrité personnelle et professionnelle, et toujours prêtes à assumer la responsabilité de leurs actions. Nous nous efforçons de répondre aux attentes de nos clients en utilisant les ressources avec soin.</p>
+                                </div>
+                                <span class="circle-before"></span>
+                            </div>
+                        </div>
+                        <!-- / End Single Service -->
+                        <!-- Single Service -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-service">
+                                <div class="content">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lightbulb"></i>
+                                    </span>
+                                    <h3 class="title" data-i18n="goals_section_tab_four_title">Notre engagement envers l'innovation</h3>
+                                    <p class="description" data-i18n="goals_section_tab_four_description">Nous croyons fermement que l'innovation est essentielle pour rester à la pointe de l'industrie des pièces automobiles. Nous investissons continuellement dans la recherche et le développement pour offrir des produits et services qui répondent aux besoins évolutifs de nos clients.</p>
+                                </div>
+                                <span class="circle-before"></span>
+                            </div>
+                        </div>
+                        <!-- / End Single Service -->
+                        <!-- Single Service -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="single-service">
+                                <div class="content">
+                                    <span class="icon">
+                                        <i class="fa-brands fa-searchengin"></i>
+                                    </span>
+                                    <h3 class="title" data-i18n="goals_section_tab_five_title">La transparence dans nos relations</h3>
+                                    <p class="description" data-i18n="goals_section_tab_five_description">La transparence est l'une de nos valeurs clés. Nous nous engageons à maintenir une communication ouverte et honnête avec nos clients, fournisseurs et partenaires, afin de bâtir des relations de confiance durables.</p>
+                                </div>
+                                <span class="circle-before"></span>
+                            </div>
+                        </div>
+                        <!-- / End Single Service -->
+                    </div>
+                </div>
+            </section>
+            <!-- goals / end -->
+            
+<!--==============================
+	Footer Area
+==============================-->
+   <footer class="footer-wrapper footer-default">
+        <div class="widget-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-4" data-cue="slideInUp">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="index.html"><img src="assets/img/logo.png" alt="Capram"></a>
+                                </div>
+                                <p class="about-text">Chez CAPRAM, nous nous engageons à offrir une qualité et une précision inégalées dans chaque aspect de nos activités. Dès votre premier contact avec nous et tout au long de notre accompagnement par nos experts, nous mettons tout en œuvre pour garantir des solutions fiables et un service à la hauteur de vos attentes.</p>
+                                <div class="th-social">
+                                    <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/capram.auto/"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-auto" data-cue="slideInUp">
+                        <div class="widget widget_nav_menu footer-widget ">
+                            <h3 class="widget_title">Liens Utiles</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="index.html"><i class="fa-solid fa-angle-right"></i>Accueil</a></li>
+                                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i>À propos</a></li>
+                                    <li><a href="categories.html"><i class="fa-solid fa-angle-right"></i>Nos Catégories</a></li>
+                                    <li><a href="javascript:void(0);"><i class="fa-solid fa-angle-right"></i>Actualité</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-auto" data-cue="slideInUp">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Nos Services</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="nos-service-3.html"><i class="fa-solid fa-angle-right"></i>Espace Digital</a></li>
+                                    <li><a href="nos-service-2.html"><i class="fa-solid fa-angle-right"></i>Logistique</a></li>
+                                    <li><a href="nos-service-1.html"><i class="fa-solid fa-angle-right"></i>Impact National</a></li>
+                                    <li><a href="javascript:void(0);"><i class="fa-solid fa-angle-right"></i>E-Catalogue</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3" data-cue="slideInUp">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Instagram Posts</h3>
+                            <div class="sidebar-gallery">
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_1.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_2.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_3.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_4.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_5.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_6.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row justify-content-center gy-3 align-items-center">
+                    <div class="col-lg-6" data-cue="slideInUp">
+                        <p class="copyright-text">
+                            Copyright
+                            <i class="fal fa-copyright"></i> 2025 <a href="index.html">Capram</a>, Tous droits réservés.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end text-center" data-cue="slideInUp">
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="javascript:void(0);">Politique SMQ</a></li>
+                                <li><a href="javascript:void(0);">Français</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!--********************************
+			Code End  Here 
+******************************** -->
+    <!-- Scroll To Top -->
+    <div style="display: none;" class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- <script src="assets/js/vendor/jquery-3.7.1.min.js"></script> -->
+
+    
+    <!-- <script src="assets/js/app.min.js"></script> -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+     <!-- owl carousel Js -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Cue Js -->
+    <script src="assets/js/scrollCue.min.js"></script>
+    <!-- Gsap -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- Split Text -->
+    <script src="assets/js/SplitText.min.js"></script>
+    <!-- Lenis Js -->
+    <script src="assets/js/lenis.min.js"></script>
+    
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1125 @@
+<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CAPRAM</title>
+    <meta name="author" content="Capram">
+    <meta name="description" content="Capram">
+    <meta name="keywords" content="Capram">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="favicon.png" type="image/x-icon" rel="shortcut icon">
+    <meta name="theme-color" content="#ffffff">
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--==============================
+	    All CSS File 
+	============================== -->
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="assets/css/app.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --bg-color: #0a0a0a;
+            /* Deep asphalt black */
+            --bg-secondary: #141414;
+            --text-main: #fcfcfc;
+            --text-muted: #9ca3af;
+            --primary: #f7943d;
+            /* Your requested main color */
+            --primary-dark: #d67a2b;
+            --primary-glow: rgba(247, 148, 61, 0.25);
+            --card-white: #ffffff;
+            --bg-base: #09090b;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --brand-accent: #f7943d;
+            /* Rouge dynamique */
+            --brand-light: #ffaa5f;
+            --glass-bg: rgba(24, 24, 27, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        /* --- GLOBAL RESETS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Glow */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
+            z-index: -1;
+            filter: blur(100px);
+            pointer-events: none;
+        }
+
+        h1,
+        h2,
+        .brand-text {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+
+
+        /* =========================================
+   SECTION 1 : LE PORTAIL B2B (HOLOGRAPHIC)
+========================================= */
+        .b2b-portal-section {
+            position: relative;
+            padding: 8rem 0;
+            background-color: #141414;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        /* Lueur de fond façon "Hologramme" */
+        .portal-glow-bg {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(247, 148, 61, 0.15) 0%, transparent 60%);
+            filter: blur(80px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .portal-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .portal-text {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .portal-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(247, 148, 61, 0.1);
+            border: 1px solid rgba(247, 148, 61, 0.3);
+            color: var(--brand-accent);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .portal-text h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .portal-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        /* L'interface abstraite flottante */
+        .portal-visual {
+            flex: 1.2;
+            position: relative;
+            perspective: 1000px;
+            /* Donne l'effet 3D */
+        }
+
+        .abstract-ui {
+            width: 100%;
+            max-width: 650px;
+            background: rgba(18, 18, 18, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: rotateY(-15deg) rotateX(5deg);
+            animation: floatUI 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        /* Éléments internes de l'interface abstraite */
+        .ui-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .ui-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .ui-dots span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .ui-dots span:nth-child(1) {
+            background: #ff5f56;
+        }
+
+        .ui-dots span:nth-child(2) {
+            background: #ffbd2e;
+        }
+
+        .ui-dots span:nth-child(3) {
+            background: #27c93f;
+        }
+
+        .ui-search {
+            width: 40%;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+
+        .ui-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .ui-card {
+            height: 120px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ui-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--brand-accent);
+            opacity: 0.5;
+        }
+
+        /* =========================================
+   SECTION 2 : LA GRILLE BENTO (AVANTAGES)
+========================================= */
+        /* =========================================
+   SECTION 2 : LA GRILLE BENTO (AVANTAGES)
+========================================= */
+        .bento-section {
+            padding: 6rem 5% 10rem 5%;
+            background-color: var(--bg-base);
+        }
+
+        .bento-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .bento-header h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        /* Grille Asymétrique */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 260px);
+            /* Slightly taller for better breathing room */
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Style de base des cases */
+        .bento-box {
+            background: #141414;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            /* Slightly more visible border */
+            border-radius: 24px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Centers text vertically for wide and square boxes */
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: default;
+        }
+
+        .bento-box:hover {
+            border-color: rgba(247, 148, 61, 0.4);
+            background: rgba(25, 25, 25, 0.8);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Tailles asymétriques */
+        .bento-large {
+            grid-column: span 2;
+            grid-row: span 2;
+            justify-content: flex-end;
+            /* Keeps text at the bottom ONLY for the large box */
+        }
+
+        .bento-wide {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .bento-square {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        /* Contenu des cases */
+        .bento-box h3 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.7rem;
+            z-index: 2;
+        }
+
+        .bento-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            z-index: 2;
+            margin: 0;
+        }
+
+        /* Container for Icons to make them look like modern UI elements */
+        .bento-icon {
+            position: absolute;
+            top: 1.8rem;
+            right: 1.8rem;
+            width: 48px;
+            height: 48px;
+            color: var(--brand-accent);
+            background: rgba(247, 148, 61, 0.1);
+            /* Subtle orange background */
+            padding: 10px;
+            border-radius: 14px;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .bento-box:hover .bento-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Décorations visuelles dans le Bento Large */
+        .bento-large .bento-graphic {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+            bottom: 9rem;
+            /* Perfectly reserves space for the text below */
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            /* Ensures the image doesn't bleed out of the rounded corners */
+            background: #1a1a1a;
+            margin-bottom: 25px;
+        }
+
+        /* NEW: Style specifically for the image to make it fit flawlessly */
+        .bento-large .bento-graphic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Fills the area without distorting ratio */
+            object-position: top;
+            /* Anchors the screenshot to the top */
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        /* Subtle image zoom on hover */
+        .bento-large:hover .bento-graphic img {
+            transform: scale(1.04);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .bento-large,
+            .bento-wide,
+            .bento-square {
+                grid-column: span 2;
+                height: auto;
+                min-height: 250px;
+            }
+
+            .bento-large {
+                min-height: 500px;
+                /* Ensure enough height for the absolute image on tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bento-large,
+            .bento-wide,
+            .bento-square {
+                grid-column: span 1;
+            }
+        }
+
+        /* =========================================
+   BOUTON PREMIUM (Pour Portail B2B & autres)
+========================================= */
+        .transport-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--brand-accent);
+            border: 1px solid var(--brand-accent);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border-radius: 4px;
+            /* Un très léger arrondi pour l'élégance */
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* L'icône (flèche) à l'intérieur du bouton */
+        .transport-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            transition: transform 0.4s ease;
+        }
+
+        /* Effets au survol (Hover) */
+        .transport-btn:hover {
+            background: var(--brand-accent);
+            color: #000;
+            /* Le texte devient noir sur fond orange pour un contraste maximal */
+            box-shadow: 0 10px 30px rgba(247, 148, 61, 0.4);
+            /* Effet de lueur orange */
+        }
+
+        /* Animation de la flèche au survol */
+        .transport-btn:hover svg {
+            transform: translateX(6px);
+        }
+
+        .bento-large .bento-graphic img {
+            border-radius: 12px 12px 0px 0px;
+        }
+
+        /* Fix the image cropping and ghost space */
+        .bento-large .bento-graphic img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px 12px 0px 0px;
+            display: block;
+        }
+
+        /* Remove default margin from the title so you control the exact space */
+        .bento-large h3 {
+            margin-top: 20px;
+            /* Adjust this to make it closer or further from the image */
+        }
+
+    </style>
+</head>
+
+<body class="">
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+    <!-- <div class="cursor-follower"></div> -->
+
+    <!-- slider drag cursor -->
+    <!-- <div class="slider-drag-cursor"> DRAG </div> -->
+    <!--==============================
+    Mobile Menu
+============================== -->
+
+    <div style="display: none" class="th-menu-wrapper">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="index.html">Home</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Multipage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Home General Plumbing</a></li>
+                                    <li><a href="home-2.html">Home Emergency Plumbing</a></li>
+                                    <li><a href="home-3.html">Home Residential Plumbing</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Onepage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="home-1-op.html">Home General Plumbing</a></li>
+                                    <li><a href="home-2-op.html">Home Emergency Plumbing</a></li>
+                                    <li><a href="home-3-op.html">Home Residential Plumbing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="javascript:void(0);">Service Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="project-details.html">Project Details</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="testimonial.html">Testimonial</a></li>
+                            <li><a href="faq.html">FAQ'S Page</a></li>
+                            <li><a href="cost-calculation.html">Cost Calculation</a></li>
+                            <li><a href="error.html">Error Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Blog</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">Blog Standard</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="display: none" class="popup-search-box d-none d-lg-block">
+        <button class="searchClose"><i class="far fa-times"></i></button>
+        <form action="#">
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+    <!--==============================
+    Sidemenu 
+    ============================== -->
+    <div style="display: none" class="sidemenu-wrapper sidemenu-info d-none d-lg-block">
+        <div class="sidemenu-content allow-natural-scroll">
+            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
+            <div class="widget  ">
+                <div class="th-widget-about">
+                    <div class="about-logo">
+                        <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+                    </div>
+                    <p class="about-text mb-4"> Capram full potential with our comprehensive consulting services. Our expert team partners with you to identify growth opportunities.</p>
+                    <div class="th-social style2">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="widget">
+                <h3 class="widget_title">Recent Posts</h3>
+                <div class="recent-post-wrap">
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>20 Mar, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Rapid solutions for your plumbing issues</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>24 Sep, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Frequent maintenance, such as inspection</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>23 Oct, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Mastering: Handyman's Guide to Tips & Tricks</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget th-newsletter-widget style4 ">
+                <h3 class="widget_title">Subscribe to Newsletter</h3>
+                <p class="footer-text mb-4">Get Monthly insights from founders around the globe. No spam - promise.</p>
+                <form class="newsletter-form">
+                    <div class="form-group style-border">
+                        <input class="form-control" type="email" placeholder="Enter your email" required="">
+                    </div>
+                    <button type="submit" class="th-btn">Subscribe <span class="after-bg"></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+	Header Area
+    ==============================-->
+    <header class="th-header header-default">
+        <div class="header-top">
+            <div class="row justify-content-center justify-content-lg-between  align-items-center gy-2">
+                <div class="col-auto">
+                    <div class="header-links d-none d-xxl-inline-block d-lg-inline-block">
+                        <ul>
+                            <li class=" d-xxl-inline-block"><i class="fa-regular fa-clock"></i>Horaires: Lundi – Vendredi : 9:00 AM – 18:30 PM <span class="colorSlash">/</span> Samedi : 9:00 AM – 13:00 PM</li>
+                            <li><i class="fal fa-envelope"></i><a href="mailto:info@Capram.com">contact@capram.ma</a></li>
+                            <li class=" d-xxl-inline-block"><i class="fal fa-location-dot"></i>35 Rue Bachir Ibrahimi, Casablanca 20250</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="top-right">
+                        <div class="social-links">
+                            <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/capram.auto/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="menu-area">
+                <div class="container-fulid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo.png" alt="Capram" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li class="">
+                                        <a href="index.html">Accueil</a>
+                                    </li>
+                                    <li><a href="about.html">À propos</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="categories.html">Catégories</a>
+                                        <ul class="sub-menu">
+
+                                            <li>
+                                                <div><img src="assets/img/icon/clutch.png" alt=""></div><a href="ca-embrayage.html">Embrayage</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/motor.svg" alt=""></div><a href="ca-motor.html">Moteur</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/filter.png" alt=""></div><a href="ca-filtration.html">Filtration</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/suspension.svg" alt=""></div><a href="ca-suspension.html">Suspension</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/brakes.svg" alt=""></div><a href="ca-freinage.html">Freinage</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/cooling.png" alt=""></div><a href="ca-refroidissment.html">Refroidissement</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/battery.png" alt=""></div><a href="ca-electrical.html">Système Électrique</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/roues.svg" alt=""></div><a href="ca-wheels.html">Entraînement des roues</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/lubricant.png" alt=""></div><a href="ca-lubricant.html">Lubrifiant</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/carrosserie.png" alt=""></div><a href="ca-carrosserie.html">Carrosserie</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/perfum.png" alt=""></div><a href="ca-accessory.html">Accessoires</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/other.png" alt=""></div><a href="ca-autres.html">Autres</a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0);">Services</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="nos-service-3.html">Espace Digital</a></li>
+                                            <li><a href="nos-service-2.html">Logistique</a></li>
+                                            <li><a href="nos-service-1.html">Impact National</a></li>
+                                            <li><a href="javascript:void(0);">E-Catalogue</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="partner.html">Partenaires</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="javascript:void(0);">Actualité</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header-button d-flex d-lg-none">
+                                <button type="button" class="th-menu-toggle icon-btn"><i class="far fa-bars"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-auto d-xl-block d-none">
+                            <div class="header-button">
+                                <a class="th-btn style6" href="tel:+16369729901"><img src="assets/img/icon/phone.svg" alt="">Appelez-nous: +212 522 31 93 54</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--==============================
+    Hero Area
+    ==============================-->
+    <div class="th-hero-wrapper hero-1 bg-mask" id="hero">
+        <div class="swiper th-slider" id="heroSlider8" data-slider-options='{"effect":"fade", "autoHeight": "false"}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_1.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Pièces de rechanges</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPRAM</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Meilleure Offre pièces de rechanges au Maroc.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_2.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Carrosserie</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPCARROSSERIE</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Bon rapport qualité prix en carrosserie Européenne & Asiatique</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_3.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Lubrifiants, additifs & liquides</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPSERVICE</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Solution Complète: Lubrifiants, additifs & liquides pour automobile & industrie.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="icon-box">
+                <button data-slider-prev="#heroSlider8" class="slider-arrow style2 default">
+                    <img src="assets/img/icon/left-arrow.svg" alt="">
+                </button>
+                <button data-slider-next="#heroSlider8" class="slider-arrow style2 default">
+                    <img src="assets/img/icon/right-arrow.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about-sec" class="scroll-wrap">Descendre<span><img src="assets/img/icon/down-arrow.svg" alt=""></span></a>
+        </div>
+    </div>
+    <!--==============================
+    ==============================-->
+
+    <!-- SECTION 1 : PORTAIL B2B (HOLOGRAPHIC UI) -->
+    <section class="b2b-portal-section">
+        <!-- Lueur orange en arrière-plan -->
+        <div class="portal-glow-bg"></div>
+
+        <div class="portal-container">
+
+            <!-- Colonne Texte -->
+            <div class="portal-text">
+                <span class="portal-tag">E-Commerce B2B</span>
+                <h2>Votre Espace <br><span style="color: var(--brand-accent);">Pro Digital.</span></h2>
+                <p>Passez dans une nouvelle ère d'approvisionnement. Notre plateforme B2B exclusive vous donne le contrôle total sur vos achats, vos volumes et votre facturation.</p>
+                <p>Pensée pour les professionnels exigeants, l'interface simplifie la complexité de la logistique de gros.</p>
+
+                <button class="transport-btn" style="margin-top: 1rem;">
+                    Découvrir le Portail
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Colonne Visuel (L'interface abstraite en verre 3D) -->
+            <div class="portal-visual">
+                <div class="abstract-ui">
+                    <img src="assets/img/service/b2b.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2 : LA GRILLE BENTO (AVANTAGES B2B) -->
+    <section class="bento-section">
+        <div class="bento-header">
+            <h2>Un concentré de <br><span style="color: var(--brand-accent);">Performances</span></h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 1rem;">Tout ce dont votre entreprise a besoin pour gérer ses stocks de manière fluide, réuni au sein d'un seul et même écosystème intelligent.</p>
+        </div>
+
+        <!-- La Grille Asymétrique -->
+        <div class="bento-grid">
+
+            <!-- Case 1 : Grande (Visuel abstrait à l'intérieur) -->
+            <div class="bento-box bento-large">
+                <div class="bento-graphic"><img src="assets/img/service/stock.jpg" alt=""></div> <!-- Faux visuel de graphique/données -->
+                <h3>Visibilité des Stocks</h3>
+                <p>Consultez la disponibilité de nos références en temps réel. Ne passez commande que sur ce qui est réellement en stock dans nos entrepôts, sans surprise.</p>
+            </div>
+
+            <!-- Case 2 : Large (Horizontale) -->
+            <div class="bento-box bento-wide">
+                <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3>Tarification B2B Dynamique</h3>
+                <p>Vos prix de gros, vos remises et vos conditions de paiement habituelles sont automatiquement appliqués dès votre connexion.</p>
+            </div>
+
+            <!-- Case 3 : Carrée (Petite) -->
+            <div class="bento-box bento-square">
+                <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+                <h3>Re-commande Rapide</h3>
+                <p>Dupliquez vos anciennes commandes en un seul clic pour gagner du temps.</p>
+            </div>
+
+            <!-- Case 4 : Carrée (Petite) -->
+            <div class="bento-box bento-square">
+                <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+                </svg>
+                <h3>Historique & Factures</h3>
+                <p>Retrouvez l'intégralité de vos documents comptables centralisés.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--==============================
+	Footer Area
+    ==============================-->
+    <footer class="footer-wrapper footer-default">
+        <div class="widget-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-4" data-cue="slideInUp">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="index.html"><img src="assets/img/logo.png" alt="Capram"></a>
+                                </div>
+                                <p class="about-text">Chez CAPRAM, nous nous engageons à offrir une qualité et une précision inégalées dans chaque aspect de nos activités. Dès votre premier contact avec nous et tout au long de notre accompagnement par nos experts, nous mettons tout en œuvre pour garantir des solutions fiables et un service à la hauteur de vos attentes.</p>
+                                <div class="th-social">
+                                    <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/capram.auto/"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-auto" data-cue="slideInUp">
+                        <div class="widget widget_nav_menu footer-widget ">
+                            <h3 class="widget_title">Liens Utiles</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="index.html"><i class="fa-solid fa-angle-right"></i>Accueil</a></li>
+                                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i>À propos</a></li>
+                                    <li><a href="categories.html"><i class="fa-solid fa-angle-right"></i>Nos Catégories</a></li>
+                                    <li><a href="javascript:void(0);"><i class="fa-solid fa-angle-right"></i>Actualité</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-auto" data-cue="slideInUp">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Nos Services</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="nos-service-3.html"><i class="fa-solid fa-angle-right"></i>Espace Digital</a></li>
+                                    <li><a href="nos-service-2.html"><i class="fa-solid fa-angle-right"></i>Logistique</a></li>
+                                    <li><a href="nos-service-1.html"><i class="fa-solid fa-angle-right"></i>Impact National</a></li>
+                                    <li><a href="javascript:void(0);"><i class="fa-solid fa-angle-right"></i>E-Catalogue</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3" data-cue="slideInUp">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Instagram Posts</h3>
+                            <div class="sidebar-gallery">
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_1.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_2.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_3.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_4.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_5.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_6.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row justify-content-center gy-3 align-items-center">
+                    <div class="col-lg-6" data-cue="slideInUp">
+                        <p class="copyright-text">
+                            Copyright
+                            <i class="fal fa-copyright"></i> 2025 <a href="index.html">Capram</a>, Tous droits réservés.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end text-center" data-cue="slideInUp">
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="javascript:void(0);">Politique SMQ</a></li>
+                                <li><a href="javascript:void(0);">Français</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!--********************************
+			Code End  Here 
+******************************** -->
+    <!-- Scroll To Top -->
+    <div style="display: none;" class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- <script src="assets/js/vendor/jquery-3.7.1.min.js"></script> -->
+
+    <!-- <script src="assets/js/app.min.js"></script> -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Cue Js -->
+    <script src="assets/js/scrollCue.min.js"></script>
+    <!-- Gsap -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- Split Text -->
+    <script src="assets/js/SplitText.min.js"></script>
+    <!-- Lenis Js -->
+    <script src="assets/js/lenis.min.js"></script>
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

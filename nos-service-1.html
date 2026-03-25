@@ -1,0 +1,1761 @@
+<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CAPRAM</title>
+    <meta name="author" content="Capram">
+    <meta name="description" content="Capram">
+    <meta name="keywords" content="Capram">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="favicon.png" type="image/x-icon" rel="shortcut icon">
+    <meta name="theme-color" content="#ffffff">
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--==============================
+	    All CSS File 
+	============================== -->
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="assets/css/app.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --bg-color: #0a0a0a;
+            /* Deep asphalt black */
+            --bg-secondary: #141414;
+            --text-main: #fcfcfc;
+            --text-muted: #9ca3af;
+            --primary: #f7943d;
+            /* Your requested main color */
+            --primary-dark: #d67a2b;
+            --primary-glow: rgba(247, 148, 61, 0.25);
+            --card-white: #ffffff;
+            --bg-base: #09090b;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --brand-accent: #f7943d;
+            /* Rouge dynamique */
+            --brand-light: #ffaa5f;
+            --glass-bg: rgba(24, 24, 27, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        /* --- GLOBAL RESETS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Glow */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
+            z-index: -1;
+            filter: blur(100px);
+            pointer-events: none;
+        }
+
+        h1,
+        h2,
+        .brand-text {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+
+        /* --- SECTION 1: HERO OVERLAP --- */
+
+        /* --- SECTION 1: HERO OVERLAP (Mise à jour pour Bootstrap) --- */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            /* Plus de padding horizontal (5%), Bootstrap gère ça ! Juste en haut/bas */
+            padding: 100px 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* L'image de fond qui prend 65% de TOUT l'écran (hors du container) */
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 65%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* Utilisation du container pour pousser le contenu à droite */
+        .hero-container {
+            display: flex;
+            justify-content: flex-end;
+            /* Aligne la carte en verre à droite du container Bootstrap */
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-content {
+            /* Au lieu de 45% de l'écran, on lui donne une largeur fixe maximale pour qu'il soit parfait dans le container */
+            width: 100%;
+            max-width: 550px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 4rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform: translateY(40px);
+            opacity: 0;
+            animation: cardFloatUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+            position: relative;
+            z-index: 9;
+            float: right;
+        }
+
+        /* --- SECTION 2: CARTE DU MAROC (Mise à jour pour Bootstrap) --- */
+        .map-section {
+            padding: 8rem 0;
+            /* Bootstrap s'occupe des marges gauche/droite */
+            background-color: var(--bg-base);
+            position: relative;
+        }
+
+        /* C'est cette div qui remplace le display:flex qu'on avait avant sur .map-section */
+        .map-inner-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+
+        .map-text {
+            flex: 1;
+            /* Le max-width n'est plus trop nécessaire car flexbox gère l'espace, mais on peut le garder */
+            max-width: 500px;
+        }
+
+        /* --- RESPONSIVE MOBILE (Mise à jour) --- */
+        @media (max-width: 1024px) {
+            .hero-section {
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 100px;
+            }
+
+            .hero-image {
+                width: 100%;
+                height: 55vh;
+            }
+
+            .hero-container {
+                justify-content: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                margin-top: 15vh;
+                padding: 2.5rem;
+            }
+
+            .map-section {
+                padding: 4rem 0;
+            }
+
+            .map-inner-wrap {
+                flex-direction: column;
+                /* Sur mobile, le texte passe au dessus de la carte */
+                gap: 2rem;
+            }
+
+            .map-container {
+                width: 100%;
+                height: 600px;
+                margin-top: 2rem;
+            }
+        }
+
+
+
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.15);
+            animation: imageReveal 3.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            filter: brightness(0.65) contrast(1.1);
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(9, 9, 11, 0.2) 0%, var(--bg-base) 95%);
+        }
+
+
+        .tagline {
+            display: inline-block;
+            color: var(--brand-light);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .tagline::after {
+            content: '';
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            width: 30px;
+            height: 1px;
+            background: var(--brand-light);
+        }
+
+        .main-title {
+            font-size: clamp(3rem, 5vw, 5.5rem);
+            line-height: 1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .main-title .highlight {
+            color: var(--brand-accent);
+            background: linear-gradient(135deg, var(--brand-light), var(--brand-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .description {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-btn {
+            margin-top: 1.5rem;
+            padding: 1.2rem 3rem;
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--brand-accent);
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--brand-accent), var(--brand-accent));
+            transition: all 0.4s ease;
+            z-index: -1;
+            transform: skewX(-15deg);
+        }
+
+        .cta-btn:hover {
+            box-shadow: 0 0 30px rgba(225, 29, 72, 0.4);
+            border-color: transparent;
+        }
+
+        .cta-btn:hover::before {
+            left: 0;
+        }
+
+
+        /* --- SECTION 2: CARTE DU MAROC INTERACTIVE --- */
+        .map-section {
+            padding: 8rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            background-color: var(--bg-base);
+            position: relative;
+        }
+
+        .map-text {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .map-text h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .map-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--brand-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- CONTENEUR DE LA CARTE --- */
+        /* --- CONTENEUR DE LA CARTE --- */
+        .map-container {
+            flex: 1.2;
+            position: relative;
+            height: 750px;
+            display: flex;
+            justify-content: center;
+            /* Centre la carte horizontalement */
+            align-items: center;
+            /* Centre la carte verticalement */
+        }
+
+        /* NOUVEAU : Wrapper pour fixer la zone exacte des points */
+        .map-wrapper {
+            position: relative;
+            height: 100%;
+            /* Ajustez cette valeur si votre SVG a l'air un peu écrasé ou étiré (essayez 0.8 ou 1.0) */
+            aspect-ratio: 0.9;
+            max-width: 100%;
+        }
+
+        /* L'astuce "Cutting Edge" : Un masque CSS en forme de Maroc */
+        .morocco-map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Dégradé de fond qui remplira la carte avec l'orange de votre charte (#f7943d) */
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(247, 148, 61, 0.25) 100%);
+            -webkit-mask-image: url('../capram/assets/img/ma.svg');
+            /* IMPORTANT : On force le masque à remplir 100% du wrapper */
+            -webkit-mask-size: 100% 100%;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-image: url('../capram/assets/img/ma.svg');
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            filter: drop-shadow(0 0 20px rgba(247, 148, 61, 0.15));
+            z-index: 1;
+        }
+
+        /* Conteneur exact pour positionner les pins en % */
+        .pins-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+
+        /* --- MARQUEURS (LES COMMERCIAUX) --- */
+        .commercial-pin {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        /* Nouvelles coordonnées géographiques (à ajuster très légèrement selon votre SVG exact) */
+        .pin-tanger {
+            top: 7%;
+            left: 68%;
+        }
+
+        .pin-fes {
+            top: 20%;
+            left: 71%;
+        }
+
+        .pin-casa {
+            top: 28%;
+            left: 52%;
+        }
+
+        .pin-marrakech {
+            top: 36%;
+            left: 56%;
+        }
+
+        .pin-dakhla {
+            top: 83%;
+            left: 14%;
+        }
+
+        /* L'icône Humaine (Point radar) */
+        .human-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--bg-surface);
+            border: 2px solid var(--brand-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 15px rgba(225, 29, 72, 0.5);
+        }
+
+        .human-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-main);
+            stroke-width: 2;
+            fill: none;
+            transition: stroke 0.3s ease;
+        }
+
+        /* Onde de choc (Pulse) */
+        .pulse-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            border: 2px solid var(--brand-accent);
+            border-radius: 50%;
+            animation: pulseAnim 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+            z-index: 1;
+        }
+
+        /* Différer les animations pour un effet naturel */
+        .pin-fes .pulse-ring {
+            animation-delay: 0.5s;
+        }
+
+        .pin-casa .pulse-ring {
+            animation-delay: 1s;
+        }
+
+        .pin-marrakech .pulse-ring {
+            animation-delay: 1.5s;
+        }
+
+        .pin-dakhla .pulse-ring {
+            animation-delay: 0.8s;
+        }
+
+        /* --- CARTE D'INFO AU SURVOL --- */
+        .pin-info-card {
+            position: absolute;
+            top: -20px;
+            left: 60px;
+            width: 260px;
+            background: rgba(15, 15, 17, 0.95);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(225, 29, 72, 0.4);
+            border-radius: 12px;
+            padding: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-20px) scale(0.9);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+            z-index: 50;
+        }
+
+        /* Modifier l'ouverture pour les pins très à droite (ex: Fès) pour ne pas sortir de l'écran */
+        .pin-fes .pin-info-card {
+            left: auto;
+            right: 60px;
+            transform: translateX(20px) scale(0.9);
+        }
+
+        .pin-info-card h3 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .pin-info-card .city {
+            color: var(--brand-light);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            display: block;
+        }
+
+        .pin-info-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Actions au survol */
+        .commercial-pin:hover {
+            z-index: 100;
+        }
+
+        .commercial-pin:hover .human-icon {
+            transform: scale(1.15);
+            background: var(--brand-accent);
+            box-shadow: 0 0 30px rgba(225, 29, 72, 0.8);
+        }
+
+        .commercial-pin:hover .pulse-ring {
+            animation: none;
+            opacity: 0;
+        }
+
+        .commercial-pin:hover .pin-info-card {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) scale(1);
+        }
+
+        /* --- KEYFRAMES --- */
+        @keyframes imageReveal {
+            0% {
+                transform: scale(1.2);
+                filter: brightness(0);
+            }
+
+            100% {
+                transform: scale(1);
+                filter: brightness(0.65) contrast(1.1);
+            }
+        }
+
+        @keyframes cardFloatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseAnim {
+            0% {
+                width: 44px;
+                height: 44px;
+                opacity: 1;
+                border-width: 2px;
+            }
+
+            100% {
+                width: 120px;
+                height: 120px;
+                opacity: 0;
+                border-width: 0px;
+            }
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 1024px) {
+            .hero-section {
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 100px;
+                padding-left: 5%;
+            }
+
+            .hero-image {
+                width: 100%;
+                height: 55vh;
+            }
+
+            .hero-image::after {
+                background: linear-gradient(0deg, var(--bg-base) 0%, transparent 80%);
+            }
+
+            .hero-content {
+                width: 100%;
+                margin-top: 15vh;
+                padding: 2.5rem;
+            }
+
+            .map-section {
+                flex-direction: column;
+                padding: 4rem 5%;
+            }
+
+            .map-container {
+                width: 100%;
+                height: 600px;
+                margin-top: 2rem;
+            }
+
+            .pin-info-card,
+            .pin-fes .pin-info-card {
+                left: -100px;
+                top: 55px;
+                right: auto;
+            }
+        }
+
+        .cta-btn:hover a {
+            color: black !important;
+        }
+
+
+        /* --- NOUVEAUX STYLES POUR LE SVG INTERACTIF --- */
+        .map-wrapper svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            filter: drop-shadow(0 0 20px rgba(247, 148, 61, 0.15));
+        }
+
+        /* Style des régions du Maroc (les paths du SVG) */
+        .map-wrapper svg path {
+            fill: rgba(255, 255, 255, 0.05);
+            /* Couleur de base sombre */
+            stroke: rgba(255, 255, 255, 0.2);
+            stroke-width: 1px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+
+        /* Effet au survol de la région elle-même */
+        .map-wrapper svg path:hover,
+        .map-wrapper svg path.active {
+            fill: rgba(247, 148, 61, 0.35);
+            /* Orange translucide */
+            stroke: var(--brand-accent);
+            stroke-width: 2px;
+            filter: drop-shadow(0 0 10px rgba(247, 148, 61, 0.5));
+        }
+
+        /* --- POSITIONS DES 12 PINS (En %) --- */
+        /* Ces valeurs sont basées sur la géographie du Maroc, ajustez légèrement selon votre SVG */
+        .pin-MA01 {
+            top: 12%;
+            left: 69%;
+        }
+
+
+        .pin-MA02 {
+            top: 22%;
+            left: 85%;
+        }
+
+        .pin-MA03 {
+            top: 21%;
+            left: 72%;
+        }
+
+        .pin-MA04 {
+            top: 19%;
+            left: 64%;
+        }
+
+
+        .pin-MA05 {
+            top: 29%;
+            left: 64%;
+        }
+
+
+        .pin-MA06 {
+            top: 25%;
+            left: 56%;
+        }
+
+        .pin-MA07 {
+            top: 33%;
+            left: 53%;
+        }
+
+        .pin-MA08 {
+            top: 36%;
+            left: 70%;
+        }
+
+        .pin-MA09 {
+            top: 43%;
+            left: 53%;
+        }
+
+        .pin-MA10 {
+            top: 51%;
+            left: 45%;
+        }
+
+        .pin-MA11 {
+            top: 62%;
+            left: 30%;
+        }
+
+        .pin-MA12 {
+            top: 79%;
+            left: 21%;
+        }
+
+    
+
+        /* Décaler l'animation du radar pour que ça ne clignote pas tout en même temps */
+        .pin-MA01 .pulse-ring {
+            animation-delay: 0.1s;
+        }
+
+        .pin-MA02 .pulse-ring {
+            animation-delay: 0.8s;
+        }
+
+        .pin-MA03 .pulse-ring {
+            animation-delay: 0.4s;
+        }
+
+        .pin-MA04 .pulse-ring {
+            animation-delay: 1.1s;
+        }
+
+        .pin-MA05 .pulse-ring {
+            animation-delay: 0.3s;
+        }
+
+        .pin-MA06 .pulse-ring {
+            animation-delay: 0.9s;
+        }
+
+        .pin-MA07 .pulse-ring {
+            animation-delay: 0.2s;
+        }
+
+        .pin-MA08 .pulse-ring {
+            animation-delay: 1.5s;
+        }
+
+        .pin-MA09 .pulse-ring {
+            animation-delay: 0.6s;
+        }
+
+        .pin-MA10 .pulse-ring {
+            animation-delay: 1.2s;
+        }
+
+        .pin-MA11 .pulse-ring {
+            animation-delay: 0.5s;
+        }
+
+        .pin-MA12 .pulse-ring {
+            animation-delay: 1.0s;
+        }
+
+        /* Inverser l'ouverture des tooltips pour les régions très à l'Est (Oriental, Fès, Drâa) */
+        .pin-MA02 .pin-info-card,
+        .pin-MA03 .pin-info-card,
+        .pin-MA08 .pin-info-card {
+            left: auto;
+            right: 60px;
+            transform: translateX(20px) scale(0.9);
+        }
+
+        /* Animations d'apparition de la section texte */
+        .fade-update {
+            animation: fadeUpdate 0.5s ease forwards;
+        }
+
+        @keyframes fadeUpdate {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #svg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #svg-container svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 20px rgba(247, 148, 61, 0.15));
+        }
+
+        #svg-container svg path {
+            fill: rgba(255, 255, 255, 0.2);
+            stroke: rgba(255, 255, 255, 0.2);
+            stroke-width: 1px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+
+        #svg-container svg path:hover,
+        #svg-container svg path.active {
+            fill: rgba(247, 148, 61, 0.35);
+            stroke: var(--brand-accent);
+            stroke-width: 2px;
+            filter: drop-shadow(0 0 10px rgba(247, 148, 61, 0.5));
+        }
+
+    </style>
+</head>
+
+<body class="">
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+    <!-- <div class="cursor-follower"></div> -->
+
+    <!-- slider drag cursor -->
+    <!-- <div class="slider-drag-cursor"> DRAG </div> -->
+    <!--==============================
+    Mobile Menu
+============================== -->
+
+    <div style="display: none" class="th-menu-wrapper">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li class="menu-item-has-children">
+                        <a href="index.html">Home</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Multipage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Home General Plumbing</a></li>
+                                    <li><a href="home-2.html">Home Emergency Plumbing</a></li>
+                                    <li><a href="home-3.html">Home Residential Plumbing</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Onepage</a>
+                                <ul class="sub-menu">
+                                    <li><a href="home-1-op.html">Home General Plumbing</a></li>
+                                    <li><a href="home-2-op.html">Home Emergency Plumbing</a></li>
+                                    <li><a href="home-3-op.html">Home Residential Plumbing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Services</a>
+                        <ul class="sub-menu">
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="javascript:void(0);">Service Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                    <li><a href="cart.html">Cart Page</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="project.html">Project</a></li>
+                            <li><a href="project-details.html">Project Details</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="work.html">Work</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="testimonial.html">Testimonial</a></li>
+                            <li><a href="faq.html">FAQ'S Page</a></li>
+                            <li><a href="cost-calculation.html">Cost Calculation</a></li>
+                            <li><a href="error.html">Error Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Blog</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog.html">Blog Standard</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="display: none" class="popup-search-box d-none d-lg-block">
+        <button class="searchClose"><i class="far fa-times"></i></button>
+        <form action="#">
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+    <!--==============================
+    Sidemenu 
+============================== -->
+    <div style="display: none" class="sidemenu-wrapper sidemenu-info d-none d-lg-block">
+        <div class="sidemenu-content allow-natural-scroll">
+            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
+            <div class="widget  ">
+                <div class="th-widget-about">
+                    <div class="about-logo">
+                        <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+                    </div>
+                    <p class="about-text mb-4"> Capram full potential with our comprehensive consulting services. Our expert team partners with you to identify growth opportunities.</p>
+                    <div class="th-social style2">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="widget">
+                <h3 class="widget_title">Recent Posts</h3>
+                <div class="recent-post-wrap">
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>20 Mar, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Rapid solutions for your plumbing issues</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>24 Sep, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Frequent maintenance, such as inspection</a></h4>
+                        </div>
+                    </div>
+                    <div class="recent-post">
+                        <div class="media-img">
+                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="recent-post-meta">
+                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>23 Oct, 2025</a>
+                            </div>
+                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Mastering: Handyman's Guide to Tips & Tricks</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget th-newsletter-widget style4 ">
+                <h3 class="widget_title">Subscribe to Newsletter</h3>
+                <p class="footer-text mb-4">Get Monthly insights from founders around the globe. No spam - promise.</p>
+                <form class="newsletter-form">
+                    <div class="form-group style-border">
+                        <input class="form-control" type="email" placeholder="Enter your email" required="">
+                    </div>
+                    <button type="submit" class="th-btn">Subscribe <span class="after-bg"></span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+	Header Area
+   ==============================-->
+     <header class="th-header header-default">
+        <div class="header-top">
+            <div class="row justify-content-center justify-content-lg-between  align-items-center gy-2">
+                <div class="col-auto">
+                    <div class="header-links d-none d-xxl-inline-block d-lg-inline-block">
+                        <ul>
+                            <li class=" d-xxl-inline-block"><i class="fa-regular fa-clock"></i>Horaires: Lundi – Vendredi : 9:00 AM – 18:30 PM <span class="colorSlash">/</span> Samedi : 9:00 AM – 13:00 PM</li>
+                            <li><i class="fal fa-envelope"></i><a href="mailto:info@Capram.com">contact@capram.ma</a></li>
+                            <li class=" d-xxl-inline-block"><i class="fal fa-location-dot"></i>35 Rue Bachir Ibrahimi, Casablanca 20250</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="top-right">
+                        <div class="social-links">
+                            <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/capram.auto/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="menu-area">
+                <div class="container-fulid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo.png" alt="Capram" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li class="">
+                                        <a href="index.html">Accueil</a>
+                                    </li>
+                                    <li><a href="about.html">À propos</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="categories.html">Catégories</a>
+                                        <ul class="sub-menu">
+
+                                            <li>
+                                                <div><img src="assets/img/icon/clutch.png" alt=""></div><a href="ca-embrayage.html">Embrayage</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/motor.svg" alt=""></div><a href="ca-motor.html">Moteur</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/filter.png" alt=""></div><a href="ca-filtration.html">Filtration</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/suspension.svg" alt=""></div><a href="ca-suspension.html">Suspension</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/brakes.svg" alt=""></div><a href="ca-freinage.html">Freinage</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/cooling.png" alt=""></div><a href="ca-refroidissment.html">Refroidissement</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/battery.png" alt=""></div><a href="ca-electrical.html">Système Électrique</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/roues.svg" alt=""></div><a href="ca-wheels.html">Entraînement des roues</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/lubricant.png" alt=""></div><a href="ca-lubricant.html">Lubrifiant</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/carrosserie.png" alt=""></div><a href="ca-carrosserie.html">Carrosserie</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/perfum.png" alt=""></div><a href="ca-accessory.html">Accessoires</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/other.png" alt=""></div><a href="ca-autres.html">Autres</a>
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0);">Services</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="nos-service-3.html">Espace Digital</a></li>
+                                            <li><a href="nos-service-2.html">Logistique</a></li>
+                                            <li><a href="nos-service-1.html">Impact National</a></li>
+                                            <li><a href="javascript:void(0);">E-Catalogue</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="partner.html">Partenaires</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="javascript:void(0);">Actualité</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header-button d-flex d-lg-none">
+                                <button type="button" class="th-menu-toggle icon-btn"><i class="far fa-bars"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-auto d-xl-block d-none">
+                            <div class="header-button">
+                                <a class="th-btn style6" href="tel:+16369729901"><img src="assets/img/icon/phone.svg" alt="">Appelez-nous: +212 522 31 93 54</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--==============================
+Hero Area
+==============================-->
+    <div class="th-hero-wrapper hero-1 bg-mask" id="hero">
+        <div class="swiper th-slider" id="heroSlider8" data-slider-options='{"effect":"fade", "autoHeight": "false"}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_1.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Pièces de rechanges</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPRAM</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Meilleure Offre pièces de rechanges au Maroc.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_2.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Carrosserie</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPCARROSSERIE</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Bon rapport qualité prix en carrosserie Européenne & Asiatique</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_1_3.jpg">
+                    <div class="hero-inner">
+                        <div class="container-fluid">
+                            <div class="hero-style1">
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Lubrifiants, additifs & liquides</span>
+                                <h1 class="hero-title text-white">
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPSERVICE</span>
+                                </h1>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Solution Complète: Lubrifiants, additifs & liquides pour automobile & industrie.</p>
+                                <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
+                                    <a href="about.html" class="th-btn">
+                                        Découvrir
+                                        <span class="after-bg"></span>
+                                    </a>
+                                    <a href="contact.html" class="th-btn style2">
+                                        Contact
+                                        <span class="after-bg"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="icon-box">
+                <button data-slider-prev="#heroSlider8" class="slider-arrow style2 default">
+                    <img src="assets/img/icon/left-arrow.svg" alt="">
+                </button>
+                <button data-slider-next="#heroSlider8" class="slider-arrow style2 default">
+                    <img src="assets/img/icon/right-arrow.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about-sec" class="scroll-wrap">Descendre<span><img src="assets/img/icon/down-arrow.svg" alt=""></span></a>
+        </div>
+    </div>
+    <!--======== / Hero Section ========-->
+    <!-- SECTION 1: HERO OVERLAP -->
+    <section class="hero-section">
+        <div class="hero-image">
+            <!-- Image représentant l'action sur le terrain / mobilité professionnelle -->
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1920&q=80" alt="Équipe commerciale sur le terrain">
+        </div>
+        <div class="container">
+
+            <div class=" hero-content">
+                <span class="tagline">Partout au Maroc</span>
+                <h1 class="main-title">Impact<br><span class="highlight">National.</span></h1>
+
+                <p class="description">
+                    Notre force ne s'arrête pas aux portes de notre entreprise. De <strong>Casablanca à Tanger</strong>, en passant par <strong>Marrakech et Agadir</strong>, nos équipes commerciales sillonnent chaque jour les routes du Royaume pour venir directement à votre rencontre.
+                </p>
+                <p class="description">
+                    Où que vous soyez, nous croyons en une dynamique de terrain. Nos agents sont déployés en permanence pour comprendre vos réalités locales, anticiper vos besoins et vous apporter des solutions concrètes en temps réel, hors de nos murs.
+                </p>
+
+                <button class="cta-btn"><a href="">Nous Contacter</a></button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="map-section">
+        <div class="container">
+            <div class="map-inner-wrap">
+
+                <!-- Colonne Texte (Dynamique) -->
+                <div class="map-text" id="dynamic-info-panel">
+                    <h2 id="info-title">Notre Force<br><span style="color: var(--brand-accent);">Sur Le Terrain</span></h2>
+                    <p id="info-desc">Découvrez la cartographie de nos agents. Notre réseau est conçu comme une véritable toile stratégique couvrant le Maroc, de Tanger jusqu'aux provinces du Sud.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h4 id="stat-1-val">12</h4>
+                            <p id="stat-1-text">Régions couvertes au Royaume.</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 id="stat-2-val">100%</h4>
+                            <p id="stat-2-text">De proximité et de réactivité.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne Carte du Maroc -->
+                <div class="map-container">
+                    <div class="map-wrapper">
+
+                        <!-- LE CONTENEUR VIDE OÙ LE SVG VA APPARAÎTRE -->
+                        <div id="svg-container"></div>
+
+                        <div class="pins-area">
+                            <!-- Nous générons un composant pour chaque région via JS ou HTML -->
+                            <!-- Voici la structure pour les 12 régions : -->
+
+                            <!-- MA01 : Tanger -->
+                            <div class="commercial-pin pin-MA01" data-region="MA01">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Tanger-Tétouan-Al Hoceïma</span></div>
+                            </div>
+
+                            <!-- MA02 : Oriental -->
+                            <div class="commercial-pin pin-MA02" data-region="MA02">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">L'Oriental</span></div>
+                            </div>
+
+                            <!-- MA03 : Fès-Meknès -->
+                            <div class="commercial-pin pin-MA03" data-region="MA03">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Fès-Meknès</span></div>
+                            </div>
+
+                            <!-- MA04 : Rabat -->
+                            <div class="commercial-pin pin-MA04" data-region="MA04">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Rabat-Salé-Kénitra</span></div>
+                            </div>
+
+                            <!-- MA05 : Béni Mellal -->
+                            <div class="commercial-pin pin-MA05" data-region="MA05">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Béni Mellal-Khénifra</span></div>
+                            </div>
+
+                            <!-- MA06 : Casa -->
+                            <div class="commercial-pin pin-MA06" data-region="MA06">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Casablanca-Settat</span></div>
+                            </div>
+
+                            <!-- MA07 : Marrakech -->
+                            <div class="commercial-pin pin-MA07" data-region="MA07">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Marrakech-Safi</span></div>
+                            </div>
+
+                            <!-- MA08 : Draa -->
+                            <div class="commercial-pin pin-MA08" data-region="MA08">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Drâa-Tafilalet</span></div>
+                            </div>
+
+                            <!-- MA09 : Souss -->
+                            <div class="commercial-pin pin-MA09" data-region="MA09">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Souss-Massa</span></div>
+                            </div>
+
+                            <!-- MA10 : Guelmim -->
+                            <div class="commercial-pin pin-MA10" data-region="MA10">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Guelmim-Oued Noun</span></div>
+                            </div>
+
+                            <!-- MA11 : Laayoune -->
+                            <div class="commercial-pin pin-MA11" data-region="MA11">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Laâyoune-Sakia El Hamra</span></div>
+                            </div>
+
+                            <!-- MA12 : Dakhla -->
+                            <div class="commercial-pin pin-MA12" data-region="MA12">
+                                <div class="pulse-ring"></div>
+                                <div class="human-icon"><svg viewBox="0 0 24 24">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg></div>
+                                <div class="pin-info-card"><span class="city">Dakhla-Oued Ed-Dahab</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==============================
+	Footer Area
+==============================-->
+    <footer class="footer-wrapper footer-default">
+        <div class="widget-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-4" data-cue="slideInUp">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="index.html"><img src="assets/img/logo.png" alt="Capram"></a>
+                                </div>
+                                <p class="about-text">Chez CAPRAM, nous nous engageons à offrir une qualité et une précision inégalées dans chaque aspect de nos activités. Dès votre premier contact avec nous et tout au long de notre accompagnement par nos experts, nous mettons tout en œuvre pour garantir des solutions fiables et un service à la hauteur de vos attentes.</p>
+                                <div class="th-social">
+                                    <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.instagram.com/capram.auto/"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-auto" data-cue="slideInUp">
+                        <div class="widget widget_nav_menu footer-widget ">
+                            <h3 class="widget_title">Liens Utiles</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="index.html"><i class="fa-solid fa-angle-right"></i>Accueil</a></li>
+                                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i>À propos</a></li>
+                                    <li><a href="categories.html"><i class="fa-solid fa-angle-right"></i>Nos Catégories</a></li>
+                                    <li><a href="javascript:void(0);"><i class="fa-solid fa-angle-right"></i>Actualité</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xl-auto" data-cue="slideInUp">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Nos Services</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="nos-service-3.html"><i class="fa-solid fa-angle-right"></i>Espace Digital</a></li>
+                                    <li><a href="nos-service-2.html"><i class="fa-solid fa-angle-right"></i>Logistique</a></li>
+                                    <li><a href="nos-service-1.html"><i class="fa-solid fa-angle-right"></i>Impact National</a></li>
+                                    <li><a href="javascript:void(0);"><i class="fa-solid fa-angle-right"></i>E-Catalogue</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3" data-cue="slideInUp">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">Instagram Posts</h3>
+                            <div class="sidebar-gallery">
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_1.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_2.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_3.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_4.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_5.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="gallery-thumb">
+                                    <img src="assets/img/widget/gallery_1_6.jpg" alt="Gallery Image">
+                                    <a target="_blank" href="https://www.instagram.com/capram.auto/" class="gallery-btn"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row justify-content-center gy-3 align-items-center">
+                    <div class="col-lg-6" data-cue="slideInUp">
+                        <p class="copyright-text">
+                            Copyright
+                            <i class="fal fa-copyright"></i> 2025 <a href="index.html">Capram</a>, Tous droits réservés.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end text-center" data-cue="slideInUp">
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="javascript:void(0);">Politique SMQ</a></li>
+                                <li><a href="javascript:void(0);">Français</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!--********************************
+			Code End  Here 
+******************************** -->
+    <!-- Scroll To Top -->
+    <div style="display: none;" class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- <script src="assets/js/vendor/jquery-3.7.1.min.js"></script> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // 1. ON CHARGE LE FICHIER SVG EXTERNE DYNAMIQUEMENT
+            // Mettez ici le chemin exact vers votre fichier SVG
+            const svgUrl = '../capram/assets/img/ma.svg';
+
+            fetch(svgUrl)
+                .then(response => response.text())
+                .then(svgCode => {
+                    // On injecte le code SVG dans notre div vide
+                    document.getElementById('svg-container').innerHTML = svgCode;
+
+                    // On s'assure que le SVG prend bien toute la place (optionnel mais recommandé)
+                    const injectedSvg = document.querySelector('#svg-container svg');
+                    if (injectedSvg) {
+                        injectedSvg.removeAttribute('width');
+                        injectedSvg.removeAttribute('height');
+                    }
+
+                    // 2. MAINTENANT QUE LE SVG EST LÀ, ON LANCE L'INTERACTIVITÉ
+                    initMapInteractions();
+                })
+                .catch(err => console.error("Erreur de chargement du SVG : ", err));
+
+
+            // --- LA FONCTION QUI GÈRE L'INTERACTIVITÉ ---
+            function initMapInteractions() {
+                const regionData = {
+                    "MA01": {
+                        title: "Tanger-Tétouan",
+                        stat1: "Nord",
+                        stat2: "Pôle Industriel",
+                        desc: "Zone stratégique en pleine expansion. Nos équipes couvrent le port de Tanger Med et l'axe industriel du Nord."
+                    },
+                    "MA02": {
+                        title: "L'Oriental",
+                        stat1: "Est",
+                        stat2: "Frontière",
+                        desc: "Une couverture complète de Oujda à Nador, accompagnant les nouveaux développements de l'Oriental."
+                    },
+                    "MA03": {
+                        title: "Fès-Meknès",
+                        stat1: "Centre",
+                        stat2: "Historique",
+                        desc: "Le cœur artisanal et agricole. Nos agents assurent une liaison rapide entre la capitale spirituelle et Meknès."
+                    },
+                    "MA04": {
+                        title: "Rabat-Salé-Kénitra",
+                        stat1: "Capitale",
+                        stat2: "Hub",
+                        desc: "Présence forte autour du centre de décision et de la zone franche de Kénitra."
+                    },
+                    "MA05": {
+                        title: "Béni Mellal",
+                        stat1: "Atlas",
+                        stat2: "Ressources",
+                        desc: "Intervention experte dans les zones montagneuses et la plaine de Tadla."
+                    },
+                    "MA06": {
+                        title: "Casablanca-Settat",
+                        stat1: "Hub Central",
+                        stat2: "Économie",
+                        desc: "Le poumon économique. Une concentration maximale de nos forces commerciales pour une réactivité immédiate."
+                    },
+                    "MA07": {
+                        title: "Marrakech-Safi",
+                        stat1: "Sud-Centre",
+                        stat2: "Tourisme",
+                        desc: "Du tourisme à Marrakech jusqu'à l'axe industriel et portuaire de Safi."
+                    },
+                    "MA08": {
+                        title: "Drâa-Tafilalet",
+                        stat1: "Sud-Est",
+                        stat2: "Oasis",
+                        desc: "Une logistique adaptée pour nos agents opérant dans la vaste région des oasis."
+                    },
+                    "MA09": {
+                        title: "Souss-Massa",
+                        stat1: "Agadir",
+                        stat2: "Export",
+                        desc: "Couverture du pôle agricole et halieutique majeur du sud marocain."
+                    },
+                    "MA10": {
+                        title: "Guelmim",
+                        stat1: "Porte du Sud",
+                        stat2: "Transit",
+                        desc: "Le trait d'union indispensable vers nos provinces sahariennes."
+                    },
+                    "MA11": {
+                        title: "Laâyoune",
+                        stat1: "Sahara",
+                        stat2: "Développement",
+                        desc: "Accompagnement des grands projets d'infrastructures dans les provinces du Sud."
+                    },
+                    "MA12": {
+                        title: "Dakhla",
+                        stat1: "Grand Sud",
+                        stat2: "Avenir",
+                        desc: "Présence avancée à Dakhla, nouveau hub atlantique et porte vers l'Afrique subsaharienne."
+                    }
+                };
+
+                const pins = document.querySelectorAll('.commercial-pin');
+                // Attention : on cherche maintenant dans le svg-container
+                const svgPaths = document.querySelectorAll('#svg-container svg path');
+
+                const infoPanel = document.getElementById('dynamic-info-panel');
+                const titleEl = document.getElementById('info-title');
+                const descEl = document.getElementById('info-desc');
+                const subEl = document.getElementById('info-sub');
+                const stat1Val = document.getElementById('stat-1-val');
+                const stat1Text = document.getElementById('stat-1-text');
+                const stat2Val = document.getElementById('stat-2-val');
+                const stat2Text = document.getElementById('stat-2-text');
+
+                function updatePanel(regionId) {
+                    const data = regionData[regionId];
+                    if (!data) return;
+
+                    // Reset animation
+                    infoPanel.classList.remove('fade-update');
+                    void infoPanel.offsetWidth; // trigger reflow
+                    infoPanel.classList.add('fade-update');
+
+                    // Update Text
+                    titleEl.innerHTML = `Région<br><span style="color: var(--brand-accent);">${data.title}</span>`;
+                    descEl.innerText = data.desc;
+                    subEl.innerText = "Notre agent local est à votre disposition pour toute intervention.";
+
+                    stat1Val.innerText = data.stat1;
+                    stat1Text.innerText = "Zone d'action";
+
+                    stat2Val.innerText = data.stat2;
+                    stat2Text.innerText = "Spécialité";
+
+                    // Highlight SVG Path
+                    svgPaths.forEach(p => p.classList.remove('active'));
+                    const targetPath = document.getElementById(regionId);
+                    if (targetPath) targetPath.classList.add('active');
+                }
+
+                // Survol et clic sur les Pins
+                pins.forEach(pin => {
+                    pin.addEventListener('mouseenter', function() {
+                        const rId = this.getAttribute('data-region');
+                        const targetPath = document.getElementById(rId);
+                        if (targetPath) targetPath.classList.add('active');
+                    });
+
+                    pin.addEventListener('mouseleave', function() {
+                        const rId = this.getAttribute('data-region');
+                        const targetPath = document.getElementById(rId);
+                        if (targetPath) targetPath.classList.remove('active');
+                    });
+
+                    pin.addEventListener('click', function() {
+                        updatePanel(this.getAttribute('data-region'));
+                    });
+                });
+
+                // Clic direct sur les régions du SVG
+                svgPaths.forEach(path => {
+                    path.addEventListener('click', function() {
+                        // On récupère l'ID du path cliqué (ex: "MA05")
+                        const rId = this.getAttribute('id');
+                        if (rId) updatePanel(rId);
+                    });
+                });
+            }
+        });
+
+    </script>
+    <!-- <script src="assets/js/app.min.js"></script> -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Cue Js -->
+    <script src="assets/js/scrollCue.min.js"></script>
+    <!-- Gsap -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- Split Text -->
+    <script src="assets/js/SplitText.min.js"></script>
+    <!-- Lenis Js -->
+    <script src="assets/js/lenis.min.js"></script>
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

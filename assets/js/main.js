@@ -5,7 +5,7 @@
 $(document).ready(function() {
 
     // --- STEP 1: Listen for clicks on links ---
-    $('a').on('click', function(e) {
+    $('nav.main-menu ul li a').on('click', function(e) {
         // Ignore middle-clicks or Ctrl/Cmd+clicks (which open in a new tab)
         if (e.which !== 1 || e.ctrlKey || e.metaKey) {
             return; 
@@ -41,7 +41,7 @@ $(document).ready(function() {
             
             // Smooth scroll down by 400 pixels
             $('html, body').animate({
-                scrollTop: 930 
+                scrollTop: 800 
             }, 800); // 800 is the animation speed (0.8 seconds to scroll)
             
         }, 1000); // 1000 is the 1-second wait time
@@ -83,58 +83,7 @@ $(document).ready(function() {
     ==================================*/
     
     
-        document.addEventListener('DOMContentLoaded', () => {
-            const wrapper = document.getElementById('brandsWrapper');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-
-            let isPaused = false;
-            let scrollSpeed = 1; // Change this to 0.5 for slower, or 2 for faster
-            let animationFrameId;
-
-            // Function to continuously scroll
-            const continuousScroll = () => {
-                if (!isPaused && wrapper) {
-                    wrapper.scrollLeft += scrollSpeed;
-
-                    // INFINITE LOOP LOGIC
-                    // Since we duplicated the cards, when we reach exactly halfway,
-                    // we jump back to 0 instantly. The user won't notice the jump.
-                    if (wrapper.scrollLeft >= wrapper.scrollWidth / 2) {
-                        wrapper.scrollLeft -= (wrapper.scrollWidth / 2);
-                    } else if (wrapper.scrollLeft <= 0 && scrollSpeed < 0) {
-                        wrapper.scrollLeft += (wrapper.scrollWidth / 2);
-                    }
-                }
-                // Call this function again on the next monitor frame
-                animationFrameId = requestAnimationFrame(continuousScroll);
-            };
-
-            // Start the continuous scrolling
-            animationFrameId = requestAnimationFrame(continuousScroll);
-
-            // Pause on hover
-            wrapper.addEventListener('mouseenter', () => isPaused = true);
-            wrapper.addEventListener('mouseleave', () => isPaused = false);
-
-            // Button click logic (Pauses auto-scroll for 600ms while smoothly jumping)
-            const manualScroll = (amount) => {
-                isPaused = true; // Pause continuous scroll
-                wrapper.scrollBy({ left: amount, behavior: 'smooth' }); // Smoothly jump
-                
-                // Wait for the smooth jump to finish, then resume continuous scroll
-                setTimeout(() => {
-                    isPaused = false;
-                }, 600);
-            };
-
-            if (nextBtn && prevBtn) {
-                // Scroll by roughly 1 card width (300px) when clicking arrows
-                nextBtn.addEventListener('click', () => manualScroll(300));
-                prevBtn.addEventListener('click', () => manualScroll(-300));
-            }
-        });
-
+ 
   /*---------- 01. On Load Function ----------*/
     $(window).on("load", function () {
         $(".preloader").fadeOut();
