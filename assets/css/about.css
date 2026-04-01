@@ -1,6 +1,174 @@
+/* --- Brand Variables --- */
+:root {
+    --capram-orange: #f39c12; /* Matches your brand orange */
+    --capram-orange-hover: #e67e22;
+    --capram-dark-bg: transparent; /* Allows your site's dark background to show */
+    --capram-card-bg: #151515; /* Matches your other dark cards */
+    --capram-border: #2a2a2a;
+    --text-muted: #a0a0a0;
+}
 
+.capram-brand-section {
+    background-color: var(--capram-dark-bg);
+    padding: 80px 0;
+    font-family: inherit; /* Uses your website's font */
+}
 
+.z-index-1 { z-index: 1; }
+.z-index-2 { z-index: 2; position: relative; }
 
+/* --- Dark Card Design --- */
+.capram-dark-card {
+    background: var(--capram-card-bg);
+    border: 1px solid var(--capram-border);
+    border-top: 4px solid var(--capram-orange); /* Gives it the Capram identity */
+    border-radius: 8px; /* Sharper corners to match your site */
+    padding: 45px 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+/* Typography */
+.subtitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--capram-orange);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.orange-line {
+    width: 30px;
+    height: 2px;
+    background-color: var(--capram-orange);
+}
+
+.capram-dark-card h1 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    text-transform: uppercase; /* Matches your other section titles */
+}
+
+.capram-dark-card .text p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.highlight-orange {
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--capram-orange);
+}
+
+/* Orange Pill Button (Matches 'Ecommerce Capram' button) */
+.btn-capram-orange {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 28px;
+    background-color: var(--capram-orange);
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-capram-orange:hover {
+    background-color: var(--capram-orange-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+/* --- Image & Layout --- */
+.image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--capram-border);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    transform-style: preserve-3d;
+}
+
+.image-wrapper img {
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.services:hover .image-wrapper img {
+    transform: scale(1.03);
+}
+
+/* Optional: Slight dark tint over the image to blend it with the site */
+.dark-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(17,17,17,0.4) 0%, rgba(17,17,17,0) 100%);
+    pointer-events: none;
+}
+
+/* Brand Floating Badge */
+.floating-badge-orange {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: #111111;
+    border: 1px solid #333;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    z-index: 10;
+}
+
+.dot-pulse-orange {
+    width: 8px;
+    height: 8px;
+    background-color: var(--capram-orange);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.7);
+    animation: pulse-orange 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse-orange {
+    to { box-shadow: 0 0 0 12px rgba(243, 156, 18, 0); }
+}
+
+/* --- Responsive Layout (The Overlap) --- */
+@media (min-width: 992px) {
+    .capram-text-col {
+        margin-right: -80px; /* Pulls the card over the image */
+    }
+}
+
+@media (max-width: 991px) {
+    .capram-text-col {
+        margin-bottom: 40px;
+    }
+    .capram-dark-card h1 {
+        font-size: 1.8rem;
+    }
+    .floating-badge-orange {
+        right: 10px;
+        bottom: -15px;
+    }
+}
+
+/*******************************/
 .image-container {
     display: flex;
     justify-content: center;
@@ -75,82 +243,6 @@ span.zoomImgWrapper-title {
 
 /**************************************/
 
-.hexagon-gallery {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: 149px;
-    grid-gap: 16px;
-    padding-bottom: 55px;
-}
-
-.hex {
-    display: flex;
-    position: relative;
-    width: 180px;
-    height: 200px;
-    background-color: white;
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-
-
-.hex.inner {
-    -webkit-transform: scale(.95, .95);
-    -moz-transform: scale(.95, .95);
-    transform: scale(.95, .95);
-    z-index: 1;
-}
-
-
-.hex:first-child {
-    grid-row-start: 1;
-    grid-column: 2 / span 2;
-}
-
-.hex:nth-child(2) {
-    grid-row-start: 1;
-    grid-column: 4 / span 2;
-}
-
-.hex:nth-child(3) {
-    grid-row-start: 1;
-    grid-column: 6 / span 2;
-}
-
-.hex:nth-child(4) {
-    grid-row-start: 2;
-    grid-column: 1 / span 2;
-}
-
-.hex:nth-child(5) {
-    grid-row-start: 2;
-    grid-column: 3 / span 2;
-}
-
-.hex:nth-child(6) {
-    grid-row-start: 2;
-    grid-column: 5 / span 2;
-}
-
-.hex:nth-child(7) {
-    grid-row-start: 2;
-    grid-column: 7 / span 2;
-}
-
-.hex:nth-child(8) {
-    grid-row-start: 3;
-    grid-column: 2 / span 2;
-}
-
-.hex:nth-child(9) {
-    grid-row-start: 3;
-    grid-column: 4 / span 2;
-}
-
-.hex:nth-child(10) {
-    grid-row-start: 3;
-    grid-column: 6 / span 2;
-}
 
 
 section#our-services {
@@ -496,103 +588,11 @@ p.description.para_target {
 
 /* OUR SEERVICES LEFT SIDE */
 
-#our-services .desc {
-    width: 60%;
-
-}
-
-#our-services .desc .heading h1 {
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1.4px;
-    margin-bottom: 30px;
-    color: white;
-    font-size: 33px;
-}
-
-#our-services .desc .text {
-    color: #777777;
-    position: relative;
-}
-
-/* OUR SERVICES RIGHT SIDE */
-
-#our-services .services {
-    width: 67%;
-    float: left;
-}
-
-#our-services .services .column {
-    float: left;
-    margin-right: 60px;
-    transform: rotate(45deg);
-    transition: transform 0.3s ease;
-}
-
-#our-services .services .column .service {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 120px;
-    background: transparent;
-    transition: all 0.1s ease;
-    margin-bottom: 7px;
-    overflow: hidden;
-}
-
-#our-services .services .column .service:hover {
-    background: #28282e;
-    color: #fff;
-}
-
-#our-services .services .column .service:hover .service-icon {
-    color: #fff;
-}
-
-#our-services .services .column .service .service-desc {
-    transform: rotate(-45deg);
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-}
-
-#our-services .services .column .service .service-desc .service-icon {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #f57469;
-}
 
 /* end of our services section */
 
 /* media query */
 
-@media all and (max-width: 967px) {
-    #our-services {
-        padding-top: 60px;
-    }
-
-    #our-services .desc {
-        width: 100%;
-        float: none;
-        margin-bottom: 30px;
-    }
-
-    #our-services .services {
-        width: 100%;
-    }
-
-    #our-services .services .column {
-        transform: rotate(0deg);
-        margin-right: 10px;
-    }
-
-    #our-services .services .column .service .service-desc {
-        transform: rotate(0deg);
-    }
-}
 
 /***********************************/
 .contentLeft,

@@ -163,6 +163,91 @@
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 
+/* 1. Ensure the parent container can anchor the arrow */
+.container {
+  position: relative; 
+  /* keep your other container styles */
+}
+
+/* 2. Perfectly center the arrow at the bottom of the section */
+.aero-arrow-wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background: #141414;
+    width: 110px;
+    border-radius: 10px;
+    height: 110px;
+}
+
+/* 3. The vertical hanging line */
+.aero-line {
+  width: 2px;
+  height: 60px; /* Adjust length as needed */
+  /* A nice touch: fades from dark grey to orange for a seamless blend */
+  background: linear-gradient(to bottom, #1a1a1a, #f99d1c); 
+  opacity: 0.8;
+}
+
+/* 4. The Chevrons wrapper */
+.aero-chevrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2px; /* Connects them tightly to the line */
+}
+
+/* 5. The LED Chevron design & animation (Adjusted sizing for elegance) */
+.led-chevron {
+  display: block;
+  width: 22px; 
+  height: 22px;
+  border-right: 3px solid #f99d1c; 
+  border-bottom: 3px solid #f99d1c;
+  transform: rotate(45deg);
+  margin-top: -12px; /* Overlaps them nicely */
+  border-radius: 2px;
+  animation: ledCascade 1.5s infinite;
+}
+
+/* Animation Delays */
+.led-chevron:nth-child(1) { animation-delay: 0s; }
+.led-chevron:nth-child(2) { animation-delay: 0.2s; }
+.led-chevron:nth-child(3) { animation-delay: 0.4s; }
+
+/* The Cascade Animation */
+@keyframes ledCascade {
+  0% { 
+    opacity: 0.1; 
+    filter: drop-shadow(0 0 0px transparent);
+  }
+  30% { 
+    opacity: 1; 
+    filter: drop-shadow(0 0 6px #f99d1c);
+    border-color: #ffffff; /* Flashes white at its brightest */
+  }
+  100% { 
+    opacity: 0.1; 
+    border-color: #f99d1c;
+    filter: drop-shadow(0 0 0px transparent);
+  }
+}
+
+.relativity {
+    position: relative;
+}
+
+/*******************************/
+
+.header-button a {
+    display: flex !important;
+}
+
 .hero-inner .container-fluid {
     width: 1700px !important;
 }
@@ -620,6 +705,48 @@ h6 {
     h1 {
         font-size: 32px;
     }
+}
+
+
+.tel-info img {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.tel-info {
+    display: inline-block;
+    margin-right: 40px;
+    color: white;
+    font-size: 14px;
+}
+
+.icon-stack {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span.icon-stack i.fa-solid.fa-store {
+    font-size: 20px;
+}
+
+.niche-badge {
+    position: absolute;
+    bottom: -4px;
+    right: -6px;
+    font-size: 10px !important;
+    background: #f29048;
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    padding: 2px 3px;
+}
+
+
+nav.main-menu.d-none.d-lg-inline-block {
+    margin-right: 190px;
 }
 
 /************************************************************
@@ -12508,7 +12635,6 @@ ul.sub-menu li div {
 
 .header-top {
     padding: 11px 80px;
-    background-color: var(--black-color3);
     max-width: 1840px;
     margin: 0 auto;
     margin-top: 10px;
@@ -12516,8 +12642,9 @@ ul.sub-menu li div {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    /* Large devices */
-    /* Medium devices */
+    background-color: #121212;
+    box-shadow: inset 0px 2px 4px rgba(255, 255, 255, 0.08), inset 0px -6px 15px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 @media (max-width: 1199px) {
@@ -12535,17 +12662,15 @@ ul.sub-menu li div {
 }
 
 .header-top::after {
-    position: absolute;
+        position: absolute;
     right: 0;
     top: 0;
     width: 438px;
     height: 100%;
     content: "";
-    background-color: rgba(255, 255, 255, 0.15);
     clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
     z-index: -1;
-    /* Large devices */
-    /* Medium devices */
+    background-color: #151515;
 }
 
 @media (max-width: 1199px) {
@@ -12729,6 +12854,7 @@ ul.sub-menu li div {
     left: 0;
     right: 0;
     top: 0;
+    background: #000000;
     /*
     background: var(--black-color);
     z-index: -1;
