@@ -275,6 +275,11 @@ p.process-para {
     height: 100% !important;
 }
 
+ul.menu li:last-child img {
+    width: 180px;
+    margin-top: 75px;
+}
+
 @font-face {
     font-family: "Satoshi";
     src: url("../fonts/Satoshi-Black.woff2") format("woff2"), url("../fonts/Satoshi-Black.woff") format("woff");
