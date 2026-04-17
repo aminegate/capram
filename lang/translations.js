@@ -482,7 +482,7 @@ var translations = {
         "data-161": "Grande Maison de Pièces de",
         "data-2003": "Rechange Automobile",
         "data-162": "Chez CAPRAM nous nous engageons à rester à la pointe de notre industrie, en offrant des solutions innovantes et en maintenant des standards élevés de qualité et de service. Nous sommes fiers de notre histoire et sommes impatients de vous accompagner dans tous vos besoins en matière de PRA et de réparation automobile.",
-        "data-164": "<span>Un Héritage d'Excellence</span>",
+        "data-164": "Un Héritage d'Excellence",
         "data-165": "Fondation de CAPRAM",
         "data-166": "Fondation CAPRAM / Fourniture de solutions « Maintenance & Réparation Automobile ».",
         "data-167": "Division dédiée à la carrosserie",
