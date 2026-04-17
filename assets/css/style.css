@@ -82,7 +82,7 @@
 /*------------------- 1.3. Variable-------------------*/
 :root {
     --theme-color: #F7943D;
-    --theme-color2: #FDB52A;
+    --theme-color2: #F7943D;
     --theme-color3: #F02801;
     --title-color: #010916;
     --body-color: #6F756D;
@@ -163,10 +163,396 @@
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 
+/************************************************/
+@media (max-width: 991px) {
+    .hero-1 {
+        margin-top: 160px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-1 {
+        margin-top: 205px !important;
+    }
+
+    .custom-info-group .header-button {
+        padding: 2px 0px 6px 0px;
+    }
+
+    .col-auto.custom-info-group button.info-toggle-btn .th-btn,
+    .col-auto.custom-info-group button#infoToggleBtn {
+        font-size: 14px;
+    }
+
+    @media (max-width: 400px) {
+
+        .col-auto.custom-info-group button.info-toggle-btn .th-btn,
+        .col-auto.custom-info-group button#infoToggleBtn {
+            font-size: 12px;
+        }
+    }
+}
+
+
+@media (max-width: 1400px) and (min-width: 991px) {
+    .why-img-box1 {
+        max-width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .title-area.mb-60 {
+        text-align: center !important;
+    }
+
+    .why-img-box1 img {
+        width: 50% !important;
+    }
+
+    img.hideImg {
+        display: block !important;
+    }
+}
+
+
+.mobile-logo a img {
+    width: 70%;
+}
+
+
+h2.sec-title.text-white span {
+    color: white;
+}
+
+
+/***************************************************/
+/* Container for the icons */
+.icon-wrapper {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Style for both SVGs */
+#cert-tab svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+/* State: Widget is CLOSED (Showing Badge) */
+#cert-side-widget.closed .close-svg {
+    opacity: 0;
+    transform: scale(0.5) rotate(-90deg);
+}
+
+#cert-side-widget.closed .cert-svg {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.6)); /* Subtle Glow */
+}
+
+/* State: Widget is OPEN (Showing X) */
+#cert-side-widget:not(.closed) .cert-svg {
+    opacity: 0;
+    transform: scale(0.5) rotate(90deg);
+}
+
+#cert-side-widget:not(.closed) .close-svg {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+/* Extra "Cutting Edge" Polish for the Tab */
+#cert-tab {
+    background: linear-gradient(135deg, #f28d44 0%, #e67e22 100%);
+    box-shadow: 4px 0 15px rgba(230, 126, 34, 0.3);
+    border-left: none;
+}
+
+#cert-tab:hover .icon-wrapper {
+    transform: scale(1.1); /* Slight pop on hover */
+}
+#cert-side-widget {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: flex-start;
+    z-index: 9999;
+    transition: all 0.4s ease;
+    font-family: Arial, sans-serif;
+}
+
+/* Hide content when closed */
+#cert-side-widget.closed {
+    left: -220px; /* Adjust this to match the width of #cert-content */
+}
+
+#cert-content {
+    width: 220px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.cert-header {
+    background: #f28d44; /* Orange from image */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cert-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.cert-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* The Orange Tab */
+#cert-tab {
+    background: #f28d44;
+    color: white;
+    width: 40px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    font-size: 24px;
+    font-weight: bold;
+    order: 2; /* Puts tab to the right of the content */
+}
+
+/************************************************/
+.social-links {
+    display: flex;
+}
+
+/* Container */
+.lang-switcher-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 30px;
+    /* Adjust based on space to social icons */
+}
+
+/* The Pill Shape */
+.lang-switcher-header .lang-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0px 7px;
+    /* Smaller left padding to balance the circle */
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+}
+
+/* Flag Circle */
+.lang-switcher-header .flag-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-switcher-header .flag-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Language Text (FR/EN) */
+.lang-switcher-header .lang-code {
+    color: rgba(255, 255, 255, 0.6);
+    /* Muted white text */
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Hover Effect */
+.lang-switcher-header .lang-pill:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.lang-switcher-header .lang-pill:hover .lang-code {
+    color: #fff;
+}
+
+/* Active State (The currently selected language) */
+.lang-switcher-header .lang-pill.active {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgb(255 255 255 / 39%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.lang-switcher-header .lang-pill.active .lang-code {
+    color: #ffffff;
+    /* Bright white for active */
+}
+
+/***************************************************/
+
+@media (max-width: 1634px) {
+    nav.main-menu.d-none.d-lg-inline-block {
+        margin-right: 0 !important;
+    }
+}
+
+/*************************************************/
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-wrap {
+        margin: 0px auto;
+        max-width: 100% !important;
+    }
+
+    .why-img-box1,
+    .title-area.style2 .title-area-right {
+        max-width: 100% !important;
+    }
+}
+
+/*************************************************/
+
+nav.main-menu.d-none.d-lg-inline-block {
+    float: right;
+}
+
+@media (max-width: 480px) {
+    .heading-catego img {
+        height: 300px !important;
+    }
+
+    .section-title {
+        font-size: 2.5rem !important;
+    }
+}
+
+.certifWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.certifContainer img {
+    width: 170px;
+}
+
+@media (max-width: 1483px) {
+    .hideIn {
+        display: none !important;
+    }
+}
+
+a.th-btn.style6.th-btn-responsive::before {
+    background: transparent;
+}
+
+a.th-btn.style6.th-btn-responsive {
+    padding: 0px;
+    border-radius: 0px !important;
+}
+
+/***********************************************/
+
+li.menu-item-has-children ul li a:before {
+
+    left: -15px !important;
+}
+
+/* 1. Make the list item a flex container to align items side-by-side */
+.th-mobile-menu .sub-menu li {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* 2. Control the size of the icon container so it doesn't overlap */
+.th-mobile-menu .sub-menu li > div {
+    flex: 0 0 auto;
+    /* Prevent the box from stretching */
+    width: 40px;
+    /* Adjust size if needed */
+    height: 40px;
+    /* Adjust size if needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    /* Space between the icon and the text */
+    margin-left: 15px;
+    /* Push it away from the left edge */
+}
+
+/* 3. Make sure the image fits perfectly inside the box */
+.th-mobile-menu .sub-menu li > div img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* 4. Fix the text link so it sits properly next to the icon */
+.th-mobile-menu .sub-menu li > a {
+    flex-grow: 1;
+    /* Makes the link fill the rest of the space */
+    padding-left: 0 !important;
+    /* Removes the theme's default left space */
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+@media (max-width: 991px) {
+    .why-card {
+        display: flex;
+        gap: 30px;
+    }
+
+    .process-card {
+        display: flex;
+    }
+
+    .process-card-wrap .process-card .box-text {
+        margin-bottom: 0px;
+    }
+}
+
+.why-card p.box-text {
+    color: #c6c6c6;
+}
+
+
+/***********************************************/
+
 /* 1. Ensure the parent container can anchor the arrow */
 .container {
-  position: relative; 
-  /* keep your other container styles */
+    position: relative;
+    /* keep your other container styles */
 }
 
 /* 2. Perfectly center the arrow at the bottom of the section */
@@ -187,55 +573,72 @@
 
 /* 3. The vertical hanging line */
 .aero-line {
-  width: 2px;
-  height: 60px; /* Adjust length as needed */
-  /* A nice touch: fades from dark grey to orange for a seamless blend */
-  background: linear-gradient(to bottom, #1a1a1a, #f99d1c); 
-  opacity: 0.8;
+    width: 2px;
+    height: 60px;
+    /* Adjust length as needed */
+    /* A nice touch: fades from dark grey to orange for a seamless blend */
+    background: linear-gradient(to bottom, #1a1a1a, #f99d1c);
+    opacity: 0.8;
 }
 
 /* 4. The Chevrons wrapper */
 .aero-chevrons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -2px; /* Connects them tightly to the line */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2px;
+    /* Connects them tightly to the line */
 }
 
 /* 5. The LED Chevron design & animation (Adjusted sizing for elegance) */
 .led-chevron {
-  display: block;
-  width: 22px; 
-  height: 22px;
-  border-right: 3px solid #f99d1c; 
-  border-bottom: 3px solid #f99d1c;
-  transform: rotate(45deg);
-  margin-top: -12px; /* Overlaps them nicely */
-  border-radius: 2px;
-  animation: ledCascade 1.5s infinite;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-right: 3px solid #f99d1c;
+    border-bottom: 3px solid #f99d1c;
+    transform: rotate(45deg);
+    margin-top: -12px;
+    /* Overlaps them nicely */
+    border-radius: 2px;
+    animation: ledCascade 1.5s infinite;
 }
 
+
+
+
 /* Animation Delays */
-.led-chevron:nth-child(1) { animation-delay: 0s; }
-.led-chevron:nth-child(2) { animation-delay: 0.2s; }
-.led-chevron:nth-child(3) { animation-delay: 0.4s; }
+.led-chevron:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.led-chevron:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.led-chevron:nth-child(3) {
+    animation-delay: 0.4s;
+}
 
 /* The Cascade Animation */
 @keyframes ledCascade {
-  0% { 
-    opacity: 0.1; 
-    filter: drop-shadow(0 0 0px transparent);
-  }
-  30% { 
-    opacity: 1; 
-    filter: drop-shadow(0 0 6px #f99d1c);
-    border-color: #ffffff; /* Flashes white at its brightest */
-  }
-  100% { 
-    opacity: 0.1; 
-    border-color: #f99d1c;
-    filter: drop-shadow(0 0 0px transparent);
-  }
+    0% {
+        opacity: 0.1;
+        filter: drop-shadow(0 0 0px transparent);
+    }
+
+    30% {
+        opacity: 1;
+        filter: drop-shadow(0 0 6px #f99d1c);
+        border-color: #ffffff;
+        /* Flashes white at its brightest */
+    }
+
+    100% {
+        opacity: 0.1;
+        border-color: #f99d1c;
+        filter: drop-shadow(0 0 0px transparent);
+    }
 }
 
 .relativity {
@@ -262,22 +665,290 @@ p.process-para {
 
 #hero {
     /* Standard height minus header height */
+    /*
     height: calc(100vh - 70px);
     height: calc(100dvh - 70px);
+*/
     /* Use dvh for mobile support */
     position: relative;
+    padding-top: clamp(25px, 15vw, 25px);
 }
+
+/*****************************************************/
+@media (max-width: 480px) and (min-width: 360px) {
+
+    .hero-inner p.hero-text.text-white.slideinup,
+    .hero-inner .btn-group.slideinup {
+        display: none;
+    }
+
+    .hero-1 .icon-box {
+        left: 30vw !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .portal-container {
+        flex-direction: column;
+    }
+
+    .portal-visual {
+
+        perspective: initial !important;
+    }
+
+    .bento-box.bento-square,
+    .bento-box.bento-wide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .bento-icon {
+        position: initial !important;
+    }
+
+    .bento-large .bento-graphic {
+        margin-bottom: 45px !important;
+    }
+}
+
+/******************************************************/
+/* Base Container */
+.custom-info-group {
+    position: relative;
+}
+
+.custom-info-group .header-button {
+    padding: 2px 0px 3px 0px;
+}
+
+@media (max-width: 991px) {
+    .header-button {
+        justify-content: flex-end;
+    }
+}
+
+/* Default state for links (Large Screens > 1483px) */
+.header-links-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 14px;
+    line-height: normal;
+}
+
+/* Default state for links (Large Screens > 1483px) */
+.header-links-list li {
+    position: relative;
+}
+
+ul.header-links-list li i {
+    margin-right: 10px;
+    color: #F7943D;
+}
+
+ul.header-links-list li:nth-child(2) a {
+    color: white !important;
+}
+
+ul.header-links-list li:not(:last-child) {
+    margin: 0 45px 0 0;
+}
+
+.header-links-list li:not(:last-child):after {
+    content: "";
+    height: 14px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0px;
+    right: -25px;
+    margin-top: 1px;
+
+}
+
+/* Hide the toggle button on large screens */
+.info-toggle-btn {
+    display: none;
+}
+
+/* --- MOBILE & TABLET STYLES (1483px and down) --- */
+@media (max-width: 1483px) {
+
+    /* 1. Style the Button so the user knows to click it */
+    .info-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #181919;
+        color: #dadada;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 1px 1px rgb(0 0 0 / 80%);
+        transition: all 0.3s ease;
+    }
+
+    .info-toggle-btn:hover {
+        background-color: #004494;
+    }
+
+    /* Small animation to draw attention to the icon */
+    .info-toggle-btn i {
+        animation: pulseIcon 2s infinite;
+    }
+
+    @keyframes pulseIcon {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    /* 2. Turn the container into a hidden Popup */
+    .header-links-container {
+        display: none;
+        /* Hidden by default */
+        position: absolute;
+        top: 100%;
+        /* Position directly below the button */
+        right: 0;
+        /* Aligns to the right side */
+        margin-top: 15px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        width: max-content;
+        max-width: 90vw;
+        /* Prevents overflow on very small screens */
+        z-index: 1000;
+    }
+
+    /* Class added by JavaScript to show the popup */
+    .header-links-container.show-popup {
+        display: block !important;
+    }
+
+    /* 3. Stack the list vertically inside the popup */
+    .header-links-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Optional: Add spacing to your icons inside the popup */
+    .header-links-list i {
+        margin-right: 8px;
+        color: #0056b3;
+        /* Change to match your theme */
+    }
+}
+
+/* --- MOBILE POPUP (CENTERED) STYLES --- */
+
+/* The dark background behind the popup */
+#mobilePopupOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark semi-transparent */
+    z-index: 999998;
+    /* Right below the popup */
+    backdrop-filter: blur(3px);
+    /* Optional: blurs the website behind it */
+}
+
+/* The Cloned Popup Container */
+#headerLinksPopupMobile {
+    display: none;
+    position: fixed;
+    /* Center Vertically and Horizontally */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+    padding: 40px 20px 20px 20px;
+    /* Extra padding on top for the close button */
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    z-index: 999999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Show classes added by jQuery */
+#mobilePopupOverlay.show-popup,
+#headerLinksPopupMobile.show-popup {
+    display: block !important;
+}
+
+/* The Close Button inside the popup */
+.mobile-popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+#headerLinksPopupMobile ul.header-links-list li:not(:last-child) {
+    margin: 0px;
+}
+
+.mobile-popup-close-btn:hover {
+    color: #d9534f;
+    /* Turns red on hover */
+}
+
+/* Optional: Make the list inside the mobile popup stack nicely */
+#headerLinksPopupMobile .header-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+    /* Dark text for the white background */
+}
+
+
+
+/* Hide the overlay and clone completely on Desktop screens */
+@media (min-width: 1484px) {
+
+    #headerLinksPopupMobile,
+    #mobilePopupOverlay {
+        display: none !important;
+    }
+}
+
 
 /* Force the swiper and slides to match the parent height */
 #hero .th-slider,
 #hero .swiper-wrapper,
 #hero .swiper-slide {
     height: 100% !important;
-}
-
-ul.menu li:last-child img {
-    width: 180px;
-    margin-top: 75px;
 }
 
 @font-face {
@@ -750,9 +1421,7 @@ span.icon-stack i.fa-solid.fa-store {
 }
 
 
-nav.main-menu.d-none.d-lg-inline-block {
-    margin-right: 190px;
-}
+
 
 /************************************************************
 ************************************************************/
@@ -871,7 +1540,8 @@ nav.main-menu.d-none.d-lg-inline-block {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px 60px; /* Large spacing for the floating effect */
+    gap: 40px 60px;
+    /* Large spacing for the floating effect */
     position: relative;
     z-index: 2;
     max-width: 1200px;
@@ -898,12 +1568,28 @@ nav.main-menu.d-none.d-lg-inline-block {
 
 /* Asynchronous Floating Animations */
 @keyframes levitate {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
 }
-.brand-node:nth-child(3n+1) { animation: levitate 4s ease-in-out infinite; }
-.brand-node:nth-child(3n+2) { animation: levitate 5s ease-in-out infinite 1s; }
-.brand-node:nth-child(3n+3) { animation: levitate 6s ease-in-out infinite 2s; }
+
+.brand-node:nth-child(3n+1) {
+    animation: levitate 4s ease-in-out infinite;
+}
+
+.brand-node:nth-child(3n+2) {
+    animation: levitate 5s ease-in-out infinite 1s;
+}
+
+.brand-node:nth-child(3n+3) {
+    animation: levitate 6s ease-in-out infinite 2s;
+}
 
 /* The Image inside */
 .brand-node img {
@@ -911,7 +1597,7 @@ nav.main-menu.d-none.d-lg-inline-block {
     max-height: 100%;
     object-fit: contain;
     /* Subtle shadow to separate from background */
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
     transition: all 0.4s ease;
 }
 
@@ -923,14 +1609,16 @@ nav.main-menu.d-none.d-lg-inline-block {
 .interactive-matrix:hover .brand-node {
     opacity: 0.15;
     filter: blur(3px) grayscale(100%);
-    animation-play-state: paused; /* Freeze the floating */
+    animation-play-state: paused;
+    /* Freeze the floating */
 }
 
 /* 2. Focus Mode: Brighten the SPECIFIC node being hovered */
 .interactive-matrix .brand-node:hover {
     opacity: 1;
     filter: blur(0px) grayscale(0%);
-    transform: scale(1.3) !important; /* Overrides the stagger/float */
+    transform: scale(1.3) !important;
+    /* Overrides the stagger/float */
     z-index: 10;
 }
 
@@ -979,10 +1667,22 @@ nav.main-menu.d-none.d-lg-inline-block {
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
-    .matrix-header h2 { font-size: 2.2rem; }
-    .interactive-matrix { gap: 20px 30px; }
-    .brand-node { width: 100px; height: 60px; }
-    .brand-node:nth-child(even) { transform: translateY(20px); }
+    .matrix-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .interactive-matrix {
+        gap: 20px 30px;
+    }
+
+    .brand-node {
+        width: 100px;
+        height: 60px;
+    }
+
+    .brand-node:nth-child(even) {
+        transform: translateY(20px);
+    }
 }
 
 
@@ -4302,7 +5002,7 @@ textarea.is-invalid {
 }
 
 .th-btn.style5:before {
-    background: var(--theme-color2);
+    background: white;
 }
 
 .th-btn.style5 .after-bg {
@@ -4314,7 +5014,7 @@ textarea.is-invalid {
 }
 
 .th-btn.style6 {
-    padding: 16px 24px;
+    padding: 15px 12px;
 }
 
 .th-btn.style6::after {
@@ -5801,7 +6501,7 @@ textarea.is-invalid {
 }
 
 .sec-title.style2 {
-    font-size: 124px;
+    font-size: 80px;
     font-weight: 700;
     /* Medium Large devices */
     /* Small devices */
@@ -10879,6 +11579,11 @@ ol.wp-block-rss {
     max-width: 361px;
 }
 
+.th-widget-about {
+    max-width: 361px;
+}
+
+
 .th-widget-about p {
     color: var(--th-border-color);
 }
@@ -12456,6 +13161,7 @@ ul.sub-menu li div {
     -ms-flex-align: center;
     align-items: center;
     gap: 15px;
+    float: right;
 }
 
 .header-button .icon-btn .badge {
@@ -12495,9 +13201,11 @@ ul.sub-menu li div {
 }
 
 @media (max-width: 991px) {
-    .social-links a {
-        color: var(--title-color);
+    /*
+    .header-default .header-top {
+        display: none !important;
     }
+*/
 }
 
 .social-links a:last-child {
@@ -12530,14 +13238,10 @@ ul.sub-menu li div {
     padding-top: 15px;
     padding-bottom: 15px;
     /* Medium devices */
-    width: 40%;
+    width: 170px;
 }
 
-@media (max-width: 991px) {
-    .header-logo {
-        padding-bottom: 25px;
-    }
-}
+
 
 .header-logo a {
     display: -webkit-box;
@@ -12662,12 +13366,12 @@ ul.sub-menu li div {
     .header-top {
         margin-top: 0px;
         border-radius: 0px;
-        background: var(--white-color);
+
     }
 }
 
 .header-top::after {
-        position: absolute;
+    position: absolute;
     right: 0;
     top: 0;
     width: 438px;
@@ -12871,7 +13575,7 @@ ul.sub-menu li div {
     /* Large devices */
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1558px) {
     .header-default .header-top {
         padding: 11px 38px;
     }
@@ -12879,7 +13583,7 @@ ul.sub-menu li div {
 
 @media (max-width: 1199px) {
     .header-default .header-top {
-        padding: 11px 24px;
+        padding: 11px 8px;
     }
 }
 
@@ -13009,8 +13713,7 @@ ul.sub-menu li div {
 @media (max-width: 991px) {
     .header-default .menu-area {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 10px 0;
-        background: var(--title-color);
+
     }
 }
 
@@ -16574,11 +17277,7 @@ ul.comment-list .th-comment-item:first-child:not(.children .th-comment-item) > .
     }
 }
 
-@media (max-width: 991px) {
-    .hero-1 .icon-box {
-        display: none;
-    }
-}
+
 
 @media (max-width: 991px) {
     .hero-1 {
@@ -16622,7 +17321,7 @@ ul.comment-list .th-comment-item:first-child:not(.children .th-comment-item) > .
 .hero-style1 {
     position: relative;
     z-index: 6;
-    padding: 285px 0 248px;
+    padding: 285px 0 271px;
     max-width: 712px;
     /* Extra large devices */
     /* Medium Large devices */
@@ -16647,15 +17346,31 @@ ul.comment-list .th-comment-item:first-child:not(.children .th-comment-item) > .
 
 @media (max-width: 1399px) {
     .hero-style1 {
-        padding: 220px 0 160px;
+        padding: 100px 0 160px;
     }
 }
 
 @media (max-width: 767px) {
     .hero-style1 {
-        padding: 200px 0 140px;
+        padding: 45px 0 140px;
     }
+
+    a.th-btn.style2 {
+        display: none;
+    }
+
+
 }
+
+@media (max-width: 768px) {
+    .hero-style1 .hero-text {
+        max-width: 50% !important;
+        height: 61px;
+    }
+
+}
+
+
 
 .hero-style1 .hero-text {
     font-size: 16px;
@@ -28395,6 +29110,8 @@ span.select2-selection.select2-selection--single:focus {
 @media (max-width: 1199px) {
     .process-card {
         gap: 30px;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -28475,7 +29192,6 @@ span.select2-selection.select2-selection--single:focus {
     color: var(--white-color);
     font-size: 28px;
     font-weight: 500;
-    height: 110px;
     /* Medium Large devices */
     /* Medium devices */
 }
@@ -28554,6 +29270,8 @@ span.select2-selection.select2-selection--single:focus {
         padding-bottom: 230px;
     }
 }
+
+
 
 /* Process Card 2---------------------------------- */
 .process-img-box2 {
@@ -29800,7 +30518,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .feature-card {
-    padding: 24px 44px 34px 24px;
+    padding: 24px 44px 0px 24px;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -29815,7 +30533,7 @@ span.select2-selection.select2-selection--single:focus {
     /* Medium devices */
     /* Medium Large devices */
     /* Large devices */
-    height: 180px;
+
 }
 
 @media (max-width: 991px) {

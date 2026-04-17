@@ -1,0 +1,20 @@
+# 1. Disable PHP Execution Engine
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+  php_flag engine off
+</IfModule>
+
+# 2. Prevent Apache from treating .php.jpg as PHP
+RemoveHandler .php .phtml .php3 .php4 .php5
+RemoveType .php .phtml .php3 .php4 .php5
+
+# 3. Block any file containing ".php" in the name
+<FilesMatch "\.php">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# 4. Prevent listing files
+Options -Indexes

@@ -450,7 +450,6 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            padding: 1rem 2rem;
             background: transparent;
             color: var(--brand-accent);
             border: 1px solid var(--brand-accent);
@@ -464,7 +463,13 @@
             /* Un très léger arrondi pour l'élégance */
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
+        
+        button.transport-btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+}
         /* L'icône (flèche) à l'intérieur du bouton */
         .transport-btn svg {
             width: 18px;
@@ -523,178 +528,136 @@
     Mobile Menu
 ============================== -->
 
-    <div style="display: none" class="th-menu-wrapper">
+    <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
+                <a href="index.html"><img src="assets/img/logo_2.png" alt="Capram"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
+                    <li>
+                        <a href="index.html" data-i18n="data-1">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="about.html" data-i18n="data-2">À propos</a>
+                    </li>
                     <li class="menu-item-has-children">
-                        <a href="index.html">Home</a>
+                        <a href="categories.html" data-i18n="data-3">Catégories</a>
                         <ul class="sub-menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Multipage</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Home General Plumbing</a></li>
-                                    <li><a href="home-2.html">Home Emergency Plumbing</a></li>
-                                    <li><a href="home-3.html">Home Residential Plumbing</a></li>
-                                </ul>
+                            <li>
+                                <div><img src="assets/img/icon/clutch.png" alt=""></div><a href="ca-embrayage.html" data-i18n="data-4">Embrayage</a>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Onepage</a>
-                                <ul class="sub-menu">
-                                    <li><a href="home-1-op.html">Home General Plumbing</a></li>
-                                    <li><a href="home-2-op.html">Home Emergency Plumbing</a></li>
-                                    <li><a href="home-3-op.html">Home Residential Plumbing</a></li>
-                                </ul>
+                            <li>
+                                <div><img src="assets/img/icon/motor.svg" alt=""></div><a href="ca-motor.html" data-i18n="data-5">Moteur</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/filter.png" alt=""></div><a href="ca-filtration.html" data-i18n="data-6">Filtration</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/suspension.svg" alt=""></div><a href="ca-suspension.html" data-i18n="data-7">Suspension</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/brakes.svg" alt=""></div><a href="ca-freinage.html" data-i18n="data-8">Freinage</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/cooling.png" alt=""></div><a href="ca-refroidissment.html" data-i18n="data-9">Refroidissement</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/battery.png" alt=""></div><a href="ca-electrical.html" data-i18n="data-10">Système Électrique</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/roues.svg" alt=""></div><a href="ca-wheels.html" data-i18n="data-11">Entraînement des roues</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/lubricant.png" alt=""></div><a href="ca-lubricant.html" data-i18n="data-12">Lubrifiant</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/carrosserie.png" alt=""></div><a href="ca-carrosserie.html" data-i18n="data-13">Carrosserie</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/perfum.png" alt=""></div><a href="ca-accessory.html" data-i18n="data-14">Accessoires</a>
+                            </li>
+                            <li>
+                                <div><img src="assets/img/icon/other.png" alt=""></div><a href="ca-autres.html" data-i18n="data-15">Autres</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="about.html">About Us</a></li>
                     <li class="menu-item-has-children">
-                        <a href="#">Services</a>
+                        <a href="javascript:void(0);" data-i18n="data-16">Services</a>
                         <ul class="sub-menu">
-                            <li><a href="service.html">Services</a></li>
-                            <li><a href="javascript:void(0);">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop.html">Shop</a></li>
-                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                    <li><a href="cart.html">Cart Page</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="project.html">Project</a></li>
-                            <li><a href="project-details.html">Project Details</a></li>
-                            <li><a href="team.html">Our Team</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                            <li><a href="work.html">Work</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
-                            <li><a href="testimonial.html">Testimonial</a></li>
-                            <li><a href="faq.html">FAQ'S Page</a></li>
-                            <li><a href="cost-calculation.html">Cost Calculation</a></li>
-                            <li><a href="error.html">Error Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog Standard</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
+                            <li><a href="nos-service-3.html" data-i18n="data-17">Espace Digital</a></li>
+                            <li><a href="nos-service-2.html" data-i18n="data-18">Logistique</a></li>
+                            <li><a href="nos-service-1.html" data-i18n="data-19">Impact National</a></li>
+                            <li><a href="javascript:void(0);" data-i18n="data-20">E-Catalogue</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="partner.html" data-i18n="data-21">Partenaires</a>
+                    </li>
+                    <li>
+                        <a href="blog.php" data-i18n="data-22">Actualité</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" data-i18n="data-23" class="goToContact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div style="display: none" class="popup-search-box d-none d-lg-block">
-        <button class="searchClose"><i class="far fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="What are you looking for?">
-            <button type="submit"><i class="fal fa-search"></i></button>
-        </form>
-    </div>
-    <!--==============================
-    Sidemenu 
-    ============================== -->
-    <div style="display: none" class="sidemenu-wrapper sidemenu-info d-none d-lg-block">
-        <div class="sidemenu-content allow-natural-scroll">
-            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-            <div class="widget  ">
-                <div class="th-widget-about">
-                    <div class="about-logo">
-                        <a href="index.html"><img src="assets/img/logo2.svg" alt="Capram"></a>
-                    </div>
-                    <p class="about-text mb-4"> Capram full potential with our comprehensive consulting services. Our expert team partners with you to identify growth opportunities.</p>
-                    <div class="th-social style2">
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="widget">
-                <h3 class="widget_title">Recent Posts</h3>
-                <div class="recent-post-wrap">
-                    <div class="recent-post">
-                        <div class="media-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
-                        </div>
-                        <div class="media-body">
-                            <div class="recent-post-meta">
-                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>20 Mar, 2025</a>
-                            </div>
-                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Rapid solutions for your plumbing issues</a></h4>
-                        </div>
-                    </div>
-                    <div class="recent-post">
-                        <div class="media-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
-                        </div>
-                        <div class="media-body">
-                            <div class="recent-post-meta">
-                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>24 Sep, 2025</a>
-                            </div>
-                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Frequent maintenance, such as inspection</a></h4>
-                        </div>
-                    </div>
-                    <div class="recent-post">
-                        <div class="media-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
-                        </div>
-                        <div class="media-body">
-                            <div class="recent-post-meta">
-                                <a href="blog.html"><i class="fa-solid fa-calendar-days"></i>23 Oct, 2025</a>
-                            </div>
-                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Mastering: Handyman's Guide to Tips & Tricks</a></h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="widget th-newsletter-widget style4 ">
-                <h3 class="widget_title">Subscribe to Newsletter</h3>
-                <p class="footer-text mb-4">Get Monthly insights from founders around the globe. No spam - promise.</p>
-                <form class="newsletter-form">
-                    <div class="form-group style-border">
-                        <input class="form-control" type="email" placeholder="Enter your email" required="">
-                    </div>
-                    <button type="submit" class="th-btn">Subscribe <span class="after-bg"></span></button>
-                </form>
-            </div>
-        </div>
-    </div>
     <!--==============================
 	Header Area
-    ==============================-->
-   <header class="th-header header-default">
+   ==============================-->
+
+    <header class="th-header header-default">
+
         <div class="header-top">
             <div class="row justify-content-center justify-content-lg-between  align-items-center gy-2">
-                <div class="col-auto">
-                    <div class="header-links d-none d-xxl-inline-block d-lg-inline-block">
-                        <ul>
-                            <li class=" d-xxl-inline-block"><i class="fa-regular fa-clock"></i>Horaires: Lundi – Vendredi : 9:00 AM – 18:30 PM <span class="colorSlash">/</span> Samedi : 9:00 AM – 13:00 PM</li>
-                            <li><i class="fal fa-envelope"></i><a href="mailto:info@Capram.com">contact@capram.ma</a></li>
-                            <li class=" d-xxl-inline-block"><i class="fal fa-location-dot"></i>35 Rue Bachir Ibrahimi, Casablanca 20250</li>
+                <div class="col-auto custom-info-group">
+                    <!-- The clickable button (Visible only at 1483px and down) -->
+                    <button class="info-toggle-btn" id="infoToggleBtn">
+                        <i class="fa-solid fa-circle-info"></i> <span data-i18n="data-24">Infos Pratiques</span>
+                    </button>
+                    <button class="info-toggle-btn">
+                        <div class="header-button">
+                            <a class="th-btn style6 th-btn-responsive" href="https://www.ecommerce.capram.ma/login">
+                                <span class="icon-stack">
+                                    <i class="fa-solid fa-store"></i>
+                                    <div class="niche-badge"> <i class="fa-solid fa-cog"></i></div>
+                                </span> <span data-i18n="data-25">Ecommerce Capram</span>
+                            </a>
+                        </div>
+                    </button>
+
+                    <!-- The Information Container -->
+                    <div class="header-links-container" id="headerLinksPopup">
+                        <ul class="header-links-list">
+                            <li><i class="fa-regular fa-clock"></i><span data-i18n="data-26">Horaires: Lundi – Vendredi : 9:00 AM – 18:30 PM</span> <span class="colorSlash">/</span> <span data-i18n="data-2000">Samedi : 9:00 AM – 13:00 PM</span></li>
+                            <li><i class="fal fa-envelope"></i><a href="mailto:contact@capram.ma">contact@capram.ma</a></li>
+                            <li><i class="fal fa-location-dot"></i>35 Rue Bachir Ibrahimi, Casablanca 20250</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="top-right">
                         <div class="social-links">
-                           <div class="tel-info"><img src="assets/img/icon/phone.svg" alt="">&nbsp;+212 522 31 93 54</div>
+                            <div class="lang-switcher-header">
+                                <!-- French Option -->
+                                <div class="lang-pill active" data-lang="fr">
+                                    <div class="flag-circle">
+                                        <img src="assets/img/france.png" alt="FR">
+                                    </div>
+                                    <span class="lang-code">FR</span>
+                                </div>
+
+                                <!-- English Option -->
+                                <div class="lang-pill" data-lang="en">
+                                    <div class="flag-circle">
+                                        <img src="assets/img/united-states.png" alt="EN">
+                                    </div>
+                                    <span class="lang-code">EN</span>
+                                </div>
+                            </div>
                             <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
                             <a href="https://www.instagram.com/capram.auto/"><i class="fab fa-instagram"></i></a>
@@ -708,6 +671,7 @@
             <div class="menu-area">
                 <div class="container-fulid">
                     <div class="row align-items-center justify-content-between">
+
                         <div class="col-auto">
                             <div class="header-logo">
                                 <a href="index.html">
@@ -719,72 +683,72 @@
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
                                     <li class="">
-                                        <a href="index.html">Accueil</a>
+                                        <a href="index.html" data-i18n="data-28">Accueil</a>
                                     </li>
-                                    <li><a href="about.html">À propos</a></li>
+                                    <li><a href="about.html" data-i18n="data-29">À propos</a></li>
                                     <li class="menu-item-has-children">
-                                        <a href="categories.html">Catégories</a>
+                                        <a href="categories.html" data-i18n="data-30">Catégories</a>
                                         <ul class="sub-menu">
 
                                             <li>
-                                                <div><img src="assets/img/icon/clutch.png" alt=""></div><a href="ca-embrayage.html">Embrayage</a>
+                                                <div><img src="assets/img/icon/clutch.png" alt=""></div><a href="ca-embrayage.html" data-i18n="data-31">Embrayage</a>
                                             </li>
                                             <li>
-                                                <div><img src="assets/img/icon/motor.svg" alt=""></div><a href="ca-motor.html">Moteur</a>
+                                                <div><img src="assets/img/icon/motor.svg" alt=""></div><a href="ca-motor.html" data-i18n="data-32">Moteur</a>
                                             </li>
                                             <li>
-                                                <div><img src="assets/img/icon/filter.png" alt=""></div><a href="ca-filtration.html">Filtration</a>
+                                                <div><img src="assets/img/icon/filter.png" alt=""></div><a href="ca-filtration.html" data-i18n="data-33">Filtration</a>
                                             </li>
                                             <li>
-                                                <div><img src="assets/img/icon/suspension.svg" alt=""></div><a href="ca-suspension.html">Suspension</a>
-                                            </li>
-
-                                            <li>
-                                                <div><img src="assets/img/icon/brakes.svg" alt=""></div><a href="ca-freinage.html">Freinage</a>
-                                            </li>
-                                            <li>
-                                                <div><img src="assets/img/icon/cooling.png" alt=""></div><a href="ca-refroidissment.html">Refroidissement</a>
-                                            </li>
-                                            <li>
-                                                <div><img src="assets/img/icon/battery.png" alt=""></div><a href="ca-electrical.html">Système Électrique</a>
-                                            </li>
-                                            <li>
-                                                <div><img src="assets/img/icon/roues.svg" alt=""></div><a href="ca-wheels.html">Entraînement des roues</a>
+                                                <div><img src="assets/img/icon/suspension.svg" alt=""></div><a href="ca-suspension.html" data-i18n="data-34">Suspension</a>
                                             </li>
 
                                             <li>
-                                                <div><img src="assets/img/icon/lubricant.png" alt=""></div><a href="ca-lubricant.html">Lubrifiant</a>
+                                                <div><img src="assets/img/icon/brakes.svg" alt=""></div><a href="ca-freinage.html" data-i18n="data-35">Freinage</a>
                                             </li>
                                             <li>
-                                                <div><img src="assets/img/icon/carrosserie.png" alt=""></div><a href="ca-carrosserie.html">Carrosserie</a>
+                                                <div><img src="assets/img/icon/cooling.png" alt=""></div><a href="ca-refroidissment.html" data-i18n="data-36">Refroidissement</a>
                                             </li>
                                             <li>
-                                                <div><img src="assets/img/icon/perfum.png" alt=""></div><a href="ca-accessory.html">Accessoires</a>
+                                                <div><img src="assets/img/icon/battery.png" alt=""></div><a href="ca-electrical.html" data-i18n="data-37">Système Électrique</a>
                                             </li>
                                             <li>
-                                                <div><img src="assets/img/icon/other.png" alt=""></div><a href="ca-autres.html">Autres</a>
+                                                <div><img src="assets/img/icon/roues.svg" alt=""></div><a href="ca-wheels.html" data-i18n="data-38">Entraînement des roues</a>
+                                            </li>
+
+                                            <li>
+                                                <div><img src="assets/img/icon/lubricant.png" alt=""></div><a href="ca-lubricant.html" data-i18n="data-39">Lubrifiant</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/carrosserie.png" alt=""></div><a href="ca-carrosserie.html" data-i18n="data-40">Carrosserie</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/perfum.png" alt=""></div><a href="ca-accessory.html" data-i18n="data-41">Accessoires</a>
+                                            </li>
+                                            <li>
+                                                <div><img src="assets/img/icon/other.png" alt=""></div><a href="ca-autres.html" data-i18n="data-42">Autres</a>
                                             </li>
 
                                         </ul>
 
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="javascript:void(0);">Services</a>
+                                        <a href="javascript:void(0);" data-i18n="data-43">Services</a>
                                         <ul class="sub-menu">
-                                            <li><a href="nos-service-3.html">Espace Digital</a></li>
-                                            <li><a href="nos-service-2.html">Logistique</a></li>
-                                            <li><a href="nos-service-1.html">Impact National</a></li>
-                                            <li><a href="javascript:void(0);">E-Catalogue</a></li>
+                                            <li><a href="nos-service-3.html" data-i18n="data-44">Espace Digital</a></li>
+                                            <li><a href="nos-service-2.html" data-i18n="data-45">Logistique</a></li>
+                                            <li><a href="nos-service-1.html" data-i18n="data-46">Impact National</a></li>
+                                            <li><a href="javascript:void(0);" data-i18n="data-47">E-Catalogue</a></li>
                                         </ul>
                                     </li>
                                     <li class="">
-                                        <a href="partner.html">Partenaires</a>
+                                        <a href="partner.html" data-i18n="data-48">Partenaires</a>
                                     </li>
                                     <li class="">
-                                        <a href="javascript:void(0);">Actualité</a>
+                                        <a href="blog.php" data-i18n="data-49">Actualité</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0);">Contact</a>
+                                        <a href="javascript:void(0);" data-i18n="data-50" class="goToContact">Contact</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -792,24 +756,27 @@
                                 <button type="button" class="th-menu-toggle icon-btn"><i class="far fa-bars"></i></button>
                             </div>
                         </div>
-                      <div class="col-auto d-xl-block d-none">
+                        <div class="col-auto hideIn d-lg-block d-none">
                             <div class="header-button">
-                                <a class="th-btn style6" href="https://b2bcapram.ma/login">
+                                <a class="th-btn style6" href="https://www.ecommerce.capram.ma/login">
                                     <span class="icon-stack">
                                         <i class="fa-solid fa-store"></i>
                                         <div class="niche-badge"> <i class="fa-solid fa-cog"></i></div>
-                                    </span> Ecommerce Capram
+                                    </span><span data-i18n="data-51">Ecommerce Capram</span>
                                 </a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </header>
-  <!--==============================
-    Hero Area
-    ==============================-->
+
+
+    <!--==============================
+Hero Area
+==============================-->
     <div class="th-hero-wrapper hero-1 bg-mask" id="hero">
         <div class="swiper th-slider" id="heroSlider8" data-slider-options='{"effect":"fade", "autoHeight": "false"}'>
             <div class="swiper-wrapper">
@@ -817,20 +784,17 @@
                     <div class="hero-inner">
                         <div class="container-fluid">
                             <div class="hero-style1">
-                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Pièces de rechanges</span>
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s" data-i18n="data-52"> Pièces de rechanges</span>
                                 <h1 class="hero-title text-white">
-                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPRAM</span>
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s" data-i18n="data-53">CAPRAM</span>
                                 </h1>
-                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Meilleure Offre pièces de rechanges au Maroc.</p>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s" data-i18n="data-54">Meilleure Offre pièces de rechanges au Maroc.</p>
                                 <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
                                     <a href="about.html" class="th-btn">
-                                        Découvrir
+                                        <span data-i18n="data-55">Découvrir</span>
                                         <span class="after-bg"></span>
                                     </a>
-                                    <a href="contact.html" class="th-btn style2">
-                                        Contact
-                                        <span class="after-bg"></span>
-                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -840,20 +804,17 @@
                     <div class="hero-inner">
                         <div class="container-fluid">
                             <div class="hero-style1">
-                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Carrosserie</span>
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s" data-i18n="data-57"> Carrosserie</span>
                                 <h1 class="hero-title text-white">
-                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPCARROSSERIE</span>
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s" data-i18n="data-58">CAPCARROSSERIE</span>
                                 </h1>
-                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Bon rapport qualité prix en carrosserie Européenne & Asiatique</p>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s" data-i18n="data-59">Bon rapport qualité prix en carrosserie Européenne & Asiatique</p>
                                 <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
                                     <a href="about.html" class="th-btn">
-                                        Découvrir
+                                        <span data-i18n="data-60">Découvrir</span>
                                         <span class="after-bg"></span>
                                     </a>
-                                    <a href="contact.html" class="th-btn style2">
-                                        Contact
-                                        <span class="after-bg"></span>
-                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -863,20 +824,17 @@
                     <div class="hero-inner">
                         <div class="container-fluid">
                             <div class="hero-style1">
-                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s"> Lubrifiants, additifs & liquides</span>
+                                <span class="sub-title style5" data-ani="slideinup" data-ani-delay="0.2s" data-i18n="data-62"> Lubrifiants, additifs & liquides</span>
                                 <h1 class="hero-title text-white">
-                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s">CAPSERVICE</span>
+                                    <span class="title1" data-ani="slideinup" data-ani-delay="0.4s" data-i18n="data-63">CAPSERVICE</span>
                                 </h1>
-                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s">Solution Complète: Lubrifiants, additifs & liquides pour automobile & industrie.</p>
+                                <p class="hero-text text-white" data-ani="slideinup" data-ani-delay="0.6s" data-i18n="data-64">Solution Complète: Lubrifiants, additifs & liquides pour automobile & industrie.</p>
                                 <div class="btn-group" data-ani="slideinup" data-ani-delay="0.7s">
                                     <a href="about.html" class="th-btn">
-                                        Découvrir
+                                        <span data-i18n="data-65">Découvrir</span>
                                         <span class="after-bg"></span>
                                     </a>
-                                    <a href="contact.html" class="th-btn style2">
-                                        Contact
-                                        <span class="after-bg"></span>
-                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -894,7 +852,9 @@
             </div>
         </div>
         <div class="scroll-down">
-            <a href="#about-sec" class="scroll-wrap">Descendre<span><img src="assets/img/icon/down-arrow.svg" alt=""></span></a>
+            <a href="#about-sec" class="scroll-wrap">
+                <span data-i18n="data-67">Descendre</span> <span><img src="assets/img/icon/down-arrow.svg" alt=""></span>
+            </a>
         </div>
     </div>
     <!--==============================
@@ -909,16 +869,28 @@
 
             <!-- Colonne Texte -->
             <div class="portal-text">
-                <span class="portal-tag">E-Commerce B2B</span>
-                <h2>Votre Espace <br><span style="color: var(--brand-accent);">Pro Digital.</span></h2>
-                <p>Passez dans une nouvelle ère d'approvisionnement. Notre plateforme B2B exclusive vous donne le contrôle total sur vos achats, vos volumes et votre facturation.</p>
-                <p>Pensée pour les professionnels exigeants, l'interface simplifie la complexité de la logistique de gros.</p>
+                <span class="portal-tag" data-i18n="data-293">E-Commerce B2B</span>
+
+                <h2>
+                    <span data-i18n="data-294">Votre Espace</span><br>
+                    <span style="color: var(--brand-accent);" data-i18n="data-295">Pro Digital.</span>
+                </h2>
+
+                <p data-i18n="data-296">
+                    Passez dans une nouvelle ère d'approvisionnement. Notre plateforme B2B exclusive vous donne le contrôle total sur vos achats, vos volumes et votre facturation.
+                </p>
+
+                <p data-i18n="data-297">
+                    Pensée pour les professionnels exigeants, l'interface simplifie la complexité de la logistique de gros.
+                </p>
 
                 <button class="transport-btn" style="margin-top: 1rem;">
-                    Découvrir le Portail
+                   <a target="_blank" href="https://www.ecommerce.capram.ma/" >
+                    <span data-i18n="data-298">Découvrir le Portail</span>
                     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
+                    </a>
                 </button>
             </div>
 
@@ -935,45 +907,61 @@
     <!-- SECTION 2 : LA GRILLE BENTO (AVANTAGES B2B) -->
     <section class="bento-section">
         <div class="bento-header">
-            <h2>Un concentré de <br><span style="color: var(--brand-accent);">Performances</span></h2>
-            <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 1rem;">Tout ce dont votre entreprise a besoin pour gérer ses stocks de manière fluide, réuni au sein d'un seul et même écosystème intelligent.</p>
+            <h2>
+                <span data-i18n="data-299">Un concentré de</span><br>
+                <span style="color: var(--brand-accent);" data-i18n="data-300">Performances</span>
+            </h2>
+
+            <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 1rem;" data-i18n="data-301">
+                Tout ce dont votre entreprise a besoin pour gérer ses stocks de manière fluide, réuni au sein d'un seul et même écosystème intelligent.
+            </p>
         </div>
 
         <!-- La Grille Asymétrique -->
         <div class="bento-grid">
 
-            <!-- Case 1 : Grande (Visuel abstrait à l'intérieur) -->
+            <!-- Case 1 -->
             <div class="bento-box bento-large">
-                <div class="bento-graphic"><img src="assets/img/service/stock.jpg" alt=""></div> <!-- Faux visuel de graphique/données -->
-                <h3>Visibilité des Stocks</h3>
-                <p>Consultez la disponibilité de nos références en temps réel. Ne passez commande que sur ce qui est réellement en stock dans nos entrepôts, sans surprise.</p>
+                <div class="bento-graphic">
+                    <img src="assets/img/service/stock.jpg" alt="">
+                </div>
+                <h3 data-i18n="data-302">Visibilité des Stocks</h3>
+                <p data-i18n="data-303">
+                    Consultez la disponibilité de nos références en temps réel. Ne passez commande que sur ce qui est réellement en stock dans nos entrepôts, sans surprise.
+                </p>
             </div>
 
-            <!-- Case 2 : Large (Horizontale) -->
+            <!-- Case 2 -->
             <div class="bento-box bento-wide">
                 <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <h3>Tarification B2B Dynamique</h3>
-                <p>Vos prix de gros, vos remises et vos conditions de paiement habituelles sont automatiquement appliqués dès votre connexion.</p>
+                <h3 data-i18n="data-304">Tarification B2B Dynamique</h3>
+                <p data-i18n="data-305">
+                    Vos prix de gros, vos remises et vos conditions de paiement habituelles sont automatiquement appliqués dès votre connexion.
+                </p>
             </div>
 
-            <!-- Case 3 : Carrée (Petite) -->
+            <!-- Case 3 -->
             <div class="bento-box bento-square">
                 <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
                 </svg>
-                <h3>Re-commande Rapide</h3>
-                <p>Dupliquez vos anciennes commandes en un seul clic pour gagner du temps.</p>
+                <h3 data-i18n="data-306">Re-commande Rapide</h3>
+                <p data-i18n="data-307">
+                    Dupliquez vos anciennes commandes en un seul clic pour gagner du temps.
+                </p>
             </div>
 
-            <!-- Case 4 : Carrée (Petite) -->
+            <!-- Case 4 -->
             <div class="bento-box bento-square">
                 <svg class="bento-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
                 </svg>
-                <h3>Historique & Factures</h3>
-                <p>Retrouvez l'intégralité de vos documents comptables centralisés.</p>
+                <h3 data-i18n="data-308">Historique & Factures</h3>
+                <p data-i18n="data-309">
+                    Retrouvez l'intégralité de vos documents comptables centralisés.
+                </p>
             </div>
 
         </div>
@@ -993,7 +981,7 @@
                                 <div class="about-logo">
                                     <a href="index.html"><img src="assets/img/logo.png" alt="Capram"></a>
                                 </div>
-                                <p class="about-text">Chez CAPRAM, nous nous engageons à offrir une qualité et une précision inégalées dans chaque aspect de nos activités. Dès votre premier contact avec nous et tout au long de notre accompagnement par nos experts, nous mettons tout en œuvre pour garantir des solutions fiables et un service à la hauteur de vos attentes.</p>
+                                <p class="about-text" data-i18n="data-142">Chez CAPRAM, nous nous engageons à offrir une qualité et une précision inégalées dans chaque aspect de nos activités. Dès votre premier contact avec nous et tout au long de notre accompagnement par nos experts, nous mettons tout en œuvre pour garantir des solutions fiables et un service à la hauteur de vos attentes.</p>
                                 <div class="th-social">
                                     <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
                                     <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
@@ -1003,15 +991,42 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-xl-auto" data-cue="slideInUp">
-                        <div class="widget widget_nav_menu footer-widget ">
-                            <h3 class="widget_title">Liens Utiles</h3>
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">
+                                <span data-i18n="data-143">Liens Utiles</span>
+                            </h3>
+
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="index.html"><i class="fa-solid fa-angle-right"></i>Accueil</a></li>
-                                    <li><a href="about.html"><i class="fa-solid fa-angle-right"></i>À propos</a></li>
-                                    <li><a href="categories.html"><i class="fa-solid fa-angle-right"></i>Nos Catégories</a></li>
-                                    <li><a href="javascript:void(0);"><i class="fa-solid fa-angle-right"></i>Actualité</a></li>
-                                    <li><img src="assets/img/imanor_2.png" alt=""></li>
+
+                                    <li>
+                                        <a href="index.html">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                            <span data-i18n="data-144">Accueil</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="about.html">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                            <span data-i18n="data-145">À propos</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="categories.html">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                            <span data-i18n="data-146">Nos Catégories</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                            <span data-i18n="data-147">Actualité</span>
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -1019,21 +1034,48 @@
 
                     <div class="col-md-6 col-xl-auto" data-cue="slideInUp">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Nos Services</h3>
+                            <h3 class="widget_title">
+                                <span data-i18n="data-148">Nos Services</span>
+                            </h3>
+
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="nos-service-3.html"><i class="fa-solid fa-angle-right"></i>Espace Digital</a></li>
-                                    <li><a href="nos-service-2.html"><i class="fa-solid fa-angle-right"></i>Logistique</a></li>
-                                    <li><a href="nos-service-1.html"><i class="fa-solid fa-angle-right"></i>Impact National</a></li>
-                                    <li><a href="javascript:void(0);"><i class="fa-solid fa-angle-right"></i>E-Catalogue</a></li>
-                                     <li><img src="assets/img/salamatouna%202.png" alt=""></li>
+
+                                    <li>
+                                        <a href="nos-service-3.html">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                            <span data-i18n="data-149">Espace Digital</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="nos-service-2.html">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                            <span data-i18n="data-150">Logistique</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="nos-service-1.html">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                            <span data-i18n="data-151">Impact National</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <i class="fa-solid fa-angle-right"></i>
+                                            <span data-i18n="data-152">E-Catalogue</span>
+                                        </a>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3" data-cue="slideInUp">
                         <div class="widget footer-widget">
-                            <h3 class="widget_title">Instagram Posts</h3>
+                            <h3 class="widget_title" data-i18n="data-153">Publications Instagram</h3>
                             <div class="sidebar-gallery">
                                 <div class="gallery-thumb">
                                     <img src="assets/img/widget/gallery_1_1.jpg" alt="Gallery Image">
@@ -1065,20 +1107,28 @@
                 </div>
             </div>
         </div>
+        <div class="certifWrapper">
+            <div class="certifContainer">
+
+                <img src="assets/img/salamatouna%202.png" alt="">
+                <img src="assets/img/imanor_2.png" alt="">
+            </div>
+
+        </div>
         <div class="copyright-wrap">
             <div class="container">
                 <div class="row justify-content-center gy-3 align-items-center">
                     <div class="col-lg-6" data-cue="slideInUp">
                         <p class="copyright-text">
-                            Copyright
-                            <i class="fal fa-copyright"></i> 2026 <a href="index.html">Capram</a>, Tous droits réservés.
+                            <span data-i18n="data-154">Copyright</span>
+                            <i class="fal fa-copyright"></i> 2025 <a href="index.html">Capram</a>, <span data-i18n="data-157">Tous droits réservés.</span>
                         </p>
                     </div>
                     <div class="col-lg-6 text-lg-end text-center" data-cue="slideInUp">
                         <div class="footer-links">
                             <ul>
-                                <li><a href="javascript:void(0);">Politique SMQ</a></li>
-                                <li><a href="javascript:void(0);">Français</a></li>
+                                <li><a href="javascript:void(0);" data-i18n="data-158">Politique SMQ</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1086,12 +1136,11 @@
             </div>
         </div>
     </footer>
-  
     <!--********************************
 			Code End  Here 
 ******************************** -->
     <!-- Scroll To Top -->
-    <div style="display: none;" class="scroll-top">
+    <div style="" class="scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg>
@@ -1128,6 +1177,7 @@
     <script src="assets/js/lenis.min.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <script src="lang/translations.js"></script>
 </body>
 
 </html>
