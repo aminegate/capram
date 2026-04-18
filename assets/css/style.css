@@ -293,11 +293,11 @@ h2.sec-title.text-white span {
 
 /* Hide content when closed */
 #cert-side-widget.closed {
-    left: -220px; /* Adjust this to match the width of #cert-content */
+    left: -140px; /* Adjust this to match the width of #cert-content */
 }
 
 #cert-content {
-    width: 220px;
+    width: 140px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 0 0 10px 0;
