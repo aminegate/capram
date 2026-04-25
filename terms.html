@@ -36,62 +36,366 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* --- CSS VARIABLES --- */
-        :root {
-            --bg-color: #0a0a0a;
-            /* Deep asphalt black */
-            --bg-secondary: #141414;
-            --text-main: #fcfcfc;
-            --text-muted: #9ca3af;
-            --primary: #f7943d;
-            /* Your requested main color */
-            --primary-dark: #d67a2b;
-            --primary-glow: rgba(247, 148, 61, 0.25);
-            --card-white: #ffffff;
-        }
 
-        /* --- GLOBAL RESETS --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* =========================================
+   1. GLOBAL RESET & VARIABLES
+   ========================================= */
+:root {
+    --primary-orange: #f39c12;    /* Capram Brand Orange */
+    --deep-black: #050505;        /* Base Background */
+    --card-bg: rgba(15, 15, 15, 0.75); /* Glassmorphism Base */
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Ambient Glow */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -10%;
-            right: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 60%);
-            z-index: -1;
-            filter: blur(100px);
-            pointer-events: none;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        h1,
-        h2,
-        .brand-text {
-            font-family: 'Syncopate', sans-serif;
-            text-transform: uppercase;
-        }
+body {
+    background-color: var(--deep-black);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
 
-        .container {
-            max-width: 1350px;
-            margin: 0 auto;
-            padding: 0 5%;
-        }
+/* =========================================
+   2. THE CREATIVE BACKGROUND (NON-BORING)
+   ========================================= */
+.smq-premium-page {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 150px;
+    background: #151515;
+}
 
+.canvas-bg {
+    position: absolute;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Technical Dot Grid - Engineering Feel */
+.bg-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.2px, transparent 0);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(circle at center, black, transparent 90%);
+}
+
+/* Sharp Geometric "Car-Line" Shapes */
+.bg-geometry {
+    position: absolute;
+    width: 100%; height: 100%;
+}
+
+.shape-poly {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(30,30,30,0.4) 0%, rgba(5,5,5,0) 100%);
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+.poly-1 {
+    width: 90%; height: 70%;
+    top: -15%; left: -10%;
+    clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+    transform: rotate(-3deg);
+}
+
+.poly-2 {
+    width: 70%; height: 60%;
+    bottom: -10%; right: -5%;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+    transform: rotate(1deg);
+}
+
+/* Atmospheric Phallows (Glows) */
+.bg-glows {
+    position: absolute;
+    inset: 0;
+    filter: blur(140px);
+}
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: pulseGlow 20s infinite alternate ease-in-out;
+}
+
+.orange-glow {
+    width: 700px; height: 700px;
+    background: var(--primary-orange);
+    top: -150px; right: -100px;
+}
+
+.blue-glow {
+    width: 600px; height: 600px;
+    background: #2980b9; /* Indigo blue for depth contrast */
+    bottom: 20%; left: -200px;
+    animation-delay: -7s;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1) translate(0, 0); opacity: 0.15; }
+    50% { transform: scale(1.15) translate(40px, 60px); opacity: 0.25; }
+    100% { transform: scale(1) translate(-20px, 30px); opacity: 0.15; }
+}
+
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+.content-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-overlap {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding-top: 100px;
+    margin-bottom: 180px;
+}
+
+.hero-text { flex: 1.2; text-align: left; }
+
+.line-accent {
+    width: 60px; height: 4px;
+    background: var(--primary-orange);
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.95;
+    margin-bottom: 30px;
+    letter-spacing: -3px;
+}
+
+.orange-text { color: var(--primary-orange); }
+
+.hero-subtext {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.btn-cta {
+    background: var(--primary-orange);
+    color: #000;
+    padding: 20px 45px;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(243, 156, 18, 0.3);
+}
+
+.hero-image-frame {
+    flex: 1;
+    position: relative;
+    transform: perspective(1200px) rotateY(-15deg);
+}
+
+.image-inner {
+    padding: 12px;
+    background: #111;
+    border: 1px solid var(--border-glass);
+    box-shadow: 30px 40px 80px rgba(0,0,0,0.6);
+}
+
+.image-inner img { width: 100%; display: block; }
+
+/* =========================================
+   4. FEATURE BLOCKS (GMAT STYLE OVERLAP)
+   ========================================= */
+.feature-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 180px;
+}
+
+.doc-display {
+    flex: 1.3;
+    z-index: 1;
+}
+
+.frame-border {
+    background: #1a1a1a;
+    padding: 10px;
+    border: 1px solid var(--border-glass);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.doc-display img {
+    width: 100%;
+    display: block;
+    filter: brightness(0.9);
+}
+
+/* The Glassmorphism Card */
+.glass-card {
+    flex: 1;
+    background: var(--card-bg);
+    backdrop-filter: blur(25px) saturate(160%);
+    padding: 70px;
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    margin-left: -120px; /* Overlap Factor */
+    z-index: 2;
+    text-align: left;
+    box-shadow: 
+        0 40px 100px rgba(0,0,0,0.5),
+        inset 0 1px 1px rgba(255,255,255,0.05); /* Rim Light */
+}
+
+.block-right { flex-direction: row-reverse; }
+.block-right .glass-card { margin-left: 0; margin-right: -120px; }
+
+.card-tag {
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.glass-card h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.glass-card p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: #eee;
+}
+
+.feature-list li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+.btn-text {
+    background: none; border: none;
+    color: var(--primary-orange);
+    font-size: 1rem; font-weight: 700;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.btn-text:hover { border-bottom-color: var(--primary-orange); }
+
+/* Card Shine Effect on Hover */
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(243, 156, 18, 0.4);
+}
+
+/* =========================================
+   5. MODAL ZOOM POPUP
+   ========================================= */
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    inset: 0;
+    background: rgba(0,0,0,0.96);
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border: 1px solid var(--border-glass);
+    box-shadow: 0 0 100px rgba(0,0,0,1);
+    animation: modalZoom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalZoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 30px; right: 40px;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-modal:hover { color: var(--primary-orange); }
+
+/* =========================================
+   6. RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 1024px) {
+    .hero-text h1 { font-size: 3.5rem; }
+    .hero-overlap { flex-direction: column; text-align: center; gap: 50px; }
+    .hero-text { text-align: center; }
+    .line-accent { margin: 0 auto 25px; }
+    
+    .feature-block, .block-right { flex-direction: column; }
+    .glass-card { 
+        margin: -80px 20px 0 20px !important; 
+        padding: 40px;
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 { font-size: 2.8rem; }
+    .glass-card h2 { font-size: 2rem; }
+    .smq-premium-page { padding: 60px 0; }
+}
+        
+        
+        
     </style>
 </head>
 
@@ -440,81 +744,85 @@ Hero Area
     <!--======== / Hero Section ========-->
 
 
-    <div class="container">
 
-        <!-- ========================================== -->
-        <!-- SECTION 1: HERO (Catégorie: Filtration)    -->
-        <!-- ========================================== -->
-        <section class="hero">
-            <div class="hero-content">
-                <span class="category-label" data-i18n="data-212">Catégorie</span>
+<main class="smq-premium-page">
+   
+  <!-- CREATIVE BACKGROUND ARCHITECTURE -->
+    <div class="canvas-bg">
+        <!-- Technical Dot Grid -->
+        <div class="bg-dots"></div>
+        
+        <!-- Large Engineering Shapes -->
+        <div class="bg-geometry">
+            <div class="shape-poly poly-1"></div>
+            <div class="shape-poly poly-2"></div>
+        </div>
 
-                <h1>
-                    <span data-i18n="data-231">Filtration</span><br>
-                    <span style="color: var(--primary);" data-i18n="data-232">& Protection</span>
-                </h1>
+        <!-- Atmospheric Glows (Phallows) -->
+        <div class="bg-glows">
+            <div class="glow orange-glow"></div>
+            <div class="glow blue-glow"></div>
+            <div class="glow accent-glow"></div>
+        </div>
+    </div>
 
-                <p data-i18n="data-233">
-                    Des éléments filtrants de très haute technologie conçus pour capturer les micro-particules, garantir un flux d'air et de fluides d'une pureté absolue, et préserver les organes vitaux de votre véhicule.
-                </p>
+    <div class="content-wrapper">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-overlap">
+            <div class="hero-text" data-aos="fade-up">
+                <div class="line-accent"></div>
+                <h1>Politique <span class="orange-text">SMQ</span></h1>
+                <p class="hero-subtext">Au cœur de notre performance, un Système de Management de la Qualité rigoureux pour garantir l'excellence de nos pièces de rechange.</p>
+             
             </div>
-
-            <div class="hero-img-container">
-                <!-- Ensure you have an image of filters (air, oil, or fuel filter) here -->
-                <img src="assets/img/categories/sub-catego/filtration.jpg" alt="Filtres Automobile Haute Performance" class="hero-img">
+            <div class="hero-image-frame" data-aos="zoom-in">
+                <div class="image-inner">
+                    <img src="assets/img/imanor_certif.jpg" alt="Certification">
+                </div>
+                <!-- Floating decorative element -->
+                <div class="float-shape"></div>
             </div>
         </section>
 
-        <!-- Flèche dynamique ancrée au centre bas -->
-        <div class="aero-arrow-wrapper">
-            <div class="aero-line"></div>
-            <div class="aero-chevrons">
-                <span class="led-chevron"></span>
-                <span class="led-chevron"></span>
-                <span class="led-chevron"></span>
+        <!-- SECTION 1: OVERLAP LEFT -->
+        <section class="feature-block block-left" id="explore">
+            <div class="doc-display" data-aos="fade-right">
+                <div class="frame-border">
+                    <img src="assets/img/politique-qualite.jpg" alt="Politique Qualité">
+                </div>
             </div>
-        </div>
+            <div class="glass-card" data-aos="fade-left">
+                <span class="card-tag">Excellence</span>
+                <h2>Stand out with Quality</h2>
+                <p>Notre politique qualité est le socle de notre développement. Elle définit nos orientations stratégiques pour assurer la pérennité de notre organisme.</p>
+                <ul class="feature-list">
+                    <li>Renforcement de l'image de marque</li>
+                    <li>Satisfaction client totale</li>
+                    <li>Optimisation des processus</li>
+                </ul>
+              
+            </div>
+        </section>
+
+        <!-- SECTION 2: OVERLAP RIGHT -->
+        <section class="feature-block block-right">
+            <div class="doc-display" data-aos="fade-left">
+                <div class="frame-border">
+                    <img src="assets/img/salamatona_certif.jpg" alt="Label Salamatouna">
+                </div>
+            </div>
+            <div class="glass-card" data-aos="fade-right">
+                <span class="card-tag">Sécurité</span>
+                <h2>Label Salamatouna</h2>
+                <p>Le label de confiance au Maroc. Ce certificat atteste que nos pièces de rechange respectent les normes de sécurité les plus strictes du marché national.</p>
+   
+           
+            </div>
+        </section>
 
     </div>
-
-
-
-    <div class="3dWrapper mb-5 mt-5">
-        <div class="container">
-            <div class="sketchfab-embed-wrapper"> <iframe title="Air filter" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="1920" height="720" src="https://sketchfab.com/models/ef27bf2e9ec34a259517bf30e5b0a6d9/embed?dnt=1"> </iframe>
-                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/air-filter-ef27bf2e9ec34a259517bf30e5b0a6d9?utm_medium=embed&utm_campaign=share-popup&utm_content=ef27bf2e9ec34a259517bf30e5b0a6d9" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> </a></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================== -->
-    <!-- SECTION 3: BRANDS (Automotive Cutting-Edge)-->
-    <!-- ========================================== -->
-
-    <section class="matrix-brands-section">
-        <!-- Subtle animated scanline overlay -->
-        <div class="scanlines"></div>
-
-        <div class="container">
-
-            <div class="matrix-header">
-                <span class="tech-subtitle" data-i18n="data-216">// RÉSEAU DE CONFIANCE</span>
-                <h2><span data-i18n="data-217">NOS MARQUES</span>&nbsp;<span class="text-orange" data-i18n="data-218">PARTENAIRES</span></h2>
-            </div>
-
-            <!-- The Staggered Floating Matrix -->
-            <div class="interactive-matrix">
-
-                <!-- Nodes -->
-                <div class="brand-node"><img src="assets/img/categories/sub-cartes/alco-filters.jpg" alt="alco-filters"></div>
-                <div class="brand-node"><img src="assets/img/categories/sub-cartes/capfilter.jpg" alt="capfilter"></div>
-                <div class="brand-node"><img src="assets/img/categories/sub-cartes/delphi.jpg" alt="delphi"></div>
-                <div class="brand-node"><img src="assets/img/categories/sub-cartes/misfilter.jpg" alt="misfilter"></div>
-
-
-            </div>
-        </div>
-    </section>
+</main>
 
     <!--==============================
 	Footer Area
@@ -677,7 +985,6 @@ Hero Area
                             <ul>
                                 <li><a href="terms.html" data-i18n="data-158">Politique SMQ</a></li>
 
-
                             </ul>
                         </div>
                     </div>
@@ -700,7 +1007,6 @@ Hero Area
     <!-- Jquery -->
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <!-- <script src="assets/js/vendor/jquery-3.7.1.min.js"></script> -->
-
 
     <!-- <script src="assets/js/app.min.js"></script> -->
     <script src="assets/js/swiper-bundle.min.js"></script>
@@ -728,6 +1034,69 @@ Hero Area
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
     <script src="lang/translations.js"></script>
+    
+ 
+   
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("fullImage");
+    const closeBtn = document.querySelector(".close-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    // 1. Automatically find all images in the cards
+    const cardImages = Array.from(document.querySelectorAll(".zoom-trigger img"));
+    let currentIndex = 0;
+
+    // 2. Open Modal Function
+    function openModal(index) {
+        currentIndex = index;
+        modalImg.src = cardImages[currentIndex].src;
+        modal.style.display = "flex";
+    }
+
+    // 3. Attach click events to each card
+    cardImages.forEach((img, index) => {
+        img.closest(".zoom-trigger").addEventListener("click", function() {
+            openModal(index);
+        });
+    });
+
+    // 4. Navigation Logic
+    function showNext() {
+        currentIndex = (currentIndex + 1) % cardImages.length;
+        modalImg.src = cardImages[currentIndex].src;
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + cardImages.length) % cardImages.length;
+        modalImg.src = cardImages[currentIndex].src;
+    }
+
+    nextBtn.onclick = (e) => { e.stopPropagation(); showNext(); };
+    prevBtn.onclick = (e) => { e.stopPropagation(); showPrev(); };
+
+    // 5. Close Logic
+    closeBtn.onclick = () => modal.style.display = "none";
+    
+    // Close when clicking background
+    modal.onclick = (e) => {
+        if (e.target === modal) modal.style.display = "none";
+    };
+
+    // Keyboard support
+    document.addEventListener("keydown", (e) => {
+        if (modal.style.display === "flex") {
+            if (e.key === "ArrowRight") showNext();
+            if (e.key === "ArrowLeft") showPrev();
+            if (e.key === "Escape") modal.style.display = "none";
+        }
+    });
+});
+    </script>
+    
+    
 </body>
 
 </html>

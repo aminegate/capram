@@ -71,15 +71,15 @@
             display: flex !important;
             gap: 40px !important;
         }
-        
+
         .main-content {
-    flex: 3 !important;
-}
-        
+            flex: 3 !important;
+        }
+
         .sidebar {
-    flex: 1 !important;
-    min-width: 300px !important;
-}
+            flex: 1 !important;
+            min-width: 300px !important;
+        }
 
         /* Blog Post Cards */
         .blog-post {
@@ -326,9 +326,9 @@
     <!-- slider drag cursor -->
     <!-- <div class="slider-drag-cursor"> DRAG </div> -->
 
-   
-    
-       <div class="th-menu-wrapper">
+
+
+    <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
@@ -458,9 +458,8 @@
                                     <span class="lang-code">EN</span>
                                 </div>
                             </div>
-                            <a href="https://web.facebook.com/profile.php?id=61561691562602"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.linkedin.com/company/centre-africain-de-pi%C3%A8ces-de-rechange-pour-l%E2%80%99automobile-au-maroc"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.instagram.com/capram.auto/"><i class="fab fa-instagram"></i></a>
+
+                            <a href="terms.html" data-i18n="data-3500">Politique SMQ</a>
                         </div>
                     </div>
                 </div>
@@ -572,8 +571,8 @@
             </div>
         </div>
     </header>
-    
-    
+
+
     <!--==============================
 Hero Area
 ==============================-->
@@ -594,7 +593,7 @@ Hero Area
                                         <span data-i18n="data-55">Découvrir</span>
                                         <span class="after-bg"></span>
                                     </a>
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -614,7 +613,7 @@ Hero Area
                                         <span data-i18n="data-60">Découvrir</span>
                                         <span class="after-bg"></span>
                                     </a>
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -634,7 +633,7 @@ Hero Area
                                         <span data-i18n="data-65">Découvrir</span>
                                         <span class="after-bg"></span>
                                     </a>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -657,8 +656,8 @@ Hero Area
             </a>
         </div>
     </div>
-    
-       <!--======== / Hero Section ========-->
+
+    <!--======== / Hero Section ========-->
     <!--==============================
 Feature Area  
 ==============================-->
@@ -950,8 +949,8 @@ Feature Area
                     <div class="col-lg-6 text-lg-end text-center" data-cue="slideInUp">
                         <div class="footer-links">
                             <ul>
-                                <li><a href="javascript:void(0);" data-i18n="data-158">Politique SMQ</a></li>
-                       
+                                <li><a href="terms.html" data-i18n="data-158">Politique SMQ</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -1016,7 +1015,7 @@ Feature Area
     <script src="assets/js/lenis.min.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
-     <script src="lang/translations.js"></script>
+    <script src="lang/translations.js"></script>
 
     <script>
         // Use 'jQuery' keyword to avoid conflict with other libraries ($)
@@ -1119,9 +1118,9 @@ Feature Area
         })(jQuery);
 
     </script>
-    
 
-        
-    </body>
+
+
+</body>
 
 </html>
