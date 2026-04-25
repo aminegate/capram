@@ -132,7 +132,6 @@
     <!--==============================
 	Header Area
    ==============================-->
-
     <header class="th-header header-default">
 
         <div class="header-top">
@@ -294,9 +293,7 @@
             </div>
         </div>
     </header>
-
-
-    <!--==============================
+<!--==============================
 Hero Area
 ==============================-->
     <div class="th-hero-wrapper hero-1 bg-mask" id="hero">
@@ -379,9 +376,6 @@ Hero Area
             </a>
         </div>
     </div>
-
-
-
     <!--======== / Hero Section ========-->
     <!--==============================
 Feature Area  
@@ -1421,7 +1415,9 @@ Contact Area
 Contact Area  
 ==============================-->
                             <div class="contact-form-v1">
+                               <input type="text" name="b_website" style="display:none" tabindex="-1" autocomplete="off">
                                 <form action="mail.php" method="POST" class="contact-form ajax-contact">
+                                   <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                                     <div class="row">
                                         <div class="form-group style-border col-md-6">
                                             <input type="text" class="form-control" name="name" id="name" placeholder="Votre nom">
