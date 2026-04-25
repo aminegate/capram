@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CAPRAM</title>
+    <title>CAPRAM - Blog</title>
     <meta name="author" content="Capram">
     <meta name="description" content="Capram">
     <meta name="keywords" content="Capram">
